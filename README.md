@@ -1,13 +1,8 @@
-# Welcome to Bene
+# Welcome to blip
 
 ## You can visit us at:
 ### http://benetravel-dev.s3-website-us-east-1.amazonaws.com/
 #### (no credentials are necessary to explore functionalities that our app offers)
-
-
-## Point of Contacts in case of technical mishaps:
-### Aakash Khurana, Aakanksha Ardhapurkar, Sonakshi Singh, Nick Gulson
-#### we can be reached either via email or slack
 
 
 ## In case you decided to be adventurous and do a little project setup
