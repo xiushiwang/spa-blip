@@ -1,0 +1,17 @@
+{
+    "projectName": "E-2020",
+    "version": "3.0",
+    "frontend": "javascript",
+    "javascript": {
+        "framework": "vue",
+        "config": {
+            "SourceDir": "src",
+            "DistributionDir": "dist",
+            "BuildCommand": "npm run-script build",
+            "StartCommand": "npm run-script serve"
+        }
+    },
+    "providers": [
+        "awscloudformation"
+    ]
+}
