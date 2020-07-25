@@ -2,7 +2,17 @@
   <div>
     <banner></banner>
     <b-container>   
-        <h2>Welcome to our savings calculator!</h2>
+        <b-row>
+           <b-col xs="12" sm="12" md="6" lg="6" xl="6">
+              <h1 class="blip-headline">See how blip can save you money</h1>
+             <div class="zipcode-container">
+             <savings></savings>
+             </div>
+           </b-col>
+          <b-col xs="12" sm="12" md="6" lg="6" xl="6">
+            <img class="blip-pig" src="../assets/exploding_blip_pig.png">
+          </b-col>
+        </b-row>
     </b-container>                   
 
   </div>
@@ -10,6 +20,7 @@
 
 <script>
 import banner from "./banner.vue";
+import savings from "./savings.vue";
 
 export default {
   name: "calculator",
@@ -25,7 +36,8 @@ export default {
   methods: {
   },
   components: {
-    banner
+    banner,
+    savings
 
   }
 };
@@ -34,28 +46,21 @@ export default {
 <style lang="scss" scoped>
 $button-color: #e7eff9;
 
-.home-container {
-  background-image: url("../assets/background.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-  min-height: 100%;
-
-  .enter-dest {
-    position: relative;
-    top: 20%;
-    transform: translateY(-50%);
-
-    .content {
-      margin: 20em 0 0 0;
-    }
-
-    .input {
-      margin: 1em 0 0 0;
-    }
-  }
+.blip-pig {
+  // background-image: url("../assets/exploding_blip_pig.png");
+   max-width: 100%;
+  // max-width: 400px;
+  height: auto;
+  // background-repeat: no-repeat;
+  // background-position: center center;
+  // background-attachment: fixed;
+  // background-size: cover;
+  // min-height: 100%;
 }
+.blip-headline {
+  margin: 5em 0 0 0;
+}
+//find a better way to vertically align
 
  .buttons {
     position: relative;
