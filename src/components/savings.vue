@@ -3,32 +3,78 @@
     <b-container class="zipcode_container" v-if="seen">
       <b-row>
         <b-col xs="12" sm="12" md="12" lg="12" xl="12">
-
           <h4 class="blip-area">How do rates in your area compare to your possible blip savings?</h4>
 
           <b-row class="zipcode_input">
             <b-col xs="12" sm="12" md="8" lg="8" xl="8">
-              <b-form-input v-model="zipcode" placeholder="Enter your zipcode"></b-form-input>
+              <b-form-input type="number" v-model.number="zipcode" placeholder="Enter your zipcode"></b-form-input>
             </b-col>
             <b-col xs="12" sm="12" md="4" lg="4" xl="4">
-              <b-button variant="outline-primary" v-on:click="seen = !seen">Search</b-button>
+              <b-button
+                variant="outline-primary"
+                v-on:click="seen = !seen"
+                :disabled="isDisabled"
+              >Search</b-button>
             </b-col>
           </b-row>
         </b-col>
       </b-row>
     </b-container>
-    <b-container class="utility_container">
-      <b-row>
+    <b-container class="utility_container" v-if="!seen">
+      <b-row class="zipcode_input">
+        <b-col xs="12" sm="12" md="8" lg="8" xl="8">
+          <b-form-input v-model="zipcode" placeholder="Enter your zipcode"></b-form-input>
+        </b-col>
+        <b-col xs="12" sm="12" md="3" lg="3" xl="3">
+          <b-button variant="outline-primary">Search</b-button>
+        </b-col>
+      </b-row>
+      <b-row class=utility_provider>
         <b-col xs="12" sm="12" md="12" lg="12" xl="12">
-
-          <h4 class="blip-area">How do rates in your area compare to your possible blip savings?</h4>
-
-          <b-row class="zipcode_input">
-            <b-col xs="12" sm="12" md="8" lg="8" xl="8">
-              <b-form-input v-model="zipcode" placeholder="Enter your zipcode"></b-form-input>
+          <h3>Choose your utility provider</h3>
+          <b-row class="utility_select">
+            <b-col xs="12" sm="12" md="6" lg="6" xl="4">
+              <div class="card">
+                <div class="card-body">ComEd</div>
+              </div>
             </b-col>
             <b-col xs="12" sm="12" md="4" lg="4" xl="4">
-              <b-button variant="outline-primary">Search</b-button>
+              <div class="card">
+                <div class="card-body">Edison International</div>
+              </div>
+            </b-col>
+            <b-col xs="12" sm="12" md="4" lg="4" xl="4">
+              <div class="card">
+                <div class="card-body">PG&E</div>
+              </div>
+            </b-col>
+          </b-row>
+        </b-col>
+      </b-row>
+      <b-row class="rate_plan">
+        <b-col xs="12" sm="12" md="12" lg="12" xl="12">
+          <h3>Choose your Rate Plan</h3>
+          <b-row class="plan_select">
+            <b-col xs="12" sm="12" md="12" lg="12" xl="12">
+              <b-dropdown
+                split
+                split-variant="outline-primary"
+                variant="primary"
+                text="Choose your Plan"
+                class="m-2"
+              >
+                <b-dropdown-item href="#">Time of Use</b-dropdown-item>
+                <b-dropdown-item href="#">Plan 1</b-dropdown-item>
+                <b-dropdown-item href="#">Plan2</b-dropdown-item> <!--REMEMBER TO MAKE THIS DYNAMIC-->
+              </b-dropdown>
+            </b-col>
+          </b-row>
+          <b-row class="plan_select">
+            <b-col xs="12" sm="12" md="12" lg="12" xl="12">
+               <b-button
+                variant="outline-primary"
+                @click="displaySavings()"
+              >Search</b-button>
             </b-col>
           </b-row>
         </b-col>
@@ -40,13 +86,32 @@
 <script>
 export default {
   name: "savings",
-  data() {
-    seen: true
-    return {};
+  data: function() {
+    return {
+      data:'display this!',
+      seen: true,
+      zipcode: ""
+    };
   },
+  computed: {
+    isDisabled: function() {
+      return !this.zipcode;
+    }
+  },
+
   mounted() {},
 
-  methods: {},
+  methods: {
+    entered_zipcode(zipcode) {
+      console.log(zipcode);
+    },
+
+    displaySavings() {
+      const data = this.data;
+       this.$emit('display-savings', data)
+       console.log('data', data);
+    }
+  },
   components: {}
 };
 </script>
@@ -60,6 +125,18 @@ $button-color: #e7eff9;
 
 .zipcode_input {
   margin: 3em 0 0 0;
+}
+
+.utility_select{
+  h3 {
+    margin: 2em 0 0 0;
+  }
+}
+
+.rate_plan, .utility_provider {
+  h3{
+    margin: 2em 0 0 0;
+  }
 }
 
 .buttons {

@@ -6,11 +6,12 @@
            <b-col xs="12" sm="12" md="6" lg="6" xl="6">
               <h1 class="blip-headline">See how blip can save you money</h1>
              <div class="zipcode-container">
-             <savings></savings>
+             <savings @display-savings="displaySavings"></savings>
              </div>
            </b-col>
           <b-col xs="12" sm="12" md="6" lg="6" xl="6">
-            <img class="blip-pig" src="../assets/exploding_blip_pig.png">
+            <img class="blip-pig" src="../assets/exploding_blip_pig.png" v-if='savings'>
+            <h3 v-if='!savings'>Savings will be displayed here</h3>
           </b-col>
         </b-row>
     </b-container>                   
@@ -26,14 +27,17 @@ export default {
   name: "calculator",
   data() {
     return {
+      savings: true,
     };
   },
   mounted() {
-
-
   },
 
   methods: {
+    displaySavings(value) {
+      console.log('waht', value);
+      this.savings = false;
+    }
   },
   components: {
     banner,

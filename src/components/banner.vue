@@ -2,7 +2,7 @@
   <b-navbar class="navbar">
     <b-navbar-brand class="bene-logo">
       <router-link :to="'/'">
-        <img src="../assets/Transparent Scan.png" />
+        <img src="../assets/blip_logo.png" />
       </router-link>
     </b-navbar-brand>
 
@@ -59,7 +59,7 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
-  background-color: #b3d9f2;
+  background-color: #ffffff;
   height: 4em !important;
   .bene-logo {
     padding-bottom: 0.5em;
