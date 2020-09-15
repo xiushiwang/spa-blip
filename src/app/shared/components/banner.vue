@@ -2,7 +2,7 @@
   <b-navbar class="navbar">
     <b-navbar-brand class="bene-logo">
       <router-link :to="'/'">
-        <img src={logo} />
+        <img src="../../../assets/blip_logo.png"/>
       </router-link>
     </b-navbar-brand>
 
@@ -37,7 +37,7 @@
 
 
 <script>
-import logo from '../../../assets/images/blip_logo.png'
+// import logo from '../../../assets/images/blip_logo.png'
 
 export default {
   name: "banner",
