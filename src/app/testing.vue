@@ -417,79 +417,6 @@
         </div>
       </div>
     </section>
-    <section class="features">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
-                <div class="heading text-center wow fadeInUp">
-                    <span class="badge badge-success badge-pill">FEATURES</span>
-                    <h3 class="text-black mt-16">Our solution for your business</h3>
-                    <p class="text-gray mt-16 mb-0">We are self-service data analytics software that lets you create visually appealing data visualizations and insightful dashboards in minutes.</p>
-                </div>
-            </div>
-        </div>
-        <div class="content">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card-f flex text-center wow fadeInUp">
-                        <div class="card-f-heading">
-                            <div class="ic ic-lg ic-badge bg-primary-100 mb-36">
-                                <img src="../assets/images/icons/pie-chart.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="card-f-body">
-                            <h4 class="text-20 text-black mb-12">Analyze your data</h4>
-                            <p class="text-gray mb-20">Create reports with an easy to use drag-and-drop designer. </p>
-                            <a href="#" class="font-bold text-18 text-primary">Learn more <i class="fas fa-arrow-right text-14 ml-8"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card-f flex text-center wow fadeInUp">
-                        <div class="card-f-heading">
-                            <div class="ic ic-lg ic-badge bg-primary-100 mb-36">
-                                <img src="../assets/images/icons/shield.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="card-f-body">
-                            <h4 class="text-20 text-black mb-12">Collaborate securely</h4>
-                            <p class="text-gray mb-20">Share/publish your reports with your colleagues.</p>
-                            <a href="#" class="font-bold text-18 text-primary">Learn more <i class="fas fa-arrow-right text-14 ml-8"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card-f flex text-center wow fadeInUp">
-                        <div class="card-f-heading">
-                            <div class="ic ic-lg ic-badge bg-primary-100 mb-36">
-                                <img src="../assets/images/icons/line-chart.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="card-f-body">
-                            <h4 class="text-20 text-black mb-12">Embedded analytics</h4>
-                            <p class="text-gray mb-20">Get a powerful analytics tool in your own brand name.</p>
-                            <a href="#" class="font-bold text-18 text-primary">Learn more <i class="fas fa-arrow-right text-14 ml-8"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card-f flex text-center wow fadeInUp">
-                        <div class="card-f-heading">
-                            <div class="ic ic-lg ic-badge bg-primary-100 mb-36">
-                                <img src="../assets/images/icons/workflow.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="card-f-body">
-                            <h4 class="text-20 text-black mb-12">Easy and Intuitive</h4>
-                            <p class="text-gray mb-20">Easily converse with your data using everyday language. </p>
-                            <a href="#" class="font-bold text-18 text-primary">Learn more <i class="fas fa-arrow-right text-14 ml-8"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
   </div>
 </template>
 
@@ -521,7 +448,7 @@ export default {
 //  @import "../assets/css/fontawesome/brands.min.css";
 //  @import "../assets/css/fontawesome/regular.min.css";
 //  @import "../assets/css/bootstrap-select.min.css";
- @import "../assets/css/animate.css";
- @import "../assets/css/main.css";
+//  @import "../assets/css/animate.css";
+//  @import "../assets/css/main.css";
 
 </style>
