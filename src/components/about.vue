@@ -168,18 +168,18 @@
                   <p class="text-gray mt-8 mb-24">Name *</p>
                   <div class="form-row">
                     <div class="form-group col-md-6">
-                      <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="">
+                      <input type="text" class="form-control" aria-describedby="int2" placeholder="">
                       <p class="text-gray mt-8 mb-24">First Name</p>
                     </div>
                     <div class="form-group col-md-6">
-                      <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="">
+                      <input type="text" class="form-control" aria-describedby="int2" placeholder="">
                       <p class="text-gray mt-8 mb-24">Last Name</p>
                     </div>
                   </div>
 
                   <div class="form-group">
                     <p class="text-gray mt-8 mb-24">Email *</p>
-                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="">
+                    <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="">
                   </div>
 
                   <div class="form-group">
@@ -298,6 +298,5 @@ $button-color: #e7eff9;
   width: 50%;
 }
 </style>
-
 
 
