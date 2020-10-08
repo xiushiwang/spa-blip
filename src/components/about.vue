@@ -91,7 +91,7 @@
                   We are passionate about limiting our collective impact on the environment.
                 </p>
                 <div class="card-pricing-footer">
-                  <a href="https://www.blipenergy.com/contact-us" class="btn btn-outline-primary btn-block d-flex justify-between items-center">CONTACT US<i class="fas fa-arrow-right text-14"></i></a>
+                  <a href="https://www.blipenergy.com/contact-us" class="btn btn-primary">CONTACT US<i class="fas fa-arrow-right text-14"></i></a>
                 </div>
               </div>
             </div>
@@ -188,7 +188,7 @@
                   </div>
 
                   <div class="form-group mb-0">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">Get Started</button>
+                    <button type="submit" class="btn btn-primary">Get Started</button>
                   </div>
                 </form>
               </div>
