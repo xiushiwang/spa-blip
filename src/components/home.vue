@@ -316,7 +316,7 @@
                     </div>
 
                     <div class="form-group mb-0">
-                      <button type="submit" class="btn btn-primary btn-lg btn-block">Get Started</button>
+                      <button type="submit" class="btn btn-primary">Get Started</button>
                     </div>
                   </form>
                 </div>
