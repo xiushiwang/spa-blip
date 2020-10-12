@@ -6,7 +6,7 @@
 
         <!--start:SAVING RENTERS MONEY-->
         <div class="card text-white">
-          <img src="../assets/blip_logo.png" class="card-img" alt="...">
+          <img src="../assets/website_photo.jpg" class="card-img" alt="...">
           <div class="card-img-overlay">
             <div class="container">
               <div class="row">
@@ -30,7 +30,7 @@
 
               <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="illustration wow fadeInLeft">
-                  <img src="../assets/blip_logo.png" alt="" class="w-100p">
+                  <img src="../assets/blip-mockup-update.png" alt="" class="w-100p">
                 </div>
               </div>
 
@@ -147,7 +147,7 @@
               </div>
               <div class="right col-lg-6 col-md-12 col-sm-12">
                 <div class="quotes-user wow fadeInUpRight">
-                  <img src="../assets/blip_logo.png" alt="">
+                  <img src="../assets/alain_duchateau_QvZj7r3efC4_unsplash_lighterblue_Copy.jpg" alt="">
                 </div>
               </div>
             </div>
@@ -455,5 +455,3 @@ $button-color: #e7eff9;
   width: 50%;
 }
 </style>
-
-
