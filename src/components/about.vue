@@ -47,7 +47,7 @@
           <div class="row">
             <div class="col-lg-6 col-md-12 col-sm-12">
               <div class="illustration wow fadeInLeft">
-                <img src="../assets/blip_logo.png" alt="" class="w-100p">
+                <img src="../assets/geran-de-klerk-qzgN45hseN0-unsplash.jpg" alt="" class="w-100p">
               </div>
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12">
@@ -215,12 +215,14 @@
 
 
     </b-container>
+<!--    <footer></footer>-->
 
   </div>
 </template>
 
 <script>
 import banner from "./banner.vue";
+// import footer from "./Footer.vue";
 
 export default {
   name: "about",
@@ -237,6 +239,7 @@ export default {
   },
   components: {
     banner
+    // , footer//added
   }
 };
 </script>
