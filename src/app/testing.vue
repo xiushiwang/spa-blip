@@ -448,7 +448,7 @@ export default {
 //  @import "../assets/css/fontawesome/brands.min.css";
 //  @import "../assets/css/fontawesome/regular.min.css";
 //  @import "../assets/css/bootstrap-select.min.css";
-//  @import "../assets/css/animate.css";
-//  @import "../assets/css/main.css";
+ @import "../assets/css/animate.css";
+ @import "../assets/css/main.css";
 
 </style>
