@@ -91,7 +91,7 @@
                   We are passionate about limiting our collective impact on the environment.
                 </p>
                 <div class="card-pricing-footer">
-                  <a href="https://www.blipenergy.com/contact-us" class="btn btn-primary">CONTACT US<i class="fas fa-arrow-right text-14"></i></a>
+                  <a href="./contact-us" class="btn btn-primary">CONTACT US<i class="fas fa-arrow-right text-14"></i></a>
                 </div>
               </div>
             </div>
@@ -188,7 +188,7 @@
                   </div>
 
                   <div class="form-group mb-0">
-                    <button type="submit" class="btn btn-primary">Get Started</button>
+                    <button type="submit" class="btn btn-outline-primary">Get Started</button>
                   </div>
                 </form>
               </div>
@@ -198,31 +198,31 @@
       </div>
       <!--end:blip is launching soon-->
 
-      <!--start:Contact-->
-      <div class="hero">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
-              <div class="content text-center">
-                <h3 class="text-white mb-24 wow fadeInUp">Contact</h3>
-                <p class="text-gray mt-8 mb-24">hello@blipenergy.com</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--end:Contact-->
+<!--      &lt;!&ndash;start:Contact&ndash;&gt;-->
+<!--      <div class="hero">-->
+<!--        <div class="container">-->
+<!--          <div class="row">-->
+<!--            <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">-->
+<!--              <div class="content text-center">-->
+<!--                <h3 class="text-white mb-24 wow fadeInUp">Contact</h3>-->
+<!--                <p class="text-gray mt-8 mb-24">hello@blipenergy.com</p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      &lt;!&ndash;end:Contact&ndash;&gt;-->
 
 
     </b-container>
-<!--    <footer></footer>-->
+    <Footer></Footer>
 
   </div>
 </template>
 
 <script>
 import banner from "./banner.vue";
-// import footer from "./Footer.vue";
+import Footer from "./Footer.vue";
 
 export default {
   name: "about",
@@ -238,8 +238,8 @@ export default {
   methods: {
   },
   components: {
-    banner
-    // , footer//added
+    banner,
+    Footer//added
   }
 };
 </script>
