@@ -71,7 +71,7 @@
                   <div class="card-f flex text-center wow fadeInUp">
                     <div class="card-f-heading">
                       <div class="ic ic-lg ic-badge bg-primary-100 mb-36">
-                        <img src="../assets/blip_logo.png" alt="">
+                        <img src="../assets/blip-icon-home.png" alt="">
                       </div>
                     </div>
                     <div class="card-f-body">
@@ -87,7 +87,7 @@
                   <div class="card-f flex text-center wow fadeInUp">
                     <div class="card-f-heading">
                       <div class="ic ic-lg ic-badge bg-primary-100 mb-36">
-                        <img src="../assets/blip_logo.png" alt="">
+                        <img src="../assets/blip-icon-piggy.png" alt="">
                       </div>
                     </div>
                     <div class="card-f-body">
@@ -103,7 +103,7 @@
                   <div class="card-f flex text-center wow fadeInUp">
                     <div class="card-f-heading">
                       <div class="ic ic-lg ic-badge bg-primary-100 mb-36">
-                        <img src="../assets/blip_logo.png" alt="">
+                        <img src="../assets/blip-icon-plug.png" alt="">
                       </div>
                     </div>
                     <div class="card-f-body">
@@ -119,7 +119,7 @@
             </div>
 
             <div class="card-pricing-footer">
-              <a href="https://www.blipenergy.com/why-blip" class="btn btn-outline-primary btn-block d-flex justify-between items-center">LEARN MORE<i class="fas fa-arrow-right text-14"></i></a>
+              <a href="./product" class="btn btn-outline-primary btn-block d-flex justify-between items-center">LEARN MORE<i class="fas fa-arrow-right text-14"></i></a>
             </div>
 
           </div>
@@ -142,7 +142,6 @@
                   <p class="text-black mt-24 mb-16 wow fadeInUp" data-wow-duration="3s">
                     We can work together to decommission dirty plants by shifting demand away from those peak hours, one home at a time. If we each help a little, we can all do a lot.
                   </p>
-                  <span class="text-gray wow fadeInUp" data-wow-duration="3.5s">Daniel hosts in Yogyakarta to earn extra money</span>
                 </div>
               </div>
               <div class="right col-lg-6 col-md-12 col-sm-12">
@@ -316,7 +315,7 @@
                     </div>
 
                     <div class="form-group mb-0">
-                      <button type="submit" class="btn btn-primary">Get Started</button>
+                      <button type="submit" class="btn btn-outline-primary">Get Started</button>
                     </div>
                   </form>
                 </div>
@@ -326,29 +325,31 @@
         </div>
         <!--end:blip is launching soon-->
 
-        <!--start:Contact-->
-        <div class="hero">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
-                <div class="content text-center">
-                  <h3 class="text-white mb-24 wow fadeInUp">Contact</h3>
-                  <p class="text-gray mt-8 mb-24">hello@blipenergy.com</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--end:Contact-->
+<!--        &lt;!&ndash;start:Contact&ndash;&gt;-->
+<!--        <div class="hero">-->
+<!--          <div class="container">-->
+<!--            <div class="row">-->
+<!--              <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">-->
+<!--                <div class="content text-center">-->
+<!--                  <h3 class="text-white mb-24 wow fadeInUp">Contact</h3>-->
+<!--                  <p class="text-gray mt-8 mb-24">hello@blipenergy.com</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;end:Contact&ndash;&gt;-->
 
       </div>
 
     </b-container>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 import banner from "./banner.vue";
+import Footer from "./Footer.vue";
 import { MarkerArea } from 'markerjs';
 import $ from 'jquery';
 
@@ -393,7 +394,8 @@ export default {
     },
   },
   components: {
-    banner
+    banner,
+    Footer
   }
 };
 </script>
@@ -455,3 +457,5 @@ $button-color: #e7eff9;
   width: 50%;
 }
 </style>
+
+
