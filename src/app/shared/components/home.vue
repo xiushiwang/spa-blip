@@ -2,86 +2,354 @@
   <div>
     <banner></banner>
     <b-container fluid class="home-container">
-      <div class="enter-dest" id="mydiv" ref="myImage">
-        <b-row>
-          <b-col xs="12" sm="12" md="9" offset-md="2" lg="6" offset-lg="3" xl="6" offset-xl="3">
-            <div class="content">
-              <h1>WHERE ARE YOU GOING ?</h1>
+      <div class="hero hidden xl-block">
 
-              <b-form-select v-model="travel" :options="options"></b-form-select>
-              <!-- <div class="mt-3">
-                Selected:
-                <strong>{{ travel }}</strong>
-              </div>-->
-              <!-- <b-form-input
-                type="text"
-                v-model="travel"
-                align="center"
-                placeholder="Enter City Name Here"
-                class="input"
-              ></b-form-input>-->
+        <!--start:SAVING RENTERS MONEY-->
+        <div class="card text-white">
+          <img src="../assets/website_photo.jpg" class="card-img" alt="...">
+          <div class="card-img-overlay">
+            <div class="container">
+              <div class="row">
+                <div class="left col-lg-7 col-md-12 col-sm-12">
+                  <div class="left-top">
+                    <h1 class="text-48 leading-64 text-white wow fadeInUp">SAVING RENTERS MONEY</h1>
+                    <p class="text-20 leading-36 mt-12 wow fadeInUp">A sustainable energy storage solution focused on saving you money on your electricity bill</p>
+                    <button type="button" class="btn btn-outline-white mt-32 wow fadeInUp">Take Our Survey<i class="fas fa-arrow-right text-14 ml-8"></i></button>
+                  </div>
+                </div>
+              </div>
             </div>
-          </b-col>
-        </b-row> 
-        <br><br>
-        <b-row no-gutters>
-          <b-col xs="12" sm="12" md="9" offset-md="2" lg="6" offset-lg="3" xl="6" offset-xl="3">
-            <div class="buttons">
-                <router-link :to="'Game'">
-                  <b-button
-                    variant="warning"
-                    @click="destEntered"
-                    class="game-buttons"
-                  >Play Bene Travel Game</b-button>
-                </router-link>
+          </div>
+        </div>
+        <!--end:SAVING RENTERS MONEY-->
+
+        <!--start:about blip-->
+        <section class="analytics">
+          <div class="container">
+            <div class="row">
+
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="illustration wow fadeInLeft">
+                  <img src="../assets/blip-mockup-update.png" alt="" class="w-100p">
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="heading wow fadeInUp">
+                  <h3 class="text-black mt-16">about blip</h3>
+                  <p class="text-gray mt-20 mb-0">
+                    blip is a residential energy storage product focused on saving you money
+                    on your monthly electric bill by capturing the value of electricity price changes throughout the day,
+                    and delivering that value back to you as savings.
+                    By offering blip at a fraction of the price our competitors charge,
+                    we aim to widely expand access to the savings and benefits energy storage can provide.
+                  </p>
+                </div>
+              </div>
+
             </div>
-          </b-col>
-        </b-row>
+          </div>
+        </section>
+        <!--end:about blip-->
+
+        <!--start:Clean energy is no longer just for homeowners-->
+        <section class="features">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
+                <div class="heading text-center wow fadeInUp">
+                  <h3 class="text-black mt-16">Clean energy is no longer just for homeowners</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="content">
+              <div class="row">
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="card-f flex text-center wow fadeInUp">
+                    <div class="card-f-heading">
+                      <div class="ic ic-lg ic-badge bg-primary-100 mb-36">
+                        <img src="../assets/blip-icon-home.png" alt="">
+                      </div>
+                    </div>
+                    <div class="card-f-body">
+                      <h4 class="text-20 text-black mb-12">The where</h4>
+                      <p class="text-gray mb-20">
+                        blip works in any home or apartment, and due to its portable design, you can bring it with you wherever you live
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="card-f flex text-center wow fadeInUp">
+                    <div class="card-f-heading">
+                      <div class="ic ic-lg ic-badge bg-primary-100 mb-36">
+                        <img src="../assets/blip-icon-piggy.png" alt="">
+                      </div>
+                    </div>
+                    <div class="card-f-body">
+                      <h4 class="text-20 text-black mb-12">The what</h4>
+                      <p class="text-gray mb-20">
+                        blip charges overnight, when electricity is cheap, and dispenses power during the day, when electricity is expensive
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="card-f flex text-center wow fadeInUp">
+                    <div class="card-f-heading">
+                      <div class="ic ic-lg ic-badge bg-primary-100 mb-36">
+                        <img src="../assets/blip-icon-plug.png" alt="">
+                      </div>
+                    </div>
+                    <div class="card-f-body">
+                      <h4 class="text-20 text-black mb-12">The how</h4>
+                      <p class="text-gray mb-20">
+                        Set it and forget it: plug blip into any standard outlet and any appliance into blip. No professional installation required.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-pricing-footer">
+              <a href="./product" class="btn btn-outline-primary btn-block d-flex justify-between items-center">LEARN MORE<i class="fas fa-arrow-right text-14"></i></a>
+            </div>
+
+          </div>
+        </section>
+        <!--end:Clean energy is no longer just for homeowners-->
+
+        <!--start:blip helps the planet too-->
+        <section class="quotes">
+          <div class="container">
+            <div class="row">
+              <div class="left col-lg-6 col-md-12 col-sm-12">
+                <div class="content">
+                  <h3 class="text-black mt-16">blip helps the planet too</h3>
+                  <p class="text-black mt-24 mb-16 wow fadeInUp" data-wow-duration="3s">
+                    Imagine a world where dirty plants are shut down because consumers control their power consumption without sacrificing their quality of life.
+                  </p>
+                  <p class="text-black mt-24 mb-16 wow fadeInUp" data-wow-duration="3s">
+                    By offering a way to store power, and using it during peak demand times, blip reduces our reliance on dirty energy from peaker plants.
+                  </p>
+                  <p class="text-black mt-24 mb-16 wow fadeInUp" data-wow-duration="3s">
+                    We can work together to decommission dirty plants by shifting demand away from those peak hours, one home at a time. If we each help a little, we can all do a lot.
+                  </p>
+                </div>
+              </div>
+              <div class="right col-lg-6 col-md-12 col-sm-12">
+                <div class="quotes-user wow fadeInUpRight">
+                  <img src="../assets/alain_duchateau_QvZj7r3efC4_unsplash_lighterblue_Copy.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--end:blip helps the planet too-->
+
+        <!--start:Help shape the future of blip-->
+        <section class="features">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
+                <div class="heading text-center wow fadeInUp">
+                  <h1 class="text-white mb-24 wow fadeInUp">Help shape the future of blip</h1>
+                  <div class="content text-center">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSignup">
+                      Take Our Survey
+                    </button>
+                  </div>
+
+                  <!-- start:blip Questionnaire popup -->
+                  <div class="modal fade" id="modalSignup" tabindex="-1" role="dialog" aria-labelledby="modalSignupLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-body">
+                          <button type="button" class="close outline-none" data-dismiss="modal" aria-label="Close">
+                            <i class="fas fa-times text-14 text-gray"></i>
+                          </button>
+
+                          <div class="heading text-center">
+                            <h3 class="text-hkgrotesk font-bold text-alt text-black mb-36">blip Questionnaire</h3>
+                          </div>
+
+                          <form action="">
+                            <div class="form-group">
+                              <label>Which age range do you fall under? *</label>
+                              <select class="form-control input-lg selectpicker">
+                                <option>Below 18</option>
+                                <option>18-24</option>
+                                <option>25-34</option>
+                                <option>35-44</option>
+                                <option>45-54</option>
+                                <option>55-64</option>
+                                <option>65+</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                              <label>Where are you located? (City, Zipcode) *</label>
+                              <input class="form-control" placeholder="(Exapmle: Champaign, 61820)">
+                            </div>
+                            <div class="form-group">
+                              <label>Which of the following best describes where you live? *</label>
+                              <select class="form-control input-lg selectpicker">
+                                <option>Apartment</option>
+                                <option>Condominium</option>
+                                <option>Mobile Home</option>
+                                <option>Multi-family home</option>
+                                <option>Single-family home</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                              <label>Do you currently rent or own your property? *</label>
+                              <select class="form-control input-lg selectpicker">
+                                <option>Rent</option>
+                                <option>Own</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                              <label>What types of A/C units do you have? *</label>
+                              <select class="form-control input-lg selectpicker">
+                                <option>Central A/C</option>
+                                <option>Window A/C</option>
+                                <option>Mini-split A/C</option>
+                                <option>Ductless A/C</option>
+                                <option>Portable A/C</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                              <label>How many A/C units do you have in your home? *</label>
+                              <select class="form-control input-lg selectpicker">
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3+</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                              <label>What is the most important feature of this product to you? *</label>
+                              <p>Select 2 out of the 4 options provided</p>
+                              <p><input type="checkbox" class="form-check-input" name="importantFeature" value="Resiliency" />Resiliency</p>
+                              <p><input type="checkbox" class="form-check-input" name="importantFeature" value="CostCutting" />Cost cutting</p>
+                              <p><input type="checkbox" class="form-check-input" name="importantFeature" value="EnvironmentalImpact" />Environmental impact</p>
+                              <p><input type="checkbox" class="form-check-input" name="importantFeature" value="PortablePowerForRecreationOutdoors" />Portable power for recreation / outdoors</p>
+                            </div>
+                            <div class="form-group">
+                              <label>How did you hear about us? *</label>
+                              <select class="form-control input-lg selectpicker">
+                                <option>Reddit</option>
+                                <option>Quora</option>
+                                <option>From a friend</option>
+                                <option>Other social media platforms</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                              <label>What excites you about our product?</label>
+                              <input class="form-control">
+                            </div>
+                            <div class="form-group">
+                              <label>We would love to chat with you further about your energy consumption needs. Could we follow up with you for an additional 15 minutes of your time?</label>
+                              <p>Please provide your email so we may contact you with further details. There will be compensation provided.</p>
+                              <input type="email" class="form-control">
+                            </div>
+
+                            <div class="form-group mb-0">
+                              <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--end:blip Questionnaire popup-->
+
+<!--                  &lt;!&ndash;start:javascript&ndash;&gt;-->
+<!--                  <script src="../assets/js/jquery.min.js"></script>-->
+<!--                  <script src="../assets/js/popper.min.js"></script>-->
+<!--                  <script src="../assets/js/bootstrap.min.js"></script>-->
+<!--                  &lt;!&ndash;end:javascript&ndash;&gt;-->
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--end:Help shape the future of blip-->
+
+        <!--start:blip is launching soon-->
+        <div class="hero">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
+                <div class="content text-center">
+                  <h2 class="text-white mb-24 wow fadeInUp">blip is launching soon</h2>
+                  <h3 class="text-white mb-24 wow fadeInUp">get notified</h3>
+                  <form>
+                    <p class="text-gray mt-8 mb-24">Name *</p>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="">
+                        <p class="text-gray mt-8 mb-24">First Name</p>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="">
+                        <p class="text-gray mt-8 mb-24">Last Name</p>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <p class="text-gray mt-8 mb-24">Email *</p>
+                      <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                      <p class="text-gray mt-8 mb-24">Zip Code *</p>
+                      <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="">
+                    </div>
+
+                    <div class="form-group mb-0">
+                      <button type="submit" class="btn btn-outline-primary">Get Started</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end:blip is launching soon-->
+
+<!--        &lt;!&ndash;start:Contact&ndash;&gt;-->
+<!--        <div class="hero">-->
+<!--          <div class="container">-->
+<!--            <div class="row">-->
+<!--              <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">-->
+<!--                <div class="content text-center">-->
+<!--                  <h3 class="text-white mb-24 wow fadeInUp">Contact</h3>-->
+<!--                  <p class="text-gray mt-8 mb-24">hello@blipenergy.com</p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;end:Contact&ndash;&gt;-->
+
       </div>
-      <!-- <div class="buttons">
-        <b-row no-gutters>
-          <b-col xs="6" sm="6" md="6" lg="3" xl="3">
-            <router-link :to="'drugSearch'">
-              <b-button
-                variant="success"
-                @click="destEntered"
-                class="nav-buttons"
-                :disabled="!travel"
-              >Find OTC Medicine Equivalent</b-button>
-            </router-link>
-          </b-col>
-          <b-col xs="6" sm="6" md="6" lg="3" xl="3">
-            <b-button variant="info" disabled>Find Pharmacies</b-button>
-          </b-col>
-          <b-col xs="6" sm="6" md="6" lg="3" xl="3">
-            <router-link :to="'factSheet'">
-              <b-button
-                variant="info"
-                @click="destEntered"
-                :disabled="!travel"
-              >Traveler Factsheet</b-button>
-            </router-link>
-          </b-col>
-          <b-col xs="6" sm="6" md="6" lg="3" xl="3">
-            <router-link :to="'keyPhrases'">
-              <b-button
-                variant="info"
-                @click="destEntered"
-                :disabled="!travel"
-              >Medical Phrasebook</b-button>
-              
-            </router-link>
-          </b-col>
-        </b-row>
-      </div> -->
-                                <button id="start-togetherjs">Start TogetherJS</button>
 
     </b-container>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 import banner from "./banner.vue";
+import Footer from "./Footer.vue";
 import { MarkerArea } from 'markerjs';
 import $ from 'jquery';
 
@@ -126,7 +394,8 @@ export default {
     },
   },
   components: {
-    banner
+    banner,
+    Footer
   }
 };
 </script>
@@ -135,7 +404,11 @@ export default {
 $button-color: #e7eff9;
 
 .home-container {
+<<<<<<< HEAD:src/app/shared/components/home.vue
   // background-image: url("../../../assets/background.jpg");
+=======
+  //background-image: url("../assets/background.jpg");
+>>>>>>> d0c93de8b225cc46a02bba7e4d802ff429d5cc36:src/components/home.vue
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -170,7 +443,7 @@ $button-color: #e7eff9;
   // background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 30%);
   border-color: darken($button-color, 15%);
   color: darken(black, 100%);
-  font-style:bold;  
+  font-style:bold;
   font-size:15px;
   height: 8em;
   word-break: break-word;
