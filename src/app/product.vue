@@ -229,8 +229,8 @@
 </template>
 
 <script>
-import banner from "./banner.vue";
-import Footer from "./Footer.vue";
+import banner from "./shared/components/banner.vue";
+import Footer from "./shared/components/Footer.vue";
 
 // import chart from './chart' //导入组件
 // import * as echarts from 'node_mpdules/echarts'

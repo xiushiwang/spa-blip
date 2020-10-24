@@ -221,8 +221,8 @@
 </template>
 
 <script>
-import banner from "./banner.vue";
-import Footer from "./Footer.vue";
+import banner from "./shared/components/banner.vue";
+import Footer from "./shared/components/Footer.vue";
 
 export default {
   name: "about",

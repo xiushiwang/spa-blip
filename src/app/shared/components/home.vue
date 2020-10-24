@@ -404,11 +404,7 @@ export default {
 $button-color: #e7eff9;
 
 .home-container {
-<<<<<<< HEAD:src/app/shared/components/home.vue
-  // background-image: url("../../../assets/background.jpg");
-=======
   //background-image: url("../assets/background.jpg");
->>>>>>> d0c93de8b225cc46a02bba7e4d802ff429d5cc36:src/components/home.vue
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
