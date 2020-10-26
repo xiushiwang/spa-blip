@@ -4,15 +4,15 @@
     <b-container fluid class="home-container">
       <div class="hero hidden xl-block">
 
-        <!--start:SAVING RENTERS MONEY-->
+        <!--start:Saving Renters Money-->
         <div class="card text-white">
-          <img src="../assets/website_photo.jpg" class="card-img" alt="...">
+          <img src="../../../assets/website_photo.jpg" class="card-img" alt="...">
           <div class="card-img-overlay">
             <div class="container">
               <div class="row">
                 <div class="left col-lg-7 col-md-12 col-sm-12">
                   <div class="left-top">
-                    <h1 class="text-48 leading-64 text-white wow fadeInUp">SAVING RENTERS MONEY</h1>
+                    <h1 class="text-48 leading-64 text-white wow fadeInUp">Saving Renters Money</h1>
                     <p class="text-20 leading-36 mt-12 wow fadeInUp">A sustainable energy storage solution focused on saving you money on your electricity bill</p>
                     <button type="button" class="btn btn-outline-white mt-32 wow fadeInUp">Take Our Survey<i class="fas fa-arrow-right text-14 ml-8"></i></button>
                   </div>
@@ -21,7 +21,7 @@
             </div>
           </div>
         </div>
-        <!--end:SAVING RENTERS MONEY-->
+        <!--end:Saving Renters Money-->
 
         <!--start:about blip-->
         <section class="analytics">
@@ -30,7 +30,7 @@
 
               <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="illustration wow fadeInLeft">
-                  <img src="../assets/blip-mockup-update.png" alt="" class="w-100p">
+                  <img src="../../../assets/blip-mockup-update.png" alt="" class="w-100p">
                 </div>
               </div>
 
@@ -71,7 +71,7 @@
                   <div class="card-f flex text-center wow fadeInUp">
                     <div class="card-f-heading">
                       <div class="ic ic-lg ic-badge bg-primary-100 mb-36">
-                        <img src="../assets/blip-icon-home.png" alt="">
+                        <img src="../../../assets/blip-icon-home.png" alt="">
                       </div>
                     </div>
                     <div class="card-f-body">
@@ -87,7 +87,7 @@
                   <div class="card-f flex text-center wow fadeInUp">
                     <div class="card-f-heading">
                       <div class="ic ic-lg ic-badge bg-primary-100 mb-36">
-                        <img src="../assets/blip-icon-piggy.png" alt="">
+                        <img src="../../../assets/blip-icon-piggy.png" alt="">
                       </div>
                     </div>
                     <div class="card-f-body">
@@ -103,7 +103,7 @@
                   <div class="card-f flex text-center wow fadeInUp">
                     <div class="card-f-heading">
                       <div class="ic ic-lg ic-badge bg-primary-100 mb-36">
-                        <img src="../assets/blip-icon-plug.png" alt="">
+                        <img src="../../../assets/blip-icon-plug.png" alt="">
                       </div>
                     </div>
                     <div class="card-f-body">
@@ -146,7 +146,7 @@
               </div>
               <div class="right col-lg-6 col-md-12 col-sm-12">
                 <div class="quotes-user wow fadeInUpRight">
-                  <img src="../assets/alain_duchateau_QvZj7r3efC4_unsplash_lighterblue_Copy.jpg" alt="">
+                  <img src="../../../assets/alain_duchateau_QvZj7r3efC4_unsplash_lighterblue_Copy.jpg" alt="">
                 </div>
               </div>
             </div>
@@ -401,61 +401,62 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$button-color: #e7eff9;
-
-.home-container {
-  //background-image: url("../assets/background.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-  min-height: 100%;
-
-  .enter-dest {
-    position: relative;
-    top: 20%;
-    transform: translateY(-50%);
-
-    .content {
-      margin: 20em 0 0 0;
-    }
-
-    .input {
-      margin: 1em 0 0 0;
-    }
-  }
-}
-
- .buttons {
-    position: relative;
-    // top: 25%;
-    transform: translateY(-25%);
-    // display: inline;
-  }
-
-.btn-warning {
-   background: rgba(76, 175, 80,0.33);
-  // opacity:0.3;
-  // background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 30%);
-  border-color: darken($button-color, 15%);
-  color: darken(black, 100%);
-  font-style:bold;
-  font-size:15px;
-  height: 8em;
-  word-break: break-word;
-  width: 50%;
-  width: 50%;
-}
-.btn-success,
-.btn-info {
-  background-color: $button-color;
-  background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
-  border-color: darken($button-color, 15%);
-  color: darken($button-color, 50%);
-  height: 8em;
-  word-break: break-word;
-  width: 50%;
-}
+@import "src/scss/components/_home.scss";
+//$button-color: #e7eff9;
+//
+//.home-container {
+//  //background-image: url("../assets/background.jpg");
+//  background-repeat: no-repeat;
+//  background-position: center center;
+//  background-attachment: fixed;
+//  background-size: cover;
+//  min-height: 100%;
+//
+//  .enter-dest {
+//    position: relative;
+//    top: 20%;
+//    transform: translateY(-50%);
+//
+//    .content {
+//      margin: 20em 0 0 0;
+//    }
+//
+//    .input {
+//      margin: 1em 0 0 0;
+//    }
+//  }
+//}
+//
+// .buttons {
+//    position: relative;
+//    // top: 25%;
+//    transform: translateY(-25%);
+//    // display: inline;
+//  }
+//
+//.btn-warning {
+//   background: rgba(76, 175, 80,0.33);
+//  // opacity:0.3;
+//  // background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 30%);
+//  border-color: darken($button-color, 15%);
+//  color: darken(black, 100%);
+//  font-style:bold;
+//  font-size:15px;
+//  height: 8em;
+//  word-break: break-word;
+//  width: 50%;
+//  width: 50%;
+//}
+//.btn-success,
+//.btn-info {
+//  background-color: $button-color;
+//  background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
+//  border-color: darken($button-color, 15%);
+//  color: darken($button-color, 50%);
+//  height: 8em;
+//  word-break: break-word;
+//  width: 50%;
+//}
 </style>
 
 
