@@ -6,7 +6,7 @@ import home from './shared/components/home.vue'
 import about from './about.vue'
 import product from './product.vue'
 import testing from './testing.vue'
-import calculator from './calculator.vue'
+import calculator from './calculator/calculator.vue'
 
 Vue.use(Router)
 
