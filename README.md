@@ -1,8 +1,5 @@
 # Welcome to blip
 
-## You can visit us at:
-### http://benetravel-dev.s3-website-us-east-1.amazonaws.com/
-#### (no credentials are necessary to explore functionalities that our app offers)
 
 
 ## In case you decided to be adventurous and do a little project setup
