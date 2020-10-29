@@ -9,8 +9,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+import VueWow from "vue-wow";
 
-import router from './router';
+
+import router from '../src/app/router';
 
 library.add(faPlus)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
@@ -18,6 +20,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
+Vue.use(VueWow)
 
 new Vue({
   router,               // Add this line
