@@ -31,11 +31,22 @@ const webpackConfig = {
                 include: [helpers.root('src')]
             },
             {
-                test: /\.(png|svg|jpg|gif)$/,
+                test: /\.(png|gif|jpg|woff|woff2|eot|ttf|svg)$/,
                 use: [
                     'file-loader',
                 ],
             },
+            // {
+            //     test: /\.(png|gif|jpg|woff|woff2|eot|ttf|svg)$/,
+            //     use: [
+            //         'url-loader',
+            //     ],
+            // },
+            {
+                // HTML LOADER
+                test: /\.html$/,
+                loader: 'html-loader'
+              },
             {
                 test: /\.css$/,
                 use: [
