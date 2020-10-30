@@ -29,7 +29,7 @@ export default {
              </div>
            </b-col>
           <b-col xs="12" sm="12" md="6" lg="6" xl="6">
-            <img class="blip-pig" src="../assets/images/exploding_blip_pig.png" v-if='savings'>
+            <img class="blip-pig" src="../../assets/images/exploding_blip_pig.png" v-if='savings'>
             <h3 v-if='!savings'>Savings will be displayed here</h3>
           </b-col>
         </b-row>
@@ -39,8 +39,8 @@ export default {
 </template>
 
 <script>
-import banner from "./shared/components/banner.vue";
-import savings from "./savings.vue";
+import banner from "../shared/components/banner.vue";
+import savings from "../savings.vue";
 
 export default {
   name: "calculator",
