@@ -10,11 +10,16 @@
           <div class="card-img-overlay">
             <div class="container">
               <div class="row">
-                <div class="left col-lg-7 col-md-12 col-sm-12">
+                <!--                <banner></banner>-->
+                <div class="left-col-lg-7-col-md-12-col-sm-12">
                   <div class="left-top">
                     <h1 class="text-48 leading-64 text-white wow fadeInUp">Saving Renters Money</h1>
-                    <p class="text-20 leading-36 mt-12 wow fadeInUp">A sustainable energy storage solution focused on saving you money on your electricity bill</p>
-                    <button type="button" class="btn btn-outline-white mt-32 wow fadeInUp">Take Our Survey<i class="fas fa-arrow-right text-14 ml-8"></i></button>
+                    <p class="text-20 leading-36 mt-12 wow fadeInUp">
+                      A sustainable energy storage solution focused on saving you money on your electricity bill
+                    </p>
+                    <button type="button" class="btn btn-outline-white mt-32 wow fadeInUp" onclick="window.location.href='../about'">
+                      Learn more &nbsp;&nbsp;<font-awesome-icon icon="arrow-right" style="font-size: 18px"/>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -28,21 +33,21 @@
           <div class="container">
             <div class="row">
 
-              <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="illustration wow fadeInLeft">
+              <div class="col-lg-6-col-md-12-col-sm-12">
+                <div class="illustration-wow-fadeInLeft">
                   <img src="../../../assets/blip-mockup-update.png" alt="" class="w-100p">
                 </div>
               </div>
 
-              <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="heading wow fadeInUp">
-                  <h3 class="text-black mt-16">about blip</h3>
-                  <p class="text-gray mt-20 mb-0">
-                    blip is a residential energy storage product focused on saving you money
-                    on your monthly electric bill by capturing the value of electricity price changes throughout the day,
-                    and delivering that value back to you as savings.
-                    By offering blip at a fraction of the price our competitors charge,
-                    we aim to widely expand access to the savings and benefits energy storage can provide.
+              <div class="col-lg-6-col-md-12-col-sm-12">
+                <div class="heading-wow-fadeInUp">
+                  <h3 class="text-black-mt-16">about blip</h3>
+                  <p class="text-gray-mt-20-mb-0">
+                    We supply enterprises, organizations and institutes of high-tech industries with modern components.
+                    We build long-term trusting relationships with our customers and partnes for further fruitful cooperations.
+                    <br>
+                    <br>
+                    From year to year we strive to invent the most innovative technology that is used by both small enterprises and space enterprises.
                   </p>
                 </div>
               </div>
@@ -57,9 +62,9 @@
           <div class="container">
 
             <div class="row">
-              <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
-                <div class="heading text-center wow fadeInUp">
-                  <h3 class="text-black mt-16">Clean energy is no longer just for homeowners</h3>
+              <div class="col-lg-8-offset-lg-2-col-md-12-col-sm-12">
+                <div class="heading-text-center-wow-fadeInUp">
+                  <h3 class="text-black-mt-16">Clean energy is no longer just for homeowners</h3>
                 </div>
               </div>
             </div>
@@ -67,48 +72,48 @@
             <div class="content">
               <div class="row">
 
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="col-lg-4-col-md-6-col-sm-12">
                   <div class="card-f flex text-center wow fadeInUp">
                     <div class="card-f-heading">
-                      <div class="ic ic-lg ic-badge bg-primary-100 mb-36">
+                      <div class="ic">
                         <img src="../../../assets/blip-icon-home.png" alt="">
                       </div>
                     </div>
                     <div class="card-f-body">
-                      <h4 class="text-20 text-black mb-12">The where</h4>
-                      <p class="text-gray mb-20">
+                      <h4 class="text-20-text-black-mb-12">The where</h4>
+                      <p class="text-gray-mb-20">
                         blip works in any home or apartment, and due to its portable design, you can bring it with you wherever you live
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="col-lg-4-col-md-6-col-sm-12">
                   <div class="card-f flex text-center wow fadeInUp">
                     <div class="card-f-heading">
-                      <div class="ic ic-lg ic-badge bg-primary-100 mb-36">
+                      <div class="ic">
                         <img src="../../../assets/blip-icon-piggy.png" alt="">
                       </div>
                     </div>
                     <div class="card-f-body">
-                      <h4 class="text-20 text-black mb-12">The what</h4>
-                      <p class="text-gray mb-20">
+                      <h4 class="text-20-text-black-mb-12">The what</h4>
+                      <p class="text-gray-mb-20">
                         blip charges overnight, when electricity is cheap, and dispenses power during the day, when electricity is expensive
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="col-lg-4-col-md-6-col-sm-12">
                   <div class="card-f flex text-center wow fadeInUp">
                     <div class="card-f-heading">
-                      <div class="ic ic-lg ic-badge bg-primary-100 mb-36">
+                      <div class="ic">
                         <img src="../../../assets/blip-icon-plug.png" alt="">
                       </div>
                     </div>
                     <div class="card-f-body">
-                      <h4 class="text-20 text-black mb-12">The how</h4>
-                      <p class="text-gray mb-20">
+                      <h4 class="text-20-text-black-mb-12">The how</h4>
+                      <p class="text-gray-mb-20">
                         Set it and forget it: plug blip into any standard outlet and any appliance into blip. No professional installation required.
                       </p>
                     </div>
@@ -119,7 +124,9 @@
             </div>
 
             <div class="card-pricing-footer">
-              <a href="./product" class="btn btn-outline-primary btn-block d-flex justify-between items-center">LEARN MORE<i class="fas fa-arrow-right text-14"></i></a>
+              <button type="button" class="btn-btn-outline-primary-btn-block-d-flex-justify-between-items-center" onclick="window.location.href='../about'">
+                Learn More
+              </button>
             </div>
 
           </div>
@@ -130,16 +137,28 @@
         <section class="quotes">
           <div class="container">
             <div class="row">
+              <div class="col-lg-8-offset-lg-2-col-md-12-col-sm-12">
+                <div class="heading-text-center-wow-fadeInUp">
+                  <h3 class="text-black-mt-16">blip helps the planet too</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
               <div class="left col-lg-6 col-md-12 col-sm-12">
                 <div class="content">
-                  <h3 class="text-black mt-16">blip helps the planet too</h3>
-                  <p class="text-black mt-24 mb-16 wow fadeInUp" data-wow-duration="3s">
+
+                  <p class="text-black-mt-24-mb-16-wow-fadeInUp" data-wow-duration="3s">
                     Imagine a world where dirty plants are shut down because consumers control their power consumption without sacrificing their quality of life.
-                  </p>
-                  <p class="text-black mt-24 mb-16 wow fadeInUp" data-wow-duration="3s">
+                    <!--                  </p>-->
+                    <br>
+                    <br>
+                    <!--                  <p class="text-black-mt-24-mb-16-wow-fadeInUp" data-wow-duration="3s">-->
                     By offering a way to store power, and using it during peak demand times, blip reduces our reliance on dirty energy from peaker plants.
-                  </p>
-                  <p class="text-black mt-24 mb-16 wow fadeInUp" data-wow-duration="3s">
+                    <!--                  </p>-->
+                    <br>
+                    <br>
+                    <!--                  <p class="text-black-mt-24-mb-16-wow-fadeInUp" data-wow-duration="3s">-->
                     We can work together to decommission dirty plants by shifting demand away from those peak hours, one home at a time. If we each help a little, we can all do a lot.
                   </p>
                 </div>
@@ -155,15 +174,15 @@
         <!--end:blip helps the planet too-->
 
         <!--start:Help shape the future of blip-->
-        <section class="features">
-          <div class="container">
-            <div class="row">
+        <section class="featuresII">
+          <div class="containerII">
+            <div class="rowII">
               <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
                 <div class="heading text-center wow fadeInUp">
-                  <h1 class="text-white mb-24 wow fadeInUp">Help shape the future of blip</h1>
+                  <h1 class="text-whiteOmb-24OwowOfadeInUp">Help shape the future of blip</h1>
                   <div class="content text-center">
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSignup">
-                      Take Our Survey
+                      Take the Survey
                     </button>
                   </div>
 
@@ -270,11 +289,11 @@
                   </div>
                   <!--end:blip Questionnaire popup-->
 
-<!--                  &lt;!&ndash;start:javascript&ndash;&gt;-->
-<!--                  <script src="../assets/js/jquery.min.js"></script>-->
-<!--                  <script src="../assets/js/popper.min.js"></script>-->
-<!--                  <script src="../assets/js/bootstrap.min.js"></script>-->
-<!--                  &lt;!&ndash;end:javascript&ndash;&gt;-->
+                  <!--                  &lt;!&ndash;start:javascript&ndash;&gt;-->
+                  <!--                  <script src="../assets/js/jquery.min.js"></script>-->
+                  <!--                  <script src="../assets/js/popper.min.js"></script>-->
+                  <!--                  <script src="../assets/js/bootstrap.min.js"></script>-->
+                  <!--                  &lt;!&ndash;end:javascript&ndash;&gt;-->
 
                 </div>
               </div>
@@ -283,62 +302,62 @@
         </section>
         <!--end:Help shape the future of blip-->
 
-        <!--start:blip is launching soon-->
-        <div class="hero">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
-                <div class="content text-center">
-                  <h2 class="text-white mb-24 wow fadeInUp">blip is launching soon</h2>
-                  <h3 class="text-white mb-24 wow fadeInUp">get notified</h3>
-                  <form>
-                    <p class="text-gray mt-8 mb-24">Name *</p>
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="">
-                        <p class="text-gray mt-8 mb-24">First Name</p>
-                      </div>
-                      <div class="form-group col-md-6">
-                        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="">
-                        <p class="text-gray mt-8 mb-24">Last Name</p>
-                      </div>
-                    </div>
+        <!--        &lt;!&ndash;start:blip is launching soon&ndash;&gt;-->
+        <!--        <div class="hero">-->
+        <!--          <div class="containerIII">-->
+        <!--            <div class="rowIII">-->
+        <!--              <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">-->
+        <!--                <div class="content text-center">-->
+        <!--                  <h2 class="text-whiteIIImb-24IIIwowIIIfadeInUp">blip is launching soon</h2>-->
+        <!--                  <h3 class="text-whiteIIImb-24IIIwowIIIfadeInUp">get notified</h3>-->
+        <!--                  <form>-->
+        <!--                    <p class="text-gray mt-8 mb-24">Name*</p>-->
+        <!--                    <div class="form-row">-->
+        <!--                      <div class="form-group col-md-6">-->
+        <!--                        <input type="text" class="form-control-name" aria-describedby="int2" placeholder="First">-->
+        <!--&lt;!&ndash;                        <p class="text-gray mt-8 mb-24">First Name</p>&ndash;&gt;-->
+        <!--                      </div>-->
+        <!--                      <div class="form-group col-md-6">-->
+        <!--                        <input type="text" class="form-control-name" aria-describedby="int2" placeholder="Last">-->
+        <!--&lt;!&ndash;                        <p class="text-gray mt-8 mb-24">Last Name</p>&ndash;&gt;-->
+        <!--                      </div>-->
+        <!--                    </div>-->
 
-                    <div class="form-group">
-                      <p class="text-gray mt-8 mb-24">Email *</p>
-                      <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="">
-                    </div>
+        <!--                    <div class="form-group">-->
+        <!--                      <p class="text-gray mt-8 mb-24">Email*</p>-->
+        <!--                      <input type="text" class="form-control-email" aria-describedby="emailHelp" placeholder="">-->
+        <!--                    </div>-->
 
-                    <div class="form-group">
-                      <p class="text-gray mt-8 mb-24">Zip Code *</p>
-                      <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="">
-                    </div>
+        <!--                    <div class="form-group">-->
+        <!--                      <p class="text-gray mt-8 mb-24">Zip Code*</p>-->
+        <!--                      <input type="text" class="form-control-zip" aria-describedby="areaCode" placeholder="">-->
+        <!--                    </div>-->
 
-                    <div class="form-group mb-0">
-                      <button type="submit" class="btn btn-outline-primary">Get Started</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--end:blip is launching soon-->
+        <!--                    <div class="form-group mb-0">-->
+        <!--                      <button type="submit" class="btn btn-outline-primary">Take the Survey</button>-->
+        <!--                    </div>-->
+        <!--                  </form>-->
+        <!--                </div>-->
+        <!--              </div>-->
+        <!--            </div>-->
+        <!--          </div>-->
+        <!--        </div>-->
+        <!--        &lt;!&ndash;end:blip is launching soon&ndash;&gt;-->
 
-<!--        &lt;!&ndash;start:Contact&ndash;&gt;-->
-<!--        <div class="hero">-->
-<!--          <div class="container">-->
-<!--            <div class="row">-->
-<!--              <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">-->
-<!--                <div class="content text-center">-->
-<!--                  <h3 class="text-white mb-24 wow fadeInUp">Contact</h3>-->
-<!--                  <p class="text-gray mt-8 mb-24">hello@blipenergy.com</p>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        &lt;!&ndash;end:Contact&ndash;&gt;-->
+        <!--        &lt;!&ndash;start:Contact&ndash;&gt;-->
+        <!--        <div class="hero">-->
+        <!--          <div class="container">-->
+        <!--            <div class="row">-->
+        <!--              <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">-->
+        <!--                <div class="content text-center">-->
+        <!--                  <h3 class="text-white mb-24 wow fadeInUp">Contact</h3>-->
+        <!--                  <p class="text-gray mt-8 mb-24">hello@blipenergy.com</p>-->
+        <!--                </div>-->
+        <!--              </div>-->
+        <!--            </div>-->
+        <!--          </div>-->
+        <!--        </div>-->
+        <!--        &lt;!&ndash;end:Contact&ndash;&gt;-->
 
       </div>
 
@@ -352,11 +371,14 @@ import banner from "./banner.vue";
 import Footer from "./Footer.vue";
 import { MarkerArea } from 'markerjs';
 import $ from 'jquery';
+// import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+// import {faArrowRight} from '@fortawesome/free-solid-svg-icons/faArrowRight'
 
 export default {
   name: "home",
   data() {
     return {
+      // faArrowRight,
       travel: null,
       options: [
         { value: null, text: "Please select a destination" },
@@ -389,19 +411,25 @@ export default {
       console.log("is it even reaching");
       this.$root.$emit("destWasEntered", this.travel);
     },
-      clickFunction() {
+    clickFunction() {
       console.log("is it even reaching");
     },
   },
+  // computed: {
+  //   icon () {
+  //     return faArrowRight
+  //   }
+  // },
   components: {
     banner,
+    // FontAwesomeIcon,
     Footer
   }
 };
 </script>
 
 <style lang="scss" scoped>
-@import "src/scss/components/_home.scss";
+@import "./src/scss/components/_home.scss";
 //$button-color: #e7eff9;
 //
 //.home-container {
