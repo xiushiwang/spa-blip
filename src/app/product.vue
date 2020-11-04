@@ -1,47 +1,51 @@
-<template>
+<template xmlns="http://www.w3.org/1999/html">
   <div>
     <banner></banner>
-    <b-container>
+    <div class="main">
       <!--start:Electricity rates vary throughout the day-->
-      <section class="real-estate-how-work">
+      <section class="FFFFFF h-1152px">
         <div class="container">
           <div class="heading wow fadeInUp">
             <div class="row">
               <div class="col col-md-6">
-                <h3 class="text-36 leading-48">Electricity rates vary throughout the day</h3>
+                <h2 class="h2 two54B77 t-right width-403px">Electricity rates vary throughout the day</h2>
               </div>
               <div class="col col-md-6">
-                <p class="text-gray leading-32">
-                  Electricity is more expensive during “peak” hours - when many people return home and turn on lights and other devices.
-                </p>
-                <p class="text-gray leading-32">
-                  The costs are lower during “off-peak” hours - when most are at work, school, or sleeping.
+                <p class="p2 one83B56 t-left width-526px">
+                  blip aims to democratize energy storage while lowering youElectricity is more expensive during “peak” hours
+                  - when many people return home and turn on lights and other devices.
+                  <br><br>
+                  The costs are lower during “off-peak” hours - when most are at work, school,
+                  or sleeping.r carbon footprint - one renter at a time.
                 </p>
               </div>
             </div>
           </div>
 
           <div class="row">
-            <div id="chartOne" style="width: 1000px;height: 400px;"></div>
-            <h4 class="text-20 text-black mb-12">blip stores electricity when it’s cheap</h4>
+            <div id="chartOne" class="chart" style="width: 752px;height: 592px;"></div>
           </div>
+
+          <div class="row margin_top-50px">
+            <p class="p2 one83B56 t-center width-100percent">blip stores electricity when it’s cheap</p>
+          </div>
+
         </div>
       </section>
       <!--end:Electricity rates vary throughout the day-->
 
       <!--start:Don’t pay for high cost electricity-->
-      <section class="real-estate-how-work">
+      <section class="DEF5FF h-1152px">
         <div class="container">
           <div class="heading wow fadeInUp">
             <div class="row">
               <div class="col col-md-6">
-                <h3 class="text-36 leading-48">Don’t pay for high cost electricity</h3>
+                <h2 class="h2 two54B77 t-right width-403px">Don’t pay for high cost electricity</h2>
               </div>
               <div class="col col-md-6">
-                <p class="text-gray leading-32">
+                <p class="p2 one83B56 t-left width-526px">
                   blip stores cheap electricity for use later in the day
-                </p>
-                <p class="text-gray leading-32">
+                <br><br>
                   By using stored energy while the real time price of electricity is expensive, you save money on your electric bill
                 </p>
               </div>
@@ -49,21 +53,23 @@
           </div>
 
           <div class="row">
-            <div id="chartTwo" style="width: 1000px;height: 400px;"></div>
-            <h4 class="text-20 text-black mb-12">blip saves you money when electricity is expensive</h4>
+            <div id="chartTwo" class="chart" style="width: 752px;height: 592px;"></div>
+          </div>
+          <div class="row margin_top-50px">
+              <p class="p2 one83B56 t-center width-100percent">blip saves you money when electricity is expensive</p>
           </div>
         </div>
       </section>
       <!--end:Don’t pay for high cost electricity-->
 
       <!--start:So why choose blip?-->
-      <section class="features">
+      <section class="features FFFFFF h-658px">
         <div class="container">
 
           <div class="row">
             <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
               <div class="heading text-center wow fadeInUp">
-                <h1 class="text-black mt-16">So why choose blip?</h1>
+                <h2 class="h2 two54B77 t-center">So why choose blip?</h2>
               </div>
             </div>
           </div>
@@ -74,13 +80,13 @@
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card-f flex text-center wow fadeInUp">
                   <div class="card-f-heading">
-                    <div class="ic ic-lg ic-badge bg-primary-100 mb-36">
+                    <div class="ic ic-lg ic-badge bg-primary-100 mb-36 w-100p h-100p" >
                       <img src="../assets/blip-icons-product-portable.png" alt="">
                     </div>
                   </div>
                   <div class="card-f-body">
-                    <h4 class="text-20 text-black mb-12">Portable</h4>
-                    <p class="text-gray mb-20">
+                    <h3 class="h3 two54B77 t-center">Portable</h3>
+                    <p class="p2 two54B77 t-center">
                       Move frequently? No problem. You can easily take blip with you to your next home.
                     </p>
                   </div>
@@ -90,13 +96,13 @@
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card-f flex text-center wow fadeInUp">
                   <div class="card-f-heading">
-                    <div class="ic ic-lg ic-badge bg-primary-100 mb-36">
+                    <div class="ic ic-lg ic-badge bg-primary-100 mb-36 w-100p h-100p">
                       <img src="../assets/blip-icons-product-installation.png" alt="">
                     </div>
                   </div>
                   <div class="card-f-body">
-                    <h4 class="text-20 text-black mb-12">No installation required</h4>
-                    <p class="text-gray mb-20">
+                    <h3 class="h3 two54B77 t-center">No installation required</h3>
+                    <p class="p2 two54B77 t-center">
                       blip plugs right into a wall outlet. No electricians necessary.
                     </p>
                   </div>
@@ -106,13 +112,13 @@
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card-f flex text-center wow fadeInUp">
                   <div class="card-f-heading">
-                    <div class="ic ic-lg ic-badge bg-primary-100 mb-36">
+                    <div class="ic ic-lg ic-badge bg-primary-100 mb-36 w-100p h-100p">
                       <img src="../assets/blip-icons-product-emission.png" alt="">
                     </div>
                   </div>
                   <div class="card-f-body">
-                    <h4 class="text-20 text-black mb-12">Reduce emissions</h4>
-                    <p class="text-gray mb-20">
+                    <h3 class="h3 two54B77 t-center">Reduce emissions</h3>
+                    <p class="p2 two54B77 t-center">
                       Some dirty power plants exist only to meet demand during peak hours.
                       By lowering demand at peak times, these plants do not have to run.
                     </p>
@@ -124,7 +130,7 @@
           </div>
 
           <div class="card-pricing-footer">
-            <a href="./calculator" class="btn btn-outline-primary btn-block d-flex justify-between items-center">SEE HOW MUCH YOU WILL SAVE<i class="fas fa-arrow-right text-14"></i></a>
+            <button type="button" class="btn btn-outline-254B77" onclick="window.location.href='./calculator'">See How Much You’ll Save</button>
           </div>
 
         </div>
@@ -132,37 +138,49 @@
       <!--end:So why choose blip?-->
 
       <!--start:FAQs-->
-      <section id="career-detail" class="career-detail xl-pt-36 pb-120">
+      <section class="FAQs oneD3755 h-1539px">
         <div class="container">
-          <div class="col-12 col-sm-12 col-md-12 col-lg-7 offset-lg-1 col-xl-7 offset-xl-1">
+          <div class="w-1109px">
             <div class="pr-16">
-              <h1 class="text-hkgrotesk font-bold text-black mb-24 wow fadeInUp">FAQs</h1>
+              <h2 class="h2 c-FFFFFF t-center">FAQs</h2>
 
-              <h4 class="text-36 mb-12 mt-40 text-black wow fadeInUp">How much money can I expect to save?</h4>
-              <p class="text-gray wow fadeInUp">
-                It depends on where you live. blip can save you $50 a month or more. Check our
-                <a href="./calculator" class=""><u>savings calculator</u></a>
-                for more information!
-              </p>
-              <h4 class="text-36 mb-12 mt-40 text-black wow fadeInUp">Do I need an electrician to install it?</h4>
-              <p class="text-gray wow fadeInUp">
-                Nope! Just plug it into your outlet. You will then finish setting up your blip via your user dashboard.
-              </p>
-              <h4 class="text-36 mb-12 mt-40 text-black wow fadeInUp">How does blip help the environment?</h4>
-              <p class="text-gray wow fadeInUp">
-                Some dirty power plants exist only to meet demand during peak energy times.
-                By lowering demand at peak times, these plants won’t have to run as often.
-                When enough blip units are installed, utilities may be able to shut down these dirty power plants altogether.
-              </p>
-              <h4 class="text-36 mb-12 mt-40 text-black wow fadeInUp">I have an idea for blip. Who can I talk to?</h4>
-              <p class="text-gray wow fadeInUp">
-                We would love it if you filled out our survey! You can help shape the future of blip.
-                If you have have more ideas, please reach out by filling out the contact form.
-              </p>
+              <div class="topline">
+                <h3 class="h3 c-B0E7FF t-left wow fadeInUp">How much money can I expect to save?</h3>
+                <p class="p2 c-FFFFFF t-left w-511px wow fadeInUp">
+                  It depends on where you live. blip can save you $50 a month or more. Check our
+                  <a href="./calculator" class=""><u>savings calculator</u></a>
+                  for more information!
+                </p>
+              </div>
 
-              <div class="content text-center">
-                <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#modalSignup">
-                  Take Our Survey
+              <div class="topline">
+                <h3 class="h3 c-B0E7FF t-left wow fadeInUp">Do I need an electrician to install it?</h3>
+                <p class="p2 c-FFFFFF t-left w-511px wow fadeInUp">
+                  Nope! Just plug it into your outlet. You will then finish setting up your blip via your user dashboard.
+                </p>
+              </div>
+
+              <div class="topline">
+                <h3 class="h3 c-B0E7FF t-left wow fadeInUp">How does blip help the environment?</h3>
+                <p class="p2 c-FFFFFF t-left w-511px wow fadeInUp">
+                  Some dirty power plants exist only to meet demand during peak energy times.
+                  By lowering demand at peak times, these plants won’t have to run as often.
+                  When enough blip units are installed, utilities may be able to shut down these dirty power plants altogether.
+                </p>
+              </div>
+
+              <div class="topline">
+                <h3 class="h3 c-B0E7FF t-left wow fadeInUp">I have an idea for blip. Who can I talk to?</h3>
+                <p class="p2 c-FFFFFF t-left w-511px wow fadeInUp">
+                  We would love it if you filled out our survey! You can help shape the future of blip.
+                  If you have have more ideas, please reach out by filling out the contact form.
+                </p>
+              </div>
+
+              <div class="content t-center">
+                <p class="p2 c-FFFFFF t-center wow fadeInUp">Have more questions?</p>
+                <button type="button" class="btn btn-outline-B0E7FF" data-toggle="modal" data-target="#modalSignup">
+                  Contact Us
                 </button>
               </div>
 
@@ -172,58 +190,16 @@
       </section>
       <!--end:FAQs-->
 
-      <!--start:Have more questions?-->
-      <section class="landing-agency-cta wow fadeInUp">
-        <div class="container">
-          <h3 class="wow fadeInUp">Have more questions?</h3>
-          <a href="https://www.blipenergy.com/contact-us" class="btn btn-outline-primary">CONTACT US<i class="fas fa-arrow-right text-14"></i></a>
-        </div>
-      </section>
-      <!--end:Have more questions?-->
+<!--      &lt;!&ndash;start:Have more questions?&ndash;&gt;-->
+<!--      <section class="landing-agency-cta wow fadeInUp">-->
+<!--        <div class="container">-->
+<!--          <h3 class="wow fadeInUp">Have more questions?</h3>-->
+<!--          <a href="https://www.blipenergy.com/contact-us" class="btn btn-outline-primary">CONTACT US<i class="fas fa-arrow-right text-14"></i></a>-->
+<!--        </div>-->
+<!--      </section>-->
+<!--      &lt;!&ndash;end:Have more questions?&ndash;&gt;-->
 
-      <!--start:blip is launching soon-->
-      <div class="hero">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
-              <div class="content text-center">
-                <h2 class="text-white mb-24 wow fadeInUp">blip is launching soon</h2>
-                <h3 class="text-white mb-24 wow fadeInUp">get notified</h3>
-                <form>
-                  <p class="text-gray mt-8 mb-24">Name *</p>
-                  <div class="form-row">
-                    <div class="form-group col-md-6">
-                      <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="">
-                      <p class="text-gray mt-8 mb-24">First Name</p>
-                    </div>
-                    <div class="form-group col-md-6">
-                      <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="">
-                      <p class="text-gray mt-8 mb-24">Last Name</p>
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <p class="text-gray mt-8 mb-24">Email *</p>
-                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="">
-                  </div>
-
-                  <div class="form-group">
-                    <p class="text-gray mt-8 mb-24">Zip Code *</p>
-                    <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="">
-                  </div>
-
-                  <div class="form-group mb-0">
-                    <button type="submit" class="btn btn-outline-primary">Get Started</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--end:blip is launching soon-->
-
-    </b-container>
+    </div>
     <Footer></Footer>
   </div>
 </template>
@@ -268,6 +244,7 @@ export default {
           //   type: 'cross'
           // }
         },
+        color:['#254B77'],
         legend: {
           data: ['Utility Costs Throughout the Day']
         },
@@ -296,6 +273,13 @@ export default {
           data: [1, 1, 2, 1.5, 2, 5, 2, 0],
           type: 'line',
           smooth: true,
+          itemStyle:{
+            normal:{
+              lineStyle:{
+                color:'#254B77'
+              }
+            }
+          }
         }]
       })
 
@@ -308,6 +292,7 @@ export default {
         tooltip: {
           trigger: 'axis'
         },
+        color:['#FFFFFF','#183B56'],
         legend: {
           data: ['Utility Costs Throughout the Day', 'Lower Utility Costs with blip']
         },
@@ -336,12 +321,26 @@ export default {
             data: [1, 1, 2, 1.5, 2, 5, 2, 0],
             type: 'line',
             smooth: true,
+            itemStyle:{
+              normal:{
+                lineStyle:{
+                  color:'#FFFFFF'
+                }
+              }
+            }
           },
           {
             name: 'Lower Utility Costs with blip',
             data: [1, 1, 1.5, 1, 1, 2, 2, 1],
             type: 'line',
             smooth: true,
+            itemStyle:{
+              normal:{
+                lineStyle:{
+                  color:'#183B56'
+                }
+              }
+            }
           }
         ]
       })
@@ -357,61 +356,62 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$button-color: #e7eff9;
-
-.home-container {
-  background-image: url("../assets/images/background.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-  min-height: 100%;
-
-  .enter-dest {
-    position: relative;
-    top: 20%;
-    transform: translateY(-50%);
-
-    .content {
-      margin: 20em 0 0 0;
-    }
-
-    .input {
-      margin: 1em 0 0 0;
-    }
-  }
-}
-
- .buttons {
-    position: relative;
-    // top: 25%;
-    transform: translateY(-25%);
-    // display: inline;
-  }
-
-.btn-warning {
-   background: rgba(76, 175, 80,0.33);
-  // opacity:0.3;
-  // background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 30%);
-  border-color: darken($button-color, 15%);
-  color: darken(black, 100%);
-  font-style:bold;  
-  font-size:15px;
-  height: 8em;
-  word-break: break-word;
-  width: 50%;
-  width: 50%;
-}
-.btn-success,
-.btn-info {
-  background-color: $button-color;
-  background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
-  border-color: darken($button-color, 15%);
-  color: darken($button-color, 50%);
-  height: 8em;
-  word-break: break-word;
-  width: 50%;
-}
+@import "src/scss/pages/_product.scss";
+//$button-color: #e7eff9;
+//
+//.home-container {
+//  background-image: url("../assets/images/background.jpg");
+//  background-repeat: no-repeat;
+//  background-position: center center;
+//  background-attachment: fixed;
+//  background-size: cover;
+//  min-height: 100%;
+//
+//  .enter-dest {
+//    position: relative;
+//    top: 20%;
+//    transform: translateY(-50%);
+//
+//    .content {
+//      margin: 20em 0 0 0;
+//    }
+//
+//    .input {
+//      margin: 1em 0 0 0;
+//    }
+//  }
+//}
+//
+// .buttons {
+//    position: relative;
+//    // top: 25%;
+//    transform: translateY(-25%);
+//    // display: inline;
+//  }
+//
+//.btn-warning {
+//   background: rgba(76, 175, 80,0.33);
+//  // opacity:0.3;
+//  // background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 30%);
+//  border-color: darken($button-color, 15%);
+//  color: darken(black, 100%);
+//  font-style:bold;
+//  font-size:15px;
+//  height: 8em;
+//  word-break: break-word;
+//  width: 50%;
+//  width: 50%;
+//}
+//.btn-success,
+//.btn-info {
+//  background-color: $button-color;
+//  background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
+//  border-color: darken($button-color, 15%);
+//  color: darken($button-color, 50%);
+//  height: 8em;
+//  word-break: break-word;
+//  width: 50%;
+//}
 </style>
 
 

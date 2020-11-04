@@ -379,11 +379,11 @@ export default {
   data() {
     return {
       // faArrowRight,
-      travel: null,
-      options: [
-        { value: null, text: "Please select a destination" },
-        { value: "Tokyo", text: "Tokyo" }
-      ]
+      // travel: null,
+      // options: [
+      //   { value: null, text: "Please select a destination" },
+      //   { value: "Tokyo", text: "Tokyo" }
+      // ]
     };
   },
   mounted() {

@@ -33,21 +33,36 @@
         <b-col xs="12" sm="12" md="12" lg="12" xl="12">
           <h3>Choose your utility provider</h3>
           <b-row class="utility_select">
-            <b-col xs="12" sm="12" md="6" lg="6" xl="4">
-              <div class="card">
-                <div class="card-body">ComEd</div>
+<!--            Start: add-->
+            <b-col xs="12" sm="12" md="6" lg="6" xl="4" v-if="posts && posts.length">
+              <div class="card" v-for="post of posts">
+<!--                <button v-if="post.userId == 1"><strong>{{post.title}}</strong></button>-->
+<!--                <div class="card-body">{{post.utilities.utility_name}}</div>-->
+                <b-button
+                variant="outline-primary"
+                v-on:click="list(post.utilities.utility_name)"
+                >
+                  {{post.utilities.utility_name}}
+                </b-button>
               </div>
             </b-col>
-            <b-col xs="12" sm="12" md="4" lg="4" xl="4">
-              <div class="card">
-                <div class="card-body">Edison International</div>
-              </div>
-            </b-col>
-            <b-col xs="12" sm="12" md="4" lg="4" xl="4">
-              <div class="card">
-                <div class="card-body">PG&E</div>
-              </div>
-            </b-col>
+<!--            End: add-->
+
+<!--            <b-col xs="12" sm="12" md="6" lg="6" xl="4">-->
+<!--              <div class="card">-->
+<!--                <div class="card-body">ComEd</div>-->
+<!--              </div>-->
+<!--            </b-col>-->
+<!--            <b-col xs="12" sm="12" md="4" lg="4" xl="4">-->
+<!--              <div class="card">-->
+<!--                <div class="card-body">Edison International</div>-->
+<!--              </div>-->
+<!--            </b-col>-->
+<!--            <b-col xs="12" sm="12" md="4" lg="4" xl="4">-->
+<!--              <div class="card">-->
+<!--                <div class="card-body">PG&E</div>-->
+<!--              </div>-->
+<!--            </b-col>-->
           </b-row>
         </b-col>
       </b-row>
@@ -84,16 +99,35 @@
 </template>
 
 <script>
+import axios from 'axios'; //add
+
 export default {
   name: "savings",
   data: function() {
     return {
       data:'display this!',
       seen: true,
-      zipcode: ""
+      zipcode: "",
+      //Start: add
+      posts: [],
+      errors: []
+    //End: add
     };
   },
-  computed: {
+  //Start: add
+  created() {
+    axios.get(`./src/assets/JSONforTesting/10009.json`)
+        .then(response => {
+          // JSON responses are automatically parsed.
+          this.posts = response.data
+        })
+        .catch(e => {
+          this.errors.push(e)
+        })
+  },
+  //End: add
+
+    computed: {
     isDisabled: function() {
       return !this.zipcode;
     }
@@ -110,7 +144,14 @@ export default {
       const data = this.data;
        this.$emit('display-savings', data)
        console.log('data', data);
+    },
+
+    //Start: add
+    list(utility) {
+      // alert(utility)
+      return(<p>{{utility}}</p>)
     }
+    //End: add
   },
   components: {}
 };
