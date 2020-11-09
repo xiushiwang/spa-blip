@@ -6,7 +6,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'vue-material-design-icons/styles.css'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faPlus, faArrowRight, faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import VueWow from "vue-wow";
@@ -17,7 +17,7 @@ import 'vue-form-wizard/dist/vue-form-wizard.min.css'
 
 import router from '../src/app/router';
 
-library.add(faPlus)
+library.add(faPlus, faArrowRight, faCoffee)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false

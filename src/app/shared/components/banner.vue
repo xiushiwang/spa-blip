@@ -61,6 +61,8 @@ export default {
 .navbar {
   background-color: #ffffff;
   height: 4em !important;
+  box-shadow: 0px 2px 50px -5px rgba(0, 0, 0, 0.09);
+  //box-shadow: 0px 1px 4px rgba(0,0,0,0.3);, 0px 0px 20px rgba(0,0,0,0.1) inset;
   .bene-logo {
     padding-bottom: 0.5em;
     a {
