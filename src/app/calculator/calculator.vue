@@ -25,12 +25,26 @@ export default {
            <b-col xs="12" sm="12" md="6" lg="6" xl="6">
               <h1 class="blip-headline">See how blip can save you money</h1>
              <div class="zipcode-container">
-             <savings @display-savings="displaySavings"></savings>
+             <savings
+                 @display-savings="displaySavings"
+                 v-on:pickedUtility="getUtility"
+                 v-on:planPicked="getPlan"
+                 v-on:planClickd="getPlanClicked"
+                 v-on:savePerYear="getSaving"
+             ></savings>
              </div>
            </b-col>
           <b-col xs="12" sm="12" md="6" lg="6" xl="6">
             <img class="blip-pig" src="../../assets/images/exploding_blip_pig.png" v-if='savings'>
-            <h3 v-if='!savings'>Savings will be displayed here</h3>
+<!--            <h3 v-if='!savings'>Savings will be displayed here</h3>-->
+            <div v-if='!savings'>
+              <utility
+                  :pickedUtility = "pickedUtility"
+                  :planPicked = "planPicked"
+                  :planClickd = "planClickd"
+                  :save-per-year="savePerYear"
+              ></utility>
+            </div>
           </b-col>
         </b-row>
     </b-container>                   
@@ -41,12 +55,18 @@ export default {
 <script>
 import banner from "../shared/components/banner.vue";
 import savings from "../savings.vue";
+import graph from "./graph.vue";
+import utility from "./utility.vue"
 
 export default {
   name: "calculator",
   data() {
     return {
       savings: true,
+      pickedUtility: [],
+      planPicked: [],
+      planClickd: false,
+      savePerYear: 0
     };
   },
   mounted() {
@@ -56,11 +76,30 @@ export default {
     displaySavings(value) {
       console.log('waht', value);
       this.savings = false;
+      // console.log('plan',this.planPicked)
+    },
+    //add start
+    getUtility(utility){
+      this.pickedUtility = utility
+      // console.log('hhhhhhhh',this.pickedUtility)
+    },
+    getPlan(plan){
+      this.planPicked = plan
+      // console.log('hhhhhhhh',this.pickedUtility)
+    },
+    getPlanClicked(planClicked){
+      this.planClickd = planClicked
+    },
+    getSaving(saving){
+      this.savePerYear = saving
+      console.log('saving in father', this.savePerYear)
     }
+    //add end
   },
   components: {
     banner,
-    savings
+    savings,
+    utility
 
   }
 };
