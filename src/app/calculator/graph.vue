@@ -1,59 +1,64 @@
 <template>
   <div>
-    <b-container class="zipcode_container" v-if="seen">
-      <b-row>
-        <b-col xs="12" sm="12" md="12" lg="12" xl="12">
+    <b-container class="saving_container t-center w-100p m-l-0 p-l-0" v-if="seen">
+      <b-row class="withBlip_box t-center">
 <!--          <h4 class="blip-area">{{pickedUtility.utilities.utility_name}}</h4>-->
-          <h4 class="blip-area">Your savings with blip: </h4>
-          <h4 class = "perYear fourF9BC1">${{savePerYear}}/year</h4>
-          <router-link :to="'/'">
-            <img src="../../assets/blip_logo.png"/>
-          </router-link>
-          <p class = "p3 zeroB45DC t-center">Learn more how you can save money with blip <br> > </p>
+        <h4 class="blip-area t-center c-000000 w-100p">Your savings with blip: </h4>
+        <h4 class = "perYear t-center c-4F9BC1 w-100p">${{savePerYear}}/year</h4>
+        <router-link :to="'/home'" class="logo w-100p">
+          <img src="../../assets/blip_logo.png"/>
+        </router-link>
+        <router-link :to="'/about'" class="about w-100p">
+          <p class = "p3 C-0B45DC t-center">Learn more how you can save money with blip <br> > </p>
+        </router-link>
+      </b-row>
 
-          <p class = "p3 zero00000 t-center">
+      <b-row class="congrs">
+          <p class = "p3 c-000000 t-center">
             Congratulations! With your time of use plan, you are on track to having the biggest savings.
           </p>
+      </b-row>
 
-          <b-row class="zipcode_input">
-            <b-col xs="12" sm="12" md="4" lg="4" xl="4">
-              <p class = "p3 zero00000 t-center">Savings after 1 year</p>
-              <p class = "p3 fourF9BC1 t-center">${{ (savePerYear * 3).toFixed(2)}}</p>
-            </b-col>
+      <b-row class="savingsDifYears">
+        <b-col xs="12" sm="12" md="6" lg="6" xl="6">
+          <p class = "p3 c-000000 t-center">Savings after 1 year</p>
+          <h4 class = "c-4F9BC1 t-center">${{ (savePerYear * 3).toFixed(2)}}</h4>
+        </b-col>
 
-            <b-col xs="12" sm="12" md="4" lg="4" xl="4">
-              <p class = "p3 zero00000 t-center">Savings after 10 year</p>
-              <p class = "p3 fourF9BC1 t-center">${{ (savePerYear * 30).toFixed(2)}}</p>
-            </b-col>
-          </b-row>
+        <b-col xs="12" sm="12" md="6" lg="6" xl="6">
+          <p class = "p3 c-000000 t-center">Savings after 10 year</p>
+          <h4 class = "p3 c-4F9BC1 t-center">${{ (savePerYear * 30).toFixed(2)}}</h4>
+        </b-col>
+      </b-row>
 
+      <b-row class="graph w-100p t-center">
+        <b-row class="graphButton w-100p t-center">
+          <b-col xs="12" sm="12" md="6" lg="6" xl="6">
+            <b-button
+                variant="outline-primary"
+                v-on:click="drawOverallSavings()"
+                :disabled="showOverallSavings"
+            >Overall Savings
+            </b-button>
+          </b-col>
+          <b-col xs="12" sm="12" md="6" lg="6" xl="6">
+            <b-button
+                variant="outline-primary"
+                v-on:click="drawSeasonalSavings()"
+                :disabled="!showOverallSavings"
+            >Seasonal Savings
+            </b-button>
+          </b-col>
+        </b-row>
 
-          <b-row class="zipcode_input">
-            <b-col xs="12" sm="12" md="4" lg="4" xl="4">
-              <b-button
-                  variant="outline-primary"
-                  v-on:click="drawOverallSavings()"
-                  :disabled="showOverallSavings"
-              >Overall Savings
-              </b-button>
-            </b-col>
-            <b-col xs="12" sm="12" md="4" lg="4" xl="4">
-              <b-button
-                  variant="outline-primary"
-                  v-on:click="drawSeasonalSavings()"
-                  :disabled="!showOverallSavings"
-              >Seasonal Savings
-              </b-button>
-            </b-col>
-          </b-row>
+        <b-row class="graphSaving">
+          <div v-if="planClickd" id="chartOne" class="chart" style="width: 520px;height: 423px;"></div>
+        </b-row>
+      </b-row>
 
-          <b-row class="zipcode_input">
-            <div v-if="planClickd" id="chartOne" class="chart" style="width: 520px;height: 423px;"></div>
-          </b-row>
-
-          <b-row class="zipcode_input">
-            <button variant="outline-primary"><a ref="">Sign up for Updates</a></button>
-          </b-row>
+      <b-row class="signUpForUpdates w-100p t-center">
+        <b-button class="submit" variant="outline-primary" ><a ref="">Sign up for Updates</a></b-button>
+      </b-row>
 
 
 
@@ -70,7 +75,6 @@
           <!--    >Search</b-button>-->
           <!--  </b-col>-->
           <!--</b-row>-->
-        </b-col>
       </b-row>
     </b-container>
   </div>
@@ -120,25 +124,36 @@ export default {
 
   mounted() {
     this.$nextTick(function() {
-      this.drawChartOne('chartOne')
+      this.drawChartOne()
     })
   },
 
-  methods: {
-    entered_zipcode(zipcode) {
-      console.log(zipcode);
-    },
+  // watch:{
+  //   pageNo:{
+  //     immediate:true,
+  //     handler:function(){
+  //       console.log('hello world')
+  //     }
+  //   }
+  // },
 
-    displaySavings() {
-      const data = this.data;
-      this.$emit('display-savings', data)
-      console.log('data', data);
-    },
+  methods: {
+    // entered_zipcode(zipcode) {
+    //   console.log(zipcode);
+    // },
+    //
+    // displaySavings() {
+    //   const data = this.data;
+    //   this.$emit('display-savings', data)
+    //   console.log('data', data);
+    //   console.log('display: ', this.savePerYear)
+    // },
 
 //Start: add
-    drawChartOne(id){
+    drawChartOne(){
+      // console.log('graph: ', this.savePerYear)
       // console.log('array', this.savingsForChart);
-      this.charts = echarts.init(document.getElementById(id))
+      this.charts = echarts.init(document.getElementById('chartOne'))
       // this.charts.setOption({
       this.charts.setOption({
         color: ['#4F9BC1'],
@@ -195,14 +210,27 @@ export default {
         this.savingsForChart[i] = (this.savePerYear * 3 * seasonal[i]).toFixed(2);
       }
       this.xAxisMark = this.xAxisMark4Seasonal
-      this.drawChartOne('chartOne')
+      this.drawChartOne()
       this.overallSavingsButtonAbled = true
     },
     drawOverallSavings(){
       this.savingsForChart = this.overallSavings
       this.xAxisMark = this.xAxisMark4Overall
-      this.drawChartOne('chartOne')
+      this.drawChartOne()
       this.overallSavingsButtonAbled = false
+    },
+    reDrawChart(){
+      // console.log('reDraw: ', this.savePerYear)
+      this.$nextTick(function () {
+        // console.log('reDraw: ', this.savePerYear)
+        if (this.overallSavingsButtonAbled === false){
+          this.drawChartOne()
+        }else{
+          this.drawSeasonalSavings()
+        }
+      })
+
+
     }
 //End: add
   },
@@ -211,3 +239,7 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+@import "src/scss/pages/_calculator.scss";
+</style>
