@@ -6,6 +6,7 @@ import home from './shared/components/home.vue'
 import about from './about.vue'
 import product from './product.vue'
 import testing from './testing.vue'
+import contactUs from './contact-us.vue'
 import calculator from './calculator/calculator.vue'
 
 Vue.use(Router)
@@ -43,6 +44,11 @@ export default new Router({
       path: '/home',
       name: 'home',
       component: home
+    },
+    {
+      path: '/contact-us',
+      name: 'contact-us',
+      component: contactUs
     },
   ]
 })

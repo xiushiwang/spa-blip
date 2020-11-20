@@ -93,123 +93,20 @@ p.p3{
 
 //img{background: #C4C4C4;}
 
-button.btn.btn-outline-4F9BC1{
-  //position: absolute;
-  width: 230px;
-  height: 59px;
-  //left: 608px;
-  //top: 263px;
-
-  border: 2px solid #4F9BC1;
-  box-sizing: border-box;
-  border-radius: 24px;
-
-  text-align: center;
-  background-color:transparent;
-  button:hover {
-    background-color: #4F9BC1;
-    //color: white;
-  }
-
-  //font-family: "MarkPro-TestFont";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 30px;
-  color: #4F9BC1;
-}
-
-
-button.btn.btn-outline-254B77{
-  //position: absolute;
-  width: 356px;
-  height: 59px;
-  //left: 608px;
-  //top: 263px;
-
-  border: 2px solid #254B77;
-  box-sizing: border-box;
-  border-radius: 24px;
-
-  text-align: center;
-  background-color:transparent;
-  button:hover {
-    background-color: #254B77;
-    //color: white;
-  }
-
-  //font-family: "MarkPro-TestFont";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 30px;
-  color: #254B77;
-}
-
-button.btn.btn-outline-B0E7FF{
-  //position: absolute;
-  height: 59px;
-  //left: 608px;
-  //top: 263px;
-
-  border: 2px solid #B0E7FF;
-  box-sizing: border-box;
-  border-radius: 24px;
-
-  text-align: center;
-  background-color:transparent;
-  button:hover {
-    background-color: #B0E7FF;
-    //color: white;
-  }
-
-  //font-family: "MarkPro-TestFont";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 30px;
-  color: #B0E7FF;
-}
-
-input{
-  //width: ;
-  height: 49px;
-  //left: 318px;
-  //top: 251px;
-  background: #FFFFFF;
-  box-sizing: border-box;
-  border: none;
-  outline: none;
-  margin-right:0px;
-  margin-bottom: 25px;
-  ::placeholder{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 111%;
-    color: #8E8E8E;
-  }
-}
-
-.input-group-text {
-  //width: 48px;
-  border: none;
-  background-color: #FFFFFF;
-  text-align: right;
-}
 
 button.submit{
-  background: #254B77;
-  border-radius: 24px;
+  background: #B0E7FF;
+  border-radius: 50px;
+  border: none;
 
   //font-family: FF Mark Pro;
   font-style: normal;
   font-weight: normal;
-  color: #B0E7FF;
+  color: #254B77;
 }
 button.submit:hover {
-  background: #306097;
-  color: #B0E7FF;
+  background: #254B77;
+  color: #FFFFFF;
 }
 
 
@@ -299,17 +196,44 @@ button.submit:hover {
     //top: 504px;
 
     background: #FFFFFF;
-    border: 2px solid #D3D3D3;
+    border: 2px solid #E5E5E5;
     box-sizing: border-box;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 24px;
+    border-radius: 50px;
 
     text-align: center;
+
+    //text-indent: 10px;
+    vertical-align: center;
+    //line-height: 1.5em;
+
+    //padding-top: 23px;
+    //padding-bottom: 23px;
+
+
+    //display: flex;
+    //align-items: center;
+  }
+  .zip-input::placeholder{
+    width: 157px;
+    height: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    //line-height: 1.5em;
+
+    //line-height: normal;
+    color: #C4C4C4;
+    //background: #3cb582;
+    //text-align: center;
+    //margin: 0px;
   }
 
-  .search-button{
-    width: 188px;
-    height: 59px;
+  button.search-button{
+    width: 213.49px;
+    height: 67px;
+    //left: 415.51px
+    margin-left: 15px;
 
     font-size: 24px;
     line-height: 30px;

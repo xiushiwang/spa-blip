@@ -4,7 +4,7 @@
       <b-row class = "w-100p m-l-0 p-l-0" >
         <p class="how p2 c-000000 t-left m-l-0" style="margin-left: 0px">How do rates in your area compare to your possible blip savings?</p>
         <b-row class="zipcode_input t-left w-100p m-l-0">
-          <b-col xs="12" sm="12" md="7" lg="7" xl="7" class="t-left m-tb-a p-l-0" style="">
+          <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="t-left m-tb-a p-l-0">
 <!--            <b-input-group>-->
 <!--              <b-input-group-prepend>-->
 <!--                <span class="input-group-text">hhhhhhh<font-awesome-icon icon="arrow-right" style="color: #000000" /></span>-->
@@ -13,20 +13,21 @@
                 class="zip-input absolute-mid"
                 type="number"
                 v-model="zipcode"
-                placeholder="zipcode">
+                placeholder="enter zipcode">
 <!--              <font-awesome-icon icon="arrow-right" style="color: #000000" />-->
 <!--              <font-awesome-icon icon="fa-map-marker-alt"/>-->
             </b-form-input>
 <!--            </b-input-group>-->
             <!--              <p>{{zipcode.length}}</p>-->
           </b-col>
-          <b-col xs="12" sm="12" md="4" lg="4" xl="4" class="i-a-c p-l-0">
+          <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="i-a-c p-l-0">
             <b-button
                 class = "submit search-button"
                 variant="outline-primary"
                 v-on:click="checkZipcode()"
                 :disabled="isDisabled"
-            >Search  <font-awesome-icon icon="map-marker-alt"/></b-button>
+            >Search </b-button>
+<!--            <font-awesome-icon icon="map-marker-alt"/>-->
           </b-col>
         </b-row>
         <b-row class = "w-100p m-l-0 p-l-0" >
@@ -128,11 +129,8 @@
 <!--            <b-col xs="12" sm="12" md="12" lg="12" xl="12">-->
 
               <b-dropdown
-                  split
-                  split-variant="outline-primary"
-                  variant="primary"
                   :text="selectedPlan"
-                  class="m-2 m-l-0"
+                  class="m-l-0"
               >
 <!--                <b-dropdown-item-->
 <!--                    href="#"-->
@@ -144,6 +142,7 @@
 <!--                        countPlan(utilityPicked.planList[index1])"-->
 <!--                >{{utilityPicked.planList[index1].planName}}</b-dropdown-item>-->
 <!--              </b-dropdown>-->
+                <b-dropdown-divider></b-dropdown-divider>
                 <b-dropdown-item
                     href="#"
                     v-for="plan of utilityPicked.planList"
@@ -181,7 +180,9 @@ export default {
     return {
       dataHere:'display this!',
       seen: true,
-      zipcode: "",
+      zipcode:
+          // '10009',
+          "",
 //Start: add
       showValidZipcodeError: true,
       posts: [],

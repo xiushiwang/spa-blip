@@ -11,3 +11,7 @@ if (environment === 'development') {
 } else {
     module.exports = require('./config/webpack.config.prod');
 }
+
+// Encore.enableVueLoader(() => { }, {
+//     useJsx: true,
+// })
