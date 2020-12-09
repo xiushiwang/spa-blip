@@ -23,18 +23,19 @@ export default {
     <b-container>
         <b-row class = "container">
 
-          <b-row class="seeHow row w-100p">
-            <b-col xs="12" sm="12" md="6" lg="6" xl="6">
-              <h1 class="h1 c-000000 t-left f-Avenir see">See how blip can save you money</h1>
-            </b-col>
-          </b-row>
-
-           <b-col xs="12" sm="12" md="6" lg="6" xl="6" class = "saving_enter">
+<!--          <b-row class="seeHow row w-100p">-->
+<!--            <b-col xs="12" sm="12" md="6" lg="6" xl="6">-->
+<!--              <h1 class="h1 c-000000 t-left f-Avenir see">See how blip can save you money</h1>-->
+<!--            </b-col>-->
+<!--          </b-row>-->
+<!--          v-if="noData === false"-->
+           <b-col  xs="12" sm="12" md="5" lg="5" xl="5" class = "saving_enter">
              <b-row class = "row" >
                <div class = "t-left m-l-0">
 <!--                 <h1 class="see h1 c-000000 t-left f-Avenir">See how blip can save you money</h1>-->
                  <savings
                      @display-savings="displaySavings"
+                     v-on:noData="getNoData"
                      v-on:pickedUtility="getUtility"
                      v-on:planPicked="getPlan"
                      v-on:planClickd="getPlanClicked"
@@ -45,8 +46,12 @@ export default {
              </b-row>
            </b-col>
 
-          <b-col xs="12" sm="12" md="6" lg="6" xl="6">
-            <img class="blip-pig" src="../../assets/images/exploding_blip_pig.png" v-if='savings'>
+<!--          <b-col v-if="noData === true" xs="12" sm="12" md="5" lg="5" xl="5" class = "saving_enter">-->
+<!--            hhhhhhh-->
+<!--          </b-col>-->
+
+          <b-col xs="12" sm="12" md="7" lg="7" xl="7">
+            <img class="blip-pig" src="../../assets/images/blip-savings-calculator-graphic-F.png" v-if='savings'>
 <!--            <h3 v-if='!savings'>Savings will be displayed here</h3>-->
             <div v-if='!savings'>
               <graph
@@ -75,6 +80,7 @@ export default {
   data() {
     return {
       savings: true,
+      noData: false,
       pickedUtility: [],
       planPicked: [],
       planClickd: false,
@@ -92,6 +98,11 @@ export default {
       // console.log('plan',this.planPicked)
     },
 //add start
+    getNoData(nData){
+      this.noData = nData
+      console.log('NNNNNNNNNNNNNdata',this.noData)
+      this.savings = true
+    },
     getUtility(utility){
       this.pickedUtility = utility
       // console.log('hhhhhhhh',this.pickedUtility)

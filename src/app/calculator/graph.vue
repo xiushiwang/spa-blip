@@ -1,39 +1,40 @@
 <template>
   <div>
-    <b-container class="saving_container t-center w-100p m-l-0 p-l-0" v-if="seen">
+    <b-container class="saving_container t-center w-100p m-r-0 p-l-0" v-if="seen">
       <b-row class="withBlip_box t-center">
-<!--          <h4 class="blip-area">{{pickedUtility.utilities.utility_name}}</h4>-->
-        <h4 class="blip-area t-center c-000000 w-100p">Your savings with blip: </h4>
-        <h4 class = "perYear t-center c-4F9BC1 w-100p">${{savePerYear}}/year</h4>
         <router-link :to="'/home'" class="logo w-100p">
           <img src="../../assets/blip_logo.png"/>
         </router-link>
-        <router-link :to="'/about'" class="about w-100p">
-          <p class = "p3 C-0B45DC t-center">Learn more how you can save money with blip <br> > </p>
+<!--          <h4 class="blip-area">{{pickedUtility.utilities.utility_name}}</h4>-->
+        <p class="blip-area p4 t-center c-FFFFFF w-100p">Your savings with blip</p>
+        <p class = "savePerYear t-center c-B0E7FF w-100p">${{savePerYear}}</p>
+        <p class = "perYear t-center c-B0E7FF w-100p">per year</p>
+        <router-link :to="'/about'" class="about C-4F9BC1 w-100p">
+          <p class = "p4 C-4F9BC1 t-center">Learn more how you can save money with blip</p>
         </router-link>
       </b-row>
 
       <b-row class="congrs">
-          <p class = "p3 c-000000 t-center">
+          <p class = "p3 c-254B77 t-center">
             Congratulations! With your time of use plan, you are on track to having the biggest savings.
           </p>
       </b-row>
 
       <b-row class="savingsDifYears">
-        <b-col xs="12" sm="12" md="6" lg="6" xl="6">
-          <p class = "p3 c-000000 t-center">Savings after 1 year</p>
+        <b-col xs="12" sm="12" md="6" lg="6" xl="6" class = "left">
+          <p class = "p3 c-254B77 t-center">Savings after 1 year</p>
           <h4 class = "c-4F9BC1 t-center">${{ (savePerYear * 3).toFixed(2)}}</h4>
         </b-col>
 
-        <b-col xs="12" sm="12" md="6" lg="6" xl="6">
-          <p class = "p3 c-000000 t-center">Savings after 10 year</p>
+        <b-col xs="12" sm="12" md="6" lg="6" xl="6" class = "right">
+          <p class = "p3 c-254B77 t-center">Savings after 10 year</p>
           <h4 class = "p3 c-4F9BC1 t-center">${{ (savePerYear * 30).toFixed(2)}}</h4>
         </b-col>
       </b-row>
 
       <b-row class="graph w-100p t-center">
-        <b-row class="graphButton w-100p t-center">
-          <b-col xs="12" sm="12" md="6" lg="6" xl="6">
+        <b-row class="graphButton w-100p t-center p-0">
+          <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">
             <b-button
                 variant="outline-primary"
                 v-on:click="drawOverallSavings()"
@@ -41,7 +42,7 @@
             >Overall Savings
             </b-button>
           </b-col>
-          <b-col xs="12" sm="12" md="6" lg="6" xl="6">
+          <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">
             <b-button
                 variant="outline-primary"
                 v-on:click="drawSeasonalSavings()"
@@ -54,6 +55,25 @@
         <b-row class="graphSaving">
           <div v-if="planClickd" id="chartOne" class="chart" style="width: 520px;height: 423px;"></div>
         </b-row>
+      </b-row>
+
+      <b-row
+          class="outage t-center"
+          v-if="pickedUtility.outage.saifi !== 0 || pickedUtility.outage.caidi !== 0 || pickedUtility.outage.saifi5 !== 0"
+      >
+        <b-col xs="1" sm="1" md="1" lg="1" xl="1" class="bolt c-FFFFFF i-a-c">
+          <font-awesome-icon icon="bolt"/>
+        </b-col>
+        <b-col style="padding-left: 8px">
+          <div class="outageTimes c-FFFFFF t-left w-100p m-tb-a">
+            <p v-if="pickedUtility.outage.saifi !== 0" class="outageTimes c-FFFFFF t-left w-100p m-tb-a">
+              This utility has had <u>{{pickedUtility.outage.saifi}}</u> power outages in the past year, each outage lasted on average <u>{{pickedUtility.outage.caidi}}</u> minutes.
+            </p>
+            <p v-if="pickedUtility.outage.saifi5 !== 0" class="outageTimes c-FFFFFF t-left w-100p m-tb-a">
+              Over the past 5 years, this utility has had <u>{{pickedUtility.outage.saifi5}}</u> power outages
+            </p>
+          </div>
+        </b-col>
       </b-row>
 
       <b-row class="signUpForUpdates w-100p t-center">
@@ -93,8 +113,7 @@ export default {
       seen: true,
       zipcode: "",
 //Start: add
-      overallSavings: null,
-      seasonalSavings: null,
+//       seasonalSavings: null,
       chartOne: null,
       overallSavingsButtonAbled: false,
       xAxisMark: ['Year 1', '', '', '', 'Year 5', '', '', '', '', 'Year 10'],
@@ -119,12 +138,26 @@ export default {
         savings[i] = (this.savePerYear * 3 * (i + 1)).toFixed(2);
       }
       return savings;
+    },
+    overallSavings: function(){
+      var savings = []
+      for (var i = 0; i < 10; i++) {
+        savings[i] = (this.savePerYear * 3 * (i + 1)).toFixed(2);
+      }
+      return savings;
+    },
+    seasonalSavings: function() {
+      var seasonal = [2, 3, 4, 6, 7, 8, 9, 8, 5, 4, 3, 2]
+      for (var i = 0; i < seasonal.length; i++) {
+        seasonal[i] = (this.savePerYear * 3 * seasonal[i]).toFixed(2);
+      }
+      return seasonal
     }
   },
 
   mounted() {
     this.$nextTick(function() {
-      this.drawChartOne()
+      this.drawChartOne(this.savingsForChart)
     })
   },
 
@@ -150,13 +183,13 @@ export default {
     // },
 
 //Start: add
-    drawChartOne(){
+    drawChartOne(dataHere){
       // console.log('graph: ', this.savePerYear)
       // console.log('array', this.savingsForChart);
       this.charts = echarts.init(document.getElementById('chartOne'))
       // this.charts.setOption({
       this.charts.setOption({
-        color: ['#4F9BC1'],
+        color: ['#B0E7FF'],
         tooltip: {
           trigger: 'axis',
           axisPointer: {            // 坐标轴指示器，坐标轴触发有效
@@ -180,7 +213,8 @@ export default {
             },
             axisLabel: {
               interval: 0,
-              rotate: 45 //If the label names are too long you can manage this by rotating the label.
+              rotate: 45, //If the label names are too long you can manage this by rotating the label.
+              textStyle:{color: '#254B77'}
             }
           }
         ],
@@ -188,7 +222,8 @@ export default {
           {
             type: 'value',
             axisLabel: {
-              formatter: '${value}'
+              formatter: '${value}',
+              textStyle:{color: '#254B77'}
             },
           }
         ],
@@ -197,26 +232,33 @@ export default {
             name: 'Saving',
             type: 'bar',
             barWidth: '60%',
-            data: this.savingsForChart
+            data: dataHere
+            // this.savingsForChart
           }
         ]
-      })
-
+      }, {notMerge: true})
     },
     drawSeasonalSavings(){
-      this.overallSavings = this.savingsForChart
-      var seasonal = [2, 3, 4, 6, 7, 8, 9, 8, 5, 4, 3, 2]
-      for (var i = 0; i < seasonal.length; i++) {
-        this.savingsForChart[i] = (this.savePerYear * 3 * seasonal[i]).toFixed(2);
-      }
+      // this.overallSavings = this.savingsForChart
+
+      // this.savingsForChart = []
+      // console.log('here; ',this.overallSavings)
+      // var seasonal = [2, 3, 4, 6, 7, 8, 9, 8, 5, 4, 3, 2]
+      // for (var i = 0; i < seasonal.length; i++) {
+      //   this.savingsForChart[i] = (this.savePerYear * 3 * seasonal[i]).toFixed(2);
+      // }
       this.xAxisMark = this.xAxisMark4Seasonal
-      this.drawChartOne()
+      this.drawChartOne(this.seasonalSavings)
+          // this.savingsForChart)
+      // this.savingsForChart = []
       this.overallSavingsButtonAbled = true
     },
     drawOverallSavings(){
-      this.savingsForChart = this.overallSavings
+      // this.savingsForChart = []
+      // this.savingsForChart = this.overallSavings
+      // console.log(this.savingsForChart)
       this.xAxisMark = this.xAxisMark4Overall
-      this.drawChartOne()
+      this.drawChartOne(this.overallSavings)
       this.overallSavingsButtonAbled = false
     },
     reDrawChart(){
@@ -224,7 +266,7 @@ export default {
       this.$nextTick(function () {
         // console.log('reDraw: ', this.savePerYear)
         if (this.overallSavingsButtonAbled === false){
-          this.drawChartOne()
+          this.drawChartOne(this.overallSavings)
         }else{
           this.drawSeasonalSavings()
         }
