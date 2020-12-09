@@ -27,7 +27,7 @@ section{
 .oneD3755{background: #1D3755;}
 
 .one83B56{color: #183B56;}
-.two54B77{color: #254B77;}
+.c-254B77{color: #254B77;}
 .c-FFFFFF{color: #FFFFFF;}
 .c-B0E7FF{color: #B0E7FF;}
 .c-000000{color: #000000;}
@@ -133,12 +133,15 @@ button.submit:hover {
 .h-100p{height: 100%;}
 
 .m-l-0{margin-left: 0px;}
+.m-r-0{margin-right: 0px;}
+.m-t-0{margin-top: 0px;}
 .m-tb-a{
   margin-top: auto;
   margin-bottom: auto;
 }
 .p-0{padding: 0px;}
 .p-l-0{padding-left: 0px;}
+.p-t-0{padding-top: 0px;}
 .p-tb-a {
   padding-top: 0px;
   padding-bottom: 0px;
@@ -172,8 +175,14 @@ button.submit:hover {
   //background: #6f42c1;
 }
 
-.blip-pig {max-width: 100%;}
-.see{margin-bottom: 60px;}
+.blip-pig{
+  //max-width: 100%;
+  position: absolute;
+  left: -60px;
+  top: 160px;
+  width: 800px;
+}
+
 
 .saving_enter{
   position: relative;
@@ -184,11 +193,22 @@ button.submit:hover {
 }
 
 
-
-
+/////////////////////////////////////////////////////////savings.vue
+/////////////////////seen
 .zipcode_container{
+  //background: #FAAD13;
+  position: relative;
+  top: 183px;
   max-width: 100%;
-  .how{padding-bottom: 65px;}
+  .see{
+    //background: #C4C4C4;
+    height: 174px;
+    //margin-bottom: 60px;
+  }
+  .how{
+    //background: #C4C4C4;
+    margin-top: 22px;
+    padding-bottom: 65px;}
   .zip-input{
     width: 266px;
     height: 76px;
@@ -245,15 +265,23 @@ button.submit:hover {
   }
 }
 
-
+/////////////////////!seen
 .utility_container{
-  //background: #F2607B;
+  //background: #FAAD13;
   //padding-top: 0px;
-
-  width: 438px;
-
-  border: 0.996248px solid #FFFFFF;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  width: 485px;
+  //height: 799px;
+  background: #FFFFFF;
+  box-shadow: 6px 12px 19px -4px #E5E5E5;
+  border-radius: 25px;
+  padding-left: 41px;
+  margin-bottom: 120px;
+  .seeAfterNotSeen{
+    width: 390px;
+    margin-top: 55px;
+    padding-bottom: 40px;
+    //background: #C4C4C4;
+  }
   .zipcode_input{
     height: 88px;
     padding-bottom: 38px;
@@ -265,19 +293,26 @@ button.submit:hover {
       position: absolute;
       width: 220px;
       height: 50px;
+
       //left: 130px;
       //top: 322px;
 
       background: #FFFFFF;
-      border: 3px solid #D3D3D3;
+      border: 2px solid #D3D3D3;
       box-sizing: border-box;
       border-radius: 24px;
+      box-shadow: none;
 
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 20px;
+      color: #254B77;
       text-align: center;
     }
     .enter_button{
       width: 100px;
-      height: 35px;
+      height: 50px;
       text-align: center;
 
       font-weight: 500;
@@ -316,6 +351,7 @@ button.submit:hover {
           border: 2px solid #D3D3D3;
           box-sizing: border-box;
           border-radius: 24px;
+          box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25);
 
           padding: 0px;
           text-align: center;
@@ -378,10 +414,13 @@ button.submit:hover {
         height: 59px;
         margin-top: 37px;
         margin-bottom: 57px;
-        p{
-          width: 100%;
-          font-size: 24px;
-        }
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        /* identical to box height, or 125% */
+        color: #254B77;
       }
     }
 
@@ -389,28 +428,83 @@ button.submit:hover {
 
 }
 
+/////////////////////////////////////////////////////////graph.vue
 .saving_container{
+  //background: #FAAD13;
   position: relative;
-  top: 109px;
+  top: 159px;
+  margin-left: 60px;
   margin-bottom: 300px;
 
   .withBlip_box{
-    width: 86%;
-    padding: 22px 0px;
+    width: 562px;
+    height: 272px;
+    //left: calc(50% - 562px/2 + 280px);
+    //top: calc(50% - 272px/2 - 411.5px);
+    padding-top: 0px;
+    padding-bottom: 0px;
 
-    background: #FFFFFF;
-    border: 3px solid #B0E7FF;
-    box-sizing: border-box;
+    background: #254B77;
     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25);
-    border-radius: 6px;
+    border-radius: 25px;
 
     .logo{
-      margin-top: 13px;
-      margin-bottom: 13px;
+      height: 62px;
+      margin-top: -20px;
+      margin-bottom: 0px;
+      //background: #3cb582;
       img{
-        width: 100px;
+        //height: 62px;
+        width: 105px;
         border-radius: 0px;
+        margin-bottom: 0px;
       }
+    }
+
+    .blip-area{
+      //background: #3cb582;
+      margin-top: -15px;
+      margin-bottom: 30px;
+    }
+
+    .savePerYear{
+      //font-family: FF Mark Pro;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 84px;
+      //line-height: 76px;
+      /* identical to box height, or 90% */
+
+      text-align: center;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      //background: #3cb582;
+
+      padding-bottom: 0px;
+      margin-bottom: 9.46px;
+    }
+
+    .perYear{
+      //background: #3cb582;
+      width: 245px;
+      height: 44.81px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 0px;
+
+      font-style: normal;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 125%;
+      /* or 27px */
+    }
+
+    .about{
+      //background: #C4C4C4;
+      height: 20.84px;
+      margin-top: -30px;
+      margin-bottom: 0px;
+
+      color: #4F9BC1;
     }
 
   }
@@ -424,20 +518,38 @@ button.submit:hover {
   .savingsDifYears{
     padding-bottom: 21px;
     margin-bottom: 30px;
-    border-bottom: 3px solid #4F9BC1;
+    //border-bottom: 3px solid #4F9BC1;
+    .left{
+      border-right: 1.5px solid #254B77;
+    }
+    .right{
+      border-left: 1.5px solid #254B77;
+    }
   }
 
   .graph{
     .graphButton{
+      background: #FFFFFF;
+      width: 491px;
+      height: 49.55px;
+      border: 2px solid #254B77;
+      box-sizing: border-box;
+      border-radius: 24px;
       button{
-        width: 100%;
-        height: 46px;
+        width: 247px;
+        height: 49px;
+        margin-top: -2px;
+        margin-left: -2px;
 
-        background: #FFFFFF;
-        border: 3px solid #B0E7FF;
-        box-sizing: border-box;
-        box-shadow: inset 4px 4px 12px rgba(0, 0, 0, 0.25);
-        border-radius: 6px;
+        background: transparent;
+        //background: #254B77;
+        //border: 3px solid #B0E7FF;
+        //box-sizing: border-box;
+        //box-shadow: inset 4px 4px 12px rgba(0, 0, 0, 0.25);
+        //border-radius: 6px;
+        border: none;
+
+        border-radius: 50px;
 
         //font-family: FF Mark Pro;
         font-style: normal;
@@ -445,7 +557,48 @@ button.submit:hover {
         font-size: 16px;
         line-height: 20px;
 
-        color: #000000;
+        color: #B0E7FF;
+      }
+      button:disabled{
+        background: #254B77;
+        opacity: 1;
+        border: none;
+      }
+      button:hover{
+        border: none;
+      }
+    }
+  }
+
+  .outage{
+    width: 596px;
+            //626px;
+    //height: 128px;
+    //left: 44px;
+    //top: 1393px;
+    padding: 30px 30px;
+    margin-top: 30px;
+
+    background: #254B77;
+    border-radius: 35px;
+
+    .bolt{
+      //background: #C4C4C4;
+      font-size: 30px;
+      color: #B0E7FF;
+    }
+
+    .outageTimes{
+      //background: #C4C4C4;
+      //font-family: FF Mark Pro;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 25px;
+              //20px;
+      /* or 100% */
+      u{
+        color: #B0E7FF;
       }
     }
   }
@@ -461,10 +614,71 @@ button.submit:hover {
       margin-left: auto;
       margin-right: auto;
 
-      //background: #254B77;
-      //border-radius: 24px;
+      background: #B0E7FF;
+      border-radius: 24px;
 
     }
+  }
+
+  //background: #3cb582;
+}
+
+.dontSupport{
+  //background: #FAAD13;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+
+  .goBack{
+    border: none;
+    background: transparent;
+  }
+  .goBack:hover{font-style: oblique}
+
+  h2{
+    //background: #C4C4C4;
+    margin-top: 50px;
+  }
+  button.btn.btn-outline-254B77 {
+    //position: absolute;
+    width: 223.63px;
+    height: 72px;
+    //left: 608px;
+    //top: 263px;
+    margin-top: 19px;
+    margin-bottom: 75px;
+
+    border: 2px solid #254B77;
+    box-sizing: border-box;
+    border-radius: 50px;
+
+    text-align: center;
+    background-color: transparent;
+
+    button:hover {
+      background-color: #254B77;
+      //color: white;
+    }
+  }
+
+  .weCanHelp{
+    margin-bottom: 40px;
+    //background: #C4C4C4;
+  }
+
+  .sendUsANote{
+    width: 215px;
+    height: 72px;
+
+    //font-family: FF Mark Pro;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    /* or 111% */
+
+    text-align: center;
+    color: #254B77;
   }
 
 }

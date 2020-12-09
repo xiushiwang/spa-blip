@@ -6,7 +6,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'vue-material-design-icons/styles.css'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faPlus, faArrowRight, faCoffee, faMapMarkerAlt, faMapMarker, faSearch, faLink } from '@fortawesome/free-solid-svg-icons'
+import { faPlus, faArrowRight, faCoffee, faMapMarkerAlt, faMapMarker, faSearch, faLink, faBolt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faLinkedin, faLinkedinIn, faTwitter, faFacebookMessenger, faInstagram, faMedium } from "@fortawesome/free-brands-svg-icons"
 
@@ -24,7 +24,7 @@ import VueDropdown from 'vue-dynamic-dropdown'
 import * as VueGoogleMaps from "vue2-google-maps";
 
 library.add(
-    faPlus, faArrowRight, faCoffee, faMapMarkerAlt, faMapMarker, faSearch, faLink,
+    faPlus, faArrowRight, faCoffee, faMapMarkerAlt, faMapMarker, faSearch, faLink, faBolt,
     faLinkedin, faLinkedinIn ,faTwitter, faFacebookMessenger, faInstagram, faMedium,
 )
 Vue.component('font-awesome-icon', FontAwesomeIcon)
