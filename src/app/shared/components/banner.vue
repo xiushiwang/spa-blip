@@ -19,8 +19,23 @@
         </router-link>
       </b-nav-item>
       <b-nav-item class="navigation" right>
+        <router-link :to="'utilities'">
+          <div>Utilities</div>
+        </router-link>
+      </b-nav-item>
+      <b-nav-item class="navigation" right>
+        <router-link :to="'contact-us'">
+          <div>Contact Us</div>
+        </router-link>
+      </b-nav-item>
+      <b-nav-item class="navigation" right>
         <router-link :to="'/'">
-          <div>Calculator</div>
+          <div>My blip</div>
+        </router-link>
+      </b-nav-item>
+      <b-nav-item class="navigation button" right>
+        <router-link :to="'calculator'">
+          <div>Savings Calculator</div>
         </router-link>
       </b-nav-item>
 
@@ -75,7 +90,15 @@ export default {
     width: 50%;
   }
   .navigation div {
-    color: black;
+    color: #254B77;
+  }
+  .button{
+    width: 216px;
+    border: 2px solid #254B77;
+    box-sizing: border-box;
+    border-radius: 25px;
+
+    color: #254B77;
   }
   .typewriter {
     font-family: Courier, monospace;

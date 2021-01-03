@@ -23,6 +23,8 @@ import VueDropdown from 'vue-dynamic-dropdown'
 
 import * as VueGoogleMaps from "vue2-google-maps";
 
+import VTooltip from 'v-tooltip'
+
 library.add(
     faPlus, faArrowRight, faCoffee, faMapMarkerAlt, faMapMarker, faSearch, faLink, faBolt,
     faLinkedin, faLinkedinIn ,faTwitter, faFacebookMessenger, faInstagram, faMedium,
@@ -41,6 +43,7 @@ Vue.use(VueGoogleMaps, {
     libraries: "places" // necessary for places input
   }
 });
+Vue.use(VTooltip)
 
 new Vue({
   router,               // Add this line

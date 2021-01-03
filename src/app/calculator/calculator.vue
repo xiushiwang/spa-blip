@@ -38,6 +38,7 @@ export default {
                      v-on:noData="getNoData"
                      v-on:pickedUtility="getUtility"
                      v-on:planPicked="getPlan"
+                     v-on:overAllSavings="getOverAllSavings"
                      v-on:planClickd="getPlanClicked"
                      v-on:savePerYear="getSaving"
                      @refreshGraph = "refreshGraph"
@@ -59,6 +60,7 @@ export default {
                   :planPicked = "planPicked"
                   :planClickd = "planClickd"
                   :save-per-year="savePerYear"
+                  :overAllSavings="overAllSavings"
                   ref = "graphContainer"
               ></graph>
             </div>
@@ -82,6 +84,7 @@ export default {
       savings: true,
       noData: false,
       pickedUtility: [],
+      overAllSavings: [],
       planPicked: [],
       planClickd: false,
       savePerYear: 0,
@@ -106,6 +109,10 @@ export default {
     getUtility(utility){
       this.pickedUtility = utility
       // console.log('hhhhhhhh',this.pickedUtility)
+    },
+    getOverAllSavings(allSavings){
+      this.overAllSavings = allSavings
+      // console.log('here',this.overAllSavings)
     },
     getPlan(plan){
       this.planPicked = plan
@@ -132,7 +139,6 @@ export default {
     banner,
     savings,
     graph
-
   }
 };
 </script>
