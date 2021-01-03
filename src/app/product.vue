@@ -63,7 +63,7 @@
       <!--end:Don’t pay for high cost electricity-->
 
       <!--start:So why choose blip?-->
-      <section class="features FFFFFF h-658px">
+      <section class="features FFFFFF h-700px">
         <div class="container">
 
           <div class="row">
@@ -80,8 +80,8 @@
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card-f flex text-center wow fadeInUp">
                   <div class="card-f-heading">
-                    <div class="ic ic-lg ic-badge bg-primary-100 mb-36 w-100p h-100p" >
-                      <img src="../assets/blip-icons-product-portable.png" alt="">
+                    <div class="mb-36 w-100p h-100p" >
+                      <img src="../assets/blip-icons-product-portable.png" alt="" class="whyBlip">
                     </div>
                   </div>
                   <div class="card-f-body">
@@ -96,8 +96,8 @@
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card-f flex text-center wow fadeInUp">
                   <div class="card-f-heading">
-                    <div class="ic ic-lg ic-badge bg-primary-100 mb-36 w-100p h-100p">
-                      <img src="../assets/blip-icons-product-installation.png" alt="">
+                    <div class="mb-36 w-100p h-100p">
+                      <img src="../assets/blip-icons-product-installation.png" alt="" class="whyBlip">
                     </div>
                   </div>
                   <div class="card-f-body">
@@ -112,8 +112,8 @@
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card-f flex text-center wow fadeInUp">
                   <div class="card-f-heading">
-                    <div class="ic ic-lg ic-badge bg-primary-100 mb-36 w-100p h-100p">
-                      <img src="../assets/blip-icons-product-emission.png" alt="">
+                    <div class="mb-36 w-100p h-100p">
+                      <img src="../assets/blip-icons-product-emission.png" alt="" class="whyBlip">
                     </div>
                   </div>
                   <div class="card-f-body">
@@ -129,7 +129,7 @@
             </div>
           </div>
 
-          <div class="card-pricing-footer">
+          <div class="card-pricing-footer m-t-0">
             <button type="button" class="btn btn-outline-254B77" onclick="window.location.href='./calculator'">See How Much You’ll Save</button>
           </div>
 
@@ -179,7 +179,7 @@
 
               <div class="content t-center">
                 <p class="p2 c-FFFFFF t-center wow fadeInUp">Have more questions?</p>
-                <button type="button" class="btn btn-outline-B0E7FF" data-toggle="modal" data-target="#modalSignup">
+                <button type="button" class="btn btn-outline-B0E7FF" data-toggle="modal" data-target="#modalSignup" onclick="window.location.href='./contact-us'">
                   Contact Us
                 </button>
               </div>
@@ -254,11 +254,11 @@ export default {
           bottom: '3%',
           containLabel: true
         },
-        toolbox: {
-          feature: {
-            saveAsImage: {}
-          }
-        },
+        // toolbox: {
+        //   feature: {
+        //     saveAsImage: {}
+        //   }
+        // },
         xAxis: {
           type: 'category',
           axisLine: {onZero: false},
@@ -302,11 +302,11 @@ export default {
           bottom: '3%',
           containLabel: true
         },
-        toolbox: {
-          feature: {
-            saveAsImage: {}
-          }
-        },
+        // toolbox: {
+        //   feature: {
+        //     saveAsImage: {}
+        //   }
+        // },
         xAxis: {
           type: 'category',
           boundaryGap: false,

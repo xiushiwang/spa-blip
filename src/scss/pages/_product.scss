@@ -34,6 +34,35 @@ section{
 .t-right{text-align: right;}
 .text-center{text-align: center};
 
+.width-100percent{width: 100%;}
+.w-100p{width: 100%;}
+.h-100p{height: 100%;}
+
+.m-l-0{margin-left: 0px;}
+.m-r-0{margin-right: 0px;}
+.m-t-0{margin-top: 0px;}
+.m-b-0{margin-botton: 0px;}
+.m-tb-a{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.p-0{padding: 0px;}
+.p-l-0{padding-left: 0px;}
+.p-t-0{padding-top: 0px;}
+.p-tb-a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.i-a-c{
+  display: flex;
+  align-items: center;
+}
+.absolute-mid{
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
 h2{
   font-style: normal;
   font-weight: 300;
@@ -415,6 +444,11 @@ input{
       width: 185px;
     }
   }
+}
+.h-700px{height: 750px;}
+.whyBlip{
+  background: transparent;
+  width: 100%;
 }
 
 
