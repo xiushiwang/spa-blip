@@ -36,12 +36,13 @@ export default new Router({
     },
     
     {
-      path: '/',
+      path: '/calculator',
       name: 'calculator',
       component: calculator
     },
     {
-      path: '/home',
+      path: '/',
+      alias: ['/home'],
       name: 'home',
       component: home
     },

@@ -18,7 +18,8 @@
                 class="zip-input absolute-mid"
                 type="number"
                 v-model="zipcode"
-                placeholder="enter zipcode">
+                placeholder="enter zipcode"
+                @keyup.enter="checkZipcode()">
 <!--              <font-awesome-icon icon="arrow-right" style="color: #000000" />-->
 <!--              <font-awesome-icon icon="fa-map-marker-alt"/>-->
             </b-form-input>
@@ -55,7 +56,13 @@
             <!--              <span class="input-group-text"><font-awesome-icon icon="search" style="color: #4F9BC1" /></span>-->
             <!--            </b-input-group-prepend>-->
 
-            <b-form-input v-model="zipcode" class = "input_not_seen absolute-mid" placeholder="Enter your zipcode"></b-form-input>
+            <b-form-input
+                v-model="zipcode"
+                type="number"
+                class = "input_not_seen absolute-mid"
+                placeholder="Enter your zipcode"
+                @keyup.enter="checkZipcodeAfter()"
+            ></b-form-input>
 
             <!--          </b-input-group>-->
           </b-col>
@@ -79,9 +86,11 @@
                   <!--                <button v-if="post.userId == 1"><strong>{{post.title}}</strong></button>-->
                   <b-button
                       class="utilityProviderPic"
+                      id="tooltip-target-1"
                       variant="outline-primary"
                       v-if="post.logo !== ''"
-                      v-on:click="list(post); sendUtility(post)"
+                      v-on:click="list(post); sendUtility(post); countOverallPlan(post)"
+                      v-b-tooltip.hover="{title: post.utilityName}"
                   >
                     <img :src= "'http://'+post.logo" class = "utilityLogo">
                   </b-button>
@@ -89,8 +98,8 @@
                   <b-button
                       class="utilityProviderLetter"
                       variant="outline-primary"
-                      v-if="post.logo == ''"
-                      v-on:click="list(post); sendUtility(post)"
+                      v-if="post.logo === ''"
+                      v-on:click="list(post); sendUtility(post); countOverallPlan(post)"
                   >
                     <p class="p4 t-center">{{post.utilityName}}</p>
                   </b-button>
@@ -131,7 +140,10 @@
         <b-row class="rate_plan t-left w-100p m-l-0 p-l-0">
           <!--        <b-col xs="12" sm="12" md="12" lg="12" xl="12" >-->
           <h4 class="c-254B77">Choose your rate plan:</h4>
-          <a href=""><p class="p4 c-4F9BC1 t-left">(I don’t know my rate plan)</p></a> <!--!!!!!!!!!!!!!!!!!!!Empty!!!!!!!!!!!!!!!!!!-->
+          <b-button
+              v-on:click="findMaxSaving()"
+              class="iDont"
+          ><p class="p4 c-4F9BC1 t-left">(I don’t know my rate plan)</p></b-button> <!--!!!!!!!!!!!!!!!!!!!Empty!!!!!!!!!!!!!!!!!!-->
           <b-row class="plan_select t-left w-100p m-l-0 p-l-0">
             <!--            <b-col xs="12" sm="12" md="12" lg="12" xl="12">-->
 
@@ -140,8 +152,8 @@
                 class="m-l-0"
                 block
                 split
-                split-variant="secondary"
-                variant="secondary"
+                split-variant="light"
+                variant="light"
                 style="width : 296px;"
             >
               <!--                <b-dropdown-item-->
@@ -160,16 +172,15 @@
                   v-for="plan of utilityPicked.planList"
                   @click=
                       "selectedPlan = plan.planName;
-                        countPlan(plan);
-                        sendPlan(plan)"
-
+                       countPlan(plan);
+                       sendPlan(plan)"
               >{{plan.planName}}</b-dropdown-item>
             </b-dropdown>
             <!--            </b-col>-->
           </b-row>
           <b-row class="plan_select t-left w-100p m-l-0 p-l-0">
             <b-button
-                class="submit"
+                class="submit seeSavings"
                 variant="outline-primary"
                 @click="savings = !savings; displaySavings(); "
             >
@@ -228,6 +239,7 @@ export default {
       planNum: 0,
       address: 'https://170276b6ab7d.ngrok.io/v1/get_utilities_and_rates_by_zip_code/',
       localAddress: './src/assets/JSONforTesting/',
+      overallPlan:[],
       selectedPlan: '',
       planClickd: true,
       capacity: 2.2,
@@ -284,9 +296,9 @@ export default {
     },
 
     loadJSON(){
-      // const address = './src/assets/JSONforTesting/60201.json'
       this.address = this.address + this.zipcode
-          // + '.json'
+      // const address = './src/assets/JSONforTesting/'
+      // this.address = address + this.zipcode + '.json'
       axios.get(this.address)
           .then(response => {
             // JSON responses are automatically parsed.
@@ -310,6 +322,26 @@ export default {
       this.utilityPicked = utility
       this.planNum = this.utilityPicked.planList.length
       this.selectedPlan = ''
+    },
+
+    countOverallPlan(provider){
+      this.overallPlan = [];
+      for ( var i=0; i<provider.planList.length; i++ ){
+        this.overallPlan.push(((provider.planList[i].highPrice - provider.planList[i].lowPrice)*this.capacity*365).toFixed(2))
+      }
+      this.$emit('overAllSavings', this.overallPlan)
+    },
+
+    findMaxSaving(){
+      for (var i = 0; i < this.overallPlan.length; i++) {
+        if (this.overallPlan[i] === Math.max(...this.overallPlan)){
+          break;
+        }
+      }
+      var plan = this.utilityPicked.planList[i]
+      this.selectedPlan = plan.planName;
+      this.countPlan(plan);
+      this.sendPlan(plan)
     },
 
     sendNoData(nData){
