@@ -1,6 +1,8 @@
 .main{
   width: 100%;
   //text-align: center;
+  padding-left: 0;
+  padding-right: 0;
 }
 @font-face {
   font-family: "MarkPro-TestFont";
@@ -17,6 +19,8 @@ section{
   width: 100%;
   display: flex;
   align-items: center;
+  padding-left: 0;
+  padding-right: 0
 }
 //.h-536{height: 536px;}
 
@@ -24,6 +28,7 @@ section{
 .FFFFFF{background: #FFFFFF;}
 .DEF5FF{background: #DEF5FF;}
 .oneD3755{background: #1D3755;}
+.b-3cb582{background: #3cb582}
 
 .one83B56{color: #183B56;}
 .two54B77{color: #254B77;}
@@ -36,8 +41,8 @@ section{
 h2{
   font-style: normal;
   font-weight: 300;
-  font-size: 48px;
-  line-height: 62px;
+  font-size: 52px;
+  line-height: 66px;
   margin: 20px;
   /* identical to box height, or 129% */
 }
@@ -45,8 +50,8 @@ h4{
   font-family: Avenir, serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 33px;
+  font-size: 28px;
+  line-height: 125%;
   /* identical to box height */
 }
 
@@ -54,7 +59,7 @@ p.p1{
   //font-family: FF Mark Pro;
   font-style: normal;
   font-weight: normal;
-  font-size: 32px;
+  font-size: 36px;
   line-height: 125%;
   /* or 40px */
 }
@@ -62,16 +67,16 @@ p.p2{
   //font-family: FF Mark Pro;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: 28px;
+  line-height: 125%;
   margin: 20px;
 }
 p.p3{
   //font-family: FF Mark Pro;
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 22px;
+  line-height: 111%;
   /* identical to box height, or 111% */
 }
 
@@ -139,7 +144,9 @@ input{
     text-align: center;
     //background: #869791;
     .row {
-      width: 100%;
+      width: 75%;
+      padding-right: 0;
+      padding-left: 0;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
@@ -198,6 +205,40 @@ input{
     }
   }
 }
+
+@keyframes bounceInLeft {
+  from, 60%, 75%, 90%, to {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);}
+  0% {opacity: 0;transform: translate3d(-3000px, 0, 0);}
+  60% {opacity: 1;transform: translate3d(25px, 0, 0);}
+  75% {transform: translate3d(-10px, 0, 0);}
+  90% {transform: translate3d(5px, 0, 0);}
+  100% {opacity: 1;transform: none;}
+}
+@keyframes bounceInRight {
+  from, 60%, 75%, 90%, to {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);}
+  0% {opacity: 0;transform: translate3d(3000px, 0, 0);}
+  60% {opacity: 1;transform: translate3d(-25px, 0, 0);}
+  75% {transform: translate3d(10px, 0, 0);}
+  90% {transfomembersrm: translate3d(-5px, 0, 0);}
+  100% {opacity: 1;transform: none;}
+}
+.page5-tu1,.page5-tu2,.page5-tu3,.page5-tu4{
+  //position: absolute;
+  //width: REM(480);
+  //height: REM(206);
+  //left: 50%;
+  //margin-left: REM(-240);
+  //opacity: 0;
+}
+.flyFromLeft{
+  bottom: REM(314);
+  animation: bounceInLeft 1.9s 0.65s linear forwards;
+}
+.flyFromRight{
+  bottom: REM(314);
+  animation: bounceInRight 1.9s 0.65s linear forwards;
+}
+
 .team {
   width: 100%;
   .container {
@@ -214,8 +255,8 @@ input{
     .insider{
       //background: #3cb582;
       //position: absolute;
-      padding-left: 10%;
-      padding-right: 10%;
+      padding-left: 0px;
+      padding-right: 0px;
       .rowI{
         width: 100%;
         display: -ms-flexbox;
@@ -235,14 +276,27 @@ input{
         //  background: #3cb582;
         //}
         h4{width:240px;}
-        ic.ic-lg.ic-badge.bg-primary-100.mb-36{
-          width: 152px;
+        .card-f-heading{
+          width: 169px;
           height: 169px;
+          padding: 0px 0px;
+          margin-bottom: 20px;
+        }
+        ic.ic-lg.ic-badge.bg-primary-100.mb-36{
+          //width: 202px;
+          //height: 200px;
           background: #C4C4C4;
         }
       }
     }
   }
+}
+
+.w-100p{width: 100%;}
+.members{
+  position: absolute;
+  left: 21%;
+  width: 169px;
 }
 
 .launching{

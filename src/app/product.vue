@@ -246,7 +246,7 @@ export default {
         },
         color:['#254B77'],
         legend: {
-          data: ['Utility Costs Throughout the Day']
+          data: ['Costs you would pay without blip']
         },
         grid: {
           left: '3%',
@@ -269,9 +269,10 @@ export default {
           type: 'value'
         },
         series: [{
-          name: 'Utility Costs Throughout the Day',
+          name: 'Costs you would pay without blip',
           data: [1, 1, 2, 1.5, 2, 5, 2, 0],
           type: 'line',
+          symbol: 'circle',
           smooth: true,
           itemStyle:{
             normal:{
@@ -292,9 +293,9 @@ export default {
         tooltip: {
           trigger: 'axis'
         },
-        color:['#FFFFFF','#183B56'],
+        color:['#4F9BC1','#183B56'],
         legend: {
-          data: ['Utility Costs Throughout the Day', 'Lower Utility Costs with blip']
+          data: ['Costs you would pay without blip', 'Costs you would pay with blip']
         },
         grid: {
           left: '3%',
@@ -317,22 +318,24 @@ export default {
         },
         series: [
           {
-            name: 'Utility Costs Throughout the Day',
+            name: 'Costs you would pay without blip',
             data: [1, 1, 2, 1.5, 2, 5, 2, 0],
             type: 'line',
+            symbol: 'circle',
             smooth: true,
             itemStyle:{
               normal:{
                 lineStyle:{
-                  color:'#FFFFFF'
+                  color:'#4F9BC1'
                 }
               }
             }
           },
           {
-            name: 'Lower Utility Costs with blip',
+            name: 'Costs you would pay with blip',
             data: [1, 1, 1.5, 1, 1, 2, 2, 1],
             type: 'line',
+            symbol: 'circle',
             smooth: true,
             itemStyle:{
               normal:{

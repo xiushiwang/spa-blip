@@ -16,7 +16,6 @@
 <!--              </b-input-group-prepend>-->
             <b-form-input
                 class="zip-input absolute-mid"
-                type="number"
                 v-model="zipcode"
                 placeholder="enter zipcode"
                 @keyup.enter="checkZipcode()">
@@ -58,7 +57,6 @@
 
             <b-form-input
                 v-model="zipcode"
-                type="number"
                 class = "input_not_seen absolute-mid"
                 placeholder="Enter your zipcode"
                 @keyup.enter="checkZipcodeAfter()"
@@ -322,13 +320,17 @@ export default {
       this.utilityPicked = utility
       this.planNum = this.utilityPicked.planList.length
       this.selectedPlan = ''
+      this.sendPlan(this.selectedPlan)
+      this.countPlan(this.selectedPlan)
     },
 
     countOverallPlan(provider){
       this.overallPlan = [];
       for ( var i=0; i<provider.planList.length; i++ ){
-        this.overallPlan.push(((provider.planList[i].highPrice - provider.planList[i].lowPrice)*this.capacity*365).toFixed(2))
+        this.overallPlan.push(provider.planList[i].saving)
+            // ((provider.planList[i].highPrice - provider.planList[i].lowPrice)*this.capacity*365).toFixed(2))
       }
+      console.log(this.overallPlan)
       this.$emit('overAllSavings', this.overallPlan)
     },
 
@@ -355,11 +357,16 @@ export default {
 
     countPlan(plan){
       // console.log(plan.highPrice)
-      const savings = (plan.highPrice - plan.lowPrice) * this.capacity * 365
-      const saving = savings.toFixed(2)
-
+      // const savings = (plan.highPrice - plan.lowPrice) * this.capacity * 365
+      // const savings = 0.0
+      //
+      // for (var i = 0; i < plan.savingList.length; i++) {
+      //   savings = savings + plan.savingList[i]
+      // }
+      // const saving = savings.toFixed(2)
+      const saving = plan.saving
       this.$emit('savePerYear', saving)
-      console.log(savings, 'in Savings.vue')
+      // console.log(savings, 'in Savings.vue')
     },
 
     sendPlan(plan){
