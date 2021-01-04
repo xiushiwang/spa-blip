@@ -340,9 +340,10 @@ export default {
     },
     checkMaxSaving: function(){
       var max = Math.max(...this.overAllSavings)
+      var zero = 0
       // console.log(max)
       // console.log(this.savePerYear)
-      if (this.savePerYear === max){
+      if (this.savePerYear === max && max !== zero){
         return true
       }else{
         this.askWhy = false
@@ -352,7 +353,7 @@ export default {
     hasMaxSaving: function (){
       var max = Math.max(...this.overAllSavings)
       var zero = 0
-      console.log(max, zero)
+      // console.log(max, zero)
       if (max !== zero){
         return true
       }else{
@@ -437,10 +438,12 @@ export default {
 //Start: add
     drawChartOne(dataHere){
       // console.log('graph', this.planPicked)
-      console.log('graph: ', dataHere)
+      // console.log('graph: ', dataHere)
       // console.log('array', this.savingsForChart);
       // console.log('getElement',document.getElementById(id))
       // this.charts.clear();
+      console.log('ask', this.askWhy)
+      console.log('checkMax', this.checkMaxSaving)
       this.charts = echarts.init(document.getElementById('chartOne'))
       // this.charts.setOption({
       this.charts.setOption({
