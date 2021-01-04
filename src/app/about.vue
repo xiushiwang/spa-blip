@@ -7,12 +7,12 @@
         <div class="hero">
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
+<!--              <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">-->
                 <div class="content text-center">
                   <h2 class="h2 two54B77 t-center">Our Mission</h2>
                   <p class="p2 one83B56 t-center">blip aims to democratize energy storage while lowering your carbon footprint - one renter at a time. </p>
                 </div>
-              </div>
+<!--              </div>-->
             </div>
           </div>
         </div>
@@ -24,7 +24,7 @@
         <div class="hero">
           <div class="container">
             <div class="row">
-              <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
+<!--              <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">-->
                 <div class="content text-center">
                   <h2 class="h2 two54B77 t-center">Our Goal</h2>
                   <p class="p2 one83B56 t-center">
@@ -39,7 +39,7 @@
                     no matter where you live.
                   </p>
                 </div>
-              </div>
+<!--              </div>-->
             </div>
           </div>
         </div>
@@ -50,14 +50,14 @@
       <section class="oneD3755">
         <div class="hero">
           <div class="container">
-            <div class="row">
+            <div class="row" style="width: 100%">
               <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="picOnLeft">
+                <div class="picOnLeft flyFromLeft">
                   <img src="../assets/geran-de-klerk-qzgN45hseN0-unsplash.jpg" alt="" class="w-100p">
                 </div>
               </div>
               <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="textOnRight FFFFFF">
+                <div class="textOnRight FFFFFF flyFromRight">
                   <!--              <span class="text-success text-14">ANALYTICS</span>-->
                   <div class="contentCenter">
                     <h2 class="h2 two54B77 t-left">We care deeply about our environment</h2>
@@ -78,14 +78,14 @@
         <div class="hero">
           <div class="container h-536">
             <div class="row">
-              <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
+<!--              <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">-->
                 <div class="content text-center">
                   <p class="p1 one83B56 t-center">You save money. You help the planet.</p>
                   <p class="p1 one83B56 t-center">And we are excited to provide the tools to make it happen.</p>
                   <br>
                   <p class="p1 one83B56 t-center">If we each help a little, we can all do a lot.</p>
                 </div>
-              </div>
+<!--              </div>-->
             </div>
           </div>
         </div>
@@ -116,13 +116,13 @@
               </div>
 
               <div class="content">
-                <div class="row">
+                <div class="row" style="width: 100%">
                   <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card-f flex text-center wow fadeInUp">
                       <div class="card-f-heading">
-                        <div class="ic ic-lg ic-badge bg-primary-100 mb-36">
-                          <!--                      <img src="../assets/headshot_Sophia.JPG" alt="">-->
-                        </div>
+<!--                        <div class="ic ic-lg ic-badge mb-36">-->
+                          <img src="../assets/images/team/SophiaWennstedt.png" alt="" class="members">
+<!--                        </div>-->
                       </div>
                       <div class="card-f-body">
                         <h4 class="h4 one83B56 t-center">Sophia Wennstedt</h4>
@@ -133,9 +133,9 @@
                   <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card-f flex text-center wow fadeInUp">
                       <div class="card-f-heading">
-                        <div class="ic ic-lg ic-badge bg-primary-100 mb-36">
-                          <!--                      <img src="../assets/Cobb%2BProfile.jpg" alt="">-->
-                        </div>
+<!--                        <div class="ic ic-lg ic-badge mb-36">-->
+                          <img src="../assets/images/team/ChanceCobb.png" alt="" class="members">
+<!--                        </div>-->
                       </div>
                       <div class="card-f-body">
                         <h4 class="h4 one83B56 t-center">Chance Cobb</h4>
@@ -146,9 +146,9 @@
                   <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card-f flex text-center wow fadeInUp">
                       <div class="card-f-heading">
-                        <div class="ic ic-lg ic-badge bg-primary-100 mb-36">
-                          <!--                      <img src="../assets/Kontorovich+-+Headshot.jpg" alt="">-->
-                        </div>
+<!--                        <div class="ic ic-lg ic-badge mb-36">-->
+                          <img src="../assets/images/team/DennisKontorovichs.png" alt="" class="members">
+<!--                        </div>-->
                       </div>
                       <div class="card-f-body">
                         <h4 class="h4 one83B56 t-center">Dennis Kontorovichs</h4>
@@ -159,9 +159,9 @@
                   <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card-f flex text-center wow fadeInUp">
                       <div class="card-f-heading">
-                        <div class="ic ic-lg ic-badge bg-primary-100 mb-36">
-                          <!--                      <img src="../assets/Headshot+Thibaut+Feremans.jpg" alt="">-->
-                        </div>
+<!--                        <div class="ic ic-lg ic-badge mb-36">-->
+                          <img src="../assets/images/team/ThibautFeremans.png" alt="" class="members">
+<!--                        </div>-->
                       </div>
                       <div class="card-f-body">
                         <h4 class="h4 one83B56 t-center">Thibaut Feremans</h4>
@@ -259,6 +259,15 @@ export default {
   },
 
   methods: {
+    handleScroll: function (evt, el) {
+      if (window.scrollY > 50) {
+        el.setAttribute(
+            'style',
+            'opacity: 1; transform: translate3d(0, -10px, 0)'
+        )
+      }
+      return window.scrollY > 100
+    }
   },
   components: {
     banner,
@@ -269,6 +278,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "src/scss/pages/_about.scss";
+@import "src/scss/animate";
 
 //$button-color: #e7eff9;
 //

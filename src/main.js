@@ -25,6 +25,9 @@ import * as VueGoogleMaps from "vue2-google-maps";
 
 import VTooltip from 'v-tooltip'
 
+import vuescroll from 'vuescroll';
+import "vuescroll/dist/vuescroll.css";
+
 library.add(
     faPlus, faArrowRight, faCoffee, faMapMarkerAlt, faMapMarker, faSearch, faLink, faBolt,
     faLinkedin, faLinkedinIn ,faTwitter, faFacebookMessenger, faInstagram, faMedium,
@@ -44,11 +47,30 @@ Vue.use(VueGoogleMaps, {
   }
 });
 Vue.use(VTooltip)
+Vue.use(vuescroll)
 
 new Vue({
   router,               // Add this line
   render: h => h(App),
 }).$mount('#app')
+
+// You can set global config here.
+Vue.use(vuescroll, {
+  ops: {
+    // The global config
+  },
+  name: 'myScroll' // customize component name, default -> vueScroll
+});
+
+/**
+ * or
+ */
+Vue.prototype.$vuescrollConfig = {
+  bar: {
+    background: '#000'
+  }
+};
+
 
 
 //https://binarcode.github.io/vue-form-wizard/#/ --> documentation on how to use the wizard
