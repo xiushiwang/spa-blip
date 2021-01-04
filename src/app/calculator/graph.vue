@@ -38,42 +38,42 @@
             </p>
           </b-row>
 
-          <b-row class="savingsDifYears">
-            <b-col xs="12" sm="12" md="6" lg="6" xl="6" class = "left">
-              <p class = "p3 c-254B77 t-center">Savings after 3 years</p>
-              <h4 class = "c-4F9BC1 t-center">${{ (savePerYear * 3).toFixed(2)}}</h4>
-            </b-col>
+<!--          <b-row class="savingsDifYears">-->
+<!--            <b-col xs="12" sm="12" md="6" lg="6" xl="6" class = "left">-->
+<!--              <p class = "p3 c-254B77 t-center">Savings after 3 years</p>-->
+<!--              <h4 class = "c-4F9BC1 t-center">${{ (savePerYear * 3).toFixed(2)}}</h4>-->
+<!--            </b-col>-->
 
-            <b-col xs="12" sm="12" md="6" lg="6" xl="6" class = "right">
-              <p class = "p3 c-254B77 t-center">Savings after 5 years</p>
-              <h4 class = "p3 c-4F9BC1 t-center">${{ (savePerYear * 5).toFixed(2)}}</h4>
-            </b-col>
-          </b-row>
+<!--            <b-col xs="12" sm="12" md="6" lg="6" xl="6" class = "right">-->
+<!--              <p class = "p3 c-254B77 t-center">Savings after 5 years</p>-->
+<!--              <h4 class = "p3 c-4F9BC1 t-center">${{ (savePerYear * 5).toFixed(2)}}</h4>-->
+<!--            </b-col>-->
+<!--          </b-row>-->
 
-          <b-row class="graph w-100p t-center">
-            <b-row class="graphButton w-100p t-center p-0">
-              <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">
-                <b-button
-                    variant="outline-primary"
-                    v-on:click="drawOverallSavings('chartOne')"
-                    :disabled="showOverallSavings"
-                >Overall Savings
-                </b-button>
-              </b-col>
-              <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">
-                <b-button
-                    variant="outline-primary"
-                    v-on:click="drawSeasonalSavings('chartOne')"
-                    :disabled="!showOverallSavings"
-                >Seasonal Savings
-                </b-button>
-              </b-col>
-            </b-row>
+<!--          <b-row class="graph w-100p t-center">-->
+<!--            <b-row class="graphButton w-100p t-center p-0">-->
+<!--              <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">-->
+<!--                <b-button-->
+<!--                    variant="outline-primary"-->
+<!--                    v-on:click="drawOverallSavings('chartOne')"-->
+<!--                    :disabled="showOverallSavings"-->
+<!--                >Overall Savings-->
+<!--                </b-button>-->
+<!--              </b-col>-->
+<!--              <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">-->
+<!--                <b-button-->
+<!--                    variant="outline-primary"-->
+<!--                    v-on:click="drawSeasonalSavings('chartOne')"-->
+<!--                    :disabled="!showOverallSavings"-->
+<!--                >Seasonal Savings-->
+<!--                </b-button>-->
+<!--              </b-col>-->
+<!--            </b-row>-->
 
-            <b-row class="graphSaving">
-              <div v-if="planClickd" id="chartOne" class="chart" style="width: 520px;height: 423px;"></div>
-            </b-row>
-          </b-row>
+<!--            <b-row class="graphSaving">-->
+<!--              <div v-if="planClickd" id="chartOne" class="chart" style="width: 520px;height: 423px;"></div>-->
+<!--            </b-row>-->
+<!--          </b-row>-->
 
 <!--         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! heeeeeeeeeeeeeeere-->
 
@@ -146,7 +146,7 @@
                 </p>
                 <p class = "currentBottom t-center c-FFFFFF">
                   We recommend the {{maxSavingPlan}} plan
-                  <b-button @click="askWhy = true, drawChartTwo()" class="iDont">(here’s why)</b-button>.
+                  <b-button @click="askWhy = true; drawChartTwo()" class="iDont">(here’s why)</b-button>.
                   <br><br>
                   ———————————————
                   <br><br>
@@ -160,7 +160,7 @@
                 </b-button>
               </b-row>
 
-              <b-row class="inBetween t-center">
+              <b-row class="inBetween t-center" style="margin-bottom: 40px">
                 <b-col xs="6" sm="6" md="6" lg="6" xl="6" class="t-right">
                   <router-link :to="'/home'" class="logoInBtw">
                     <img src="../../assets/blip_logo.png"/>
@@ -175,7 +175,7 @@
 
           </b-container>
 
-          <b-container v-if="!askWhy">
+          <b-container v-show="!askWhy">
             <b-row class="thisIs c-4F9BC1">
               <h4>This is what you would save with the {{maxSavingPlan}} plan:</h4>
             </b-row>
@@ -192,46 +192,85 @@
             </b-row>
           </b-container>
 
-          <b-container v-else>
-            <b-row class="savingsDifYears" style="margin-top: 40px">
-              <b-col xs="12" sm="12" md="6" lg="6" xl="6" class = "left">
-                <p class = "p3 c-254B77 t-center">Savings after 3 years</p>
-                <h4 class = "c-4F9BC1 t-center">${{ (savePerYear * 3).toFixed(2)}}</h4>
-              </b-col>
+<!--          <b-container v-show="askWhy">-->
+<!--            <b-row class="savingsDifYears" style="margin-top: 40px">-->
+<!--              <b-col xs="12" sm="12" md="6" lg="6" xl="6" class = "left">-->
+<!--                <p class = "p3 c-254B77 t-center">Savings after 3 years</p>-->
+<!--                <h4 class = "c-4F9BC1 t-center">${{ (savePerYear * 3).toFixed(2)}}</h4>-->
+<!--              </b-col>-->
 
-              <b-col xs="12" sm="12" md="6" lg="6" xl="6" class = "right">
-                <p class = "p3 c-254B77 t-center">Savings after 5 years</p>
-                <h4 class = "p3 c-4F9BC1 t-center">${{ (savePerYear * 5).toFixed(2)}}</h4>
-              </b-col>
-            </b-row>
+<!--              <b-col xs="12" sm="12" md="6" lg="6" xl="6" class = "right">-->
+<!--                <p class = "p3 c-254B77 t-center">Savings after 5 years</p>-->
+<!--                <h4 class = "p3 c-4F9BC1 t-center">${{ (savePerYear * 5).toFixed(2)}}</h4>-->
+<!--              </b-col>-->
+<!--            </b-row>-->
 
-            <b-row class="graph w-100p t-center">
-              <b-row class="graphButton w-100p t-center p-0">
-                <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">
-                  <b-button
-                      variant="outline-primary"
-                      v-on:click="drawOverallSavings('chartTwo')"
-                      :disabled="showOverallSavings"
-                  >Overall Savings
-                  </b-button>
-                </b-col>
-                <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">
-                  <b-button
-                      variant="outline-primary"
-                      v-on:click="drawSeasonalSavings('chartTwo')"
-                      :disabled="!showOverallSavings"
-                  >Seasonal Savings
-                  </b-button>
-                </b-col>
-              </b-row>
+<!--            <b-row class="graph w-100p t-center">-->
+<!--              <b-row class="graphButton w-100p t-center p-0">-->
+<!--                <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">-->
+<!--                  <b-button-->
+<!--                      variant="outline-primary"-->
+<!--                      v-on:click="drawOverallSavings('chartTwo')"-->
+<!--                      :disabled="showOverallSavings"-->
+<!--                  >Overall Savings-->
+<!--                  </b-button>-->
+<!--                </b-col>-->
+<!--                <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">-->
+<!--                  <b-button-->
+<!--                      variant="outline-primary"-->
+<!--                      v-on:click="drawSeasonalSavings('chartTwo')"-->
+<!--                      :disabled="!showOverallSavings"-->
+<!--                  >Seasonal Savings-->
+<!--                  </b-button>-->
+<!--                </b-col>-->
+<!--              </b-row>-->
 
-              <b-row class="graphSaving">
-                <div v-if="planClickd" id="chartTwo" class="chart" style="width: 520px;height: 423px;"></div>
-              </b-row>
-            </b-row>
-          </b-container>
+<!--              <b-row class="graphSaving">-->
+<!--                <div v-if="planClickd" id="chartTwo" class="chart" style="width: 520px;height: 423px;"></div>-->
+<!--              </b-row>-->
+<!--            </b-row>-->
+<!--          </b-container>-->
 
         </b-container>
+      </b-container>
+
+      <b-container v-show="checkMaxSaving || askWhy">
+        <b-row class="savingsDifYears">
+          <b-col xs="12" sm="12" md="6" lg="6" xl="6" class = "left">
+            <p class = "p3 c-254B77 t-center">Savings after 3 years</p>
+            <h4 class = "c-4F9BC1 t-center">${{ (savePerYear * 3).toFixed(2)}}</h4>
+          </b-col>
+
+          <b-col xs="12" sm="12" md="6" lg="6" xl="6" class = "right">
+            <p class = "p3 c-254B77 t-center">Savings after 5 years</p>
+            <h4 class = "p3 c-4F9BC1 t-center">${{ (savePerYear * 5).toFixed(2)}}</h4>
+          </b-col>
+        </b-row>
+
+        <b-row class="graph w-100p t-center">
+          <b-row class="graphButton w-100p t-center p-0">
+            <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">
+              <b-button
+                  variant="outline-primary"
+                  v-on:click="drawOverallSavings('chartOne')"
+                  :disabled="showOverallSavings"
+              >Overall Savings
+              </b-button>
+            </b-col>
+            <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">
+              <b-button
+                  variant="outline-primary"
+                  v-on:click="drawSeasonalSavings('chartOne')"
+                  :disabled="!showOverallSavings"
+              >Seasonal Savings
+              </b-button>
+            </b-col>
+          </b-row>
+
+          <b-row class="graphSaving">
+            <div v-if="planClickd" id="chartOne" class="chart" style="width: 520px;height: 423px;"></div>
+          </b-row>
+        </b-row>
       </b-container>
 
       <b-row
@@ -367,7 +406,8 @@ export default {
 
   mounted() {
     this.$nextTick(function() {
-      this.drawChartOne(this.overallSavings, 'chartOne')
+      this.drawChartOne(this.overallSavings);
+      // this.drawChartOne(this.overallSavings, 'chartTwo')
     })
   },
 
@@ -393,12 +433,13 @@ export default {
     // },
 
 //Start: add
-    drawChartOne(dataHere, id){
+    drawChartOne(dataHere){
       // console.log('graph', this.planPicked)
-      // console.log('graph: ', this.savePerYear)
+      console.log('graph: ', dataHere)
       // console.log('array', this.savingsForChart);
-      console.log('getElement',document.getElementById(id))
-      this.charts = echarts.init(document.getElementById(id))
+      // console.log('getElement',document.getElementById(id))
+      // this.charts.clear();
+      this.charts = echarts.init(document.getElementById('chartOne'))
       // this.charts.setOption({
       this.charts.setOption({
         color: ['#B0E7FF'],
@@ -461,17 +502,17 @@ export default {
       // }
       console.log('here; ',this.seasonalSavings)
       this.xAxisMark = this.xAxisMark4Seasonal
-      this.drawChartOne(this.seasonalSavings, id)
+      this.drawChartOne(this.seasonalSavings)
           // this.savingsForChart)
       // this.savingsForChart = []
       this.overallSavingsButtonAbled = true
     },
-    drawOverallSavings(id){
+    drawOverallSavings(){
       // this.savingsForChart = []
       // this.savingsForChart = this.overallSavings
       // console.log(this.savingsForChart)
       this.xAxisMark = this.xAxisMark4Overall
-      this.drawChartOne(this.overallSavings, id)
+      this.drawChartOne(this.overallSavings)
       this.overallSavingsButtonAbled = false
       // this.askWhy = false
     },
@@ -488,7 +529,7 @@ export default {
     },
     drawChartTwo(){
       console.log('gotHere')
-      this.drawChartOne(this.overAllSavings, 'chartTwo')
+      this.drawChartOne(this.overallSavings)
     }
 //End: add
   },
