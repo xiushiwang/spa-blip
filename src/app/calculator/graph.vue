@@ -491,7 +491,7 @@ export default {
         ]
       }, {notMerge: true})
     },
-    drawSeasonalSavings(id){
+    drawSeasonalSavings(){
       // this.overallSavings = this.savingsForChart
 
       // this.savingsForChart = []
