@@ -332,6 +332,7 @@ export default {
     },
     zeroSaving: function (){
       if (this.savePerYear === 0){
+        this.askWhy = false;
         return true
       }else{
         return false
@@ -344,6 +345,7 @@ export default {
       if (this.savePerYear === max){
         return true
       }else{
+        this.askWhy = false
         return false
       }
     },
