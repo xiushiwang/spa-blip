@@ -67,7 +67,7 @@
     "@babel/plugin-proposal-json-strings": "~7.2",
     "@babel/plugin-syntax-dynamic-import": "~7.2",
     "@babel/plugin-syntax-import-meta": "~7.2",
-    "@babel/preset-env": "~7.3",
+    "@babel/preset-env": "^7.3.4",
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-plugin-eslint": "~4.2.0",
     "@vue/cli-service": "~4.2.0",
