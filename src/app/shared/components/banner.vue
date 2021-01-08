@@ -62,11 +62,7 @@ export default {
   created() {},
 
   methods: {
-    // onSuccess(googleUser) {
-    //   this.$router.push({ name: "/" });
-    //   console.log(googleUser);
-    //   // This only gets the user information: id, name, imageUrl and email
-    //   console.log(googleUser.getBasicProfile());
+
   },
   components: {}
 };

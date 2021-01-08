@@ -66,7 +66,6 @@
 
 
 <script>
-import GoogleLogin from "vue-google-login";
 
 export default {
   name: "login",
@@ -79,15 +78,10 @@ export default {
 
   methods: {
 
-    onFailure(error) {
-      console.log(error);
-      // This only gets the user information: id, name, imageUrl and email
-      // console.log(googleUser.getBasicProfile());
-    }
+
   },
 
   components: {
-    GoogleLogin,
   }
 };
 </script>

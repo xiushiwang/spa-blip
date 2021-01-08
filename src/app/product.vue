@@ -188,16 +188,7 @@
           </div>
         </div>
       </section>
-      <!--end:FAQs-->
 
-<!--      &lt;!&ndash;start:Have more questions?&ndash;&gt;-->
-<!--      <section class="landing-agency-cta wow fadeInUp">-->
-<!--        <div class="container">-->
-<!--          <h3 class="wow fadeInUp">Have more questions?</h3>-->
-<!--          <a href="https://www.blipenergy.com/contact-us" class="btn btn-outline-primary">CONTACT US<i class="fas fa-arrow-right text-14"></i></a>-->
-<!--        </div>-->
-<!--      </section>-->
-<!--      &lt;!&ndash;end:Have more questions?&ndash;&gt;-->
 
     </div>
     <Footer></Footer>
@@ -208,13 +199,10 @@
 import banner from "./shared/components/banner.vue";
 import Footer from "./shared/components/Footer.vue";
 
-// import chart from './chart' //导入组件
-// import * as echarts from 'node_mpdules/echarts'
 
 import echarts from "echarts";
 require('echarts/theme/shine');
-// import ecStat from "echarts-stat";
-// import { setTimeout } from "timers";
+
 
 export default {
   name: "product",
@@ -352,7 +340,6 @@ export default {
   },
   components: {
     banner,
-    echarts,
     Footer
   }
 };
@@ -360,61 +347,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "src/scss/pages/_product.scss";
-//$button-color: #e7eff9;
-//
-//.home-container {
-//  background-image: url("../assets/images/background.jpg");
-//  background-repeat: no-repeat;
-//  background-position: center center;
-//  background-attachment: fixed;
-//  background-size: cover;
-//  min-height: 100%;
-//
-//  .enter-dest {
-//    position: relative;
-//    top: 20%;
-//    transform: translateY(-50%);
-//
-//    .content {
-//      margin: 20em 0 0 0;
-//    }
-//
-//    .input {
-//      margin: 1em 0 0 0;
-//    }
-//  }
-//}
-//
-// .buttons {
-//    position: relative;
-//    // top: 25%;
-//    transform: translateY(-25%);
-//    // display: inline;
-//  }
-//
-//.btn-warning {
-//   background: rgba(76, 175, 80,0.33);
-//  // opacity:0.3;
-//  // background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 30%);
-//  border-color: darken($button-color, 15%);
-//  color: darken(black, 100%);
-//  font-style:bold;
-//  font-size:15px;
-//  height: 8em;
-//  word-break: break-word;
-//  width: 50%;
-//  width: 50%;
-//}
-//.btn-success,
-//.btn-info {
-//  background-color: $button-color;
-//  background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
-//  border-color: darken($button-color, 15%);
-//  color: darken($button-color, 50%);
-//  height: 8em;
-//  word-break: break-word;
-//  width: 50%;
-//}
+
 </style>
 
 
