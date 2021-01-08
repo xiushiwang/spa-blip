@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="all">
     <b-container class="zipcode_container t-left m-l-0 p-0" v-if="seen" >
 <!--      <b-row class="seeHow row w-100p">-->
 <!--        <h1 class="h1 c-000000 t-left f-Avenir see">See how blip can save you money</h1>-->

@@ -1,10 +1,12 @@
-//.main{
-//  width: 100%;
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap');
+
+//@font-face {
+//  font-family: "Montserrat";
+//  src:("src/assets/fonts/Montserrat/Montserrat-Light.ttf") ;
 //}
-@font-face {
-  font-family: "MarkPro-TestFont";
-  src:local("./assets/fonts/MarkPro-TestFont.otf/MarkPro-TestFont.otf");
-}
+
 //@font-face {
 //  font-family: "hkgrotesk";
 //  src: local("src/assets/fonts/hkgrotesk");
@@ -12,12 +14,15 @@
 
 //@import url(../../assets/fonts/MarkPro-TestFont.otf/FFMarkFree.css);
 
-.f-Avenir{font-family: Avenir;}
+//.f-Avenir{font-family: Avenir;}
+.all{font-family: 'Montserrat', Avenir;}
 
 section{
+  //font-family: 'Montserrat', sans-serif;
   width: 100%;
   display: flex;
   align-items: center;
+  //background: url("/src/assets/images/logo.png");
 }
 //.h-536{height: 536px;}
 
@@ -42,25 +47,27 @@ section{
 
 h1{
   //font-family: Avenir;
+  font-family: 'Montserrat', Avenir;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 200;
   font-size: 64px;
   line-height: 76px;
   /* or 119% */
 }
 
 h2{
+  font-family: 'Montserrat', Avenir;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 200;
   font-size: 48px;
   line-height: 62px;
   margin: 20px;
   /* identical to box height, or 129% */
 }
 h4{
-  font-family: Avenir, serif;
+  font-family: 'Montserrat', Avenir;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 24px;
   line-height: 33px;
   /* identical to box height */
@@ -68,24 +75,27 @@ h4{
 
 p.p1{
   //font-family: FF Mark Pro;
+  font-family: 'Montserrat', Avenir;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 32px;
   line-height: 125%;
   /* or 40px */
 }
 p.p2{
   //font-family: FF Mark Pro;
+  font-family: 'Montserrat', Avenir;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 24px;
   line-height: 30px;
   margin: 20px;
 }
 p.p3{
   //font-family: FF Mark Pro;
+  font-family: 'Montserrat', Avenir;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 18px;
   line-height: 20px;
   /* identical to box height, or 111% */
@@ -100,8 +110,9 @@ button.submit{
   border: none;
 
   //font-family: FF Mark Pro;
+  font-family: 'Montserrat', Avenir;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   color: #254B77;
 }
 button.submit:hover {
@@ -204,7 +215,7 @@ button.submit:hover {
   .see{
     //background: #C4C4C4;
     height: 174px;
-    //margin-bottom: 60px;
+    margin-bottom: 30px;
   }
   .how{
     //background: #C4C4C4;
@@ -238,8 +249,9 @@ button.submit:hover {
   .zip-input::placeholder{
     width: 157px;
     height: 30px;
+    font-family: 'Montserrat', Avenir;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 300;
     font-size: 24px;
     //line-height: 1.5em;
 
