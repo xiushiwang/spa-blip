@@ -175,7 +175,64 @@
           </div>
         </div>
       </section>
-    
+    <!--      &lt;!&ndash;start:blip is launching soon&ndash;&gt;-->
+      <!--      <section class="DEF5FF launching">-->
+      <!--        <div class="hero">-->
+      <!--          <div class="container">-->
+      <!--            <div class="row">-->
+      <!--              <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">-->
+      <!--                <div class="content text-center">-->
+      <!--                  <h2 class="h2 two54B77 t-center">blip is launching soon</h2>-->
+      <!--                  <p class="p2 two54B77 t-center">get notified</p>-->
+      <!--                  <form>-->
+      <!--                    <p class="p3 two54B77 t-left">Name*</p>-->
+      <!--                    <div class="form-row">-->
+      <!--&lt;!&ndash;                      <div class="form-group col-md-6">&ndash;&gt;-->
+      <!--                        <input type="text" class="form-control-name" aria-describedby="int2" placeholder="First">-->
+      <!--&lt;!&ndash;                        <p class="text-gray mt-8 mb-24">First Name</p>&ndash;&gt;-->
+      <!--&lt;!&ndash;                      </div>&ndash;&gt;-->
+      <!--&lt;!&ndash;                      <div class="form-group col-md-6">&ndash;&gt;-->
+      <!--                        <input type="text" class="form-control-name" aria-describedby="int2" placeholder="Last">-->
+      <!--&lt;!&ndash;                        <p class="text-gray mt-8 mb-24">Last Name</p>&ndash;&gt;-->
+      <!--&lt;!&ndash;                      </div>&ndash;&gt;-->
+      <!--                    </div>-->
+
+      <!--                    <div class="form-group">-->
+      <!--                      <p class="p3 two54B77 t-left">Email*</p>-->
+      <!--                      <input type="email" class="form-control-email" aria-describedby="emailHelp" placeholder="">-->
+      <!--                    </div>-->
+
+      <!--                    <div class="form-group">-->
+      <!--                      <p class="p3 two54B77 t-left">Zip Code*</p>-->
+      <!--                      <input type="text" class="form-control-zipcode" aria-describedby="areaCode" placeholder="">-->
+      <!--                    </div>-->
+
+      <!--                    <div class="form-group mb-0">-->
+      <!--                      <button type="submit" class="btn btn-outline-4F9BC1">Take the Survey</button>-->
+      <!--                    </div>-->
+      <!--                  </form>-->
+      <!--                </div>-->
+      <!--              </div>-->
+      <!--            </div>-->
+      <!--          </div>-->
+      <!--        </div>-->
+      <!--      </section>-->
+      <!--      &lt;!&ndash;end:blip is launching soon&ndash;&gt;-->
+
+      <!--      &lt;!&ndash;start:Contact&ndash;&gt;-->
+      <!--      <div class="hero">-->
+      <!--        <div class="container">-->
+      <!--          <div class="row">-->
+      <!--            <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">-->
+      <!--              <div class="content text-center">-->
+      <!--                <h3 class="text-white mb-24 wow fadeInUp">Contact</h3>-->
+      <!--                <p class="text-gray mt-8 mb-24">hello@blipenergy.com</p>-->
+      <!--              </div>-->
+      <!--            </div>-->
+      <!--          </div>-->
+      <!--        </div>-->
+      <!--      </div>-->
+      <!--      &lt;!&ndash;end:Contact&ndash;&gt;-->
 
 
     </div>

@@ -12,11 +12,10 @@
               </div>
               <div class="col col-md-6">
                 <p class="p2 one83B56 t-left width-526px">
-                  blip aims to democratize energy storage while lowering youElectricity is more expensive during “peak” hours
-                  - when many people return home and turn on lights and other devices.
+                 Electricity is more expensive during “peak” hours - 
+                 when many people return home and turn on lights and other devices.
                   <br><br>
-                  The costs are lower during “off-peak” hours - when most are at work, school,
-                  or sleeping.r carbon footprint - one renter at a time.
+                  The costs are lower during “off-peak” hours - when most are at work, school, or sleeping.
                 </p>
               </div>
             </div>
@@ -188,7 +187,14 @@
           </div>
         </div>
       </section>
-
+      <!--      &lt;!&ndash;start:Have more questions?&ndash;&gt;-->
+<!--      <section class="landing-agency-cta wow fadeInUp">-->
+<!--        <div class="container">-->
+<!--          <h3 class="wow fadeInUp">Have more questions?</h3>-->
+<!--          <a href="https://www.blipenergy.com/contact-us" class="btn btn-outline-primary">CONTACT US<i class="fas fa-arrow-right text-14"></i></a>-->
+<!--        </div>-->
+<!--      </section>-->
+<!--      &lt;!&ndash;end:Have more questions?&ndash;&gt;-->
 
     </div>
     <Footer></Footer>
