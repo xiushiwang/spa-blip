@@ -7,6 +7,7 @@ import about from './about.vue'
 import product from './product.vue'
 import contactUs from './contact-us.vue'
 import calculator from './calculator/calculator.vue'
+import articles from "@/app/articles";
 
 Vue.use(Router)
 
@@ -49,6 +50,11 @@ export default new Router({
       path: '/contact-us',
       name: 'contact-us',
       component: contactUs
+    },
+    {
+      path: '/articles',
+      name: 'articles',
+      component: articles
     },
   ]
 })

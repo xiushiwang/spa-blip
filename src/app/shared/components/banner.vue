@@ -24,6 +24,11 @@
         </router-link>
       </b-nav-item>
       <b-nav-item class="navigation" right>
+        <router-link :to="'articles'">
+          <div>Articles</div>
+        </router-link>
+      </b-nav-item>
+      <b-nav-item class="navigation" right>
         <router-link :to="'contact-us'">
           <div>Contact Us</div>
         </router-link>
