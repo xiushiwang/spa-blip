@@ -179,15 +179,15 @@
             <div class="rowII">
               <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
                 <div class="heading text-center wow fadeInUp">
-                  <h1 class="text-whiteOmb-24OwowOfadeInUp">Help shape the future of blip</h1>
-                  <div class="content text-center">
+                  <!-- <h1 class="text-whiteOmb-24OwowOfadeInUp">Help shape the future of blip</h1> -->
+                  <!-- <div class="content text-center">
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSignup">
                       Take the Survey
                     </button>
-                  </div>
+                  </div> -->
 
                   <!-- start:blip Questionnaire popup -->
-                  <div class="modal fade" id="modalSignup" tabindex="-1" role="dialog" aria-labelledby="modalSignupLabel" aria-hidden="true">
+                  <!-- <div class="modal fade" id="modalSignup" tabindex="-1" role="dialog" aria-labelledby="modalSignupLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-body">
@@ -286,7 +286,7 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
       
 
                 </div>

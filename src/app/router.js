@@ -7,6 +7,7 @@ import about from './about.vue'
 import product from './product.vue'
 import contactUs from './contact-us.vue'
 import calculator from './calculator/calculator.vue'
+import utilities from './utilities.vue'
 import articles from "@/app/articles";
 
 Vue.use(Router)
@@ -18,6 +19,11 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: login
+    },
+    {
+      path: '/utilities',
+      name: 'utilities',
+      component: utilities
     },
     {
       path: '/about',

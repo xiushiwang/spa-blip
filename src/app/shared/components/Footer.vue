@@ -32,9 +32,9 @@
                     <input type="text" class="form-control-zipcode" aria-describedby="areaCode" placeholder="">
                   </div>
 
-                  <div class="form-group mb-0">
+                  <!-- <div class="form-group mb-0">
                     <button type="submit" class="btn btn-outline-4F9BC1">Take the Survey</button>
-                  </div>
+                  </div> -->
                 </form>
               </div>
             </div>
