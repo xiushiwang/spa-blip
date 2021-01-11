@@ -147,12 +147,11 @@
 
             <b-dropdown
                 :text="selectedPlan"
-                class="m-l-0"
+                class="m-l-0 dropdown"
                 block
                 split
                 split-variant="light"
                 variant="light"
-                style="width : 296px;"
             >
               <!--                <b-dropdown-item-->
               <!--                    href="#"-->
@@ -172,6 +171,7 @@
                       "selectedPlan = plan.planName;
                        countPlan(plan);
                        sendPlan(plan)"
+                  class="dropdown-item"
               >{{plan.planName}}</b-dropdown-item>
             </b-dropdown>
             <!--            </b-col>-->

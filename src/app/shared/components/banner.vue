@@ -78,7 +78,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap');
+
 .navbar {
+  font-family: 'Montserrat', Avenir;
+
   background-color: #ffffff;
   height: 4em !important;
   box-shadow: 0px 2px 50px -5px rgba(0, 0, 0, 0.09);
@@ -95,6 +99,7 @@ export default {
     width: 50%;
   }
   .navigation div {
+    font-family: 'Montserrat', Avenir;
     color: #254B77;
   }
   .button{
@@ -106,7 +111,7 @@ export default {
     color: #254B77;
   }
   .typewriter {
-    font-family: Courier, monospace;
+    font-family: 'Montserrat', Avenir;
     margin: 1em 0 0 0;
   }
   .typewriter-text {
@@ -115,8 +120,9 @@ export default {
     letter-spacing: 2px;
     animation: typing 2s steps(60, end), blink 0.75s step-end infinite;
     white-space: nowrap;
+    font-family: 'Montserrat', Avenir;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 300;
     color: white;
     // border-right: 4px solid orange;
     box-sizing: border-box;
@@ -158,7 +164,7 @@ export default {
     animation: typing 2s steps(60, end), blink 0.75s step-end infinite;
     white-space: nowrap;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 300;
     color: white;
     // border-right: 4px solid orange;
     box-sizing: border-box;

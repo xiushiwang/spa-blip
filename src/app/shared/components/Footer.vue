@@ -63,36 +63,6 @@
       </div>
     </div>
     <!--end:Contact-->
-
-    <!--  <b-navbar class="navbar navbar-expand-md navbar-dark bg-dark fixed-bottom">-->
-    <!--    <b-navbar-nav class="collapse navbar-collapse" id="navbarCollapse">-->
-    <!--      <b-row>-->
-    <!--        <b-col sm="3" md="3" lg="3" xl="3">-->
-    <!--          <b-nav-item>-->
-    <!--            <router-link :to="'factSheet'">-->
-    <!--              <book-icon />-->
-    <!--              <div>Gallery</div>-->
-    <!--            </router-link>-->
-    <!--          </b-nav-item>-->
-    <!--        </b-col>-->
-    <!--        <b-col sm="3" md="3" lg="3" xl="3">-->
-    <!--          <b-nav-item>-->
-    <!--            <map-marker-icon />-->
-    <!--            <div>New</div>-->
-    <!--          </b-nav-item>-->
-    <!--        </b-col>-->
-    <!--        <b-col sm="2" md="2" lg="2" xl="2">-->
-    <!--          <b-nav-item>-->
-    <!--            <router-link :to="'keyPhrases'">-->
-    <!--              <message-text-outline-icon />-->
-    <!--              <div>Profile</div>-->
-    <!--            </router-link>-->
-    <!--          </b-nav-item>-->
-    <!--             <GoogleLogin :params="params" :logoutButton="true">Logout</GoogleLogin>-->
-    <!--        </b-col>-->
-    <!--      </b-row>-->
-    <!--    </b-navbar-nav>-->
-    <!--  </b-navbar>-->
   </div>
 </template>
 <!--&lt;!&ndash;Gallery , New, Account &ndash;&gt;-->
@@ -118,48 +88,12 @@ export default {
 };
 </script>
 
-<!--<script>-->
-<!--// import BookIcon from "mdi-vue/Book";-->
-<!--// import MapMarkerIcon from "mdi-vue/MapMarker";-->
-<!--// import MessageTextOutlineIcon from "mdi-vue/MessageTextOutline";-->
-
-<!--export default {-->
-<!--  name: "footer",-->
-<!--  data() {-->
-<!--    return {};-->
-<!--  },-->
-<!--  created() {},-->
-
-<!--  methods: {-->
-<!--    // onSuccess(googleUser) {-->
-<!--    //   this.$router.push({ name: "/" });-->
-<!--    //   console.log(googleUser);-->
-<!--    //   // This only gets the user information: id, name, imageUrl and email-->
-<!--    //   console.log(googleUser.getBasicProfile());-->
-<!--  },-->
-<!--  components: {-->
-<!--    // BookIcon,-->
-<!--    // MapMarkerIcon,-->
-<!--    // MessageTextOutlineIcon,-->
-<!--    // msg: 'Welcome to Your Vue.js App'-->
-<!--  }-->
-<!--};-->
-<!--</script>-->
-
-
 <style lang="scss" scoped>
-@font-face {
-  font-family: "MarkPro-TestFont";
-  src:local("./assets/fonts/MarkPro-TestFont.otf/MarkPro-TestFont.otf");
-}
-//@font-face {
-//  font-family: "hkgrotesk";
-//  src: local("src/assets/fonts/hkgrotesk");
-//}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap');
 
-//@import url(../../assets/fonts/MarkPro-TestFont.otf/FFMarkFree.css);
-
-section{width: 100%;}
+section{
+  width: 100%;
+  font-family: 'Montserrat', Avenir;}
 //.h-536{height: 536px;}
 
 //.E5E5E5{background: #E5E5E5;}
@@ -176,42 +110,43 @@ section{width: 100%;}
 .text-center{text-align: center};
 
 h2{
+  font-family: 'Montserrat', Avenir;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 200;
   font-size: 48px;
   line-height: 62px;
   margin: 20px;
   /* identical to box height, or 129% */
 }
 h4{
-  font-family: Avenir, serif;
+  font-family: 'Montserrat', Avenir;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 24px;
   line-height: 33px;
   /* identical to box height */
 }
 
 p.p1{
-  //font-family: FF Mark Pro;
+  font-family: 'Montserrat', Avenir;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 32px;
   line-height: 125%;
   /* or 40px */
 }
 p.p2{
-  //font-family: FF Mark Pro;
+  font-family: 'Montserrat', Avenir;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 24px;
   line-height: 30px;
   margin: 20px;
 }
 p.p3{
-  //font-family: FF Mark Pro;
+  font-family: 'Montserrat', Avenir;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 300;
   font-size: 18px;
   line-height: 20px;
   /* identical to box height, or 111% */
@@ -220,8 +155,8 @@ p.p3{
 //img{background: #C4C4C4;}
 
 button.btn.btn-outline-4F9BC1{
-  //position: absolute;
-  width: 230px;
+  font-family: 'Montserrat', Avenir;
+  width: 250px;
   height: 59px;
   //left: 608px;
   //top: 263px;
@@ -237,9 +172,9 @@ button.btn.btn-outline-4F9BC1{
     //color: white;
   }
 
-  //font-family: "MarkPro-TestFont";
+  font-family: 'Montserrat', Avenir;;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 24px;
   line-height: 30px;
   color: #4F9BC1;
@@ -257,8 +192,9 @@ input{
   margin-right:0px;
   margin-bottom: 25px;
   ::placeholder{
+    font-family: 'Montserrat', Avenir;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 300;
     font-size: 18px;
     line-height: 111%;
     color: #8E8E8E;
@@ -396,9 +332,9 @@ input{
   margin-top: 14px;
   text-align: center;
 
-  font-family: Open Sans;
+  font-family: 'Montserrat', Avenir;;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 300;
   font-size: 16px;
   line-height: 22px;
   /* identical to box height */

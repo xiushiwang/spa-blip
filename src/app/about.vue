@@ -7,12 +7,10 @@
         <div class="hero">
           <div class="container">
             <div class="row">
-<!--              <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">-->
-                <div class="content text-center">
-                  <h2 class="h2 two54B77 t-center">Our Mission</h2>
-                  <p class="p2 one83B56 t-center">blip aims to democratize energy storage while lowering your carbon footprint - one renter at a time. </p>
-                </div>
-<!--              </div>-->
+              <div class="content text-center">
+                <h2 class="h2 two54B77 t-center">Our Mission</h2>
+                <p class="p2 one83B56 t-center">blip aims to democratize energy storage while lowering your carbon footprint - one renter at a time. </p>
+              </div>
             </div>
           </div>
         </div>
@@ -24,7 +22,6 @@
         <div class="hero">
           <div class="container">
             <div class="row">
-<!--              <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">-->
                 <div class="content text-center">
                   <h2 class="h2 two54B77 t-center">Our Goal</h2>
                   <p class="p2 one83B56 t-center">
@@ -39,7 +36,6 @@
                     no matter where you live.
                   </p>
                 </div>
-<!--              </div>-->
             </div>
           </div>
         </div>
@@ -58,7 +54,6 @@
               </div>
               <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="textOnRight FFFFFF flyFromRight">
-                  <!--              <span class="text-success text-14">ANALYTICS</span>-->
                   <div class="contentCenter">
                     <h2 class="h2 two54B77 t-left">We care deeply about our environment</h2>
                     <p class="p2 one83B56 t-left">
@@ -78,14 +73,12 @@
         <div class="hero">
           <div class="container h-536">
             <div class="row">
-<!--              <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">-->
                 <div class="content text-center">
                   <p class="p1 one83B56 t-center">You save money. You help the planet.</p>
                   <p class="p1 one83B56 t-center">And we are excited to provide the tools to make it happen.</p>
                   <br>
                   <p class="p1 one83B56 t-center">If we each help a little, we can all do a lot.</p>
                 </div>
-<!--              </div>-->
             </div>
           </div>
         </div>
@@ -98,8 +91,6 @@
           <div class="container">
             <div class="insider">
               <div class="rowI">
-                <!--                <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">-->
-                <!--                  <div class="heading text-center wow fadeInUp">-->
                 <h2 class="h2 two54B77 t-center">Meet the Team</h2>
                 <p class="p2 one83B56 t-center">
                   We are passionate about limiting our collective impact on the environment.
@@ -111,8 +102,6 @@
                     <!--                        </a>-->
                   </button>
                 </div>
-                <!--                  </div>-->
-                <!--                </div>-->
               </div>
 
               <div class="content">
@@ -120,9 +109,7 @@
                   <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card-f flex text-center wow fadeInUp">
                       <div class="card-f-heading">
-<!--                        <div class="ic ic-lg ic-badge mb-36">-->
                           <img src="../assets/images/team/SophiaWennstedt.png" alt="" class="members">
-<!--                        </div>-->
                       </div>
                       <div class="card-f-body">
                         <h4 class="h4 one83B56 t-center">Sophia Wennstedt</h4>
@@ -133,9 +120,7 @@
                   <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card-f flex text-center wow fadeInUp">
                       <div class="card-f-heading">
-<!--                        <div class="ic ic-lg ic-badge mb-36">-->
                           <img src="../assets/images/team/ChanceCobb.png" alt="" class="members">
-<!--                        </div>-->
                       </div>
                       <div class="card-f-body">
                         <h4 class="h4 one83B56 t-center">Chance Cobb</h4>
@@ -146,9 +131,7 @@
                   <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card-f flex text-center wow fadeInUp">
                       <div class="card-f-heading">
-<!--                        <div class="ic ic-lg ic-badge mb-36">-->
                           <img src="../assets/images/team/DennisKontorovichs.png" alt="" class="members">
-<!--                        </div>-->
                       </div>
                       <div class="card-f-body">
                         <h4 class="h4 one83B56 t-center">Dennis Kontorovichs</h4>
@@ -159,9 +142,7 @@
                   <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card-f flex text-center wow fadeInUp">
                       <div class="card-f-heading">
-<!--                        <div class="ic ic-lg ic-badge mb-36">-->
                           <img src="../assets/images/team/ThibautFeremans.png" alt="" class="members">
-<!--                        </div>-->
                       </div>
                       <div class="card-f-body">
                         <h4 class="h4 one83B56 t-center">Thibaut Feremans</h4>
@@ -220,22 +201,6 @@
       <!--        </div>-->
       <!--      </section>-->
       <!--      &lt;!&ndash;end:blip is launching soon&ndash;&gt;-->
-
-      <!--      &lt;!&ndash;start:Contact&ndash;&gt;-->
-      <!--      <div class="hero">-->
-      <!--        <div class="container">-->
-      <!--          <div class="row">-->
-      <!--            <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">-->
-      <!--              <div class="content text-center">-->
-      <!--                <h3 class="text-white mb-24 wow fadeInUp">Contact</h3>-->
-      <!--                <p class="text-gray mt-8 mb-24">hello@blipenergy.com</p>-->
-      <!--              </div>-->
-      <!--            </div>-->
-      <!--          </div>-->
-      <!--        </div>-->
-      <!--      </div>-->
-      <!--      &lt;!&ndash;end:Contact&ndash;&gt;-->
-
 
     </div>
     <Footer></Footer>

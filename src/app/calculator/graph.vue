@@ -424,16 +424,6 @@ export default {
   // },
 
   methods: {
-    // entered_zipcode(zipcode) {
-    //   console.log(zipcode);
-    // },
-    //
-    // displaySavings() {
-    //   const data = this.data;
-    //   this.$emit('display-savings', data)
-    //   console.log('data', data);
-    //   console.log('display: ', this.savePerYear)
-    // },
 
 //Start: add
     drawChartOne(dataHere){
@@ -534,7 +524,8 @@ export default {
     },
     drawChartTwo(){
       console.log('gotHere')
-      this.drawChartOne(this.overallSavings)
+      this.drawOverallSavings()
+      // this.drawChartOne(this.overallSavings)
     }
 //End: add
   },
