@@ -38,7 +38,6 @@
         </b-col>
 
         <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="right t-left m-l-0 p-l-0">
-<!--          <b-row class="whole m-r-0 FFFFFF">-->
           <b-row class="w-100p m-l-0 m-b-12 p-l-0">
             <p class="p3 t-left c-000000">Name*</p>
           </b-row>
@@ -87,11 +86,6 @@
                 :disabled="isDisabled"
             >Submit</b-button>
           </b-row>
-
-<!--          </b-row>-->
-
-
-
 
 
         </b-col>

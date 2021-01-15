@@ -100,6 +100,14 @@ p.p3{
   line-height: 20px;
   /* identical to box height, or 111% */
 }
+p.p4{
+  font-family: 'Montserrat', Avenir;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  /* or 125% */
+}
 
 //img{background: #C4C4C4;}
 
@@ -418,15 +426,27 @@ button.submit:hover {
         border: 2px solid #D3D3D3;
         box-sizing: border-box;
         border-radius: 24px;
-      }
-      .dropdown-item{
-        width: 296px;
-        //height: 49.55px;
 
-        background: #EAEAEA;
-        border: 3px solid #D3D3D3;
-        box-sizing: border-box;
-        border-radius: 24px;
+        font-family: 'Montserrat', Avenir;
+        color: #3cb582;
+        line-height: 100%;
+
+      }
+      //.dropdown::text{
+      //  font-family: 'Montserrat', Avenir;
+      //}
+      .dropdown-item{
+        //width: 296px;
+        height: 50px;
+        padding: 0px 0px;
+
+        //background: #EAEAEA;
+        //border: 3px solid #D3D3D3;
+        //box-sizing: border-box;
+        //border-radius: 24px;
+
+        font-family: 'Montserrat', Avenir;
+        //color: #3cb582;
       }
       .seeSavings{
         width: 242px;
@@ -491,7 +511,7 @@ button.submit:hover {
     }
 
     .savePerYear{
-      //font-family: FF Mark Pro;
+      font-family: 'Montserrat', Avenir;
       font-style: normal;
       font-weight: 300;
       font-size: 84px;
@@ -578,9 +598,9 @@ button.submit:hover {
 
         border-radius: 50px;
 
-        //font-family: FF Mark Pro;
+        font-family: 'Montserrat', Avenir;
         font-style: normal;
-        font-weight: normal;
+        font-weight: 300;
         font-size: 16px;
         line-height: 20px;
 
@@ -695,9 +715,11 @@ button.submit:hover {
         background: transparent;
         border: none;
         padding: 0px 0px;
+
+        font-family: 'Montserrat', Avenir;
         font-style: normal;
+        font-weight: 300;
         font-size: 16px;
-        font-weight: 500;
         line-height: 20px;
         letter-spacing: 0em;
         text-align: center;
