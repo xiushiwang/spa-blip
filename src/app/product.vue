@@ -74,12 +74,12 @@
           </div>
 
           <div class="content">
-            <div class="row">
+            <div class="row m-t-0 p-t-0">
 
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card-f flex text-center wow fadeInUp">
-                  <div class="card-f-heading">
-                    <div class="mb-36 w-100p h-100p" >
+                  <div class="card-f-heading t-center">
+                    <div class="mb-36 w-100p h-100p t-center" >
                       <img src="../assets/blip-icons-product-portable.png" alt="" class="whyBlip">
                     </div>
                   </div>
@@ -94,8 +94,8 @@
 
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card-f flex text-center wow fadeInUp">
-                  <div class="card-f-heading">
-                    <div class="mb-36 w-100p h-100p">
+                  <div class="card-f-heading t-center">
+                    <div class="mb-36 w-100p h-100p t-center">
                       <img src="../assets/blip-icons-product-installation.png" alt="" class="whyBlip">
                     </div>
                   </div>
@@ -110,8 +110,8 @@
 
               <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card-f flex text-center wow fadeInUp">
-                  <div class="card-f-heading">
-                    <div class="mb-36 w-100p h-100p">
+                  <div class="card-f-heading t-center">
+                    <div class="mb-36 w-100p h-100p t-center">
                       <img src="../assets/blip-icons-product-emission.png" alt="" class="whyBlip">
                     </div>
                   </div>
@@ -129,7 +129,7 @@
           </div>
 
           <div class="card-pricing-footer m-t-0">
-            <button type="button" class="btn btn-outline-254B77" onclick="window.location.href='./calculator'">See How Much You’ll Save</button>
+            <button type="button" class="btn btn-outline-254B77" style="width: 385px" onclick="window.location.href='./calculator'">See How Much You’ll Save</button>
           </div>
 
         </div>
@@ -204,8 +204,6 @@
 <script>
 import banner from "./shared/components/banner.vue";
 import Footer from "./shared/components/Footer.vue";
-
-
 import echarts from "echarts";
 require('echarts/theme/shine');
 
@@ -230,7 +228,6 @@ export default {
   methods: {
     drawChartOne(id){
       this.charts = echarts.init(document.getElementById(id))
-      // this.charts.setOption({
       this.charts.setOption({
         tooltip: {
           trigger: 'axis',
@@ -240,7 +237,7 @@ export default {
         },
         color:['#254B77'],
         legend: {
-          data: ['Costs you would pay without blip']
+          data: ['Costs you would pay without blip'],
         },
         grid: {
           left: '3%',
@@ -353,7 +350,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "src/scss/pages/_product.scss";
-
 </style>
 
 

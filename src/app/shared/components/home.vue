@@ -179,8 +179,8 @@
             <div class="rowII">
               <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
                 <div class="heading text-center wow fadeInUp">
-                  <!-- <h1 class="text-whiteOmb-24OwowOfadeInUp">Help shape the future of blip</h1> -->
-                  <!-- <div class="content text-center">
+                  <h2 class="text-whiteOmb-24OwowOfadeInUp">Help shape the future of blip</h2>
+                  <div class="content text-center">
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSignup">
                       Take the Survey
                     </button>
@@ -286,14 +286,13 @@
                         </div>
                       </div>
                     </div>
-                  </div> -->
-      
-
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+        end:Help shape the future of blip-->
 
       </div>
 
@@ -310,14 +309,14 @@ export default {
   name: "home",
   data() {
     return {
-   
     };
   },
 
   methods: {
    
   },
-
+  computed: {
+  },
   components: {
     banner,
     Footer
@@ -327,7 +326,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "./src/scss/components/_home.scss";
-
 </style>
 
 

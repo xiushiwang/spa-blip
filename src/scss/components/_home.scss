@@ -1,10 +1,7 @@
-.navbar {background: transparent;}
-//@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap');
 
-@font-face {
-  font-family: "MarkPro-TestFont";
-  src:local("./assets/fonts/MarkPro-TestFont.otf/MarkPro-TestFont.otf");
-}
+.navbar {background: transparent;}
+
 img{
   display: block;
   width: 100%;
@@ -31,14 +28,15 @@ img{
   padding: 0px;
   margin: 0 auto;
   align-items: center;
+  font-family: 'Montserrat', Avenir;
   .hero-hidden-xl-block{
     width: 100%;
     padding: 0px;
     margin: 0 auto;
     align-items: center;
-    font-family: "MarkPro-TdestFont";
-    //"FF Mark Pro";
+    font-family: 'Montserrat', Avenir;
     font-style: normal;
+    font-weight: 300;
   }
 }
 
@@ -109,6 +107,7 @@ img{
               width: 100%;
               padding: 0px;
               //background-color: blueviolet;
+              font-family: 'Montserrat', Avenir;
               font-style: normal;
               font-weight: 300;
               font-size: 69px;
@@ -119,8 +118,9 @@ img{
             p{
               width: 90%;
               padding: 0px;
+              font-family: 'Montserrat', Avenir;
               font-style: normal;
-              font-weight: normal;
+              font-weight: 300;
               font-size: 24px;
               line-height: 30px;
               color: #FFFFFF;
@@ -138,9 +138,9 @@ img{
                 color: white;
               }
 
-              font: "MarkPro-TestFont";
+              font-family: 'Montserrat', Avenir;
               font-style: normal;
-              font-weight: 500;
+              font-weight: 300;
               font-size: 18px;
               line-height: 20px;
               /* identical to box height, or 111% */
@@ -204,7 +204,7 @@ section.analytics{
 
           h3.text-black-mt-16{
             text-align: left;
-            font-family: "MarkPro-TestFont";
+            font-family: 'Montserrat', Avenir;
             font-style: normal;
             font-weight: 300;
             font-size: 48px;
@@ -213,8 +213,10 @@ section.analytics{
           }
           p.text-gray-mt-20-mb-0{
             text-align: left;
+
+            font-family: 'Montserrat', Avenir;
             font-style: normal;
-            font-weight: normal;
+            font-weight: 300;
             font-size: 24px;
             line-height: 30px;
             color: #183B56;
@@ -263,7 +265,7 @@ section.features{
         margin: auto;
         h3.text-black-mt-16{
           text-align: center;
-          font-family: "MarkPro-TestFont";
+          font-family: 'Montserrat', Avenir;
           font-style: normal;
           font-weight: 300;
           font-size: 48px;
@@ -279,6 +281,7 @@ section.features{
       horiz-align: center;
       position: center;
       margin: auto;
+      margin-top: 0px;
       .row{
         width: 100%;
         text-align: center;
@@ -299,7 +302,8 @@ section.features{
           margin-right: auto;
           .card-f-heading{
             width:30%;
-            background: #C4C4C4;
+            background: transparent;
+                    //#C4C4C4;
             text-align: center;
             vertical-align: middle;
             horiz-align: center;
@@ -316,9 +320,10 @@ section.features{
               align-items: center;
               margin: auto;
               img{
-                width: 100%;
+                width: 150%;
                 height: 100%;
                 margin: auto;
+                background: transparent;
               }
             }
           }
@@ -344,8 +349,9 @@ section.features{
               margin-right: auto;
               text-align: center;
 
+              font-family: 'Montserrat', Avenir;
               font-style: normal;
-              font-weight: normal;
+              font-weight: 300;
               font-size: 41px;
               line-height: 52px;
               color: #4F9BC1;
@@ -356,8 +362,9 @@ section.features{
               left: 168px;
               top: 1072px;
 
+              font-family: 'Montserrat', Avenir;
               font-style: normal;
-              font-weight: normal;
+              font-weight: 300;
               font-size: 24px;
               line-height: 30px;
               text-align: center;
@@ -371,6 +378,7 @@ section.features{
     }
 
     .card-pricing-footer{
+      margin-top: 50px;
       button.btn-btn-outline-primary-btn-block-d-flex-justify-between-items-center{
         width: 188px;
         height: 59px;
@@ -438,7 +446,7 @@ section.quotes{
           //top: 112px;
 
           /* Header 2 */
-          //font-family: "MarkPro-TestFont";
+          font-family: 'Montserrat', Avenir;
           font-style: normal;
           font-weight: 300;
           font-size: 48px;
@@ -458,8 +466,9 @@ section.quotes{
         .content{
           p.text-black-mt-24-mb-16-wow-fadeInUp{
             text-align: left;
+            font-family: 'Montserrat', Avenir;
             font-style: normal;
-            font-weight: normal;
+            font-weight: 300;
             font-size: 24px;
             line-height: 30px;
             color: #b0e7ff;
@@ -505,9 +514,9 @@ section.featuresII{
             //left: 407px;
             //top: 74px;
             /* Header 2 */
-            //font-family: FF Mark Pro;
+            font-family: 'Montserrat', Avenir;
             font-style: normal;
-            font-weight: 300;
+            font-weight: 100;
             font-size: 48px;
             line-height: 129%;
             color: #254B77;
@@ -523,8 +532,9 @@ section.featuresII{
               border-radius: 50px;
               border: none;
 
+              font-family: 'Montserrat', Avenir;
               font-style: normal;
-              font-weight: 500;
+              font-weight: 300;
               font-size: 24px;
               line-height: 30px;
               text-align: center;
@@ -536,847 +546,3 @@ section.featuresII{
     }
   }
 }
-
-////blip is launching soon
-//.hero{
-//  width: 100%;
-//  height: 694px;
-//  //left: 0px;
-//  //top: 3505px;
-//  background: #DEF5FF;
-//  display: flex;
-//  align-items: center;
-//  .containerIII{
-//    width: 100%;
-//    //background: #e83e8c;
-//    .rowIII{
-//      //background: #6f42c1;
-//      width: 100%;
-//      text-align: center;
-//      display: flex;
-//      align-items: center;
-//      .col-lg-8.offset-lg-2.col-md-12.col-sm-12{
-//        //background: #00b8d8;
-//        .content.text-center{
-//          h2.text-whiteIIImb-24IIIwowIIIfadeInUp{
-//            //background: #e83e8c;
-//
-//            //position: absolute;
-//            //width: 487px;
-//            height: 62px;
-//            //left: 454px;
-//            top: 59px;
-//
-//            /* Header 2 */
-//            //font-family: FF Mark Pro;
-//            font-style: normal;
-//            font-weight: 300;
-//            font-size: 48px;
-//            line-height: 129%;
-//            color: #254B77;
-//          }
-//          h3.text-whiteIIImb-24IIIwowIIIfadeInUp{
-//          //  position: absolute;
-//          //  width: 137px;
-//            height: 30px;
-//          //  left: 619px;
-//            top: 136px;
-//            margin-bottom: 53px;
-//
-//            /* Paragraph 2 */
-//            font-style: normal;
-//            font-weight: normal;
-//            font-size: 24px;
-//            line-height: 30px;
-//            text-align: center;
-//            color: #254B77;
-//          }
-//          form{
-//            top: 251px;
-//            text-align: left;
-//            p.text-gray.mt-8.mb-24{
-//              //position: absolute;
-//              //width: 61px;
-//              height: 20px;
-//              //left: 317px;
-//              top: 219px;
-//              margin-bottom: 12px;
-//
-//              /* Paragraph 3 */
-//              font-style: normal;
-//              font-weight: 500;
-//              font-size: 18px;
-//              line-height: 111%;
-//              color: #254B77;
-//            }
-//            .form-row{
-//              width: 100%;
-//              height: 49px;
-//              margin-bottom: 32px;
-//              padding-left: 0px;
-//              padding-right: 0px;
-//              .form-group.col-md-6{
-//                //background: #e83e8c;
-//                //width: 90%;
-//                width: 334px;
-//                margin-bottom: 32px;
-//                //margin-left: 0px;
-//                //margin-right: 0px;
-//                //padding: 0;
-//                .form-control-name{
-//                  //position: absolute;
-//                  width: 334px;
-//                  height: 49px;
-//                  //left: 318px;
-//                  //top: 251px;
-//                  background: #FFFFFF;
-//                  box-sizing: border-box;
-//                  border: none;
-//                  outline: none;
-//                  margin-right:0px;
-//                  ::placeholder{
-//                    font-style: normal;
-//                    font-weight: 500;
-//                    font-size: 18px;
-//                    line-height: 111%;
-//                    color: #8E8E8E;
-//                  }
-//                }
-//              }
-//            }
-//            .form-group{
-//              margin-bottom: 32px;
-//              .form-control-email{
-//                width: 92%;
-//                height: 49px;
-//                //left: 318px;
-//                //top: 251px;
-//                background: #FFFFFF;
-//                box-sizing: border-box;
-//                border: none;
-//                outline: none;
-//              }
-//              .form-control-zip{
-//                width: 173px;
-//                height: 49px;
-//                //left: 318px;
-//                //top: 251px;
-//                background: #FFFFFF;
-//                box-sizing: border-box;
-//                border: none;
-//                outline: none;
-//              }
-//            }
-//            .form-group.mb-0{
-//              text-align: center;
-//              margin-top: 6px;
-//              button{
-//                //position: absolute;
-//                width: 225px;
-//                height: 59px;
-//                //left: 608px;
-//                //top: 552px;
-//
-//                border: 2px solid #4F9BC1;
-//                box-sizing: border-box;
-//                border-radius: 24px;
-//              }
-//            }
-//
-//          }
-//        }
-//      }
-//    }
-//  }
-//}
-//
-
-
-//.company-about {
-//  // header
-//  header {
-//    background-image: url('../images/covers/cover-4@2x.png');
-//    background-position: top center;
-//    background-repeat: no-repeat;
-//    background-size: cover;
-//
-//    .hero {
-//      padding-top: 96px;
-//      padding-bottom: 110px;
-//    }
-//  }
-//
-//  // about
-//  .about {
-//    padding-top: 64px;
-//
-//    &-gallery-top,
-//    &-gallery-bottom {
-//      display: flex;
-//
-//      li {
-//        border-radius: .5rem;
-//
-//        img {
-//          width: 100%;
-//          height: 100%;
-//          object-fit: cover;
-//          border-radius: .5rem;
-//        }
-//      }
-//    }
-//
-//    &-gallery-top {
-//      padding-top: 140px;
-//      li {
-//        &:nth-of-type(1) {
-//          width: 380px;
-//          height: 460px;
-//          margin-left: 70px;
-//        }
-//
-//        &:nth-of-type(2) {
-//          width: 360px;
-//          height: 240px;
-//          margin-left: 25px;
-//          margin-right: 25px;
-//          margin-bottom: 25px;
-//          margin-top: 120px;
-//        }
-//
-//        &:nth-of-type(3) {
-//          width: 440px;
-//          height: 320px;
-//          position: absolute;
-//          right: 0;
-//          margin-right: -145px;
-//          margin-bottom: 25px;
-//          margin-top: 40px;
-//        }
-//      }
-//    }
-//
-//    &-gallery-bottom {
-//      li {
-//        &:nth-of-type(1) {
-//          width: 440px;
-//          height: 320px;
-//          margin-top: 25px;
-//          margin-left: -150px;
-//        }
-//
-//        &:nth-of-type(2) {
-//          width: 210px;
-//          height: 240px;
-//          margin-left: 25px;
-//          margin-top: 25px;
-//        }
-//
-//        &:nth-of-type(3) {
-//          width: 600px;
-//          height: 420px;
-//          margin-left: 25px;
-//          margin-top: -75px;
-//        }
-//
-//        &.pattern {
-//          width: 120px;
-//          height: 142px;
-//          margin-top: -80px;
-//          margin-left: 25px;
-//
-//          img {
-//            object-fit: unset;
-//          }
-//        }
-//      }
-//    }
-//  }
-//
-//  // values
-//  .values {
-//    padding-top: 200px;
-//    padding-bottom: 122px;
-//
-//    .heading {
-//      margin-bottom: 110px;
-//    }
-//  }
-//
-//  // team {
-//  .team {
-//    padding-top: 200px;
-//    padding-bottom: 165px;
-//    background-image: url("../images/covers/cover-7@2x.png");
-//    background-repeat: no-repeat;
-//    background-position: top center;
-//    background-size: 100%;
-//
-//    .left {
-//      padding-right: 180px;
-//    }
-//
-//    .heading {
-//      margin-bottom: 40px;
-//    }
-//
-//    .team-list-top,
-//    .team-list-bottom {
-//      border-radius: 12px;
-//
-//      img {
-//        width: 100%;
-//        height: 100%;
-//        object-fit: cover;
-//        border-radius: 12px;
-//        box-shadow: 0 20px 50px 0 rgba(15,24,44,0.25);
-//      }
-//    }
-//
-//    .team-list-top {
-//      display: flex;
-//
-//      li {
-//        &:nth-of-type(1) {
-//          width: 96px;
-//          height: 96px;
-//          margin-top: 70px;
-//          z-index: 1;
-//        }
-//
-//        &:nth-of-type(2) {
-//          width: 64px;
-//          height: 64px;
-//          position: absolute;
-//          margin-left: 170px;
-//          margin-top: 165px;
-//        }
-//
-//        &:nth-of-type(3) {
-//          width: 160px;
-//          height: 180px;
-//          margin-top: -60px;
-//          position: absolute;
-//          right: 0;
-//          margin-right: 100px;
-//          z-index: 1;
-//        }
-//
-//        &.blue-circle {
-//          width: 32px;
-//          height: 32px;
-//          border-radius: 100px;
-//          background-color: $s-color-primary;
-//          position: absolute;
-//          right: 0;
-//          margin-right: 85px;
-//          margin-top: 100px;
-//        }
-//
-//        &.gray-circle {
-//          width: 24px;
-//          height: 24px;
-//          border-radius: 100px;
-//          background-color: $s-color-border;
-//          position: absolute;
-//          margin-top: 155px;
-//          margin-left: -10px;
-//        }
-//      }
-//    }
-//
-//    .team-list-bottom {
-//      display: flex;
-//
-//      li {
-//        &:nth-of-type(1) {
-//          width: 120px;
-//          height: 120px;
-//          margin-top: 118px;
-//          margin-left: 90px;
-//          z-index: 1;
-//        }
-//
-//        &:nth-of-type(2) {
-//          width: 96px;
-//          height: 96px;
-//          position: absolute;
-//          margin-left: 350px;
-//          margin-top: 30px;
-//        }
-//
-//        &.pattern {
-//          width: 86px;
-//          height: 102px;
-//          position: absolute;
-//          margin-top: 90px;
-//          margin-left: 165px;
-//
-//          img {
-//            object-fit: unset !important;
-//            box-shadow: none;
-//            border-radius: 0;
-//          }
-//        }
-//      }
-//    }
-//  }
-//
-//  // customers
-//  .customers {
-//    background-image: linear-gradient(to bottom, #f8fbff, rgba(250, 251, 251, 0));
-//    padding-top: 64px;
-//    padding-bottom: 144px;
-//
-//    .heading {
-//      margin-bottom: 64px;
-//      padding-right: 100px;
-//    }
-//
-//    &-list {
-//      display: flex;
-//      align-items: center;
-//
-//      li {
-//        margin-right: 58px;
-//
-//        &:last-child {
-//          margin-right: 0;
-//        }
-//
-//        img {
-//          height: 25px;
-//        }
-//      }
-//    }
-//  }
-//
-//  // footer
-//  .footer {
-//    padding-top: 128px;
-//  }
-//
-//}
-//
-//// Extra small devices (portrait phones, less than 576px)
-//@media (max-width: 575.98px) {
-//  .company-about {
-//    .divider {
-//      display: none;
-//    }
-//
-//    .relative {
-//      svg {
-//        display: none;
-//      }
-//    }
-//
-//    // header
-//    header {
-//      .hero {
-//        padding-top: 40px;
-//        padding-bottom: 64px;
-//      }
-//    }
-//
-//    // about
-//    .about {
-//      .about-gallery-top {
-//        padding-top: 48px;
-//
-//        li {
-//          &:nth-of-type(1) {
-//            width: 80px;
-//            height: 210px;
-//            margin-left: -40px;
-//            position: relative;
-//            margin-right: 0;
-//          }
-//
-//          &:nth-of-type(2) {
-//            width: 157px;
-//            height: 105px;
-//            margin: 75px 10px 10px;
-//          }
-//
-//          &:nth-of-type(3) {
-//            width: 200px;
-//            height: 140px;
-//            position: absolute;
-//            right: 0;
-//            margin-right: -75px;
-//            margin-bottom: 25px;
-//            margin-top: 40px;
-//          }
-//        }
-//      }
-//
-//      .about-gallery-bottom {
-//        li {
-//          &:nth-of-type(1),
-//          &:nth-of-type(4) {
-//            display: none;
-//          }
-//
-//          &:nth-of-type(2) {
-//            width: 70px;
-//            height: 105px;
-//            margin-left: -30px;
-//            margin-top: 10px;
-//            position: relative;
-//          }
-//
-//          &:nth-of-type(3) {
-//            width: 251px;
-//            height: 183px;
-//            margin-left: 10px;
-//            margin-top: -20px;
-//          }
-//        }
-//      }
-//    }
-//
-//    // values
-//    .values {
-//      padding-top: 80px;
-//      padding-bottom: 0;
-//
-//      .heading {
-//        margin-bottom: 48px;
-//      }
-//    }
-//
-//    // our team
-//    .team {
-//      padding-top: 120px;
-//      padding-bottom: 82px;
-//
-//      .left {
-//        padding-right: 15px;
-//        text-align: center;
-//      }
-//
-//      &-list-top {
-//        li {
-//          &:nth-of-type(1) {
-//            margin-left: -76px !important;
-//            margin-top: 110px !important;
-//          }
-//
-//          &:nth-of-type(2) {
-//            margin-left: 80px !important;
-//            margin-top: 210px !important;
-//          }
-//
-//          &:nth-of-type(3) {
-//            margin-top: 22px !important;
-//            margin-right: -53px !important;
-//          }
-//
-//          &.gray-circle,
-//          &.blue-circle {
-//            display: none;
-//          }
-//        }
-//      }
-//
-//      &-list-bottom {
-//        li {
-//          &:nth-of-type(1) {
-//            margin-left: 10px !important;
-//          }
-//
-//          &:nth-of-type(2) {
-//            margin-left: 284px !important;
-//            margin-top: 40px !important;
-//          }
-//
-//          &.pattern {
-//            margin-left: 90px !important;
-//          }
-//        }
-//      }
-//    }
-//
-//    // customer
-//    .customers {
-//      padding-bottom: 0;
-//
-//      .heading {
-//        padding-right: 0;
-//        margin-bottom: 48px;
-//        text-align: center;
-//      }
-//
-//      .content {
-//        .customers-list {
-//          flex-direction: column;
-//
-//          li {
-//            margin-right: 0;
-//            margin-bottom: 53px;
-//
-//            img {
-//              height: 30px;
-//            }
-//          }
-//        }
-//      }
-//    }
-//
-//    // footer
-//    .footer {
-//      padding-top: 80px;
-//    }
-//  }
-//}
-//
-//// Small devices (landscape phones, 576px and up)
-//@media (min-width: 576px) and (max-width: 767.98px) {
-//  .company-about {
-//    .divider {
-//      display: none;
-//    }
-//
-//    .relative {
-//      svg {
-//        display: none;
-//      }
-//    }
-//
-//    // header
-//    header {
-//      .hero {
-//        padding-top: 40px;
-//        padding-bottom: 64px;
-//      }
-//    }
-//
-//    // about
-//    .about {
-//      .about-gallery-top {
-//        padding-top: 48px;
-//
-//        li {
-//          &:nth-of-type(1) {
-//            width: 80px;
-//            height: 210px;
-//            margin-left: -40px;
-//            position: relative;
-//            margin-right: 0;
-//          }
-//
-//          &:nth-of-type(2) {
-//            width: 157px;
-//            height: 105px;
-//            margin: 75px 10px 10px;
-//          }
-//
-//          &:nth-of-type(3) {
-//            width: 200px;
-//            height: 140px;
-//            position: absolute;
-//            right: 0;
-//            margin-right: -75px;
-//            margin-bottom: 25px;
-//            margin-top: 40px;
-//          }
-//        }
-//      }
-//
-//      .about-gallery-bottom {
-//        li {
-//          &:nth-of-type(1),
-//          &:nth-of-type(4) {
-//            display: none;
-//          }
-//
-//          &:nth-of-type(2) {
-//            width: 70px;
-//            height: 105px;
-//            margin-left: -30px;
-//            margin-top: 10px;
-//            position: relative;
-//          }
-//
-//          &:nth-of-type(3) {
-//            width: 251px;
-//            height: 183px;
-//            margin-left: 10px;
-//            margin-top: -20px;
-//          }
-//        }
-//      }
-//    }
-//
-//    // values
-//    .values {
-//      padding-top: 80px;
-//      padding-bottom: 0;
-//
-//      .heading {
-//        margin-bottom: 48px;
-//      }
-//    }
-//
-//    // our team
-//    .team {
-//      padding-top: 120px;
-//      padding-bottom: 82px;
-//
-//      .left {
-//        padding-right: 15px;
-//        text-align: center;
-//      }
-//
-//      &-list-top {
-//        li {
-//          &:nth-of-type(1) {
-//            margin-left: -76px !important;
-//            margin-top: 110px !important;
-//          }
-//
-//          &:nth-of-type(2) {
-//            margin-left: 80px !important;
-//            margin-top: 210px !important;
-//          }
-//
-//          &:nth-of-type(3) {
-//            margin-top: 22px !important;
-//            margin-right: -53px !important;
-//          }
-//
-//          &.gray-circle,
-//          &.blue-circle {
-//            display: none;
-//          }
-//        }
-//      }
-//
-//      &-list-bottom {
-//        li {
-//          &:nth-of-type(1) {
-//            margin-left: 10px !important;
-//          }
-//
-//          &:nth-of-type(2) {
-//            margin-left: 284px !important;
-//            margin-top: 40px !important;
-//          }
-//
-//          &.pattern {
-//            margin-left: 90px !important;
-//          }
-//        }
-//      }
-//    }
-//
-//    // customer
-//    .customers {
-//      padding-bottom: 0;
-//
-//      .heading {
-//        padding-right: 0;
-//        margin-bottom: 48px;
-//        text-align: center;
-//      }
-//
-//      .content {
-//        .customers-list {
-//          flex-direction: column;
-//
-//          li {
-//            margin-right: 0;
-//            margin-bottom: 53px;
-//
-//            img {
-//              height: 30px;
-//            }
-//          }
-//        }
-//      }
-//    }
-//
-//    // footer
-//    .footer {
-//      padding-top: 80px;
-//    }
-//  }
-//}
-//
-//// Medium devices (tablets, 768px and up)
-//@media (min-width: 768px) and (max-width: 991.98px) {
-//  .company-about {
-//
-//    // about
-//    .about {
-//      .about-gallery-top {
-//        li {
-//          &:nth-of-type(1) {
-//            width: 180px !important;
-//            margin-left: -80px !important;
-//          }
-//
-//          &:nth-of-type(3) {
-//            margin-right: -310px !important;
-//          }
-//        }
-//      }
-//
-//      .about-gallery-bottom {
-//        li {
-//          &:nth-of-type(1),
-//          &.pattern {
-//            display: none;
-//          }
-//
-//          &:nth-of-type(2) {
-//            width: 256px !important;
-//            margin-left: -110px !important;
-//          }
-//
-//          &:nth-of-type(3) {
-//            width: 720px !important;
-//            margin-right: -100px !important;
-//          }
-//        }
-//      }
-//    }
-//
-//    // team
-//    .team {
-//      padding-top: 120px;
-//
-//      .right {
-//        margin-left: 200px;
-//        position: relative;
-//      }
-//    }
-//
-//    // customers
-//    .customers {
-//      padding-top: 65px;
-//      padding-bottom: 192px;
-//
-//      .heading {
-//        margin-bottom: 49px;
-//      }
-//
-//      .content {
-//        .customers-list {
-//          flex-wrap: wrap;
-//
-//          li {
-//            width: calc(100% / 5);
-//            margin-right: 0;
-//
-//            .btn {
-//              position: absolute;
-//              margin-top: 40px;
-//            }
-//          }
-//        }
-//      }
-//    }
-//  }
-//}

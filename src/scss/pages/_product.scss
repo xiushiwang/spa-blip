@@ -8,12 +8,6 @@
 //  font-family: "MarkPro-TestFont";
 //  src:local("./assets/fonts/MarkPro-TestFont.otf/MarkPro-TestFont.otf");
 //}
-//@font-face {
-//  font-family: "hkgrotesk";
-//  src: local("src/assets/fonts/hkgrotesk");
-//}
-
-//@import url(../../assets/fonts/MarkPro-TestFont.otf/FFMarkFree.css);
 
 section{
   width: 100%;
@@ -75,6 +69,14 @@ h2{
   line-height: 62px;
   margin: 20px;
   /* identical to box height, or 129% */
+}
+h3{
+  font-family: 'Montserrat', Avenir;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 41px;
+  line-height: 50px;
+  /* identical to box height */
 }
 h4{
   font-family: 'Montserrat', Avenir;
