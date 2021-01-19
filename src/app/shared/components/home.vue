@@ -43,11 +43,10 @@
                 <div class="heading-wow-fadeInUp">
                   <h3 class="text-black-mt-16">about blip</h3>
                   <p class="text-gray-mt-20-mb-0">
-                    We supply enterprises, organizations and institutes of high-tech industries with modern components.
-                    We build long-term trusting relationships with our customers and partnes for further fruitful cooperations.
-                    <br>
-                    <br>
-                    From year to year we strive to invent the most innovative technology that is used by both small enterprises and space enterprises.
+                   blip is a residential energy storage product focused on saving you money on your monthly electric bill by capturing 
+                   the value of electricity price changes throughout the day, and delivering that value back to you as savings. 
+                   By offering blip at a fraction of the price our competitors charge, we aim to widely expand access 
+                   to the savings and benefits energy storage can provide.
                   </p>
                 </div>
               </div>
@@ -172,130 +171,7 @@
           </div>
         </section>
         <!--end:blip helps the planet too-->
-
-        <!--start:Help shape the future of blip-->
-        <section class="featuresII">
-          <div class="containerII">
-            <div class="rowII">
-              <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
-                <div class="heading text-center wow fadeInUp">
-                  <h2 class="text-whiteOmb-24OwowOfadeInUp">Help shape the future of blip</h2>
-                  <div class="content text-center">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSignup">
-                      Take the Survey
-                    </button>
-                  </div> -->
-
-                  <!-- start:blip Questionnaire popup -->
-                  <!-- <div class="modal fade" id="modalSignup" tabindex="-1" role="dialog" aria-labelledby="modalSignupLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <div class="modal-body">
-                          <button type="button" class="close outline-none" data-dismiss="modal" aria-label="Close">
-                            <i class="fas fa-times text-14 text-gray"></i>
-                          </button>
-
-                          <div class="heading text-center">
-                            <h3 class="text-hkgrotesk font-bold text-alt text-black mb-36">blip Questionnaire</h3>
-                          </div>
-
-                          <form action="">
-                            <div class="form-group">
-                              <label>Which age range do you fall under? *</label>
-                              <select class="form-control input-lg selectpicker">
-                                <option>Below 18</option>
-                                <option>18-24</option>
-                                <option>25-34</option>
-                                <option>35-44</option>
-                                <option>45-54</option>
-                                <option>55-64</option>
-                                <option>65+</option>
-                              </select>
-                            </div>
-                            <div class="form-group">
-                              <label>Where are you located? (City, Zipcode) *</label>
-                              <input class="form-control" placeholder="(Exapmle: Champaign, 61820)">
-                            </div>
-                            <div class="form-group">
-                              <label>Which of the following best describes where you live? *</label>
-                              <select class="form-control input-lg selectpicker">
-                                <option>Apartment</option>
-                                <option>Condominium</option>
-                                <option>Mobile Home</option>
-                                <option>Multi-family home</option>
-                                <option>Single-family home</option>
-                              </select>
-                            </div>
-                            <div class="form-group">
-                              <label>Do you currently rent or own your property? *</label>
-                              <select class="form-control input-lg selectpicker">
-                                <option>Rent</option>
-                                <option>Own</option>
-                              </select>
-                            </div>
-                            <div class="form-group">
-                              <label>What types of A/C units do you have? *</label>
-                              <select class="form-control input-lg selectpicker">
-                                <option>Central A/C</option>
-                                <option>Window A/C</option>
-                                <option>Mini-split A/C</option>
-                                <option>Ductless A/C</option>
-                                <option>Portable A/C</option>
-                              </select>
-                            </div>
-                            <div class="form-group">
-                              <label>How many A/C units do you have in your home? *</label>
-                              <select class="form-control input-lg selectpicker">
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3+</option>
-                              </select>
-                            </div>
-                            <div class="form-group">
-                              <label>What is the most important feature of this product to you? *</label>
-                              <p>Select 2 out of the 4 options provided</p>
-                              <p><input type="checkbox" class="form-check-input" name="importantFeature" value="Resiliency" />Resiliency</p>
-                              <p><input type="checkbox" class="form-check-input" name="importantFeature" value="CostCutting" />Cost cutting</p>
-                              <p><input type="checkbox" class="form-check-input" name="importantFeature" value="EnvironmentalImpact" />Environmental impact</p>
-                              <p><input type="checkbox" class="form-check-input" name="importantFeature" value="PortablePowerForRecreationOutdoors" />Portable power for recreation / outdoors</p>
-                            </div>
-                            <div class="form-group">
-                              <label>How did you hear about us? *</label>
-                              <select class="form-control input-lg selectpicker">
-                                <option>Reddit</option>
-                                <option>Quora</option>
-                                <option>From a friend</option>
-                                <option>Other social media platforms</option>
-                              </select>
-                            </div>
-                            <div class="form-group">
-                              <label>What excites you about our product?</label>
-                              <input class="form-control">
-                            </div>
-                            <div class="form-group">
-                              <label>We would love to chat with you further about your energy consumption needs. Could we follow up with you for an additional 15 minutes of your time?</label>
-                              <p>Please provide your email so we may contact you with further details. There will be compensation provided.</p>
-                              <input type="email" class="form-control">
-                            </div>
-
-                            <div class="form-group mb-0">
-                              <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
-                            </div>
-                          </form>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        end:Help shape the future of blip-->
-
       </div>
-
     </b-container>
     <Footer></Footer>
   </div>
@@ -311,14 +187,23 @@ export default {
     return {
     };
   },
-
-  methods: {
+  mounted() {
    
+  },
+  methods: {
+    destEntered() {
+      console.log("is it even reaching");
+      this.$root.$emit("destWasEntered", this.travel);
+    },
+    clickFunction() {
+      console.log("is it even reaching");
+    },
   },
   computed: {
   },
   components: {
     banner,
+    // FontAwesomeIcon,
     Footer
   }
 };
@@ -327,5 +212,3 @@ export default {
 <style lang="scss" scoped>
 @import "./src/scss/components/_home.scss";
 </style>
-
-
