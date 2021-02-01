@@ -10,10 +10,6 @@
         <p class="p2 c-000000 t-left m-l-0 how" style="margin-left: 0px">How do rates in your area compare to your possible blip savings?</p>
         <b-row class="zipcode_input t-left w-100p m-l-0">
           <b-col xs="12" sm="12" md="7" lg="7" xl="7" class="t-left m-tb-a p-l-0">
-<!--            <b-input-group>-->
-<!--              <b-input-group-prepend>-->
-<!--                <span class="input-group-text">hhhhhhh<font-awesome-icon icon="arrow-right" style="color: #000000" /></span>-->
-<!--              </b-input-group-prepend>-->
             <b-form-input
                 class="zip-input absolute-mid"
                 v-model="zipcode"
@@ -22,8 +18,6 @@
 <!--              <font-awesome-icon icon="arrow-right" style="color: #000000" />-->
 <!--              <font-awesome-icon icon="fa-map-marker-alt"/>-->
             </b-form-input>
-<!--            </b-input-group>-->
-            <!--              <p>{{zipcode.length}}</p>-->
           </b-col>
           <b-col xs="12" sm="12" md="5" lg="5" xl="5" class="i-a-c p-0">
             <b-button
@@ -31,7 +25,7 @@
                 variant="outline-primary"
                 v-on:click="checkZipcode()"
                 :disabled="isDisabled"
-            >Search </b-button>
+            >Search</b-button>
 <!--            <font-awesome-icon icon="map-marker-alt"/>-->
           </b-col>
         </b-row>
@@ -87,7 +81,7 @@
                       id="tooltip-target-1"
                       variant="outline-primary"
                       v-if="post.logo !== ''"
-                      v-on:click="list(post); sendUtility(post); countOverallPlan(post)"
+                      v-on:click="list(post); sendUtility(post); countOverallPlan(post); provider = true;"
                       v-b-tooltip.hover="{title: post.utilityName}"
                   >
                     <img :src= "'http://'+post.logo" class = "utilityLogo">
@@ -97,45 +91,18 @@
                       class="utilityProviderLetter"
                       variant="outline-primary"
                       v-if="post.logo === ''"
-                      v-on:click="list(post); sendUtility(post); countOverallPlan(post)"
+                      v-on:click="list(post); sendUtility(post); countOverallPlan(post); provider = true;"
                   >
                     <p class="p4 t-center">{{post.utilityName}}</p>
                   </b-button>
-
-                  <!--                <div class="card" v-for="post.plans of post">-->
-
-                  <!--                <div class="card" v-for="plans of post">-->
-                  <!--                  <b-button-->
-                  <!--                      variant="outline-primary"-->
-                  <!--                      v-on:click="list(post.utilities.utility_name)"-->
-                  <!--                  >-->
-                  <!--                    {{post.utilities.plans.plan_name}}-->
-                  <!--                  </b-button>-->
-                  <!--                </div>-->
                 </div>
               </b-col>
               <!--            End: add-->
-
-              <!--            <b-col xs="12" sm="12" md="6" lg="6" xl="4">-->
-              <!--              <div class="card">-->
-              <!--                <div class="card-body">ComEd</div>-->
-              <!--              </div>-->
-              <!--            </b-col>-->
-              <!--            <b-col xs="12" sm="12" md="4" lg="4" xl="4">-->
-              <!--              <div class="card">-->
-              <!--                <div class="card-body">Edison International</div>-->
-              <!--              </div>-->
-              <!--            </b-col>-->
-              <!--            <b-col xs="12" sm="12" md="4" lg="4" xl="4">-->
-              <!--              <div class="card">-->
-              <!--                <div class="card-body">PG&E</div>-->
-              <!--              </div>-->
-              <!--            </b-col>-->
             </b-row>
           </b-col>
         </b-row>
 
-        <b-row class="rate_plan t-left w-100p m-l-0 p-l-0">
+        <b-row class="rate_plan t-left w-100p m-l-0 p-l-0" v-if="provider">
           <!--        <b-col xs="12" sm="12" md="12" lg="12" xl="12" >-->
           <h4 class="c-254B77">Choose your rate plan:</h4>
           <b-button
@@ -145,35 +112,24 @@
           <b-row class="plan_select t-left w-100p m-l-0 p-l-0">
             <!--            <b-col xs="12" sm="12" md="12" lg="12" xl="12">-->
 
-            <b-dropdown
-                :text="selectedPlan"
-                class="m-l-0 dropdown"
-                block
-                split
-                split-variant="light"
-                variant="light"
-            >
-              <!--                <b-dropdown-item-->
-              <!--                    href="#"-->
-              <!--                    v-for="(i, index1) in planNum"-->
-              <!--                    :key='index1'-->
-              <!--                    @click=-->
-              <!--                        "selectedPlan = utilityPicked.planList[index1].planName;-->
-              <!--                        sendPlan(index1);-->
-              <!--                        countPlan(utilityPicked.planList[index1])"-->
-              <!--                >{{utilityPicked.planList[index1].planName}}</b-dropdown-item>-->
-              <!--              </b-dropdown>-->
-              <b-dropdown-divider></b-dropdown-divider>
-              <b-dropdown-item
-                  href="#"
-                  v-for="plan of utilityPicked.planList"
-                  @click=
-                      "selectedPlan = plan.planName;
-                       countPlan(plan);
-                       sendPlan(plan)"
+            <!--              <b-dropdown :text="selectedPlan" class="m-l-0 dropdown" block split split-variant="light" variant="light">-->
+            <!--              <b-dropdown-divider></b-dropdown-divider>-->
+            <!--              <b-dropdown-item class="dropdown-item" href="#" v-for="plan of utilityPicked.planList"-->
+            <!--                  @click=-->
+            <!--                      "selectedPlan = plan.planName;-->
+            <!--                       countPlan(plan);-->
+            <!--                       sendPlan(plan)"-->
+            <!--              >{{plan.planName}}</b-dropdown-item>-->
+
+            <select class="m-l-0 dropdown" v-model="model" v-on:change="planSelected($event)">
+<!--              <option selected>Click me to choose</option>-->
+              <option :value="''" disabled selected>Please select...</option>
+              <option
                   class="dropdown-item"
-              >{{plan.planName}}</b-dropdown-item>
-            </b-dropdown>
+                  v-for="(plan, index) of utilityPicked.planList"
+                  :value="index"
+              >{{plan.planName}}</option>
+            </select>
             <!--            </b-col>-->
           </b-row>
           <b-row class="plan_select t-left w-100p m-l-0 p-l-0">
@@ -239,9 +195,11 @@ export default {
       localAddress: './src/assets/JSONforTesting/',
       overallPlan:[],
       selectedPlan: '',
+      model:'',
       planClickd: true,
       capacity: 2.2,
-      numOfGraphLoaded: 0
+      numOfGraphLoaded: 0,
+      provider: false,
 //End: add
     };
   },
@@ -294,6 +252,7 @@ export default {
     },
 
     loadJSON(){
+      this.provider = false;
       this.address = this.address + this.zipcode
       // const address = './src/assets/JSONforTesting/'
       // this.address = address + this.zipcode + '.json'
@@ -306,6 +265,12 @@ export default {
               this.sendNoData(true)
             }else{
               this.sendNoData(false)
+              if (response.data.data.length === 1){
+                this.list(response.data.data[0]);
+                this.sendUtility(response.data.data[0]);
+                this.countOverallPlan(response.data.data[0]);
+                this.provider = true;
+              }
             }
           })
           .catch(e => {
@@ -319,6 +284,7 @@ export default {
       // const utilityPlans = '{{post.utilities.' + utility + '.plans.plan_name}}'
       this.utilityPicked = utility
       this.planNum = this.utilityPicked.planList.length
+      this.model = ''
       this.selectedPlan = ''
       this.sendPlan(this.selectedPlan)
       this.countPlan(this.selectedPlan)
@@ -356,7 +322,7 @@ export default {
     },
 
     countPlan(plan){
-      // console.log(plan.highPrice)
+      // console.log(plan)
       // const savings = (plan.highPrice - plan.lowPrice) * this.capacity * 365
       // const savings = 0.0
       //
@@ -378,6 +344,21 @@ export default {
       // console.log('sendPlan', plan)
     },
 
+    planSelected(event){
+      // console.log('Valllllllllllllllue',event.target.value)
+      // const mark = 0;
+      // for (var i=0; i<this.utilityPicked.planList.length; i++){
+      //   if (this.utilityPicked.planList[i].planName === this.selectedPlan){
+      //     break;
+      //   }
+      // }
+      // console.log('TTTTTTTTTTTThis',this.utilityPicked.planList[event.target.value]);
+      this.selectedPlan = this.utilityPicked.planList[event.target.value].planName
+      // console.log('Mooooooodel', this.selectedPlan)
+      this.countPlan(this.utilityPicked.planList[event.target.value]);
+      this.sendPlan(this.utilityPicked.planList[event.target.value]);
+    },
+
     refresh(){
       this.$router.go(0)
     },
@@ -396,59 +377,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "src/scss/pages/_calculator.scss";
-
-//$button-color: #e7eff9;
-//
-//.blip-area {
-//  margin: 3em 0 0 0;
-//}
-//
-//.zipcode_input {
-//  margin: 3em 0 0 0;
-//}
-//
-//.utility_select{
-//  h3 {
-//    margin: 2em 0 0 0;
-//  }
-//}
-//
-//.rate_plan, .utility_provider {
-//  h3{
-//    margin: 2em 0 0 0;
-//  }
-//}
-//
-//.buttons {
-//  position: relative;
-//  // top: 25%;
-//  transform: translateY(-25%);
-//  // display: inline;
-//}
-//
-//.btn-warning {
-//  background: rgba(76, 175, 80, 0.33);
-//  // opacity:0.3;
-//  // background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 30%);
-//  border-color: darken($button-color, 15%);
-//  color: darken(black, 100%);
-//  font-style: bold;
-//  font-size: 15px;
-//  height: 8em;
-//  word-break: break-word;
-//  width: 50%;
-//  width: 50%;
-//}
-//.btn-success,
-//.btn-info {
-//  background-color: $button-color;
-//  background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
-//  border-color: darken($button-color, 15%);
-//  color: darken($button-color, 50%);
-//  height: 8em;
-//  word-break: break-word;
-//  width: 50%;
-//}
 </style>
 
 

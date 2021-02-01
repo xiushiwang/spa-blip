@@ -145,55 +145,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "src/scss/pages/_calculator.scss";
-
-//$button-color: #e7eff9;
-//
-//.blip-pig {
-//  // background-image: url("../assets/exploding_blip_pig.png");
-//   max-width: 100%;
-//  // max-width: 400px;
-//  height: auto;
-//  // background-repeat: no-repeat;
-//  // background-position: center center;
-//  // background-attachment: fixed;
-//  // background-size: cover;
-//  // min-height: 100%;
-//}
-//.blip-headline {
-//  margin: 5em 0 0 0;
-//}
-////find a better way to vertically align
-//
-// .buttons {
-//    position: relative;
-//    // top: 25%;
-//    transform: translateY(-25%);
-//    // display: inline;
-//  }
-//
-//.btn-warning {
-//   background: rgba(76, 175, 80,0.33);
-//  // opacity:0.3;
-//  // background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 30%);
-//  border-color: darken($button-color, 15%);
-//  color: darken(black, 100%);
-//  font-style:bold;
-//  font-size:15px;
-//  height: 8em;
-//  word-break: break-word;
-//  width: 50%;
-//  width: 50%;
-//}
-//.btn-success,
-//.btn-info {
-//  background-color: $button-color;
-//  background-image: linear-gradient(315deg, #e7eff9 0%, #cfd6e6 74%);
-//  border-color: darken($button-color, 15%);
-//  color: darken($button-color, 50%);
-//  height: 8em;
-//  word-break: break-word;
-//  width: 50%;
-//}
 </style>
 
 
