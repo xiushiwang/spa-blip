@@ -9,7 +9,7 @@
         <h1 class="h1 c-000000 t-left see">See how blip can save you money</h1>
         <p class="p2 c-000000 t-left m-l-0 how" style="margin-left: 0px">How do rates in your area compare to your possible blip savings?</p>
         <b-row class="zipcode_input t-left w-100p m-l-0">
-          <b-col xs="12" sm="12" md="7" lg="7" xl="7" class="t-left m-tb-a p-l-0">
+          <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="t-left m-tb-a p-l-0">
             <b-form-input
                 class="zip-input absolute-mid"
                 v-model="zipcode"
@@ -19,7 +19,7 @@
 <!--              <font-awesome-icon icon="fa-map-marker-alt"/>-->
             </b-form-input>
           </b-col>
-          <b-col xs="12" sm="12" md="5" lg="5" xl="5" class="i-a-c p-0">
+          <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="i-a-c p-0">
             <b-button
                 class = "submit search-button"
                 variant="outline-primary"

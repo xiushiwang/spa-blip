@@ -21,7 +21,7 @@ export default {
   <div>
     <banner></banner>
     <b-container>
-        <b-row class = "container">
+        <b-row class = "container" style="padding-top: 0px; margin-top: 0px">
 
 <!--          <b-row class="seeHow row w-100p">-->
 <!--            <b-col xs="12" sm="12" md="6" lg="6" xl="6">-->

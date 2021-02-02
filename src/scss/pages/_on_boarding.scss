@@ -1,0 +1,273 @@
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap');
+
+//@font-face {
+//  font-family: "Montserrat";
+//  src:("src/assets/fonts/Montserrat/Montserrat-Light.ttf") ;
+//}
+
+//@font-face {
+//  font-family: "hkgrotesk";
+//  src: local("src/assets/fonts/hkgrotesk");
+//}
+
+//@import url(../../assets/fonts/MarkPro-TestFont.otf/FFMarkFree.css);
+
+//.f-Avenir{font-family: Avenir;}
+.all{font-family: 'Montserrat', Avenir;}
+
+section{
+  //font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  //background: url("/src/assets/images/logo.png");
+}
+//.h-536{height: 536px;}
+
+//.E5E5E5{background: #E5E5E5;}
+.FFFFFF{background: #FFFFFF;}
+.DEF5FF{background: #DEF5FF;}
+.oneD3755{background: #1D3755;}
+
+.c-183B56{color: #183B56;}
+.c-254B77{color: #254B77;}
+.c-FFFFFF{color: #FFFFFF;}
+.c-B0E7FF{color: #B0E7FF;}
+.c-000000{color: #000000;}
+.c-FF0000{color: #FF0000;}
+.c-4F9BC1{color: #4F9BC1;}
+.c-0B45DC{color: #0B45DC;}
+.c-C4C4C4{color: #C4C4C4;}
+
+.t-center{text-align: center;}
+.t-left{text-align: left;}
+.t-right{text-align: right;}
+.text-center{text-align: center};
+
+h1{
+  //font-family: Avenir;
+  font-family: 'Montserrat', Avenir;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 64px;
+  line-height: 76px;
+  /* or 119% */
+}
+
+h2{
+  font-family: 'Montserrat', Avenir;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 48px;
+  line-height: 62px;
+  margin: 20px;
+  /* identical to box height, or 129% */
+}
+h4{
+  font-family: 'Montserrat', Avenir;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
+  /* identical to box height */
+}
+
+p.p1{
+  //font-family: FF Mark Pro;
+  font-family: 'Montserrat', Avenir;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 125%;
+  /* or 40px */
+}
+p.p2{
+  //font-family: FF Mark Pro;
+  font-family: 'Montserrat', Avenir;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+  margin: 20px;
+}
+p.p3{
+  //font-family: FF Mark Pro;
+  font-family: 'Montserrat', Avenir;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 20px;
+  /* identical to box height, or 111% */
+}
+p.p4{
+  font-family: 'Montserrat', Avenir;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  /* or 125% */
+}
+
+//img{background: #C4C4C4;}
+
+
+button.submit{
+  background: #B0E7FF;
+  border-radius: 50px;
+  border: none;
+
+  //font-family: FF Mark Pro;
+  font-family: 'Montserrat', Avenir;
+  font-style: normal;
+  font-weight: 300;
+  color: #254B77;
+}
+button.submit:hover {
+  background: #254B77;
+  color: #FFFFFF;
+}
+
+input{
+  border: 2px solid #F2F2F2;
+  box-sizing: border-box;
+  border-radius: 50px;
+}
+input::placeholder{
+  font-family: 'Montserrat', Avenir;
+  font-size: 16px;
+  line-height: 20px;
+  /* or 125% */
+
+  text-align: center;
+
+  color: #C4C4C4;
+}
+
+
+
+.container{
+  //background: #F2607B;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  //display: flex;
+  //align-items: center;
+  padding: 0px;
+}
+.row{
+  //background: #3cb582;
+  //width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.width-100percent{width: 100%;}
+.w-100p{width: 100%;}
+.h-100p{height: 100%;}
+
+.m-l-0{margin-left: 0px;}
+.m-r-0{margin-right: 0px;}
+.m-t-0{margin-top: 0px;}
+.m-b-0{margin-botton: 0px;}
+.m-tb-a{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.p-0{padding: 0px;}
+.p-l-0{padding-left: 0px;}
+.p-t-0{padding-top: 0px;}
+.p-tb-a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.i-a-c{
+  display: flex;
+  align-items: center;
+}
+.absolute-mid{
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.chart{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.margin_top-50px{
+  margin-top: 50px;
+}
+
+////////////////////////////////////////////////////////my_blip.vue
+.big{
+  //background: #3cb582;
+  //margin-bottom: 120px;
+  padding-bottom: 120px;
+}
+.image{
+  width: 528px;
+}
+.gray{
+  text-align: center;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+.titleMyBlip{
+  margin-bottom: 50px;
+}
+.myBlip{
+  width: 219px;
+  height: 65px;
+
+  font-size: 16px;
+  line-height: 125%;
+}
+.bigReplace{
+  width: 1440px;
+  margin: auto;
+  background: #3cb582;
+}
+
+.frame{
+  position: absolute;
+  width: 965px;
+  height: 629px;
+  //left: 50%;
+  top: 237px;
+  //margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 80px 219px;
+
+  background: #FFFFFF;
+  border: 2px solid #E5E5E5;
+  box-sizing: border-box;
+  border-radius: 25px;
+
+  .owner{
+    width: 557px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+  .enter{
+    width: 417px;
+    height: 65px;
+    //left: 496px;
+    //top: 551px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+  .nextButton{
+    width: 162px;
+    height: 65px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
