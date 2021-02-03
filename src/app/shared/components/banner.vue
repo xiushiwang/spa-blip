@@ -34,7 +34,7 @@
         </router-link>
       </b-nav-item>
       <b-nav-item class="navigation" right>
-        <router-link :to="'/'">
+        <router-link :to="'/my-blip'">
           <div>My blip</div>
         </router-link>
       </b-nav-item>

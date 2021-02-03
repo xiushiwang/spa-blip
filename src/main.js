@@ -8,7 +8,7 @@ import 'vue-material-design-icons/styles.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPlus, faArrowRight, faCoffee, faMapMarkerAlt, faMapMarker, faSearch, faLink, faBolt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faLinkedin, faLinkedinIn, faTwitter, faFacebookMessenger, faInstagram, faMedium } from "@fortawesome/free-brands-svg-icons"
+import { faLinkedin, faLinkedinIn, faTwitter, faTwitterSquare, faFacebook, faFacebookF, faFacebookMessenger, faFacebookSquare, faInstagram, faMedium } from "@fortawesome/free-brands-svg-icons"
 
 import VueWow from "vue-wow";
 
@@ -30,7 +30,7 @@ import "vuescroll/dist/vuescroll.css";
 
 library.add(
     faPlus, faArrowRight, faCoffee, faMapMarkerAlt, faMapMarker, faSearch, faLink, faBolt,
-    faLinkedin, faLinkedinIn ,faTwitter, faFacebookMessenger, faInstagram, faMedium,
+    faLinkedin, faLinkedinIn ,faTwitter, faTwitterSquare, faFacebook, faFacebookF, faFacebookMessenger, faFacebookSquare, faInstagram, faMedium,
 )
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('vue-dropdown', VueDropdown);
