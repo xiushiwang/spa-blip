@@ -13,12 +13,16 @@
                   <p class="p3 two54B77 t-left">Name*</p>
                   <div class="form-row">
                     <!--                      <div class="form-group col-md-6">-->
-                    <input type="text" class="form-control-name" aria-describedby="int2" placeholder="First">
+<!--                    <b-col xs="6" sm="6" md="6" lg="6" xl="6">-->
+                    <input type="text" class="form-control-name-left" aria-describedby="int2" placeholder="First">
                     <!--                        <p class="text-gray mt-8 mb-24">First Name</p>-->
+<!--                    </b-col>-->
                     <!--                      </div>-->
                     <!--                      <div class="form-group col-md-6">-->
-                    <input type="text" class="form-control-name" aria-describedby="int2" placeholder="Last">
+<!--                    <b-col xs="6" sm="6" md="6" lg="6" xl="6" class="FFFFFF">-->
+                    <input type="text" class="form-control-name-right" aria-describedby="int2" placeholder="Last">
                     <!--                        <p class="text-gray mt-8 mb-24">Last Name</p>-->
+<!--                    </b-col>-->
                     <!--                      </div>-->
                   </div>
 
@@ -52,6 +56,11 @@
             <div class="content text-center">
               <h2 class="h2 zero000000 t-center">Contact</h2>
               <p class="p2 zero000000 t-center">hello@blipenergy.com</p>
+              <div class="w-100p m-l-0 p-l-0">
+                <a href="https://www.linkedin.com/company/blip-energy"><font-awesome-icon :icon="['fab', 'linkedin']" class="font-awesome-icon one83B56"/></a>
+                <a href="https://twitter.com/BlipEnergy"><font-awesome-icon :icon="['fab', 'twitter-square']" class="font-awesome-icon one83B56"/></a>
+                <a href="https://www.facebook.com/blipenergy/"><font-awesome-icon :icon="['fab', 'facebook-square']" class="font-awesome-icon one83B56"/></a>
+              </div>
               <br>
               <br>
               <!--              <div class="logo w-88h-55"></div>-->
@@ -287,16 +296,22 @@ input{
       //background: #6f42c1;
       margin-bottom: 15px;
     }
-    .form-control-name{
+    .form-control-name-left{
       //position: absolute;
-      width: 334px;
-      margin-left: 5px;
-      margin-right: 30px;
-
+      width: 47%;
+      margin-left: 0.6%;
+      margin-right: 2.4%;
+    }
+    .form-control-name-right{
+      width: 47%;
+      margin-left: 2.5%;
+      margin-right: 0.5%;
     }
     .form-control-email{
       //position: absolute;
-      width: 704px;
+      width: 100%;
+      margin-left: 0px;
+      margin-right: 0px;
     }
     .form-control-zipcode{
       width: 173px;
@@ -306,6 +321,9 @@ input{
       text-align: center;
     }
   }
+}
+.font-awesome-icon{
+  font-size: 28px;
 }
 .logo{
   background: url(../../../assets/blip_logo.png);
@@ -324,7 +342,7 @@ input{
   //right: 45.35%;
   left: 40%;
   right: 40%;
-  top: calc(50% - 22px/2 + 130px);
+  top: calc(50% - 22px/2 + 150px);
   margin-top: 14px;
   text-align: center;
 

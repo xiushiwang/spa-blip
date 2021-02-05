@@ -129,7 +129,7 @@
           </div>
 
           <div class="card-pricing-footer m-t-0">
-            <button type="button" class="btn btn-outline-254B77" style="width: 385px" onclick="window.location.href='./calculator'">See How Much You Will Save</button>
+            <button type="button" class="btn btn-outline-254B77" style="width: 415px" onclick="window.location.href='./calculator'">See How Much You Will Save</button>
           </div>
 
         </div>
@@ -261,7 +261,7 @@ export default {
         },
         series: [{
           name: 'Costs you would pay without blip',
-          data: [1, 1, 2, 1.5, 2, 5, 2, 0],
+          data: [1, 1, 2, 1.7, 2, 5, 2, 1],
           type: 'line',
           symbol: 'circle',
           smooth: true,
@@ -310,7 +310,7 @@ export default {
         series: [
           {
             name: 'Costs you would pay without blip',
-            data: [1, 1, 2, 1.5, 2, 5, 2, 0],
+            data: [1, 1, 2, 1.7, 2, 5, 2, 1],
             type: 'line',
             symbol: 'circle',
             smooth: true,
@@ -324,7 +324,7 @@ export default {
           },
           {
             name: 'Costs you would pay with blip',
-            data: [1, 1, 1.5, 1, 1, 2, 2, 1],
+            data: [1.5, 1.5, 2, 1.7, 2, 2.5, 2, 1.5],
             type: 'line',
             symbol: 'circle',
             smooth: true,

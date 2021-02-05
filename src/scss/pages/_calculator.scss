@@ -198,18 +198,18 @@ button.submit:hover {
 .blip-pig{
   //max-width: 100%;
   position: absolute;
-  left: -60px;
-  top: 160px;
+  left: 65%;
+  top: 70px;
   width: 800px;
 }
 
 
 .saving_enter{
-  position: relative;
+  position: absolute;
   //width: 517px;
   //height: 174px;
-  //left: 130px;
-  top: 109px;
+  left: 8%;
+  top: 40px;
 }
 
 
@@ -220,6 +220,7 @@ button.submit:hover {
   position: relative;
   top: 183px;
   max-width: 100%;
+  //padding-bottom: 50px;
   .see{
     //background: #C4C4C4;
     height: 174px;
@@ -296,6 +297,7 @@ button.submit:hover {
   box-shadow: 6px 12px 19px -4px #E5E5E5;
   border-radius: 25px;
   padding-left: 41px;
+  padding-bottom: 40px;
   margin-bottom: 120px;
   .seeAfterNotSeen{
     width: 390px;
@@ -324,13 +326,16 @@ button.submit:hover {
       border-radius: 24px;
       box-shadow: none;
 
+      font-family: 'Montserrat', Avenir;
       font-style: normal;
-      font-weight: 500;
+      font-weight: 300;
       font-size: 18px;
       line-height: 20px;
       color: #254B77;
       text-align: center;
     }
+    .input_not_seen::placeholder{font-family: 'Montserrat', Avenir;}
+
     .enter_button{
       width: 100px;
       height: 50px;
@@ -390,6 +395,13 @@ button.submit:hover {
           border: 2px solid #D3D3D3;
           box-sizing: border-box;
           border-radius: 24px;
+          box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25);
+
+          font-family: 'Montserrat', Avenir;
+          font-size: 18px;
+          line-height: 21px;
+          //line-height: 24px;
+          color: #254B77;
 
           padding: 0px;
           text-align: center;
@@ -418,19 +430,35 @@ button.submit:hover {
       //height: 80px;
       padding-left: 0px;
       .dropdown{
-        width: 296px;
-        //height: 49.55px;
-        margin-top: 20px;
+        overflow: hidden;
+        text-overflow : ellipsis ;
+        //white-space : nowrap ;
+        white-space:pre-wrap;
 
+        width: 296px;
+        height: 119.55px;
+                //49.55px;
+        margin-top: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
         background: #FFFFFF;
         border: 2px solid #D3D3D3;
         box-sizing: border-box;
         border-radius: 24px;
 
         font-family: 'Montserrat', Avenir;
-        color: #3cb582;
-        line-height: 100%;
+        font-size: 18px;
+        line-height: 21px;
+        //line-height: 24px;
+        color: #254B77;
+        text-align: center;
 
+        appearance:none;
+        -moz-appearance:none;
+        -webkit-appearance:none;
+        ///*在选择框的最右侧中间显示下拉箭头图片*/
+        ////background: url("")  right center no-repeat;
+        ///*为下拉小箭头留出一点位置，避免被文字覆盖*/
       }
       //.dropdown::text{
       //  font-family: 'Montserrat', Avenir;
@@ -452,7 +480,7 @@ button.submit:hover {
         width: 242px;
         height: 59px;
         margin-top: 37px;
-        margin-bottom: 57px;
+        margin-bottom: 37px;
 
         font-style: normal;
         font-weight: 500;

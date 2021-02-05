@@ -9,6 +9,7 @@ import contactUs from './contact-us.vue'
 import calculator from './calculator/calculator.vue'
 import utilities from './utilities.vue'
 import articles from "@/app/articles";
+import myBlip from './onboarding/my-blip.vue'
 
 Vue.use(Router)
 
@@ -61,6 +62,11 @@ export default new Router({
       path: '/articles',
       name: 'articles',
       component: articles
+    },
+    {
+      path: '/my-blip',
+      name: 'my-blip',
+      component: myBlip
     },
   ]
 })
