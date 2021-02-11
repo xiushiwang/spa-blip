@@ -82,7 +82,12 @@
 export default {
   name: "footer",
   data() {
-    return {};
+    return {
+      firstName:"",
+      lastName: "",
+      email:"",
+      zipCode:"",
+    };
   },
   created() {},
 
@@ -196,10 +201,12 @@ input{
   //top: 251px;
   background: #FFFFFF;
   box-sizing: border-box;
-  border: none;
+  border-radius: 30px;
+  border: transparent;
   outline: none;
   margin-right:0px;
   margin-bottom: 25px;
+  padding-left: 20px;
   ::placeholder{
     font-family: 'Montserrat', Avenir;
     font-style: normal;

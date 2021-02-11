@@ -6,8 +6,8 @@
 <!--        <h2 class="c-254B77 t-left m-l-0">Contact Us</h2>-->
 <!--      </b-row>-->
 
-<!--      <b-row class="others w-100p t-center FFFFFF">-->
-<!--        <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="left t-left m-l-0 p-l-0">-->
+      <b-row class="others w-100p t-center">
+        <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="left t-left m-l-0 p-l-0">
 <!--          <b-row class="w-100p m-l-0 p-l-0" >-->
 <!--            <p class="p2 c-183B56 t-left m-l-0 p-l-0">-->
 <!--              hello@blipenergy.com-->
@@ -37,9 +37,14 @@
 <!--          </b-row>-->
 <!--        </b-col>-->
 
-      <b-row class="we t-center m-t-0">
-<!--        <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="right t-left m-l-0 p-l-0">-->
-        <h2 class="h2 w-100p c-254B77 wed">We’d love to hear from you</h2>
+<!--      <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="t-left m-l-0 p-l-0">-->
+        <img src="../assets/contact-illo-v02.png" style="width: 671px; margin-top: 89px; margin-left: -50px;">
+      </b-col>
+
+      <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="t-left m-l-0 p-l-0">
+        <b-row class="we t-center m-t-0">
+          <!--        <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="right t-left m-l-0 p-l-0">-->
+          <h2 class="h2 w-100p c-254B77 wed">We’d love to hear from you</h2>
           <b-row class="w-100p m-l-0 m-b-12 p-l-0">
             <p class="p3 t-left c-000000">Name*</p>
           </b-row>
@@ -48,16 +53,18 @@
               <b-form-input
                   class="input"
                   type="string"
-                  v-model="name"
-                  placeholder="First">
+                  v-model="firstName"
+                  placeholder="First"
+              >
               </b-form-input>
             </b-col>
             <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="last p-r-0">
               <b-form-input
                   class="input m-l-0"
                   type="string"
-                  v-model="name"
-                  placeholder="Last">
+                  v-model="lastName"
+                  placeholder="Last"
+              >
               </b-form-input>
             </b-col>
           </b-row>
@@ -67,7 +74,13 @@
           </b-row>
           <b-row class="w-100p m-l-0 m-b-32 p-l-0">
             <b-col xs="12" sm="12" md="12" lg="12" xl="12" class="p-l-0 p-r-0">
-              <b-form-input class="input" type="string" v-model="email"></b-form-input>
+              <b-form-input
+                  novalidate="true"
+                  class="input"
+                  type="email"
+                  v-model="email"
+                  @keyup.enter="submitMessage()"
+              ></b-form-input>
             </b-col>
           </b-row>
 
@@ -76,7 +89,12 @@
           </b-row>
           <b-row class="w-100p m-l-0 m-b-58 p-l-0">
             <b-col xs="12" sm="12" md="12" lg="12" xl="12" class="p-l-0 p-r-0">
-              <b-form-textarea class="input message" type="string" v-model="messages"></b-form-textarea>
+              <b-form-textarea
+                  class="input message"
+                  type="string"
+                  v-model="messages"
+                  @keyup.enter="submitMessage()"
+              ></b-form-textarea>
             </b-col>
           </b-row>
 
@@ -84,15 +102,15 @@
             <b-button
                 class = "btn btn-outline-4F9BC1"
                 variant="outline-primary"
-                v-on:click=""
-                :disabled="isDisabled"
+                v-on:click="submitMessage()"
             >Submit</b-button>
           </b-row>
 
 
-<!--        </b-col>-->
+          <!--        </b-col>-->
+        </b-row>
+      </b-col>
       </b-row>
-<!--      </b-row>-->
     </b-container>
 
     <Footer></Footer>
@@ -102,7 +120,7 @@
 
 <script>
 import banner from "./shared/components/banner.vue";
-import Footer from "./shared/components/Footer.vue";
+import Footer from "./shared/components/noneInputFooter.vue";
 
 export default {
   name: "contact-us",
@@ -112,6 +130,9 @@ export default {
       markers: [{
         position: {lat: 42.056432, lng: -87.674835}
       }],
+      firstName: "",
+      lastName: "",
+      email: "",
       messages: "",
     };
   },
@@ -119,6 +140,29 @@ export default {
   },
 
   methods: {
+    submitMessage(){
+      if (this.firstName !== ''){
+        if (this.lastName !== ''){
+          if (this.email !== "" && this.validEmail(this.email)){
+            if (this.messages !== ""){
+              console.log(this.messages);
+            }else{
+              alert("Please leave your message")
+            }
+          }else{
+            alert("Please enter a valid email address")
+          }
+        }else{
+          alert("Oops, you forget your last name")
+        }
+      }else{
+        alert("Oops, you forget your first name")
+      }
+    },
+    validEmail(email) {
+      var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    },
 
   },
   components: {

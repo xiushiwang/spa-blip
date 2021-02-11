@@ -64,6 +64,14 @@ h2{
   margin: 20px;
   /* identical to box height, or 129% */
 }
+h3{
+  font-family: 'Montserrat', Avenir;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 36px;
+  line-height: 48px;
+  /* identical to box height */
+}
 h4{
   font-family: 'Montserrat', Avenir;
   font-style: normal;
@@ -185,6 +193,10 @@ button.submit:hover {
   margin-top: 50px;
 }
 
+.portal{
+  height: 973px;
+}
+
 .seeHow{
   position: relative;
   //width: 517px;
@@ -198,9 +210,9 @@ button.submit:hover {
 .blip-pig{
   //max-width: 100%;
   position: absolute;
-  left: 65%;
-  top: 70px;
-  width: 800px;
+  left: 10%;
+  top: 207px;
+  width: 105%;
 }
 
 
@@ -211,14 +223,20 @@ button.submit:hover {
   left: 8%;
   top: 40px;
 }
-
+.graph_enter{
+  position: absolute;
+  //width: 517px;
+  //height: 174px;
+  left: 35%;
+  top: 33px;
+}
 
 /////////////////////////////////////////////////////////savings.vue
 /////////////////////seen
 .zipcode_container{
   //background: #FAAD13;
   position: relative;
-  top: 183px;
+  top: 173px;
   max-width: 100%;
   //padding-bottom: 50px;
   .see{
@@ -228,8 +246,8 @@ button.submit:hover {
   }
   .how{
     //background: #C4C4C4;
-    margin-top: 22px;
-    padding-bottom: 65px;}
+    margin-top: 0px;
+    padding-bottom: 55px;}
   .zip-input{
     width: 266px;
     height: 76px;
@@ -285,10 +303,28 @@ button.submit:hover {
     width: 266px;
     margin-top: 10px
   }
+
+  .headsUp{
+    width: 540px;
+    margin-top: 90px;
+    padding: 55px 23px;
+    border: 1px solid #B0E7FF;
+    box-sizing: border-box;
+    border-radius: 30px;
+    img{
+      position: absolute;
+      top: -7px;
+      left: -5px;
+      width: 201px;
+    }
+    .p4{margin-top: 6px}
+  }
 }
 
 /////////////////////!seen
 .utility_container{
+  position: absolute;
+  top: 120px;
   //background: #FAAD13;
   //padding-top: 0px;
   width: 485px;
@@ -591,6 +627,7 @@ button.submit:hover {
   }
 
   .savingsDifYears{
+    width: 75%;
     padding-bottom: 21px;
     margin-bottom: 30px;
     //border-bottom: 3px solid #4F9BC1;
