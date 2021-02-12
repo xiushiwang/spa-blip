@@ -21,7 +21,7 @@ export default {
   <div>
     <banner></banner>
     <b-container>
-        <b-row class = "container" style="padding-top: 0px; margin-top: 0px">
+        <b-row class = "container portal" style="padding-top: 0px; margin-top: 0px">
 
 <!--          <b-row class="seeHow row w-100p">-->
 <!--            <b-col xs="12" sm="12" md="6" lg="6" xl="6">-->
@@ -51,8 +51,8 @@ export default {
 <!--            hhhhhhh-->
 <!--          </b-col>-->
 
-          <b-col xs="12" sm="12" md="7" lg="7" xl="7">
-            <img class="blip-pig" src="../../assets/images/blip-savings-calculator-graphic-F.png" v-if='savings'>
+          <b-col xs="12" sm="12" md="7" lg="7" xl="7" class = "graph_enter">
+            <img class="blip-pig" src="../../assets/Savings Calculator Graphic/Main Graphic/blip-savings-calculator-graphic-F-taller.png" v-if='savings'>
 <!--            <h3 v-if='!savings'>Savings will be displayed here</h3>-->
             <div v-if='!savings'>
               <graph
