@@ -7,7 +7,7 @@ import about from './about.vue'
 import product from './product.vue'
 import contactUs from './contact-us.vue'
 import calculator from './calculator/calculator.vue'
-import utilities from './utilities.vue'
+// import utilities from './utilities.vue'
 import articles from "@/app/articles";
 import utilities from "@/app/utilities";
 import myBlip from './onboarding/my-blip.vue'

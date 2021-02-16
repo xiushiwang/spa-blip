@@ -1,11 +1,6 @@
 <template>
   <div>
     <banner></banner>
-<<<<<<< HEAD
-    <b-container>
-      <h4>We're currently still working. Check out our savings calculator to learn more about your savings with blip.</h4>
-    </b-container>
-=======
     <div class="main">
       <b-row class = "howDoes t-center">
         <b-row class="common m-tb-a ">
@@ -43,7 +38,7 @@
       <b-row class = "trio t-center">
         <b-row class="common m-tb-a">
           <b-col xs="12" sm="12" md="4" lg="4" xl="4" class="t-center colOneThird">
-            <h3 class="h3 c-254B77 t-left w-100p">Perfect for Time  of Use Plans</h3>
+            <h3 class="h3 c-254B77 t-left w-100p">Perfect for Time of Use Plans</h3>
             <p class="p2 c-183B56 t-left w-100p m-l-0">
               Eliminate the need for peaker plants. Utility companies no longer have to lose money over running extra plants to keep up with demand.
             </p>
@@ -53,7 +48,7 @@
               <p class="p2 c-183B56 t-left">Give your customers a choice. They can use their stored energy, saving you from having to meet demand. Or your customers can sell back that energy.</p>
             </b-col>
             <b-col xs="12" sm="12" md="4" lg="4" xl="4" class="t-center colOneThird">
-              <h3 class="h3 c-254B77 t-left">Improved  Experiences</h3>
+              <h3 class="h3 c-254B77 t-left">Improved Experiences</h3>
               <p class="p2 c-183B56 t-left">
                 Your customers will appreciate the ability to see their energy savings in real time. With our app, they’ll have access to their savings right at their fingertips.
               </p>
@@ -62,7 +57,6 @@
 
       </b-row>
     </div>
->>>>>>> a6b62ff7995158fd43dd1ddc2606ac61fadc56e5
     <Footer></Footer>
   </div>
 </template>
@@ -72,20 +66,13 @@ import banner from "./shared/components/banner.vue";
 import Footer from "./shared/components/Footer.vue";
 
 export default {
-<<<<<<< HEAD
-  name: "utilities",
-=======
   name: "articles",
->>>>>>> a6b62ff7995158fd43dd1ddc2606ac61fadc56e5
   data() {
     return {
     };
   },
-<<<<<<< HEAD
-=======
   mounted() {
   },
->>>>>>> a6b62ff7995158fd43dd1ddc2606ac61fadc56e5
 
   methods: {
   },
@@ -97,13 +84,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-<<<<<<< HEAD
-@import "src/scss/pages/_about.scss";
-@import "src/scss/animate";
-
-=======
 @import "src/scss/pages/_utilities.scss";
->>>>>>> a6b62ff7995158fd43dd1ddc2606ac61fadc56e5
 </style>
 
 
