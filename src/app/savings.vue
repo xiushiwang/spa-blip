@@ -4,38 +4,6 @@
 <!--      <b-row class="seeHow row w-100p">-->
 <!--        <h1 class="h1 c-000000 t-left f-Avenir see">See how blip can save you money</h1>-->
 <!--      </b-row>-->
-
-      <b-row class = "w-100p m-l-0 p-l-0" >
-        <h1 class="h1 c-000000 t-left see">See how blip can save you money</h1>
-        <p class="p2 c-000000 t-left m-l-0 how" style="margin-left: 0px">How do rates in your area compare to your possible blip savings?</p>
-        <b-row class="zipcode_input t-left w-100p m-l-0">
-          <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="t-left m-tb-a p-l-0">
-            <b-form-input
-                class="zip-input absolute-mid"
-                v-model="zipcode"
-                placeholder="enter zipcode"
-                @keyup.enter="checkZipcode()">
-<!--              <font-awesome-icon icon="arrow-right" style="color: #000000" />-->
-<!--              <font-awesome-icon icon="fa-map-marker-alt"/>-->
-            </b-form-input>
-          </b-col>
-          <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="i-a-c p-0">
-            <b-button
-                class = "submit search-button"
-                variant="outline-primary"
-                v-on:click="checkZipcode()"
-                :disabled="isDisabled"
-            >Search</b-button>
-<!--            <font-awesome-icon icon="map-marker-alt"/>-->
-          </b-col>
-        </b-row>
-        <b-row class = "w-100p m-l-0 p-l-0" >
-          <bcol xs="12" sm="12" md="8" lg="8" xl="8" class="t-left m-tb-a p-l-0">
-          <p v-show="!showValidZipcodeError" class="validZipcodeError p4 c-FF0000 t-center">Please enter a valid zip code.</p>
-          </bcol>
-        </b-row>
-      </b-row>
-
       <b-row class="headsUp t-left w-100p m-l-0">
         <b-col  xs="12" sm="12" md="5" lg="5" xl="5" class ="headsUp_left">
           <img src="../assets/Savings Calculator Graphic/Heads Up Location Graphic/1.png">
@@ -50,6 +18,35 @@
           </p>
         </b-col>
       </b-row>
+
+      <b-row class = "w-100p m-l-0 p-l-0" >
+        <h1 class="h1 c-000000 t-left see">See how blip can save you money</h1>
+        <p class="p2 c-000000 t-left m-l-0 how" style="margin-left: 0px">How do rates in your area compare to your possible blip savings?</p>
+        <b-row class="zipcode_input t-left w-100p m-l-0">
+          <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="t-left m-tb-a p-l-0">
+            <b-form-input
+                class="zip-input absolute-mid"
+                v-model="zipcode"
+                placeholder="enter zipcode"
+                @keyup.enter="checkZipcode()">
+            </b-form-input>
+          </b-col>
+          <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="i-a-c p-0">
+            <b-button
+                class = "submit search-button"
+                variant="outline-primary"
+                v-on:click="checkZipcode()"
+                :disabled="isDisabled"
+            >Search</b-button>
+          </b-col>
+        </b-row>
+        <b-row class = "w-100p m-l-0 p-l-0" >
+          <bcol xs="12" sm="12" md="8" lg="8" xl="8" class="t-left m-tb-a p-l-0">
+          <p v-show="!showValidZipcodeError" class="validZipcodeError p4 c-FF0000 t-center">Please enter a valid zip code.</p>
+          </bcol>
+        </b-row>
+      </b-row>
+
     </b-container>
 
 
@@ -58,26 +55,22 @@
       <b-row class="utility_container t-left m-l-0" v-if="!seen">
         <h2 class="c-254B77 t-left m-l-0 seeAfterNotSeen">See how blip can save you money</h2>
         <b-row class="zipcode_input t-left w-100p m-l-0 p-l-0">
-          <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="h-52px t-left m-l-0 p-l-0">
-            <!--          <b-input-group class = "input_not_seen">-->
-            <!--            <b-input-group-prepend>-->
-            <!--              <span class="input-group-text"><font-awesome-icon icon="search" style="color: #4F9BC1" /></span>-->
-            <!--            </b-input-group-prepend>-->
 
+          <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="h-52px t-left m-l-0 p-l-0">
             <b-form-input
                 v-model="zipcode"
                 class = "input_not_seen absolute-mid"
                 placeholder="Enter your zipcode"
                 @keyup.enter="checkZipcodeAfter()"
             ></b-form-input>
-
-            <!--          </b-input-group>-->
           </b-col>
+
           <b-col xs="12" sm="12" md="3" lg="3" xl="3" class="t-center i-a-c">
             <b-button variant="outline-primary" v-on:click="checkZipcodeAfter()" class = "enter_button submit">Enter
               <!--            <font-awesome-icon icon="search"/>-->
             </b-button>
           </b-col>
+
           <b-row class="t-left w-100p m-l-0 p-l-0">
             <p v-show="!showValidZipcodeError" class="validZipcodeError p4 c-FF0000 t-center">Please enter a valid zip code.</p>
           </b-row>
@@ -206,7 +199,7 @@ export default {
       errors: [],
       utilityPicked: [],
       planNum: 0,
-      address: 'https://170276b6ab7d.ngrok.io/v1/get_utilities_and_rates_by_zip_code/',
+      address: 'https://910e02343ac1.ngrok.io/v1/get_utilities_and_rates_by_zip_code/',
       localAddress: './src/assets/JSONforTesting/',
       overallPlan:[],
       selectedPlan: '',
@@ -268,9 +261,9 @@ export default {
 
     loadJSON(){
       this.provider = false;
-      this.address = this.address + this.zipcode
-      // const address = './src/assets/JSONforTesting/'
-      // this.address = address + this.zipcode + '.json'
+      // this.address = this.address + this.zipcode //un-command-out me to link to Zhen///////////////////////////////////////////////////////
+      const address = './src/assets/JSONforTesting/' /////////////////////////////////////////////////////////command-out me to run local
+      this.address = address + this.zipcode + '.json' /////////////////////////////////////////////////////////command-out me to run local
       axios.get(this.address)
           .then(response => {
             // JSON responses are automatically parsed.
@@ -291,8 +284,9 @@ export default {
           .catch(e => {
             this.errors.push(e)
           })
-      this.address = 'https://170276b6ab7d.ngrok.io/v1/get_utilities_and_rates_by_zip_code/'
-          // './src/assets/JSONforTesting/'
+      this.address =
+          // 'https://910e02343ac1.ngrok.io/v1/get_utilities_and_rates_by_zip_code/' //un-command-out me to link to Zhen////////////////////////////////////////
+          './src/assets/JSONforTesting/' /////////////////////////////////////////////////////////command-out me to run local
     },
 
     list(utility) {
@@ -337,14 +331,6 @@ export default {
     },
 
     countPlan(plan){
-      // console.log(plan)
-      // const savings = (plan.highPrice - plan.lowPrice) * this.capacity * 365
-      // const savings = 0.0
-      //
-      // for (var i = 0; i < plan.savingList.length; i++) {
-      //   savings = savings + plan.savingList[i]
-      // }
-      // const saving = savings.toFixed(2)
       const saving = plan.saving
       this.$emit('savePerYear', saving)
       // console.log(savings, 'in Savings.vue')

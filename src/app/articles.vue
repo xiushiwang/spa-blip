@@ -2,29 +2,28 @@
   <div>
     <banner></banner>
     <b-container>
-      <h2>Learn more about our team</h2>
       <!-- Start embed -->
-<!--      <div id="retainable-rss-embed"-->
-<!--           data-rss="https://medium.com/feed/@blipenergy"-->
-<!--           data-maxcols="4"-->
-<!--           data-layout="grid"-->
-<!--           data-poststyle="inline"-->
-<!--           data-readmore="Read the rest"-->
-<!--           data-buttonclass="btn btn-outline-secondary"-->
-<!--           data-offset="-200">&#160;</div>-->
-
       <div id="retainable-rss-embed"
-           data-rss="https://medium.com/feed/@xiushiwang09"
+           data-rss="https://medium.com/feed/@blipenergy"
            data-maxcols="3"
-           data-layout="grid"
-           data-poststyle="inline"
-           data-readmore="Read the rest"
-           data-buttonclass="btn btn-outline-secondary"
+           data-layout="slider"
+           data-poststyle="modal"
+           data-readmore="..."
+           data-buttonclass="moreButton"
            data-offset="-200">&#160;</div>
+
+      <!--      <div id="retainable-rss-embed"-->
+      <!--           data-rss="https://medium.com/feed/@xiushiwang09"-->
+      <!--           data-maxcols="3"-->
+      <!--           data-layout="slider"-->
+      <!--           data-poststyle="modal"-->
+      <!--           data-readmore="Read the rest"-->
+      <!--           data-buttonclass="btn btn-outline-secondary"-->
+      <!--           data-offset="-200">&#160;</div>-->
 
       <!-- End embed -->
     </b-container>
-<!--    <script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>-->
+    <!--    <script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>-->
     <Footer></Footer>
   </div>
 </template>
@@ -41,8 +40,9 @@ export default {
   },
   mounted() {
     let externalScript = document.createElement('script')
-    externalScript.setAttribute('src', '' + 'https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js')
-        // 'https://www.retainable.io/assets/retainable/rss-embed/retainable-rss-embed.js')
+    externalScript.setAttribute('src', '' + 'src/app/medium.js')
+    // 'https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js')
+    // 'https://www.retainable.io/assets/retainable/rss-embed/retainable-rss-embed.js')
     document.head.appendChild(externalScript)
   },
 
