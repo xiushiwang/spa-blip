@@ -261,9 +261,9 @@ export default {
 
     loadJSON(){
       this.provider = false;
-      // this.address = this.address + this.zipcode //un-command-out me to link to Zhen///////////////////////////////////////////////////////
-      const address = './src/assets/JSONforTesting/' /////////////////////////////////////////////////////////command-out me to run local
-      this.address = address + this.zipcode + '.json' /////////////////////////////////////////////////////////command-out me to run local
+      // this.address = this.address + this.zipcode //un-command-out me to link to Zhen1///////////////////////////////////////////////////////
+      const address = './src/assets/JSONforTesting/' /////////////////////////////////////////////////////////command-out me to run locally
+      this.address = address + this.zipcode + '.json' /////////////////////////////////////////////////////////command-out me to run locally
       axios.get(this.address)
           .then(response => {
             // JSON responses are automatically parsed.
@@ -286,7 +286,7 @@ export default {
           })
       this.address =
           // 'https://910e02343ac1.ngrok.io/v1/get_utilities_and_rates_by_zip_code/' //un-command-out me to link to Zhen////////////////////////////////////////
-          './src/assets/JSONforTesting/' /////////////////////////////////////////////////////////command-out me to run local
+          './src/assets/JSONforTesting/' /////////////////////////////////////////////////////////command-out me to run locally
     },
 
     list(utility) {
