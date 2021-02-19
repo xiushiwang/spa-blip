@@ -58,20 +58,12 @@ h1{
 }
 
 h2{
-  margin: 20px;
-
-  /*background: #00b8d8;*/
-  text-align: left;
-
   font-family: 'Montserrat', Avenir;
   font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 20px;
-  /* or 125% */
-
-
-  color: #000000;
+  font-weight: 200;
+  font-size: 48px;
+  line-height: 62px;
+  margin: 20px;
   /* identical to box height, or 129% */
 }
 h4{
