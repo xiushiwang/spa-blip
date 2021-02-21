@@ -2,41 +2,6 @@
   <div>
     <banner></banner>
     <b-container class="t-center m-t-0">
-<!--      <b-row class="contactUs w-100p m-l-0 p-l-0">-->
-<!--        <h2 class="c-254B77 t-left m-l-0">Contact Us</h2>-->
-<!--      </b-row>-->
-
-<!--      <b-row class="others w-100p t-center FFFFFF">-->
-<!--        <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="left t-left m-l-0 p-l-0">-->
-<!--          <b-row class="w-100p m-l-0 p-l-0" >-->
-<!--            <p class="p2 c-183B56 t-left m-l-0 p-l-0">-->
-<!--              hello@blipenergy.com-->
-<!--              <br>-->
-<!--              Evanston, IL 60028-->
-<!--            </p>-->
-<!--          </b-row>-->
-
-<!--          <b-row class="w-100p m-l-0 p-l-0">-->
-<!--            <a href="https://www.linkedin.com/company/blip-energy"><font-awesome-icon :icon="['fab', 'linkedin-in']" class="font-awesome-icon c-183B56"/></a>-->
-<!--          </b-row>-->
-<!--          <b-row class="w-100p m-l-0 p-l-0">-->
-<!--            <gmap-map-->
-<!--                :center="center"-->
-<!--                :zoom="12"-->
-<!--                style=" width: 524px; height: 669px;"-->
-<!--            >-->
-<!--              <gmap-marker-->
-<!--                  :key="index"-->
-<!--                  v-for="(m, index) in markers"-->
-<!--                  :position="m.position"-->
-<!--                  :clickable="true"-->
-<!--                  :draggable="true"-->
-<!--                  @click="center=m.position"-->
-<!--              ></gmap-marker>-->
-<!--            </gmap-map>-->
-<!--          </b-row>-->
-<!--        </b-col>-->
-
       <b-row class="we t-center m-t-0">
 <!--        <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="right t-left m-l-0 p-l-0">-->
         <h2 class="h2 w-100p c-254B77 wed">We’d love to hear from you</h2>
@@ -78,9 +43,6 @@
               :disabled="isDisabled"
             >Submit</b-button>
           </b-row>
-
-
-<!--        </b-col>-->
      </b-row>
     </b-container>
 
@@ -89,8 +51,8 @@
 </template>
 
 <script>
-import banner from "./shared/components/banner.vue";
-import Footer from "./shared/components/Footer.vue";
+import banner from "../shared/components/banner.vue";
+import Footer from "../shared/components/Footer.vue";
 
 export default {
   name: "contact-us",

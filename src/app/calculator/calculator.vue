@@ -1,22 +1,3 @@
-<!--
-this file is the parent component that will house all the different parts of the savings calculator data.<template>
-  The order is zipcode -> utility -> device -> {user object computed, sent to BE, then graph is displayed}
-
-  in zipcode, remember to add 'sorry not in your area div (there is computing that needs to happen to get that information)
-</template>
-
-<script>
-export default {
-
-}
-</script>
-
-<style>
-
-</style>
- -->
-
-
 <template>
   <div>
     <banner></banner>

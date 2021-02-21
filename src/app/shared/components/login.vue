@@ -99,7 +99,6 @@ body {
   height: 100%;
 }
 .login-container {
-  // background-image: url("../../../assets/images/login_background.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;

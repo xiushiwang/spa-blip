@@ -23,7 +23,7 @@
 
       <b-row class = "Homeowners t-center b-1D3755">
         <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="t-left">
-          <img class="w-100p" src="../assets/Stock Images/night-glow-8BM107iOuys-unsplash.jpg">
+          <img class="w-100p" src="../../assets/Stock Images/night-glow-8BM107iOuys-unsplash.jpg">
         </b-col>
         <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="t-left m-tb-a">
           <b-row class="homeownnerInnner">
@@ -62,8 +62,8 @@
 </template>
 
 <script>
-import banner from "./shared/components/banner.vue";
-import Footer from "./shared/components/Footer.vue";
+import banner from "../shared/components/banner.vue";
+import Footer from "../shared/components/Footer.vue";
 
 export default {
   name: "articles",

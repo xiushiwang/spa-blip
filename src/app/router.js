@@ -3,13 +3,12 @@ import Router from 'vue-router'
 
 import login from './shared/components/login.vue'
 import home from './shared/components/home.vue'
-import about from './about.vue'
-import product from './product.vue'
-import contactUs from './contact-us.vue'
+import about from './website/about.vue'
+import product from './website/product.vue'
+import contactUs from './website/contact-us.vue'
 import calculator from './calculator/calculator.vue'
-// import utilities from './utilities.vue'
-import articles from "@/app/articles";
-import utilities from "@/app/utilities";
+import utilities from './website/utilities.vue'
+import articles from './website/articles'
 import myBlip from './onboarding/my-blip.vue'
 
 Vue.use(Router)

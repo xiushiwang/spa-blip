@@ -54,22 +54,6 @@
           <b-row class="zipcode_input">
             <button variant="outline-primary"><a ref="">Sign up for Updates</a></button>
           </b-row>
-
-
-
-
-          <!--<b-row class="zipcode_input">-->
-          <!--  <b-col xs="12" sm="12" md="8" lg="8" xl="8">-->
-          <!--    <b-form-input type="number" v-model.number="zipcode" placeholder="Enter your zipcode"></b-form-input>-->
-          <!--  </b-col>-->
-          <!--  <b-col xs="12" sm="12" md="4" lg="4" xl="4">-->
-          <!--    <b-button-->
-          <!--        variant="outline-primary"-->
-          <!--        v-on:click="seen = !seen; loadJSON()"-->
-          <!--        :disabled="isDisabled"-->
-          <!--    >Search</b-button>-->
-          <!--  </b-col>-->
-          <!--</b-row>-->
         </b-col>
       </b-row>
     </b-container>
