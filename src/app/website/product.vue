@@ -80,7 +80,7 @@
                 <div class="card-f flex text-center wow fadeInUp">
                   <div class="card-f-heading t-center">
                     <div class="mb-36 w-100p h-100p t-center" >
-                      <img src="../assets/blip-icons-product-portable.png" alt="" class="whyBlip">
+                      <img src="../../assets/blip-icons-product-portable.png" alt="" class="whyBlip">
                     </div>
                   </div>
                   <div class="card-f-body">
@@ -96,7 +96,7 @@
                 <div class="card-f flex text-center wow fadeInUp">
                   <div class="card-f-heading t-center">
                     <div class="mb-36 w-100p h-100p t-center">
-                      <img src="../assets/blip-icons-product-installation.png" alt="" class="whyBlip">
+                      <img src="../../assets/blip-icons-product-installation.png" alt="" class="whyBlip">
                     </div>
                   </div>
                   <div class="card-f-body">
@@ -112,7 +112,7 @@
                 <div class="card-f flex text-center wow fadeInUp">
                   <div class="card-f-heading t-center">
                     <div class="mb-36 w-100p h-100p t-center">
-                      <img src="../assets/blip-icons-product-emission.png" alt="" class="whyBlip">
+                      <img src="../../assets/blip-icons-product-emission.png" alt="" class="whyBlip">
                     </div>
                   </div>
                   <div class="card-f-body">
@@ -187,23 +187,14 @@
           </div>
         </div>
       </section>
-      <!--      &lt;!&ndash;start:Have more questions?&ndash;&gt;-->
-<!--      <section class="landing-agency-cta wow fadeInUp">-->
-<!--        <div class="container">-->
-<!--          <h3 class="wow fadeInUp">Have more questions?</h3>-->
-<!--          <a href="https://www.blipenergy.com/contact-us" class="btn btn-outline-primary">CONTACT US<i class="fas fa-arrow-right text-14"></i></a>-->
-<!--        </div>-->
-<!--      </section>-->
-<!--      &lt;!&ndash;end:Have more questions?&ndash;&gt;-->
-
     </div>
     <Footer></Footer>
   </div>
 </template>
 
 <script>
-import banner from "./shared/components/banner.vue";
-import Footer from "./shared/components/Footer.vue";
+import banner from "../shared/components/banner.vue";
+import Footer from "../shared/components/Footer.vue";
 import echarts from "echarts";
 require('echarts/theme/shine');
 
