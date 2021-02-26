@@ -6,12 +6,21 @@
         <div class="row">
           <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
             <div class="content text-center">
-              <h2 class="h2 zero000000 t-center">Contact</h2>
-              <p class="p2 zero000000 t-center">hello@blipenergy.com</p>
+<!--              <h2 class="h2 zero000000 t-center">Contact</h2>-->
+<!--              <p class="p2 zero000000 t-center">hello@blipenergy.com</p>-->
               <div class="w-100p m-l-0 p-l-0">
-                <a href="https://www.linkedin.com/company/blip-energy"><font-awesome-icon :icon="['fab', 'linkedin']" class="font-awesome-icon one83B56"/></a>
-                <a href="https://twitter.com/BlipEnergy"><font-awesome-icon :icon="['fab', 'twitter-square']" class="font-awesome-icon one83B56"/></a>
-                <a href="https://www.facebook.com/blipenergy/"><font-awesome-icon :icon="['fab', 'facebook-square']" class="font-awesome-icon one83B56"/></a>
+                <a href="https://twitter.com/BlipEnergy"><font-awesome-icon :icon="['fab', 'twitter']" class="font-awesome-icon one83B56"/></a>
+                <a href="https://www.facebook.com/blipenergy/"><font-awesome-icon :icon="['fab', 'facebook-f']" class="font-awesome-icon one83B56"/></a>
+                <a href="https://www.linkedin.com/company/blip-energy"><font-awesome-icon :icon="['fab', 'linkedin-in']" class="font-awesome-icon one83B56"/></a>
+<!--                <p class="circle">-->
+<!--                  <a href="https://twitter.com/BlipEnergy"><font-awesome-icon :icon="['fab', 'twitter']" class="font-awesome-icon one83B56"/></a>-->
+<!--                </p>-->
+<!--                <p class="circle">-->
+<!--                  <a href="https://www.facebook.com/blipenergy/"><font-awesome-icon :icon="['fab', 'facebook-f']" class="font-awesome-icon one83B56"/></a>-->
+<!--                </p>-->
+<!--                <p class="circle">-->
+<!--                  <a href="https://www.linkedin.com/company/blip-energy"><font-awesome-icon :icon="['fab', 'linkedin-in']" class="font-awesome-icon one83B56"/></a>-->
+<!--                </p>-->
               </div>
               <br>
               <br>
@@ -166,7 +175,7 @@ input{
   //background: #6f42c1;
   .container{
     width: 100%;
-    height: 536px;
+    height: 341px;
     padding-right: 0;
     padding-left: 0;
     margin-right: auto;
@@ -192,39 +201,7 @@ input{
         padding-left: 15px;
         //background: #6f42c1;
         //border: #3cb582 0.2cm;
-        .picOnLeft{
-          text-align: center;
-          //display: flex;
-          //align-items: center;
-          margin-left: auto;
-          margin-right: auto;
-          img{
-            width: 470px;
-            height: 373px;
-            //position: absolute;
-            //left: 15%;
-          }
-        }
 
-        .textOnRight{
-          width: 90%;
-          height: 444px;
-          //background: #F2607B;
-          text-align: center;
-          display: flex;
-          align-items: center;
-          //flex-direction: column;
-          .contentCenter{
-            position: absolute;
-            //width: 488px;
-            //height: 186px;
-            //left: 98px;
-            //top: 78px;
-            width: 70%;
-            left: 10%;
-            //background: #3cb582;
-          }
-        }
       }
       //.offset-lg-2{
       //  height: 536px;
@@ -276,7 +253,14 @@ input{
   }
 }
 .font-awesome-icon{
-  font-size: 28px;
+  font-size: 32px;
+  line-height: 34px;
+}
+.circle{
+  width: 64px;
+  height: 64px;
+  border: 2px solid #254B77;
+  border-radius: 50px;
 }
 .logo{
   background: url(../../../assets/blip_logo.png);
@@ -295,7 +279,7 @@ input{
   //right: 45.35%;
   left: 40%;
   right: 40%;
-  top: calc(50% - 22px/2 + 150px);
+  top: calc(50% - 22px/2 + 80px);
   margin-top: 14px;
   text-align: center;
 
@@ -308,30 +292,10 @@ input{
   color: #5A7184;
 }
 
-//$page-color: #333;
-//$text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3),
-//  0px -0px 0px rgba(0, 0, 0, 0.7);
-//
-//* {
-//  font-family: "Montserrat", sans-serif;
-//  color: $page-color;
-//  text-shadow: $text-shadow;
-//}
-//
-//.bg-dark {
-//  background-color: white !important;
-//  -webkit-box-shadow: 0px -4px 14px -14px rgba(201, 201, 201, 1);
-//  -moz-box-shadow: 0px -4px 14px -14px rgba(201, 201, 201, 1);
-//  box-shadow: 0px -4px 14px -14px rgba(201, 201, 201, 1);
-//  bottom: 0;
-//  margin-top: calc(10% + 20px);
-//  position: relative;
-//  bottom: 0;
-//}
-
 .navbar-nav{
   justify-content: center;
   text-decoration: none;
   width: 100%;
+  //height: 341px;
 }
 </style>

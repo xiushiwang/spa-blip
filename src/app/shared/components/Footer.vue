@@ -36,9 +36,9 @@
                     <input type="text" class="form-control-zipcode" aria-describedby="areaCode" placeholder="">
                   </div>
 
-                  <!-- <div class="form-group mb-0">
-                    <button type="submit" class="btn btn-outline-4F9BC1">Take the Survey</button>
-                  </div> -->
+                  <div class="form-group mb-0">
+                    <button type="submit" class="btn btn-outline-254B77 takeTheSurvey">Submit</button>
+                  </div>
                 </form>
               </div>
             </div>
@@ -54,13 +54,14 @@
         <div class="row">
           <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
             <div class="content text-center">
-              <h2 class="h2 zero000000 t-center">Contact</h2>
-              <p class="p2 zero000000 t-center">hello@blipenergy.com</p>
+              <h2 class="h2 zero000000 t-center">Contact Us</h2>
+              <p class="p2 two54B77 t-center">hello@blipenergy.com</p>
               <div class="w-100p m-l-0 p-l-0">
                 <a href="https://www.linkedin.com/company/blip-energy"><font-awesome-icon :icon="['fab', 'linkedin']" class="font-awesome-icon one83B56"/></a>
                 <a href="https://twitter.com/BlipEnergy"><font-awesome-icon :icon="['fab', 'twitter-square']" class="font-awesome-icon one83B56"/></a>
                 <a href="https://www.facebook.com/blipenergy/"><font-awesome-icon :icon="['fab', 'facebook-square']" class="font-awesome-icon one83B56"/></a>
               </div>
+              <p class="p2 c-B0E7FF t-center">blip respects your privacy</p>
               <br>
               <br>
               <!--              <div class="logo w-88h-55"></div>-->
@@ -114,6 +115,7 @@ section{
 .two54B77{color: #254B77;}
 .one83B56{color: #183B56;}
 .zero000000{color: #000000;}
+.c-B0E7FF{color: #B0E7FF;}
 
 .t-center{text-align: center;}
 .t-left{text-align: left;}
@@ -188,6 +190,30 @@ button.btn.btn-outline-4F9BC1{
   font-size: 24px;
   line-height: 30px;
   color: #4F9BC1;
+}
+button.btn.btn-outline-254B77{
+  font-family: 'Montserrat', Avenir;
+  width: 167px;
+  height: 59px;
+  //left: 608px;
+  //top: 263px;
+  text-align: center;
+
+  background-color:transparent;
+  border: 2px solid #254B77;
+  box-sizing: border-box;
+  border-radius: 50px;
+
+  font-family: 'Montserrat', Avenir;;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+  color: #254B77;
+}
+button.btn.btn-outline-254B77:hover {
+  background-color: #254B77;
+  color: #DEF5FF;
 }
 
 input{
@@ -327,6 +353,9 @@ input{
       width: 100%;
       text-align: center;
     }
+    .takeTheSurvey{
+      margin-bottom: 50px;
+    }
   }
 }
 .font-awesome-icon{
@@ -341,6 +370,7 @@ input{
   //height: 55px;
   //left: 676px;
   //top: 231px;
+  margin-top: -60px;
 }
 .copyright{
   position: absolute;

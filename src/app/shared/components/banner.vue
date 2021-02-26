@@ -1,7 +1,7 @@
 <template>
   <b-navbar class="navbar">
     <b-navbar-brand class="bene-logo">
-      <router-link :to="'/'">
+      <router-link :to="'/'" :active='$route.name =="/"'>
         <img src="../../../assets/blip_logo.png"/>
       </router-link>
     </b-navbar-brand>
@@ -9,37 +9,39 @@
     <!-- Right aligned nav items -->
     <b-navbar-nav class="ml-auto">
       <b-nav-item class="navigation" right>
-        <router-link :to="'about'">
+        <router-link :to="'about'" :active='$route.name =="about"'>
           <div>About</div>
         </router-link>
       </b-nav-item>
       <b-nav-item class="navigation" right>
-        <router-link :to="'product'">
+        <router-link :to="'product'" :active='$route.name =="product"'>
           <div>Product</div>
         </router-link>
       </b-nav-item>
       <b-nav-item class="navigation" right>
-        <router-link :to="'utilities'">
+        <router-link :to="'utilities'" :active='$route.name =="utilities"'>
           <div>Utilities</div>
         </router-link>
       </b-nav-item>
       <b-nav-item class="navigation" right>
-        <router-link :to="'articles'">
+        <router-link :to="'articles'" :active='$route.name =="articles"'>
           <div>Articles</div>
         </router-link>
       </b-nav-item>
       <b-nav-item class="navigation" right>
-        <router-link :to="'contact-us'">
+        <router-link :to="'contact-us'" :active='$route.name =="contact-us"'>
           <div>Contact Us</div>
         </router-link>
       </b-nav-item>
+      <b-nav-item class="navigation" right></b-nav-item>
+      <b-nav-item class="navigation" right></b-nav-item>
       <b-nav-item class="navigation" right>
-        <router-link :to="'/my-blip'">
+        <router-link :to="'my-blip'" :active='$route.name =="my-blip"'>
           <div>My blip</div>
         </router-link>
       </b-nav-item>
       <b-nav-item class="navigation button" right>
-        <router-link :to="'calculator'">
+        <router-link :to="'calculator'" :active='$route.name =="calculator"'>
           <div>Savings Calculator</div>
         </router-link>
       </b-nav-item>
@@ -67,7 +69,6 @@ export default {
   created() {},
 
   methods: {
-
   },
   components: {}
 };
@@ -97,10 +98,19 @@ export default {
   .navigation div {
     font-family: 'Montserrat', Avenir;
     color: #254B77;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .router-link-active{
+    color: #254B77;
+    text-decoration: underline;
+    //div{border-bottom: 1px solid #254B77;}
   }
   .button{
-    width: 216px;
-    border: 2px solid #254B77;
+    width: 200px;
+    margin-left: 10px;
+
+    border: 1px solid #254B77;
     box-sizing: border-box;
     border-radius: 25px;
 

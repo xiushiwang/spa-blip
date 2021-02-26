@@ -1,178 +1,115 @@
 <template>
   <div>
     <banner></banner>
-    <b-container fluid class="home-container">
-      <div class="hero hidden xl-block">
-
-        <!--start:Saving Renters Money-->
-        <div class="card text-white">
+    <div class="main">
+      <!--start: Saving Renters Money-->
+      <section class="SavingRentersMoney">
+        <div class="crop">
           <img src="../../../assets/website_photo.jpg" class="card-img" alt="...">
-          <div class="card-img-overlay">
-            <div class="container">
-              <div class="row">
-                <!--                <banner></banner>-->
-                <div class="left-col-lg-7-col-md-12-col-sm-12">
-                  <div class="left-top">
-                    <h1 class="text-48 leading-64 text-white wow fadeInUp">Saving Renters Money</h1>
-                    <p class="text-20 leading-36 mt-12 wow fadeInUp">
-                      A sustainable energy storage solution focused on saving you money on your electricity bill
-                    </p>
-                    <button type="button" class="btn btn-outline-white mt-32 wow fadeInUp" onclick="window.location.href='../about'">
-                      Learn more &nbsp;&nbsp;<font-awesome-icon icon="arrow-right" style="font-size: 18px"/>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-        <!--end:Saving Renters Money-->
+        <div class="fog">
+          <b-row class="insider m-tb-a t-left">
+<!--            <b-col  xs="12" sm="12" md="5" lg="5" xl="5" class ="insideInsider">-->
+              <h1 class="c-FFFFFF">Saving Renters Money</h1>
+            <p class="p2 c-FFFFFF t-left p-l-0 aSustainable">
+              A sustainable energy storage solution focused on saving you money on your electricity bill
+            </p>
+            <button type="button" class="btn btn-outline-FFFFFF" onclick="window.location.href='../about'">
+              Learn more &nbsp;&nbsp;<font-awesome-icon icon="arrow-right" style="font-size: 18px"/>
+            </button>
+<!--            </b-col>-->
+          </b-row>
+        </div>
+      </section>
+      <!--end: Saving Renters Money-->
 
-        <!--start:about blip-->
-        <section class="analytics">
-          <div class="container">
-            <div class="row">
+      <!--start: About blip-->
+      <section class="AboutBlip b-FFFFFF i-a-c">
+        <b-row class="w-80p insider">
+          <b-col  xs="12" sm="12" md="5" lg="5" xl="5" class ="leftImg">
+            <img src="../../../assets/blip-mockup-update.png" alt="" class="w-100p">
+          </b-col>
+          <b-col  xs="12" sm="12" md="7" lg="7" xl="7" class ="rightText t-left">
+            <h2 class="c-254B77 m-l-0 p-l-0">about blip</h2>
+            <p class="p2 c-183B56 m-l-0 p-l-0">
+              We supply enterprises, organizations and institutes of high-tech industries with modern components.
+              We build long-term trusting relationships with our customers and partnes for further fruitful cooperations.
+              <br>
+              <br>
+              From year to year we strive to invent the most innovative technology that is used by both small enterprises and space enterprises.
+            </p>
+          </b-col>
+        </b-row>
+      </section>
+      <!--end: About blip-->
 
-              <div class="col-lg-6-col-md-12-col-sm-12">
-                <div class="illustration-wow-fadeInLeft">
-                  <img src="../../../assets/blip-mockup-update.png" alt="" class="w-100p">
-                </div>
-              </div>
+      <!--start: Clean energy is no longer just for homeowners-->
+      <section class="cleanEnergy b-DEF5FF i-a-c">
+        <b-row class="w-80p insider">
+          <b-row class="w-100p">
+            <h2 class="c-254B77">Clean energy is no longer just for homeowners</h2>
+          </b-row>
 
-              <div class="col-lg-6-col-md-12-col-sm-12">
-                <div class="heading-wow-fadeInUp">
-                  <h3 class="text-black-mt-16">about blip</h3>
-                  <p class="text-gray-mt-20-mb-0">
-                   blip is a residential energy storage product focused on saving you money on your monthly electric bill by capturing 
-                   the value of electricity price changes throughout the day, and delivering that value back to you as savings. 
-                   By offering blip at a fraction of the price our competitors charge, we aim to widely expand access 
-                   to the savings and benefits energy storage can provide.
-                  </p>
-                </div>
-              </div>
+          <b-row class="w-100p">
+            <b-col xs="12" sm="12" md="4" lg="4" xl="4" class="oneThird">
+              <img class="imgIn" src="../../../assets/blip-icon-home.png" alt="">
+              <h3 class="c-254B77 t-center">the where</h3>
+              <p class="p2 c-254B77 t-center">blip works in any home or apartment, and due to its portable design, you can bring it with you wherever you live</p>
+            </b-col>
 
-            </div>
-          </div>
-        </section>
-        <!--end:about blip-->
+            <b-col xs="12" sm="12" md="4" lg="4" xl="4" class="oneThird">
+              <img class="imgIn" src="../../../assets/blip-icon-piggy.png" alt="">
+              <h3 class="c-254B77 t-center">the what</h3>
+              <p class="p2 c-254B77 t-center">blip charges overnight, when electricity is cheap, and dispenses power during the day, when electricity is expensive</p>
+            </b-col>
 
-        <!--start:Clean energy is no longer just for homeowners-->
-        <section class="features">
-          <div class="container">
+            <b-col xs="12" sm="12" md="4" lg="4" xl="4" class="oneThird">
+              <img class="imgIn" src="../../../assets/blip-icon-plug.png" alt="">
+              <h3 class="c-254B77 t-center">the how</h3>
+              <p class="p2 c-254B77 t-center">Set it and forget it: plug blip into any standard outlet and any appliance into blip. No professional installation required.</p>
+            </b-col>
+          </b-row>
 
-            <div class="row">
-              <div class="col-lg-8-offset-lg-2-col-md-12-col-sm-12">
-                <div class="heading-text-center-wow-fadeInUp">
-                  <h3 class="text-black-mt-16">Clean energy is no longer just for homeowners</h3>
-                </div>
-              </div>
-            </div>
+          <b-row class="w-100p t-center">
+            <button type="button" class="btn btn-outline-254B77 m-lr-a" onclick="window.location.href='../about'">
+              Learn More
+            </button>
+          </b-row>
+        </b-row>
+      </section>
+      <!--end: Clean energy is no longer just for homeowners-->
 
-            <div class="content">
-              <div class="row">
+      <!--start: blip helps the planet too-->
+      <section class="blipHelps b-1D3755 i-a-c">
+        <b-row class="w-80p insider">
+          <b-row class="w-100p t-center m-lr-a m-b-30">
+            <h2 class="c-FFFFFF m-lr-a">blip helps the planet too</h2>
+          </b-row>
+          <b-row class="w-100p">
+            <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="oneHalf">
+              <p class="p2 c-B0E7FF t-left" data-wow-duration="3s">
+                Imagine a world where dirty plants are shut down because consumers control their power consumption without sacrificing their quality of life.
+                <!--                  </p>-->
+                <br>
+                <br>
+                <!--                  <p class="text-black-mt-24-mb-16-wow-fadeInUp" data-wow-duration="3s">-->
+                By offering a way to store power, and using it during peak demand times, blip reduces our reliance on dirty energy from peaker plants.
+                <!--                  </p>-->
+                <br>
+                <br>
+                <!--                  <p class="text-black-mt-24-mb-16-wow-fadeInUp" data-wow-duration="3s">-->
+                We can work together to decommission dirty plants by shifting demand away from those peak hours, one home at a time. If we each help a little, we can all do a lot.
+              </p>
+            </b-col>
+            <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="oneHalf i-a-c">
+              <img src="../../../assets/alain_duchateau_QvZj7r3efC4_unsplash_lighterblue_Copy.jpg" alt="">
+            </b-col>
+          </b-row>
+        </b-row>
+      </section>
+      <!--end: blip helps the planet too-->
 
-                <div class="col-lg-4-col-md-6-col-sm-12">
-                  <div class="card-f flex text-center wow fadeInUp">
-                    <div class="card-f-heading">
-                      <div class="ic">
-                        <img src="../../../assets/blip-icon-home.png" alt="">
-                      </div>
-                    </div>
-                    <div class="card-f-body">
-                      <h4 class="text-20-text-black-mb-12">The where</h4>
-                      <p class="text-gray-mb-20">
-                        blip works in any home or apartment, and due to its portable design, you can bring it with you wherever you live
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4-col-md-6-col-sm-12">
-                  <div class="card-f flex text-center wow fadeInUp">
-                    <div class="card-f-heading">
-                      <div class="ic">
-                        <img src="../../../assets/blip-icon-piggy.png" alt="">
-                      </div>
-                    </div>
-                    <div class="card-f-body">
-                      <h4 class="text-20-text-black-mb-12">The what</h4>
-                      <p class="text-gray-mb-20">
-                        blip charges overnight, when electricity is cheap, and dispenses power during the day, when electricity is expensive
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-lg-4-col-md-6-col-sm-12">
-                  <div class="card-f flex text-center wow fadeInUp">
-                    <div class="card-f-heading">
-                      <div class="ic">
-                        <img src="../../../assets/blip-icon-plug.png" alt="">
-                      </div>
-                    </div>
-                    <div class="card-f-body">
-                      <h4 class="text-20-text-black-mb-12">The how</h4>
-                      <p class="text-gray-mb-20">
-                        Set it and forget it: plug blip into any standard outlet and any appliance into blip. No professional installation required.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="card-pricing-footer">
-              <button type="button" class="btn-btn-outline-primary-btn-block-d-flex-justify-between-items-center" onclick="window.location.href='../about'">
-                Learn More
-              </button>
-            </div>
-
-          </div>
-        </section>
-        <!--end:Clean energy is no longer just for homeowners-->
-
-        <!--start:blip helps the planet too-->
-        <section class="quotes">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8-offset-lg-2-col-md-12-col-sm-12">
-                <div class="heading-text-center-wow-fadeInUp">
-                  <h3 class="text-black-mt-16">blip helps the planet too</h3>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="left col-lg-6 col-md-12 col-sm-12">
-                <div class="content">
-
-                  <p class="text-black-mt-24-mb-16-wow-fadeInUp" data-wow-duration="3s">
-                    Imagine a world where dirty plants are shut down because consumers control their power consumption without sacrificing their quality of life.
-                    <!--                  </p>-->
-                    <br>
-                    <br>
-                    <!--                  <p class="text-black-mt-24-mb-16-wow-fadeInUp" data-wow-duration="3s">-->
-                    By offering a way to store power, and using it during peak demand times, blip reduces our reliance on dirty energy from peaker plants.
-                    <!--                  </p>-->
-                    <br>
-                    <br>
-                    <!--                  <p class="text-black-mt-24-mb-16-wow-fadeInUp" data-wow-duration="3s">-->
-                    We can work together to decommission dirty plants by shifting demand away from those peak hours, one home at a time. If we each help a little, we can all do a lot.
-                  </p>
-                </div>
-              </div>
-              <div class="right col-lg-6 col-md-12 col-sm-12">
-                <div class="quotes-user wow fadeInUpRight">
-                  <img src="../../../assets/alain_duchateau_QvZj7r3efC4_unsplash_lighterblue_Copy.jpg" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!--end:blip helps the planet too-->
-      </div>
-    </b-container>
+    </div>
     <Footer></Footer>
   </div>
 </template>
@@ -180,6 +117,8 @@
 <script>
 import banner from "./banner.vue";
 import Footer from "./Footer.vue";
+import { MarkerArea } from 'markerjs';
+import $ from 'jquery';
 
 export default {
   name: "home",
@@ -188,8 +127,25 @@ export default {
     };
   },
   mounted() {
-   
+    let togetherScript = document.createElement('script')
+    togetherScript.setAttribute('src', 'https://togetherjs.com/togetherjs-min.js')
+    togetherScript.async = true
+    document.head.appendChild(togetherScript)
+    console.log('togetherScript', togetherScript);
+
+    $(function () {
+      $("#start-togetherjs").click(TogetherJS);
+    });
+
+    const mark = new MarkerArea(this.$refs.myImage)
+    console.log('mark', mark);
+    mark.show((dataUrl) => {
+      const res = this.$ref.resultImage
+      res.src = dataUrl
+      console.log('is it reaching here?')
+    });
   },
+
   methods: {
     destEntered() {
       console.log("is it even reaching");
@@ -212,3 +168,5 @@ export default {
 <style lang="scss" scoped>
 @import "./src/scss/components/_home.scss";
 </style>
+
+

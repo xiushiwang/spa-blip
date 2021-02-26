@@ -62,7 +62,7 @@
       <!--end:Don’t pay for high cost electricity-->
 
       <!--start:So why choose blip?-->
-      <section class="features FFFFFF h-700px">
+      <section class="features FFFFFF h-800px">
         <div class="container">
 
           <div class="row">
@@ -221,7 +221,10 @@ export default {
       this.charts = echarts.init(document.getElementById(id))
       this.charts.setOption({
         tooltip: {
+          // enabled: false,
+          // trigger: 'item',
           trigger: 'axis',
+          show: false,
           // axisPointer: {
           //   type: 'cross'
           // }
@@ -229,6 +232,7 @@ export default {
         color:['#254B77'],
         legend: {
           data: ['Costs you would pay without blip'],
+          selectedMode: false,
         },
         grid: {
           left: '3%',
@@ -263,7 +267,12 @@ export default {
               }
             }
           }
-        }]
+        }],
+        hover: {
+          filter: {
+            type: 'none',
+          }
+        },
       })
 
     },
@@ -273,7 +282,10 @@ export default {
       // this.charts.setOption({
       this.charts.setOption({
         tooltip: {
-          trigger: 'axis'
+          // enabled: false,
+          // trigger: 'item',
+          trigger: 'axis',
+          show: false,
         },
         color:['#4F9BC1','#183B56'],
         legend: {

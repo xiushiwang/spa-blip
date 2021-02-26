@@ -126,7 +126,7 @@ button.btn.btn-outline-4F9BC1{
 
   border: 2px solid #4F9BC1;
   box-sizing: border-box;
-  border-radius: 24px;
+  border-radius: 50px;
 
   text-align: center;
   background-color:transparent;
@@ -154,7 +154,7 @@ button.btn.btn-outline-254B77{
 
   border: 2px solid #254B77;
   box-sizing: border-box;
-  border-radius: 24px;
+  border-radius: 50px;
 
   text-align: center;
   background-color:transparent;
@@ -180,7 +180,7 @@ button.btn.btn-outline-B0E7FF{
 
   border: 2px solid #B0E7FF;
   box-sizing: border-box;
-  border-radius: 24px;
+  border-radius: 50px;
 
   text-align: center;
   background-color:transparent;
@@ -443,9 +443,13 @@ input{
   padding-top: 17px;
   //text-align: left;
   //background: #;
+  p{
+    a{color: #4F9BC1}
+    a:hover{color: #B0E7FF}
+  }
 }
 .w-511px{
-  width: 511px;
+  width: 963px;
   position: relative;
   left: -19px;
   //background: #F2607B
@@ -460,9 +464,18 @@ input{
   }
 }
 .h-700px{height: 750px;}
+.h-800px{height: 800px;}
 .whyBlip{
   background: transparent;
   width: 100%;
+}
+.card-f-body{
+  h3{
+    height: 100px;
+    //text-align: center;
+    //display: flex;
+    //align-items: center;
+  }
 }
 
 
