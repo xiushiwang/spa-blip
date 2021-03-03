@@ -7,7 +7,7 @@
            data-rss="https://medium.com/feed/@blipenergy"
            data-maxcols="3"
            data-layout="slider"
-           data-poststyle="modal"
+           data-poststyle="external"
            data-readmore="..."
            data-buttonclass="moreButton"
            data-offset="-200">&#160;</div>
@@ -40,7 +40,7 @@ export default {
   },
   mounted() {
     let externalScript = document.createElement('script')
-    externalScript.setAttribute('src', '' + 'src/app/medium.js')
+    externalScript.setAttribute('src', '' + 'src/app/website/medium.js')
     // 'https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js')
     // 'https://www.retainable.io/assets/retainable/rss-embed/retainable-rss-embed.js')
     document.head.appendChild(externalScript)

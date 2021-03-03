@@ -162,7 +162,8 @@ button.submit:hover {
 .m-l-0{margin-left: 0px;}
 .m-r-0{margin-right: 0px;}
 .m-t-0{margin-top: 0px;}
-.m-b-0{margin-botton: 0px;}
+.m-b-0{margin-bottom: 0px;}
+.m-b-50{margin-bottom: 90px;}
 .m-tb-a{
   margin-top: auto;
   margin-bottom: auto;
@@ -307,7 +308,7 @@ button.submit:hover {
 
   .headsUp{
     width: 540px;
-    margin-bottom: 90px;
+    margin-bottom: 50px;
     padding: 55px 23px;
     border: 1px solid #B0E7FF;
     box-sizing: border-box;
@@ -544,7 +545,7 @@ button.submit:hover {
   //background: #FAAD13;
   position: relative;
   top: 159px;
-  margin-left: 60px;
+  margin-left: 70px;
   margin-bottom: 300px;
 
   .topButton{
@@ -636,7 +637,7 @@ button.submit:hover {
 
       .logo{
         height: 62px;
-        margin-top: -20px;
+        margin-top: -30px;
         margin-bottom: 0px;
         //background: #3cb582;
         img{
@@ -649,8 +650,8 @@ button.submit:hover {
 
       .blip-area{
         //background: #3cb582;
-        margin-top: -15px;
-        margin-bottom: 30px;
+        margin-top: -10px;
+        margin-bottom: 10px;
       }
 
       .savePerYear{
@@ -666,6 +667,7 @@ button.submit:hover {
         //background: #3cb582;
 
         padding-bottom: 0px;
+        margin-top: -15px;
         margin-bottom: 9.46px;
       }
 
@@ -673,6 +675,7 @@ button.submit:hover {
         //background: #3cb582;
         width: 245px;
         height: 44.81px;
+        margin-top: -15px;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 0px;

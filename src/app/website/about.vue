@@ -53,10 +53,10 @@
                 </div>
               </div>
               <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="textOnRight FFFFFF flyFromRight">
+                <div class="textOnRight flyFromRight">
                   <div class="contentCenter">
-                    <h2 class="h2 two54B77 t-left">We care deeply about our environment</h2>
-                    <p class="p2 one83B56 t-left">
+                    <h2 class="h2 c-B0E7FF t-left">We care deeply about our environment</h2>
+                    <p class="p2 c-FFFFFF t-left">
                       blip is designed to keep dirty power plants offline by shifting your energy usage.
                     </p>
                   </div>
@@ -95,13 +95,6 @@
                 <p class="p2 one83B56 t-center">
                   We are passionate about limiting our collective impact on the environment.
                 </p>
-                <div class="card-pricing-footer">
-                  <button type="button" class="btn btn-outline-4F9BC1" onclick="window.location.href='../contact-us'">
-                    <!--                      <a href="./contact-us" class="btn btn-primary">-->
-                    Contact Us
-                    <!--                        </a>-->
-                  </button>
-                </div>
               </div>
 
               <div class="content">
@@ -134,7 +127,7 @@
                           <img src="../../assets/images/team/DennisKontorovichs.png" alt="" class="members">
                       </div>
                       <div class="card-f-body">
-                        <h4 class="h4 one83B56 t-center">Dennis Kontorovichs</h4>
+                        <h4 class="h4 one83B56 t-center">Dennis Kontorovich</h4>
                         <p class="p3 one83B56 t-center">Co-Founder</p>
                       </div>
                     </div>
@@ -151,6 +144,13 @@
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="card-pricing-footer">
+                <button type="button" class="contactUsButton btn btn-outline-4F9BC1" onclick="window.location.href='../contact-us'">
+                  <!--                      <a href="./contact-us" class="btn btn-primary">-->
+                  Contact Us
+                  <!--                        </a>-->
+                </button>
               </div>
             </div>
           </div>

@@ -241,7 +241,7 @@
 <!--        </b-row>-->
       </b-container>
 
-      <b-container v-else  class = "shadow t-center w-100p">
+      <b-container v-else  class="shadow t-center w-100p">
         <b-row class="outage t-center">
 <!--          <b-col xs="1" sm="1" md="1" lg="1" xl="1" class="bolt c-FFFFFF i-a-c">-->
 <!--            <font-awesome-icon icon="bolt"/>-->

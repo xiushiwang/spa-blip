@@ -19,7 +19,7 @@
         </b-col>
       </b-row>
 
-      <b-row class = "w-100p m-l-0 p-l-0" >
+      <b-row class = "w-100p m-l-0 p-l-0 m-b-50" >
         <h1 class="h1 c-254B77 t-left see">See how blip can save you money</h1>
         <p class="p2 c-254B77 t-left m-l-0 how" style="margin-left: 0px">How do rates in your area compare to your possible blip savings?</p>
         <b-row class="zipcode_input t-left w-100p m-l-0">

@@ -145,9 +145,21 @@ button.submit:hover {
 }
 
 .input{
+  height: 49px;
   background: #FFFFFF;
   border: 2px solid #D3D3D3;
   box-sizing: border-box;
+  border-radius: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.input::placeholder{
+  font-family: 'Montserrat', Avenir;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 20px;
+  color: #8E8E8E;
 }
 .message{height: 247px;}
 
@@ -243,4 +255,28 @@ button.btn.btn-outline-4F9BC1{
   //width: 636px;
   margin-top: 134px;
   margin-bottom: 44px;
+}
+.submitButton{
+  position: absolute;
+  width: 174px;
+  height: 59px;
+  //left: 2px;
+  //top: 720px;
+
+  border: 2px solid #254B77;
+  box-sizing: border-box;
+  border-radius: 30px;
+
+  font-family: 'Montserrat', Avenir;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #254B77;
+}
+.submitButton:hover{
+  //border: 2px solid #FFFFFF;
+  background: #254B77;
+  color: #FFFFFF;
 }
