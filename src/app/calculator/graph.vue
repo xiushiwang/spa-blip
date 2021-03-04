@@ -2,32 +2,32 @@
   <div>
     <b-container class="saving_container t-center w-100p m-r-0 p-l-0" v-if="seen">
 
-      <b-row class="topButton t-center p-0">
+      <b-row id="topButtonBackground" class="topButton p-0">
         <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">
           <b-button
-              class="buttonIn"
-              v-on:click="showResiliency()"
+              class="buttonIn b-F9F9F9 c-254B77 m-l-0"
+              v-on:click="showResiliency(); b254B77()"
               :disabled="dollarSign"
-          >$</b-button>
+          >$ Bill Savings</b-button>
         </b-col>
         <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">
           <b-button
-              class="buttonIn"
-              v-on:click="showResiliency()"
+              class="buttonIn b-254B77 c-FFFFFF m-r-0"
+              v-on:click="showResiliency(); bF9F9F9()"
               :disabled="!dollarSign"
-          ><font-awesome-icon icon="bolt"/></b-button>
+          ><font-awesome-icon icon="bolt"/> Backup power</b-button>
         </b-col>
       </b-row>
-      <b-row class="topButtonExplanation t-center p-0">
-        <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="t-center m-l-0 m-t-0 p-0">
-          <div class="explanation dollarEx">Cash Savings</div>
-        </b-col>
-        <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="t-center m-l-0 m-t-0 p-0">
-          <div class="explanation boltEx">Resiliency Planning</div>
-        </b-col>
-      </b-row>
+<!--      <b-row class="topButtonExplanation t-center p-0">-->
+<!--        <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="t-center m-l-0 m-t-0 p-0">-->
+<!--          <div class="explanation dollarEx">Cash Savings</div>-->
+<!--        </b-col>-->
+<!--        <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="t-center m-l-0 m-t-0 p-0">-->
+<!--          <div class="explanation boltEx">Resiliency Planning</div>-->
+<!--        </b-col>-->
+<!--      </b-row>-->
 
-      <b-container v-if="dollarSign" class = "shadow t-center w-100p">
+      <b-container v-if="dollarSign" class = "shadow b-F9F9F9 t-center w-100p">
         <b-container v-if="!hasMaxSaving">
           <b-row class="notBiggest_box t-center">
             <p class="current p4 t-center c-FFFFFF">
@@ -47,16 +47,19 @@
         <b-container v-else>
           <b-container v-if="checkMaxSaving">
             <b-row class="withBlip_box t-center">
-              <router-link :to="'/home'" class="logo w-100p">
-                <img src="../../assets/blip_logo.png"/>
-              </router-link>
+<!--              <router-link :to="'/home'" class="logo w-100p">-->
+<!--                <img src="../../assets/blip_logo.png"/>-->
+<!--              </router-link>-->
               <!--          <h4 class="blip-area">{{pickedUtility.utilities.utility_name}}</h4>-->
               <p class="blip-area p4 t-center c-FFFFFF w-100p">Your savings with blip</p>
-              <p class = "savePerYear t-center c-B0E7FF w-100p">${{savePerYear}}</p>
-              <p class = "perYear t-center c-B0E7FF w-100p">per year</p>
-              <router-link :to="'/about'" class="about C-4F9BC1 w-100p">
-                <p class = "p4 C-4F9BC1 t-center">Learn more how you can save money with blip</p>
-              </router-link>
+              <p class = "savePerYear t-center c-B0E7FF w-100p">${{ninetyPercent}}-{{oneHundredAndTenPercent}}</p>
+              <p class = "perYear t-center c-B0E7FF w-100p">per year*</p>
+              <p class = "p4 C-4F9BC1 t-center about">
+                * estimated savings when pairing our device with an energy dense appliance
+                <span id="tooltip-target-2" v-b-tooltip.hover.bottomright="{variant: 'info', customClass: 'myTooltipClass'}"
+                      title="Savings estimated based on utility specific rate plan information"
+                ><font-awesome-icon icon="info-circle"/></span>
+              </p>
             </b-row>
 
             <b-row class="congrs">
@@ -76,10 +79,12 @@
                   <p class = "currentBottom t-center c-FFFFFF">
                     Please check other plan.
                   </p>
-                  <b-button class="contactUtilityProvider">
-                    <a :href="'http://' + this.pickedUtility.website" target="_blank" class="about C-4F9BC1 w-100p p4">
-                      <p class = "p4 C-4F9BC1 t-center">Contact Your Provider to Switch</p>
-                    </a>
+                  <b-button class="contactUtilityProvider" :to="'http://' + this.pickedUtility.website">
+<!--                    <a :href="'http://' + this.pickedUtility.website" target="_blank" class="contactYourP p4 c-4F9BC1 w-100p">-->
+                      <p class = "p4 C-4F9BC1 t-center">
+                        Contact Your Provider to Switch
+                    </p>
+<!--                    </a>-->
                   </b-button>
                 </b-row>
               </b-container>
@@ -120,7 +125,6 @@
                   </b-col>
                 </b-row>
               </b-container>
-
             </b-container>
 
             <b-container v-show="!askWhy">
@@ -132,7 +136,7 @@
               <b-row class="withBlip_box t-center">
                 <!--          <h4 class="blip-area">{{pickedUtility.utilities.utility_name}}</h4>-->
                 <p class="yourSaving p4 t-center c-FFFFFF w-100p">Your savings with blip</p>
-                <p class = "savePerYear t-center c-B0E7FF w-100p">${{maxSaving}}</p>
+                <p class = "savePerYear t-center c-B0E7FF w-100p">${{ninetyPercent}}-{{oneHundredAndTenPercent}}</p>
                 <p class = "perYear t-center c-B0E7FF w-100p">per year</p>
                 <router-link :to="'/about'" class="about C-4F9BC1 w-100p">
                   <p class = "p4 C-4F9BC1 t-center">Learn more how you can save money with blip</p>
@@ -140,77 +144,38 @@
               </b-row>
             </b-container>
 
-            <!--          <b-container v-show="askWhy">-->
-            <!--            <b-row class="savingsDifYears" style="margin-top: 40px">-->
-            <!--              <b-col xs="12" sm="12" md="6" lg="6" xl="6" class = "left">-->
-            <!--                <p class = "p3 c-254B77 t-center">Savings after 3 years</p>-->
-            <!--                <h4 class = "c-4F9BC1 t-center">${{ (savePerYear * 3).toFixed(2)}}</h4>-->
-            <!--              </b-col>-->
-
-            <!--              <b-col xs="12" sm="12" md="6" lg="6" xl="6" class = "right">-->
-            <!--                <p class = "p3 c-254B77 t-center">Savings after 5 years</p>-->
-            <!--                <h4 class = "p3 c-4F9BC1 t-center">${{ (savePerYear * 5).toFixed(2)}}</h4>-->
-            <!--              </b-col>-->
-            <!--            </b-row>-->
-
-            <!--            <b-row class="graph w-100p t-center">-->
-            <!--              <b-row class="graphButton w-100p t-center p-0">-->
-            <!--                <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">-->
-            <!--                  <b-button-->
-            <!--                      variant="outline-primary"-->
-            <!--                      v-on:click="drawOverallSavings('chartTwo')"-->
-            <!--                      :disabled="showOverallSavings"-->
-            <!--                  >Overall Savings-->
-            <!--                  </b-button>-->
-            <!--                </b-col>-->
-            <!--                <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">-->
-            <!--                  <b-button-->
-            <!--                      variant="outline-primary"-->
-            <!--                      v-on:click="drawSeasonalSavings('chartTwo')"-->
-            <!--                      :disabled="!showOverallSavings"-->
-            <!--                  >Seasonal Savings-->
-            <!--                  </b-button>-->
-            <!--                </b-col>-->
-            <!--              </b-row>-->
-
-            <!--              <b-row class="graphSaving">-->
-            <!--                <div v-if="planClickd" id="chartTwo" class="chart" style="width: 520px;height: 423px;"></div>-->
-            <!--              </b-row>-->
-            <!--            </b-row>-->
-            <!--          </b-container>-->
-
           </b-container>
         </b-container>
 
         <b-container v-show="checkMaxSaving || askWhy">
-          <b-row class="savingsDifYears">
-            <b-col xs="12" sm="12" md="6" lg="6" xl="6" class = "left">
-              <p class = "p3 c-254B77 t-center">Savings after 3 years</p>
-              <h4 class = "c-4F9BC1 t-center">${{ (savePerYear * 3).toFixed(2)}}</h4>
-            </b-col>
+<!--          <b-row class="savingsDifYears">-->
+<!--            <b-col xs="12" sm="12" md="6" lg="6" xl="6" class = "left">-->
+<!--              <p class = "p3 c-254B77 t-center">Savings after 3 years</p>-->
+<!--              <h4 class = "c-4F9BC1 t-center">${{ (savePerYear * 3).toFixed(2)}}</h4>-->
+<!--            </b-col>-->
 
-            <b-col xs="12" sm="12" md="6" lg="6" xl="6" class = "right">
-              <p class = "p3 c-254B77 t-center">Savings after 5 years</p>
-              <h4 class = "p3 c-4F9BC1 t-center">${{ (savePerYear * 5).toFixed(2)}}</h4>
-            </b-col>
-          </b-row>
+<!--            <b-col xs="12" sm="12" md="6" lg="6" xl="6" class = "right">-->
+<!--              <p class = "p3 c-254B77 t-center">Savings after 5 years</p>-->
+<!--              <h4 class = "p3 c-4F9BC1 t-center">${{ (savePerYear * 5).toFixed(2)}}</h4>-->
+<!--            </b-col>-->
+<!--          </b-row>-->
 
           <b-row class="graph w-100p t-center">
             <b-row class="graphButton w-100p t-center p-0">
               <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">
                 <b-button
                     variant="outline-primary"
-                    v-on:click="drawOverallSavings('chartOne')"
-                    :disabled="showOverallSavings"
-                >Overall Savings
+                    v-on:click="drawSeasonalSavings('chartOne')"
+                    :disabled="!showOverallSavings"
+                >Seasonal Savings
                 </b-button>
               </b-col>
               <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">
                 <b-button
                     variant="outline-primary"
-                    v-on:click="drawSeasonalSavings('chartOne')"
-                    :disabled="!showOverallSavings"
-                >Seasonal Savings
+                    v-on:click="drawOverallSavings('chartOne')"
+                    :disabled="showOverallSavings"
+                >Overall Savings
                 </b-button>
               </b-col>
             </b-row>
@@ -241,42 +206,64 @@
 <!--        </b-row>-->
       </b-container>
 
-      <b-container v-else  class="shadow t-center w-100p">
+      <b-container v-else class="shadow b-254B77 t-center w-100p">
+
+        <h4 class="ourDevice c-FFFFFF w-90p t-center m-lr-a">
+          Our device provides 2.2 kWh of backup power, enough to power your fridge for  a day or charge your phone for weeks
+        </h4>
         <b-row class="outage t-center">
 <!--          <b-col xs="1" sm="1" md="1" lg="1" xl="1" class="bolt c-FFFFFF i-a-c">-->
 <!--            <font-awesome-icon icon="bolt"/>-->
 <!--          </b-col>-->
 <!--          <b-col style="padding-left: 8px">-->
-          <div class="boltSign c-FFFFFF t-center w-100p m-tb-a"><font-awesome-icon icon="bolt"/></div>
+<!--          <div class="boltSign c-FFFFFF t-center w-100p m-tb-a"><font-awesome-icon icon="bolt"/></div>-->
           <div class="outageTimes c-FFFFFF t-center w-100p m-tb-a">
             <!--              <p class="outageTimes c-FFFFFF t-left w-100p m-tb-a">-->
             <p class="p1">{{pickedUtility.utilityName}} Users in Your Area lost</p>
             <p class = "lostToBlackouts">{{computeHours(pickedUtility.outage.saidi)}}</p>
-            <p class="p1">to blackouts this year</p>
+            <p class="p1">of power to blackouts this year</p>
           </div>
 <!--          </b-col>-->
-        </b-row>
-
-        <b-row class="outage t-center">
           <div class="outageTimes c-FFFFFF t-center w-100p m-tb-a">
             <p class="p1">This utility has had an average of</p>
-            <p class = "emf">{{pickedUtility.outage.saifi}} blackouts</p>
+            <p class = "emf c-B0E7FF">{{pickedUtility.outage.saifi}} blackouts</p>
             <p class="p1">this year</p>
           </div>
-        </b-row>
 
-        <b-row class="outage t-center">
-          <div class="outageTimes c-FFFFFF t-center w-100p m-tb-a">
+          <div class="outageTimesLast c-FFFFFF t-center w-100p m-tb-a">
             <p class="p1">Each blackout lasted</p>
-            <p class = "emf">{{computeHours(pickedUtility.outage.caidi)}}</p>
+            <p class = "emf c-B0E7FF">{{computeHours(pickedUtility.outage.caidi)}}</p>
             <p class="p1">on average</p>
           </div>
+
+          <div class="iSymbol p4 c-D3D3D3 w-100p"
+              id="tooltip-target-3" v-b-tooltip.hover.bottom="{variant: 'light', customClass: 'myTooltipClass'}"
+                title="Source: U.S. Energy Information Administration, Annual Electric Power Industry Report"
+          ><font-awesome-icon icon="info-circle"/>
+          </div>
+
         </b-row>
+
+<!--        <b-row class="outage t-center">-->
+<!--          <div class="outageTimes c-FFFFFF t-center w-100p m-tb-a">-->
+<!--            <p class="p1">This utility has had an average of</p>-->
+<!--            <p class = "emf">{{pickedUtility.outage.saifi}} blackouts</p>-->
+<!--            <p class="p1">this year</p>-->
+<!--          </div>-->
+<!--        </b-row>-->
+
+<!--        <b-row class="outage t-center">-->
+<!--          <div class="outageTimes c-FFFFFF t-center w-100p m-tb-a">-->
+<!--            <p class="p1">Each blackout lasted</p>-->
+<!--            <p class = "emf">{{computeHours(pickedUtility.outage.caidi)}}</p>-->
+<!--            <p class="p1">on average</p>-->
+<!--          </div>-->
+<!--        </b-row>-->
 
       </b-container>
 
       <b-row class="signUpForUpdates w-100p t-center">
-        <b-button class="submit" variant="outline-primary" ><a ref="">Sign up for Updates</a></b-button>
+        <b-button class="submit" variant="outline-primary" ><a ref="">Get notified when we launch</a></b-button>
       </b-row>
 
     </b-container>
@@ -285,6 +272,7 @@
 
 <script>
 import echarts from "echarts";
+import axios from 'axios';
 require('echarts/theme/shine');
 
 export default {
@@ -300,7 +288,7 @@ export default {
 //       seasonalSavings: null,
       askWhy: false,
       chartOne: null,
-      overallSavingsButtonAbled: false,
+      overallSavingsButtonAbled: true,
       xAxisMark: ['Year 1', '', '', '', 'Year 5', '', '', '', '', 'Year 10'],
       xAxisMark4Overall: ['Year 1', '', '', '', 'Year 5', '', '', '', '', 'Year 10'],
       xAxisMark4Seasonal: ['','','Spring','','','Summer','','','Fall','','','Winter'],
@@ -351,6 +339,13 @@ export default {
         return true
       }
     },
+    ninetyPercent: function (){
+      // var ninetyP =
+      return Math.round(0.9 * this.savePerYear)
+    },
+    oneHundredAndTenPercent: function (){
+      return Math.round(1.1 * this.savePerYear)
+    },
     showOverallSavings: function() {
       return !this.overallSavingsButtonAbled;
     },
@@ -393,7 +388,7 @@ export default {
 
   mounted() {
     this.$nextTick(function() {
-      this.drawChartOne(this.overallSavings);
+      this.drawChartOne(this.seasonalSavings);
       // this.drawChartOne(this.overallSavings, 'chartTwo')
     })
   },
@@ -414,6 +409,13 @@ export default {
       // console.log(this.pickedUtility.utilityName)
       this.dollarSign = !this.dollarSign
       this.reDrawChart()
+    },
+    b254B77(){
+      document.getElementById('topButtonBackground').style.background= "#254B77";
+    },
+
+    bF9F9F9(){
+      document.getElementById('topButtonBackground').style.background= "#F9F9F9";
     },
 
     computeHours(mins){

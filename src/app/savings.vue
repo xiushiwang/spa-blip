@@ -66,7 +66,7 @@
           </b-col>
 
           <b-col xs="12" sm="12" md="3" lg="3" xl="3" class="t-center i-a-c">
-            <b-button variant="outline-primary" v-on:click="checkZipcodeAfter()" class = "enter_button submit">Enter
+            <b-button variant="outline-primary" v-on:click="checkZipcodeAfter()" class="enter_button submit">Enter
               <!--            <font-awesome-icon icon="search"/>-->
             </b-button>
           </b-col>
@@ -90,7 +90,7 @@
                       variant="outline-primary"
                       v-if="post.logo !== ''"
                       v-on:click="list(post); sendUtility(post); countOverallPlan(post); provider = true;"
-                      v-b-tooltip.hover="{title: post.utilityName}"
+                      v-b-tooltip.hover.bottom="{variant: 'light', title: post.utilityName}"
                   >
                     <img :src= "'http://'+post.logo" class = "utilityLogo">
                   </b-button>
@@ -129,7 +129,7 @@
             <!--                       sendPlan(plan)"-->
             <!--              >{{plan.planName}}</b-dropdown-item>-->
 
-            <select class="m-l-0 dropdown" v-model="model" v-on:change="planSelected($event)">
+            <select name="planDropdown" class="m-l-0 dropdown" v-model="model" v-on:change="planSelected($event)">
 <!--              <option selected>Click me to choose</option>-->
               <option :value="''" disabled selected>Please select...</option>
               <option
@@ -310,13 +310,19 @@ export default {
     },
 
     findMaxSaving(){
-      for (var i = 0; i < this.overallPlan.length; i++) {
-        if (this.overallPlan[i] === Math.max(...this.overallPlan)){
-          break;
-        }
-      }
-      var plan = this.utilityPicked.planList[i]
+      // for (var i = 0; i < this.overallPlan.length; i++) {
+      //   if (this.overallPlan[i] === Math.max(...this.overallPlan)){
+      //     break;
+      //   }
+      // }
+      // var plan = this.utilityPicked.planList[i]
+
+      var plan = this.utilityPicked.planList[0]
+
+      // console.log("I donnnnnnnnt", this.model)
       this.selectedPlan = plan.planName;
+      this.model = 0;
+      // this.pleaseSelect = plan.planName;
       this.countPlan(plan);
       this.sendPlan(plan)
     },
@@ -354,6 +360,7 @@ export default {
       //   }
       // }
       // console.log('TTTTTTTTTTTThis',this.utilityPicked.planList[event.target.value]);
+      // console.log("Mooooooooodel", this.model)
       this.selectedPlan = this.utilityPicked.planList[event.target.value].planName
       // console.log('Mooooooodel', this.selectedPlan)
       this.countPlan(this.utilityPicked.planList[event.target.value]);
