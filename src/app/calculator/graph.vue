@@ -121,7 +121,7 @@
                   </b-col>
                   <b-col xs="6" sm="6" md="6" lg="6" xl="6" class="rightInBtw t-left m-tb-a">
                     <p class="p4 c-254B77">Your savings with blip:</p>
-                    <h4 class="c-4F9BC1">${{savePerYear}}/year</h4>
+                    <h4 class="c-4F9BC1">${{ninetyPercent}}-{{oneHundredAndTenPercent}}/year</h4>
                   </b-col>
                 </b-row>
               </b-container>
@@ -136,7 +136,7 @@
               <b-row class="withBlip_box t-center">
                 <!--          <h4 class="blip-area">{{pickedUtility.utilities.utility_name}}</h4>-->
                 <p class="yourSaving p4 t-center c-FFFFFF w-100p">Your savings with blip</p>
-                <p class = "savePerYear t-center c-B0E7FF w-100p">${{ninetyPercent}}-{{oneHundredAndTenPercent}}</p>
+                <p class = "savePerYear t-center c-B0E7FF w-100p">${{ninetyPercentMaxSaving}}-{{oneHundredAndTenPercentMaxSaving}}</p>
                 <p class = "perYear t-center c-B0E7FF w-100p">per year</p>
                 <router-link :to="'/about'" class="about C-4F9BC1 w-100p">
                   <p class = "p4 C-4F9BC1 t-center">Learn more how you can save money with blip</p>
@@ -374,6 +374,12 @@ export default {
     maxSaving: function(){
       return Intl.NumberFormat().format(Math.max(...this.overAllSavings))
     },
+    ninetyPercentMaxSaving: function(){
+      return Math.round(0.9 * this.maxSaving)
+    },
+    oneHundredAndTenPercentMaxSaving: function(){
+      return Math.round(1.1 * this.maxSaving)
+    },
     maxSavingPlan: function(){
       var mark
       for (var i = 0; i < this.overAllSavings.length; i++) {
@@ -531,7 +537,7 @@ export default {
     },
     drawChartTwo(){
       console.log('gotHere')
-      this.drawOverallSavings()
+      this.drawSeasonalSavings()
       // this.drawChartOne(this.overallSavings)
     }
 //End: add
