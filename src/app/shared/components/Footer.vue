@@ -55,13 +55,15 @@
           <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
             <div class="content text-center">
               <h2 class="h2 zero000000 t-center">Contact Us</h2>
-              <p class="p2 two54B77 t-center">hello@blipenergy.com</p>
+              <p class="p1 two54B77 t-center">hello@blipenergy.com</p>
               <div class="w-100p m-l-0 p-l-0">
-                <a href="https://www.linkedin.com/company/blip-energy"><font-awesome-icon :icon="['fab', 'linkedin']" class="font-awesome-icon one83B56"/></a>
-                <a href="https://twitter.com/BlipEnergy"><font-awesome-icon :icon="['fab', 'twitter-square']" class="font-awesome-icon one83B56"/></a>
-                <a href="https://www.facebook.com/blipenergy/"><font-awesome-icon :icon="['fab', 'facebook-square']" class="font-awesome-icon one83B56"/></a>
+                <a href="https://www.linkedin.com/company/blip-energy"><font-awesome-icon :icon="['fab', 'twitter']" class="font-awesome-icon c-B0E7FF"/></a>
+                <a href="https://twitter.com/BlipEnergy"><font-awesome-icon :icon="['fab', 'facebook-f']" class="font-awesome-icon c-B0E7FF"/></a>
+                <a href="https://www.facebook.com/blipenergy/"><font-awesome-icon :icon="['fab', 'linkedin-in']" class="font-awesome-icon c-B0E7FF"/></a>
               </div>
-              <p class="p2 c-B0E7FF t-center">blip respects your privacy</p>
+              <router-link :to="'/privacy-policy'" class="c-254B77 t-center">
+                <p class="p3 c-254B77 t-center">blip respects your privacy</p>
+              </router-link>
               <br>
               <br>
               <!--              <div class="logo w-88h-55"></div>-->
@@ -360,6 +362,16 @@ input{
 }
 .font-awesome-icon{
   font-size: 28px;
+
+  width: 64px;
+  height: 64px;
+  padding: 16px 16px;
+  margin-left: 14px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+
+  border: 2px solid #B0E7FF;
+  border-radius: 50px;
 }
 .logo{
   background: url(../../../assets/blip_logo.png);
@@ -380,7 +392,7 @@ input{
   left: 40%;
   right: 40%;
   top: calc(50% - 22px/2 + 150px);
-  margin-top: 14px;
+  margin-top: 20px;
   text-align: center;
 
   font-family: 'Montserrat', Avenir;;
