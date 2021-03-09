@@ -256,8 +256,10 @@ button.submit:hover {
   }
   .how{
     //background: #C4C4C4;
+    width: 464px;
     margin-top: 0px;
-    padding-bottom: 55px;}
+    //padding-bottom: 55px;
+  }
   .zip-input{
     width: 266px;
     height: 76px;
@@ -317,17 +319,19 @@ button.submit:hover {
 
   .headsUp{
     width: 540px;
-    margin-bottom: 50px;
-    padding: 55px 23px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding: 10px 23px;
     border: 1px solid #B0E7FF;
     box-sizing: border-box;
     border-radius: 30px;
     img{
       position: absolute;
-      top: -7px;
+      top: 7px;
       left: -5px;
-      width: 201px;
+      width: 220px;
     }
+    .h3{margin-top: 10px;}
     .p4{margin-top: 6px}
   }
 }

@@ -255,6 +255,16 @@ input{
 .font-awesome-icon{
   font-size: 32px;
   line-height: 34px;
+
+  width: 64px;
+  height: 64px;
+  padding: 16px 16px;
+  margin-left: 14px;
+  margin-right: 5px;
+  margin-bottom: -10px;
+
+  border: 2px solid #254B77;
+  border-radius: 50px;
 }
 .circle{
   width: 64px;
@@ -280,7 +290,7 @@ input{
   left: 40%;
   right: 40%;
   top: calc(50% - 22px/2 + 80px);
-  margin-top: 14px;
+  margin-top: 25px;
   text-align: center;
 
   font-family: 'Montserrat', Avenir;;

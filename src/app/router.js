@@ -10,6 +10,7 @@ import calculator from './calculator/calculator.vue'
 import utilities from './website/utilities.vue'
 import articles from './website/articles'
 import myBlip from './onboarding/my-blip.vue'
+import privacyPolicy from './website/privacy-policy.vue'
 
 Vue.use(Router)
 
@@ -73,5 +74,11 @@ export default new Router({
       name: 'my-blip',
       component: myBlip
     },
+    {
+      path: '/privacy-policy',
+      name: 'privacy-policy',
+      component: privacyPolicy
+    },
+
   ]
 })

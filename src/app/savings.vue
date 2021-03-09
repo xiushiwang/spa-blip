@@ -4,24 +4,31 @@
 <!--      <b-row class="seeHow row w-100p">-->
 <!--        <h1 class="h1 c-000000 t-left f-Avenir see">See how blip can save you money</h1>-->
 <!--      </b-row>-->
-      <b-row class="headsUp t-left w-100p m-l-0">
-        <b-col  xs="12" sm="12" md="5" lg="5" xl="5" class ="headsUp_left">
-          <img src="../assets/Savings Calculator Graphic/Heads Up Location Graphic/1.png">
-        </b-col>
-        <b-col  xs="12" sm="12" md="7" lg="7" xl="7" class ="headsUp_right">
-          <h3 class="h3 c-254B77 t-left">Heads up!</h3>
-          <p class="p3 c-254B77 t-left">
-            blip is currently only servicing  New York and California zip codes.
-          </p>
-          <p class="p4 c-4F9BC1 t-left">
-            Check back soon, we are expanding fast!
-          </p>
-        </b-col>
-      </b-row>
+
+<!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Where original Heads up session goes!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
       <b-row class = "w-100p m-l-0 p-l-0 m-b-50" >
         <h1 class="h1 c-254B77 t-left see">See how blip can save you money</h1>
-        <p class="p2 c-254B77 t-left m-l-0 how" style="margin-left: 0px">How do rates in your area compare to your possible blip savings?</p>
+        <p class="p2 c-254B77 t-left m-l-0 how" style="margin-left: 0px">
+          When paired with an energy dense appliance like a window AC, blip can save you money on your electricity bill.
+          Fill in your zipcode to get started
+        </p>
+
+        <b-row class="headsUp t-left w-100p m-l-0">
+          <b-col  xs="12" sm="12" md="5" lg="5" xl="5" class ="headsUp_left">
+            <img src="../assets/Savings Calculator Graphic/Heads Up Location Graphic/1.png">
+          </b-col>
+          <b-col  xs="12" sm="12" md="7" lg="7" xl="7" class ="headsUp_right">
+            <h3 class="h3 c-254B77 t-left">Heads up!</h3>
+            <p class="p3 c-254B77 t-left">
+              This savings calculator currently only includes selected providers in California and New York City.
+            </p>
+            <p class="p4 c-4F9BC1 t-left">
+              Check back soon, we are expanding fast!
+            </p>
+          </b-col>
+        </b-row>
+
         <b-row class="zipcode_input t-left w-100p m-l-0">
           <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="t-left m-tb-a p-l-0">
             <b-form-input
