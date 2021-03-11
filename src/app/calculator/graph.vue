@@ -289,7 +289,7 @@ export default {
       askWhy: false,
       chartOne: null,
       overallSavingsButtonAbled: true,
-      xAxisMark: ['Year 1', '', '', '', 'Year 5', '', '', '', '', 'Year 10'],
+      xAxisMark: ['','','Spring','','','Summer','','','Fall','','','Winter'],
       xAxisMark4Overall: ['Year 1', '', '', '', 'Year 5', '', '', '', '', 'Year 10'],
       xAxisMark4Seasonal: ['','','Spring','','','Summer','','','Fall','','','Winter'],
 //End: add
