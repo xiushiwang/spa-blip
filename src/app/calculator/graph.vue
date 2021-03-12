@@ -2,7 +2,7 @@
   <div>
     <b-container class="saving_container t-center w-100p m-r-0 p-l-0" v-if="seen">
 
-      <b-row id="topButtonBackground" class="topButton p-0">
+      <b-row id="topButtonBackground" class="topButton p-0" :style='dollarSignBackground'>
         <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">
           <b-button
               class="buttonIn b-F9F9F9 c-254B77 m-l-0"
@@ -56,15 +56,24 @@
               <p class = "perYear t-center c-B0E7FF w-100p">per year*</p>
               <p class = "p4 C-4F9BC1 t-center about">
                 * estimated savings when pairing our device with an energy dense appliance
-                <span id="tooltip-target-2" v-b-tooltip.hover.bottomright="{variant: 'info', customClass: 'myTooltipClass'}"
+                <span id="tooltip-target-2" class="infoMark" v-b-tooltip.hover.bottomright="{variant: 'light', customClass: 'myTooltipClass'}"
                       title="Savings estimated based on utility specific rate plan information"
                 ><font-awesome-icon icon="info-circle"/></span>
               </p>
             </b-row>
 
             <b-row class="congrs">
-              <p class = "p3 c-254B77 t-center">
+              <p class = "p3 c-254B77 t-center" v-if="this.model == 'A'">
                 Congratulations! With your time of use plan, you are on track to having the biggest savings.
+              </p>
+              <p class = "p3 c-254B77 t-center" v-if="this.model == 'C'">
+                You’re already saving big, but switching to a time of use plan would allow for maximum savings.
+              </p>
+              <p class = "p3 c-254B77 t-center" v-if="this.model == 'D'">
+                Switching to a time of use plan would allow for maximum savings.
+              </p>
+              <p class = "p3 c-254B77 t-center" v-if="this.model == 'E'">
+                These are the savings you can expect if you are on a Time Of Use plan.
               </p>
             </b-row>
           </b-container>
@@ -209,7 +218,10 @@
       <b-container v-else class="shadow b-254B77 t-center w-100p">
 
         <h4 class="ourDevice c-FFFFFF w-90p t-center m-lr-a">
-          Our device provides 2.2 kWh of backup power, enough to power your fridge for  a day or charge your phone for weeks
+          Our device provides 2.2 kWh of backup power, enough to power your fridge for a day or charge your phone for weeks
+          <span id="tooltip-target-3" class="infoMarkI c-D3D3D3" v-b-tooltip.hover.bottomright="{variant: 'light', customClass: 'myTooltipClass'}"
+                title="U.S. Energy Information Administration, Annual Electric Power Industry Report"
+          ><font-awesome-icon icon="info-circle"/></span>
         </h4>
         <b-row class="outage t-center">
 <!--          <b-col xs="1" sm="1" md="1" lg="1" xl="1" class="bolt c-FFFFFF i-a-c">-->
@@ -237,7 +249,7 @@
           </div>
 
           <div class="iSymbol p4 c-D3D3D3 w-100p"
-              id="tooltip-target-3" v-b-tooltip.hover.bottom="{variant: 'light', customClass: 'myTooltipClass'}"
+              id="tooltip-target-4" v-b-tooltip.hover.bottom="{variant: 'light', customClass: 'myTooltipClass'}"
                 title="Source: U.S. Energy Information Administration, Annual Electric Power Industry Report"
           ><font-awesome-icon icon="info-circle"/>
           </div>
@@ -272,20 +284,23 @@
 
 <script>
 import echarts from "echarts";
-import axios from 'axios';
+// import axios from 'axios';
 require('echarts/theme/shine');
 
 export default {
   name: "graph",
-  props:['pickedUtility','overAllSavings','planPicked','planClickd','savePerYear'],
+  props:['pickedUtility','iDontKnow','overAllSavings','planPicked','planClickd','savePerYear','ac'],
   data: function() {
     return {
       data:'display this!',
       seen: true,
       zipcode: "",
 //Start: add
-      dollarSign: true,
+      dollarSignNum: 0,
+      dollarSign: this.ac,
 //       seasonalSavings: null,
+      checkMaxSaving: true,
+      awaiting: false,
       askWhy: false,
       chartOne: null,
       overallSavingsButtonAbled: true,
@@ -306,22 +321,25 @@ export default {
       if (this.savePerYear === 0){
         this.askWhy = false;
         return true
-      }else{
-        return false
       }
+      return false
     },
-    checkMaxSaving: function(){
-      var max = Math.max(...this.overAllSavings)
-      var zero = 0
-      // console.log(max)
-      // console.log(this.savePerYear)
-      if (this.savePerYear === max && max !== zero){
-        return true
-      }else{
-        this.askWhy = false
-        return false
-      }
-    },
+    // checkMaxSaving: function(){
+    //   if (this.savePerYear !== 0) {
+    //     return true
+    //   }
+    //   return false
+    //   // var max = Math.max(...this.overAllSavings)
+    //   // var zero = 0
+    //   // // console.log(max)
+    //   // // console.log(this.savePerYear)
+    //   // if (this.savePerYear === max && max !== zero){
+    //   //   return true
+    //   // }else{
+    //   //   this.askWhy = false
+    //   //   return false
+    //   // }
+    // },
     hasMaxSaving: function (){
       var max = Math.max(...this.overAllSavings)
       var zero = 0
@@ -389,28 +407,96 @@ export default {
         }
       }
       return this.pickedUtility.planList[mark].planName
-    }
+    },
+    model: function() {
+      if (this.iDontKnow == false){
+        if (this.planPicked.planType == 1) {
+          if (this.savePerYear >= 39) {
+            return 'A'
+          } else {
+            return 'B'
+          }
+        } else if (this.planPicked.planType == 0) {
+          if (this.savePerYear >= 39) {
+            return 'C'
+          } else {
+            return 'D'
+          }
+        }
+      }else{
+        return 'E'
+      }
+      return 'other'
+    },
+    dollarSignBackground: function(){
+      if(this.dollarSign == true){
+        return {background: '#254B77'}
+      }else{
+        return {background: '#F9F9F9'}
+      }
+    },
   },
 
   mounted() {
+    this.print();
     this.$nextTick(function() {
       this.drawChartOne(this.seasonalSavings);
       // this.drawChartOne(this.overallSavings, 'chartTwo')
     })
   },
 
-  // watch:{
-  //   pageNo:{
-  //     immediate:true,
-  //     handler:function(){
-  //       console.log('hello world')
-  //     }
-  //   }
-  // },
+  watch:{
+    // iDontKnow: {
+    //     handler (newVal, oldVal){
+    //       this.iDontKnow = newVal;
+    //       if(this.iDontKnow  == true){
+    //         this.model = 'E';
+    //         this.dollarSign = true;
+    //       }
+    //       // this.iDontKnow = !newVal;
+    //     },
+    //     immediate: true
+    //   },
+
+    savePerYear: {////////////////////////////////command out to disable "This is what you would save with the Time of Use plan:" section
+      handler (newVal, oldVal){
+        if(typeof(newVal) === "undefined" && typeof(oldVal) !== "undefined") {
+          this.checkMaxSaving = false
+        }else{
+          this.checkMaxSaving = true
+        }
+      },
+      immediate: true
+    },
+
+    // dollarSign: function(){
+    //   if(this.dollarSign == true) {
+    //     this.b254B77()
+    //   }else{
+    //     this.bF9F9F9()
+    //   }
+    // },
+    // ac: {
+    //   handler (newVal, oldVal){
+    //     this.ac = !newVal;
+    //     if(this.dollarSignNum == 0){this.dollarSign = !this.ac;}
+    //   },
+    //   immediate: true,
+    //   deep: true
+    // },
+    // ACHere: function (val){
+    //   this.dollarSign = val
+    //   // alert(val)
+    // }
+  },
 
   methods: {
 
 //Start: add
+    print(){
+      // console.log("savePerYear", this.savePerYear)
+      console.log("In graph.vue after mounted",this.planPicked)
+    },
     showResiliency(){
       // console.log(this.pickedUtility.utilityName)
       this.dollarSign = !this.dollarSign
@@ -423,6 +509,15 @@ export default {
     bF9F9F9(){
       document.getElementById('topButtonBackground').style.background= "#F9F9F9";
     },
+    // setButton(){
+    //   if(this.model == 'A' || this.model == 'C'){
+    //     this.dollarSign = true
+    //     this.b254B77()
+    //   }else if(this.model == 'B' || this.model == 'D'){
+    //     this.dollarSign = false
+    //     this.bF9F9F9()
+    //   }
+    // },
 
     computeHours(mins){
       if(mins < 60){
@@ -543,7 +638,7 @@ export default {
 //End: add
   },
   components: {
-    echarts
+    // echarts
   }
 };
 </script>

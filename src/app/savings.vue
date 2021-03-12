@@ -40,7 +40,7 @@
           </b-col>
           <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="i-a-c p-0">
             <b-button
-                class = "submit search-button"
+                class = "submit search-button m-l-0"
                 variant="outline-primary"
                 v-on:click="checkZipcode()"
                 :disabled="isDisabled"
@@ -97,7 +97,7 @@
                       variant="outline-primary"
                       v-if="post.logo !== ''"
                       v-on:click="list(post); sendUtility(post); countOverallPlan(post); provider = true;"
-                      v-b-tooltip.hover.bottom="{variant: 'light', title: post.utilityName}"
+                      v-b-tooltip.hover.bottom="{variant: 'light',customClass: 'myTooltipClass', title: post.utilityName}"
                   >
                     <img :src= "'http://'+post.logo" class = "utilityLogo">
                   </b-button>
@@ -224,7 +224,7 @@ export default {
   computed: {
     isDisabled: function() {
       return !this.zipcode;
-    }
+    },
   },
 
   mounted() {},
@@ -318,18 +318,25 @@ export default {
 
     findMaxSaving(){
       // for (var i = 0; i < this.overallPlan.length; i++) {
-      //   if (this.overallPlan[i] === Math.max(...this.overallPlan)){
-      //     break;
-      //   }
+      //   // if (this.overallPlan[i] === Math.max(...this.overallPlan)){
+      //   //   break;
+      //   // }
       // }
-      // var plan = this.utilityPicked.planList[i]
+      for (var i = 0; i < this.utilityPicked.length; i++){
+        if (this.utilityPicked[i].planType === 1){
+          break;
+        }
+      }
+      var plan = this.utilityPicked.planList[i]
 
-      var plan = this.utilityPicked.planList[0]
-
-      // console.log("I donnnnnnnnt", this.model)
+      // var plan = this.utilityPicked.planList[0]
+      // console.log("I donnnnnnnnt", plan)
       this.selectedPlan = plan.planName;
-      this.model = 0;
+      this.model = i;
+      // console.log("I donnnnnnnnt", this.model)
       // this.pleaseSelect = plan.planName;
+
+      this.$emit('iDontKnow', true)
       this.countPlan(plan);
       this.sendPlan(plan)
     },

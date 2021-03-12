@@ -16,6 +16,7 @@
 <!--                 <h1 class="see h1 c-000000 t-left f-Avenir">See how blip can save you money</h1>-->
                  <savings
                      @display-savings="displaySavings"
+                     v-on:iDontKnow="getIDontKnow"
                      v-on:noData="getNoData"
                      v-on:pickedUtility="getUtility"
                      v-on:planPicked="getPlan"
@@ -38,9 +39,11 @@
             <div v-if='!savings'>
               <graph
                   :pickedUtility = "pickedUtility"
+                  :iDontKnow = "iDontKnow"
                   :planPicked = "planPicked"
                   :planClickd = "planClickd"
                   :save-per-year="savePerYear"
+                  :ac="ac"
                   :overAllSavings="overAllSavings"
                   ref = "graphContainer"
               ></graph>
@@ -64,14 +67,26 @@ export default {
     return {
       savings: true,
       noData: false,
+      iDontKnow: false,
       pickedUtility: [],
       overAllSavings: [],
       planPicked: [],
       planClickd: false,
       savePerYear: 0,
-      numOfGraphLoaded: 0
+      numOfGraphLoaded: 0,
+      ac: true,
     };
   },
+  computed: {
+    // AC: function(){
+    //   if(this.savePerYear < 39){
+    //     return true
+    //   }else{
+    //     return false
+    //   }
+    // },
+  },
+
   mounted() {
   },
 
@@ -82,13 +97,18 @@ export default {
       // console.log('plan',this.planPicked)
     },
 //add start
+    getIDontKnow(e){
+      this.iDontKnow = e
+      console.log('IDooooooooont',this.iDontKnow)
+    },
     getNoData(nData){
       this.noData = nData
-      console.log('NNNNNNNNNNNNNdata',this.noData)
+      // console.log('NNNNNNNNNNNNNdata',this.noData)
       this.savings = true
     },
     getUtility(utility){
       this.pickedUtility = utility
+      // this.savings = true////////////////////////////////////////////////command it back if hope to load image again when choose utility again
       // console.log('hhhhhhhh',this.pickedUtility)
     },
     getOverAllSavings(allSavings){
@@ -104,7 +124,11 @@ export default {
     },
     getSaving(saving){
       this.savePerYear = saving
-      console.log('saving in father', this.savePerYear)
+      // console.log('saving in father', this.savePerYear)
+      if (this.savePerYear < 39){
+        this.ac = false
+      }
+      console.log('AAAAACCCCCC in parent', this.ac)
       // console.log(this.numOfGraphLoaded)
       // this.numOfGraphLoaded = this.numOfGraphLoaded + 1
     },

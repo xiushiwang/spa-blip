@@ -33,8 +33,10 @@
           <div>Contact Us</div>
         </router-link>
       </b-nav-item>
-      <b-nav-item class="navigation" right></b-nav-item>
-      <b-nav-item class="navigation" right></b-nav-item>
+<!--      <b-nav-item class="navigation" right></b-nav-item>-->
+<!--      <b-nav-item class="navigation" right></b-nav-item>-->
+    </b-navbar-nav>
+    <b-navbar-nav class="ml-auto">
       <b-nav-item class="navigation" right>
         <router-link :to="'my-blip'" :active='$route.name =="my-blip"'>
           <div>My blip</div>

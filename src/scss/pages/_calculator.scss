@@ -205,6 +205,9 @@ button.submit:hover {
 
 .portal{
   height: 973px;
+  //position: ;
+  margin-top: 0px;
+  padding-top: 0px;
 }
 
 .seeHow{
@@ -213,6 +216,7 @@ button.submit:hover {
   //height: 174px;
   //left: 130px;
   top: 109px;
+  //margin-top: -40px;
   margin-bottom: 0px;
   //background: #6f42c1;
 }
@@ -232,6 +236,7 @@ button.submit:hover {
   //height: 174px;
   left: 8%;
   top: 40px;
+  padding-top: 0px;
 }
 .graph_enter{
   position: absolute;
@@ -246,7 +251,7 @@ button.submit:hover {
 .zipcode_container{
   //background: #FAAD13;
   position: relative;
-  top: 173px;
+  top: 143px;
   max-width: 100%;
   //padding-bottom: 50px;
   .see{
@@ -261,7 +266,7 @@ button.submit:hover {
     //padding-bottom: 55px;
   }
   .zip-input{
-    width: 266px;
+    width: 270px;
     height: 76px;
     //left: 130px;
     //top: 504px;
@@ -439,6 +444,12 @@ button.submit:hover {
             width: 67.03px;
           }
         }
+        .utilityProviderPic:focus{
+          //box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25);
+          border: 2px solid #B0E7FF;
+          //background: #E5E5E5;
+          //img{border: 2px solid #B0E7FF;}
+        }
         .utilityProviderLetter{
           width: 119.92px;
           height: 119.92px;
@@ -465,6 +476,9 @@ button.submit:hover {
             line-height: 19px;
           }
         }
+        .utilityProviderLetter:focus{
+          border: 2px solid #B0E7FF;
+        }
       }
     }
   }
@@ -487,12 +501,13 @@ button.submit:hover {
         overflow: hidden;
         text-overflow : ellipsis ;
         //white-space : nowrap ;
-        white-space:pre-wrap;
+        //white-space:pre-wrap;////////////////////////command out it back if need show all content rather than ...
 
         width: 296px;
-        height: 119.55px;
-        //49.55px;
-        margin-top: 20px;
+        height:
+                //119.55px;
+                49.55px;
+        margin-top: 10px;
         padding-left: 25px;
         padding-right: 25px;
         background: #FFFFFF;
@@ -506,16 +521,18 @@ button.submit:hover {
         //line-height: 24px;
         color: #254B77;
         text-align: center;
+        text-align-last:center;
 
         appearance:none;
         -moz-appearance:none;
         -webkit-appearance:none;
         ///*在选择框的最右侧中间显示下拉箭头图片*/
-        ////background: url("")  right center no-repeat;
+        //background: url(../../../src/assets/battery.png)  right center no-repeat;
         ///*为下拉小箭头留出一点位置，避免被文字覆盖*/
       }
-      //.dropdown::text{
+      //.dropdown::content{
       //  font-family: 'Montserrat', Avenir;
+      //  text-align: center;
       //}
       .dropdown-item{
         //width: 296px;
@@ -560,6 +577,7 @@ button.submit:hover {
   top: 159px;
   margin-left: 70px;
   margin-bottom: 300px;
+  //padding-bottom: 80px;
 
   .topButton{
     position: relative;
@@ -574,7 +592,7 @@ button.submit:hover {
     //overflow: hidden;
 
     opacity: 1;
-    background: #254B77;
+    //background: #254B77;
     border-radius: 49px 49px 0px 0px;
     //box-shadow:
             //0px 0px 0px rgba(0, 0, 0, 1);
@@ -790,12 +808,13 @@ button.submit:hover {
           font-size: 16px;
           line-height: 20px;
 
-          color: #B0E7FF;
+          color: #254B77;
         }
         button:disabled{
           background: #254B77;
           opacity: 1;
           border: none;
+          color: #FFFFFF;
         }
         button:hover{
           border: none;
@@ -908,6 +927,7 @@ button.submit:hover {
         //width: 100%;
         margin-bottom: 20px;
       }
+
     }
 
 
@@ -1041,8 +1061,9 @@ button.submit:hover {
     }
 
     .thisIs{
-      margin-top: 48px;
-      margin-bottom: 46px;
+      margin-top: 0px;
+      //48px;
+      margin-bottom: 16px;
       width: 485px;
       //height: 72px;
     }
@@ -1111,6 +1132,8 @@ button.submit:hover {
 
   .signUpForUpdates{
     margin-top: -120px;
+    //margin-bottom: 20px;
+    //padding-bottom: 40px;
     align-items: center;
     //margin-top: 30px;
 
@@ -1123,7 +1146,30 @@ button.submit:hover {
 
       background: #B0E7FF;
       border-radius: 24px;
-
+    }
+    button:hover{
+      background: #254B77;
+      //color: #B0E7FF;
     }
   }
+}
+.myTooltipClass{
+  //background: #D3D3D3 !important;
+  //color: #5A7184;
+  width: 200px;
+
+  font-family: 'Montserrat', Avenir;
+}
+.infoMark{
+  //color: #D3D3D3;
+  font-size: 14px;
+}
+.infoMarkI{
+  //color: #254B77;
+  ////height: 1px;
+  //width: 22px;
+  font-size: 18px;
+  //background: #D3D3D3;
+  //border: solid 2px #D3D3D3;
+  //border-radius: 50px;
 }
