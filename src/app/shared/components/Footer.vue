@@ -61,7 +61,7 @@
                 <a href="https://twitter.com/BlipEnergy"><font-awesome-icon :icon="['fab', 'facebook-f']" class="font-awesome-icon c-B0E7FF"/></a>
                 <a href="https://www.facebook.com/blipenergy/"><font-awesome-icon :icon="['fab', 'linkedin-in']" class="font-awesome-icon c-B0E7FF"/></a>
               </div>
-              <router-link :to="'/privacy-policy'" class="c-254B77 t-center">
+              <router-link :to="'/privacy-policy'" class="t-center" style="color: #254B77">
                 <p class="p3 c-254B77 t-center">blip respects your privacy</p>
               </router-link>
               <br>
@@ -109,7 +109,7 @@ section{
   font-family: 'Montserrat', Avenir;}
 //.h-536{height: 536px;}
 
-//.E5E5E5{background: #E5E5E5;}
+.E5E5E5{background: #E5E5E5;}
 .FFFFFF{background: #FFFFFF;}
 .DEF5FF{background: #DEF5FF;}
 .oneD3755{background: #1D3755;}
@@ -373,6 +373,7 @@ input{
   border: 2px solid #B0E7FF;
   border-radius: 50px;
 }
+.router-link{color: #254B77}
 .logo{
   background: url(../../../assets/blip_logo.png);
 }
