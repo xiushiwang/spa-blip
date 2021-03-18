@@ -30,13 +30,11 @@
             <img src="../../../assets/blip-mockup-update.png" alt="" class="w-100p">
           </b-col>
           <b-col  xs="12" sm="12" md="7" lg="7" xl="7" class ="rightText t-left">
-            <h2 class="c-254B77 m-l-0 p-l-0">about blip</h2>
+            <h2 class="c-254B77 m-l-0 p-l-0">About blip</h2>
             <p class="p2 c-183B56 m-l-0 p-l-0">
-              We supply enterprises, organizations and institutes of high-tech industries with modern components.
-              We build long-term trusting relationships with our customers and partnes for further fruitful cooperations.
-              <br>
-              <br>
-              From year to year we strive to invent the most innovative technology that is used by both small enterprises and space enterprises.
+              blip is a residential energy storage product focused on saving you money on your monthly electric bill by capturing the value of electricity price changes throughout the day,
+              and delivering that value back to you as savings. By offering blip at a fraction of the price our competitors charge,
+              we aim to widely expand access to the savings and benefits energy storage can provide.
             </p>
           </b-col>
         </b-row>
@@ -44,10 +42,11 @@
       <!--end: About blip-->
 
       <!--start: Clean energy is no longer just for homeowners-->
-      <section class="cleanEnergy b-DEF5FF i-a-c">
-        <b-row class="w-80p insider">
-          <b-row class="w-100p">
-            <h2 class="c-254B77">Clean energy is no longer just for homeowners</h2>
+      <section class="cleanEnergy b-DEF5FF i-a-c t-center">
+        <b-row class="w-80p insider t-center">
+          <b-row class="w-100p t-center">
+            <h2 class="c-254B77 t-center m-lr-a">
+              Clean energy is no longer just for homeowners</h2>
           </b-row>
 
           <b-row class="w-100p">

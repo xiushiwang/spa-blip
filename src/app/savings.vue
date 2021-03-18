@@ -60,7 +60,7 @@
 
     <div  v-if ="showNoData === false">
       <b-row class="utility_container t-left m-l-0" v-if="!seen">
-        <h2 class="c-254B77 t-left m-l-0 seeAfterNotSeen">See how blip can save you money</h2>
+        <div class="h2point5 c-254B77 t-left m-l-0 seeAfterNotSeen">See how blip can save you money</div>
         <b-row class="zipcode_input t-left w-100p m-l-0 p-l-0">
 
           <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="h-52px t-left m-l-0 p-l-0">
@@ -244,7 +244,17 @@ export default {
 //Start: add
     checkZipcode(){
       // console.log(this.zipcode.length)
-      if (this.zipcode.length === 5 ){
+      var split = this.zipcode.split("")
+      const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+      var allNum = true;
+      for(var i=0; i<5; i++){
+        if(!numbers.includes(split[i])){
+          allNum = false;
+          break;
+        }
+      }
+      // console.log('sppppppppppp', split)
+      if (this.zipcode.length === 5 && allNum){
         this.seen = !this.seen;
         this.showValidZipcodeError = true;
         this.loadJSON();
@@ -255,7 +265,16 @@ export default {
     },
 
     checkZipcodeAfter(){
-      if (this.zipcode.length === 5 ){
+      var split = this.zipcode.split("")
+      const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+      var allNum = true;
+      for(var i=0; i<5; i++){
+        if(!numbers.includes(split[i])){
+          allNum = false;
+          break;
+        }
+      }
+      if (this.zipcode.length === 5 && allNum){
         // this.seen = !this.seen;
         this.showValidZipcodeError = true;
         this.selectedPlan = '';
@@ -275,6 +294,7 @@ export default {
           .then(response => {
             // JSON responses are automatically parsed.
             this.posts = response.data.data
+            // console.log('hhhhhhhhhhhh', response.data.data)
             if (response.data.data.length === 0){
               this.showNoData = true
               this.sendNoData(true)
@@ -377,6 +397,7 @@ export default {
       // console.log("Mooooooooodel", this.model)
       this.selectedPlan = this.utilityPicked.planList[event.target.value].planName
       // console.log('Mooooooodel', this.selectedPlan)
+      this.$emit('iDontKnow', false)
       this.countPlan(this.utilityPicked.planList[event.target.value]);
       this.sendPlan(this.utilityPicked.planList[event.target.value]);
     },
