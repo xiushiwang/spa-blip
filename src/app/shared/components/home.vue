@@ -116,8 +116,6 @@
 <script>
 import banner from "./banner.vue";
 import Footer from "./Footer.vue";
-import { MarkerArea } from 'markerjs';
-import $ from 'jquery';
 
 export default {
   name: "home",
@@ -126,33 +124,11 @@ export default {
     };
   },
   mounted() {
-    let togetherScript = document.createElement('script')
-    togetherScript.setAttribute('src', 'https://togetherjs.com/togetherjs-min.js')
-    togetherScript.async = true
-    document.head.appendChild(togetherScript)
-    console.log('togetherScript', togetherScript);
 
-    $(function () {
-      $("#start-togetherjs").click(TogetherJS);
-    });
-
-    const mark = new MarkerArea(this.$refs.myImage)
-    console.log('mark', mark);
-    mark.show((dataUrl) => {
-      const res = this.$ref.resultImage
-      res.src = dataUrl
-      console.log('is it reaching here?')
-    });
   },
 
   methods: {
-    destEntered() {
-      console.log("is it even reaching");
-      this.$root.$emit("destWasEntered", this.travel);
-    },
-    clickFunction() {
-      console.log("is it even reaching");
-    },
+
   },
   computed: {
   },

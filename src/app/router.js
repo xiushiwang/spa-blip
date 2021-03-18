@@ -32,11 +32,7 @@ export default new Router({
       name: 'about',
       component: about
     },
-    // {
-    //   path: '/testing',
-    //   name: 'testing',
-    //   component: testing
-    // },
+
     {
       path: '/product',
       name: 'product',
@@ -64,11 +60,11 @@ export default new Router({
       name: 'articles',
       component: articles
     },
-    {
-      path: '/utilities',
-      name: 'utilities',
-      component: utilities
-    },
+    // {
+    //   path: '/utilities',
+    //   name: 'utilities',
+    //   component: utilities
+    // },
     {
       path: '/my-blip',
       name: 'my-blip',
