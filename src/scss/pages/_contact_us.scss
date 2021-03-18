@@ -154,6 +154,7 @@ button.submit:hover {
   padding-right: 20px;
 }
 .input::placeholder{
+  //text-align: center;
   font-family: 'Montserrat', Avenir;
   font-style: normal;
   font-weight: 300;
@@ -207,6 +208,9 @@ button.btn.btn-outline-4F9BC1{
   }
 
   .others{
+    //background: #5A7184;
+    margin-top: -30px;
+    //padding-top: 50px;
     .left{
       //background: #C4C4C4;
       .row{
@@ -226,6 +230,7 @@ button.btn.btn-outline-4F9BC1{
       }
 
       .right{
+        //margin-top: -100px;
         .row {
           margin-left: 0px;
           margin-top: 0px;
@@ -246,9 +251,11 @@ button.btn.btn-outline-4F9BC1{
 }
 .we{
   //width: 636px;
+  margin-top: -50px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 212px;
+  margin-bottom: 150px;
+          //212px;
 }
 .wed{
   //background: #3cb582;

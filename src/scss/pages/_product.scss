@@ -158,10 +158,6 @@ button.btn.btn-outline-254B77{
 
   text-align: center;
   background-color:transparent;
-  button:hover {
-    background-color: #254B77;
-    //color: white;
-  }
 
   //font-family: "MarkPro-TestFont";
   font-family: 'Montserrat', Avenir;
@@ -170,6 +166,10 @@ button.btn.btn-outline-254B77{
   font-size: 24px;
   line-height: 30px;
   color: #254B77;
+}
+button.btn.btn-outline-254B77:hover {
+  background-color: #254B77;
+  color: white;
 }
 
 button.btn.btn-outline-B0E7FF{
@@ -184,10 +184,6 @@ button.btn.btn-outline-B0E7FF{
 
   text-align: center;
   background-color:transparent;
-  button:hover {
-    background-color: #B0E7FF;
-    //color: white;
-  }
 
   //font-family: "MarkPro-TestFont";
   font-family: 'Montserrat', Avenir;
@@ -196,6 +192,11 @@ button.btn.btn-outline-B0E7FF{
   font-size: 24px;
   line-height: 30px;
   color: #B0E7FF;
+}
+button.btn.btn-outline-B0E7FF:hover {
+  background-color: #B0E7FF;
+  color: #254B77;
+  //color: white;
 }
 
 input{
@@ -216,6 +217,11 @@ input{
     font-size: 18px;
     line-height: 111%;
     color: #8E8E8E;
+  }
+}
+.features{
+  h3{
+    font-size: 40px;
   }
 }
 
@@ -438,7 +444,7 @@ input{
   //background: #F2607B;
 }
 .topline{
-  //border-top: 2px solid #FFFFFF;
+  border-top: 2px solid #FFFFFF;
   margin-top: 50px;
   padding-top: 17px;
   //text-align: left;

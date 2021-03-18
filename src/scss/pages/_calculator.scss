@@ -64,9 +64,20 @@ h2{
   font-weight: 200;
   font-size: 48px;
   line-height: 62px;
-  margin: 20px;
+  //margin: 20px;
   /* identical to box height, or 129% */
 }
+
+.h2point5{
+  font-family: 'Montserrat', Avenir;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 42px;
+  line-height: 128%;
+  //margin: 20px;
+  /* identical to box height, or 129% */
+}
+
 h3{
   font-family: 'Montserrat', Avenir;
   font-style: normal;
@@ -257,7 +268,8 @@ button.submit:hover {
   .see{
     //background: #C4C4C4;
     height: 174px;
-    margin-bottom: 30px;
+    margin-bottom: 2%;
+            //30px;
   }
   .how{
     //background: #C4C4C4;
@@ -266,7 +278,7 @@ button.submit:hover {
     //padding-bottom: 55px;
   }
   .zip-input{
-    width: 270px;
+    width: 97%;
     height: 76px;
     //left: 130px;
     //top: 504px;
@@ -308,7 +320,7 @@ button.submit:hover {
   }
 
   button.search-button{
-    width: 213.49px;
+    width: 70%;
     height: 67px;
     //left: 415.51px
     margin-left: 15px;
@@ -324,7 +336,8 @@ button.submit:hover {
 
   .headsUp{
     width: 540px;
-    margin-top: 30px;
+    margin-top: 2%;
+            //30px;
     margin-bottom: 40px;
     padding: 10px 23px;
     border: 1px solid #B0E7FF;
@@ -356,7 +369,7 @@ button.submit:hover {
   padding-bottom: 40px;
   margin-bottom: 120px;
   .seeAfterNotSeen{
-    width: 390px;
+    width: 400px;
     margin-top: 55px;
     padding-bottom: 40px;
     //background: #C4C4C4;

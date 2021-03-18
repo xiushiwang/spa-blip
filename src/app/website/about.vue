@@ -102,7 +102,7 @@
                   <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card-f flex text-center wow fadeInUp">
                       <div class="card-f-heading">
-                          <img src="../../assets/images/team/SophiaWennstedt.png" alt="" class="members">
+                          <img src="../../assets/images/team/BWSophia.jpg" alt="" class="members">
                       </div>
                       <div class="card-f-body">
                         <h4 class="h4 one83B56 t-center">Sophia Wennstedt</h4>
@@ -113,7 +113,7 @@
                   <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card-f flex text-center wow fadeInUp">
                       <div class="card-f-heading">
-                          <img src="../../assets/images/team/ChanceCobb.png" alt="" class="members">
+                          <img src="../../assets/images/team/BWChance.jpg" alt="" class="members">
                       </div>
                       <div class="card-f-body">
                         <h4 class="h4 one83B56 t-center">Chance Cobb</h4>
@@ -124,7 +124,7 @@
                   <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card-f flex text-center wow fadeInUp">
                       <div class="card-f-heading">
-                          <img src="../../assets/images/team/DennisKontorovichs.png" alt="" class="members">
+                          <img src="../../assets/images/team/BWDennis.jpg" alt="" class="members">
                       </div>
                       <div class="card-f-body">
                         <h4 class="h4 one83B56 t-center">Dennis Kontorovich</h4>
@@ -135,7 +135,7 @@
                   <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card-f flex text-center wow fadeInUp">
                       <div class="card-f-heading">
-                          <img src="../../assets/images/team/ThibautFeremans.png" alt="" class="members">
+                          <img src="../../assets/images/team/BWThibaut.jpg" alt="" class="members">
                       </div>
                       <div class="card-f-body">
                         <h4 class="h4 one83B56 t-center">Thibaut Feremans</h4>
@@ -146,7 +146,7 @@
                 </div>
               </div>
               <div class="card-pricing-footer">
-                <button type="button" class="contactUsButton btn btn-outline-4F9BC1" onclick="window.location.href='../contact-us'">
+                <button type="button" class="contactUsButton btn btn-outline-254B77" onclick="window.location.href='../contact-us'">
                   <!--                      <a href="./contact-us" class="btn btn-primary">-->
                   Contact Us
                   <!--                        </a>-->

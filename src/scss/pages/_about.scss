@@ -90,23 +90,19 @@ p.p3{
 
 img{background: #C4C4C4;}
 
-button.btn.btn-outline-4F9BC1{
+button.btn.btn-outline-254B77{
   //position: absolute;
   width: 230px;
   height: 59px;
   //left: 608px;
   //top: 263px;
 
-  border: 2px solid #4F9BC1;
+  border: 2px solid #254B77;
   box-sizing: border-box;
-  border-radius: 24px;
+  border-radius: 30px;
 
   text-align: center;
   background-color:transparent;
-  button:hover {
-    background-color: #4F9BC1;
-    //color: white;
-  }
 
   //font-family: "MarkPro-TestFont";
   font-family: 'Montserrat', Avenir;
@@ -114,7 +110,12 @@ button.btn.btn-outline-4F9BC1{
   font-weight: 300;
   font-size: 24px;
   line-height: 30px;
-  color: #4F9BC1;
+  color: #254B77;
+}
+button.btn.btn-outline-254B77:hover {
+  background-color: #254B77;
+  color: #FFFFFF;
+  //color: white;
 }
 
 input{
@@ -301,6 +302,20 @@ input{
           margin-left: auto;
           margin-right: auto;
           margin-bottom: 20px;
+          //img{
+          //  -webkit-filter: grayscale(100%);
+          //  -moz-filter: grayscale(100%);
+          //  -ms-filter: grayscale(100%);
+          //  -o-filter: grayscale(100%);
+          //  filter: grayscale(100%);
+          //  filter: gray;
+          //}
+        }
+        .card-f-body{
+          margin-top: 50px;
+          h4{
+            font-size: 24px;
+          }
         }
         ic.ic-lg.ic-badge.bg-primary-100.mb-36{
           //width: 202px;

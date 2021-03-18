@@ -9,11 +9,6 @@
     <!-- Right aligned nav items -->
     <b-navbar-nav class="ml-auto">
       <b-nav-item class="navigation" right>
-        <router-link :to="'about'" :active='$route.name =="about"'>
-          <div>About</div>
-        </router-link>
-      </b-nav-item>
-      <b-nav-item class="navigation" right>
         <router-link :to="'product'" :active='$route.name =="product"'>
           <div>Product</div>
         </router-link>
@@ -21,6 +16,11 @@
       <b-nav-item class="navigation" right>
         <router-link :to="'utilities'" :active='$route.name =="utilities"'>
           <div>Utilities</div>
+        </router-link>
+      </b-nav-item>
+      <b-nav-item class="navigation" right>
+        <router-link :to="'about'" :active='$route.name =="about"'>
+          <div>About</div>
         </router-link>
       </b-nav-item>
       <b-nav-item class="navigation" right>
@@ -39,7 +39,7 @@
     <b-navbar-nav class="ml-auto">
       <b-nav-item class="navigation" right>
         <router-link :to="'my-blip'" :active='$route.name =="my-blip"'>
-          <div>My blip</div>
+          <div>My account</div>
         </router-link>
       </b-nav-item>
       <b-nav-item class="navigation button" right>
@@ -87,7 +87,8 @@ export default {
   box-shadow: 0px 2px 50px -5px rgba(0, 0, 0, 0.09);
   //box-shadow: 0px 1px 4px rgba(0,0,0,0.3);, 0px 0px 20px rgba(0,0,0,0.1) inset;
   .bene-logo {
-    padding-bottom: 0.5em;
+    margin-left: 30px;
+    //padding-bottom: 0.5em;
     a {
       display: flex;
       align-items: center;
@@ -111,6 +112,7 @@ export default {
   .button{
     width: 200px;
     margin-left: 10px;
+    margin-right: 0px;
 
     border: 1px solid #254B77;
     box-sizing: border-box;

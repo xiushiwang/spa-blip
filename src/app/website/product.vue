@@ -289,7 +289,8 @@ export default {
         },
         color:['#4F9BC1','#183B56'],
         legend: {
-          data: ['Costs you would pay without blip', 'Costs you would pay with blip']
+          data: ['Costs you would pay without blip', 'Costs you would pay with blip'],
+          selectedMode: false,
         },
         grid: {
           left: '3%',
