@@ -267,15 +267,15 @@ button.submit:hover {
   //padding-bottom: 50px;
   .see{
     //background: #C4C4C4;
-    height: 174px;
-    margin-bottom: 2%;
+    //height: 174px;
+    margin-bottom: 5%;
             //30px;
   }
   .how{
     //background: #C4C4C4;
     width: 464px;
     margin-top: 0px;
-    //padding-bottom: 55px;
+    margin-bottom: 45px;
   }
   .zip-input{
     width: 97%;
@@ -303,8 +303,8 @@ button.submit:hover {
     //align-items: center;
   }
   .zip-input::placeholder{
-    width: 157px;
-    height: 30px;
+    width: 97%;
+    //height: 30px;
     font-family: 'Montserrat', Avenir;
     font-style: normal;
     font-weight: 300;
@@ -336,8 +336,8 @@ button.submit:hover {
 
   .headsUp{
     width: 540px;
-    margin-top: 2%;
-            //30px;
+    margin-top: -5%;
+            //2%;
     margin-bottom: 40px;
     padding: 10px 23px;
     border: 1px solid #B0E7FF;
@@ -349,8 +349,22 @@ button.submit:hover {
       left: -5px;
       width: 220px;
     }
-    .h3{margin-top: 10px;}
+    .h3{
+      margin-top: 10px;
+      //margin-bottom: 0px;
+    }
     .p4{margin-top: 6px}
+    .NYCresult{
+      width: 86%;
+      margin-bottom: 18px;
+      padding-left: 18%;
+      padding-right: 18%;;
+      span{
+        //width: 70%;
+        //margin-left: 10%;
+        //margin-right: 20%;
+      }
+    }
   }
 }
 
@@ -774,6 +788,9 @@ button.submit:hover {
       width: 78%;
       margin-top: 28px;
       margin-bottom: 38px;
+      .hoverUnderlined:hover{
+        text-decoration: underline;
+      }
     }
 
     .savingsDifYears{
@@ -1003,6 +1020,9 @@ button.submit:hover {
           text-align: center;
           color: #B0E7FF;//////////////////////////////////////////////////////////////////////////////////////////////
         }
+        //.iDont::hover{
+        //  text-decoration: underline;
+        //}
 
       }
 

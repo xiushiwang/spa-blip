@@ -52,7 +52,8 @@
 <!--              </router-link>-->
               <!--          <h4 class="blip-area">{{pickedUtility.utilities.utility_name}}</h4>-->
               <p class="blip-area p4 t-center c-FFFFFF w-100p">Your savings with blip</p>
-              <p class = "savePerYear t-center c-B0E7FF w-100p">${{ninetyPercent}}-{{oneHundredAndTenPercent}}</p>
+              <p v-if="savePerYear === 0" class = "savePerYear t-center c-B0E7FF w-100p">$0</p>
+              <p v-else class = "savePerYear t-center c-B0E7FF w-100p">${{ninetyPercent}}-{{oneHundredAndTenPercent}}</p>
               <p class = "perYear t-center c-B0E7FF w-100p">per year*</p>
               <p class = "p4 C-4F9BC1 t-center about">
                 * estimated savings when pairing our device with an energy dense appliance
@@ -66,10 +67,10 @@
               <p class = "p3 c-254B77 t-center" v-if="this.model == 'A'">
                 Congratulations! With your time of use plan, you are on track to having the biggest savings.
               </p>
-              <p class = "p3 c-254B77 t-center" v-if="this.model == 'C'">
+              <p class = "p3 c-254B77 t-center hoverUnderlined" v-if="this.model == 'C'" v-on:click="sendSwitchTOU()">
                 You’re already saving big, but switching to a time of use plan would allow for maximum savings.
               </p>
-              <p class = "p3 c-254B77 t-center" v-if="this.model == 'D'">
+              <p class = "p3 c-254B77 t-center hoverUnderlined" v-if="this.model == 'D'" v-on:click="sendSwitchTOU()">
                 Switching to a time of use plan would allow for maximum savings.
               </p>
               <p class = "p3 c-254B77 t-center" v-if="this.model == 'E'">
@@ -495,7 +496,7 @@ export default {
 //Start: add
     print(){
       // console.log("savePerYear", this.savePerYear)
-      console.log("In graph.vue after mounted",this.planPicked)
+      // console.log("In graph.vue after mounted",this.planPicked)
     },
     showResiliency(){
       // console.log(this.pickedUtility.utilityName)
@@ -534,14 +535,18 @@ export default {
       }
     },
 
+    sendSwitchTOU(){
+      this.$emit('switchTOU', true)
+    },
+
     drawChartOne(dataHere){
       // console.log('graph', this.planPicked)
       // console.log('graph: ', dataHere)
       // console.log('array', this.savingsForChart);
       // console.log('getElement',document.getElementById(id))
       // this.charts.clear();
-      console.log('ask', this.askWhy)
-      console.log('checkMax', this.checkMaxSaving)
+      // console.log('ask', this.askWhy)
+      // console.log('checkMax', this.checkMaxSaving)
       this.charts = echarts.init(document.getElementById('chartOne'))
       // this.charts.setOption({
       this.charts.setOption({
@@ -603,7 +608,7 @@ export default {
       // for (var i = 0; i < seasonal.length; i++) {
       //   this.savingsForChart[i] = (this.savePerYear * 3 * seasonal[i]).toFixed(2);
       // }
-      console.log('here; ',this.seasonalSavings)
+      // console.log('here; ',this.seasonalSavings)
       this.xAxisMark = this.xAxisMark4Seasonal
       this.drawChartOne(this.seasonalSavings)
           // this.savingsForChart)
@@ -631,7 +636,7 @@ export default {
       })
     },
     drawChartTwo(){
-      console.log('gotHere')
+      // console.log('gotHere')
       this.drawSeasonalSavings()
       // this.drawChartOne(this.overallSavings)
     }

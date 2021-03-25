@@ -1,0 +1,4 @@
+{"status":0,"msg":"SUCCESS","data":[
+  {"utilityName":"Consolidated Edison Co-NY Inc","logo":"logo.clearbit.com/www.coned.com","website":"www.coned.com","outage":{"saifi":0.2,"caidi":207.1,"saidi":41.42},"planList":[{"planName":"Time of Use","planType": 1,"saving":189.22,"savingList":[4.34,3.92,4.34,4.2,4.34,38.16,39.44,39.44,38.16,4.34,4.2,4.34]},{"planName":"Default","planType": 0,"saving":150.82,"savingList":[9.3,8.4,9.3,9.0,9.3,19.16,19.8,19.8,19.16,9.3,9.0,9.3]}]},
+  {"utilityName":"New York Power Authority","logo":"logo.clearbit.com/www.nypa.gov","website":"www.nypa.gov","outage":{"saifi":0.0,"caidi":0.0,"saidi":0.0},"planList":[{"planName":"Time of Use","planType": 1,"saving":36.0,"savingList":[2.0,2.0,2.0,2.0,2.0,2.0,6.0,6.0,6.0,2.0,2.0,2.0]},{"planName":"Default","planType": 0,"saving":24.0,"savingList":[2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0,2.0]}]}
+]}
