@@ -312,7 +312,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "src/scss/pages/_about.scss";
-@import "src/scss/animate";
+//@import "src/scss/animate";
 
 
 </style>

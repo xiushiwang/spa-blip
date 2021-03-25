@@ -211,7 +211,7 @@ export default {
       errors: [],
       utilityPicked: [],
       planNum: 0,
-      address: 'https://910e02343ac1.ngrok.io/v1/get_utilities_and_rates_by_zip_code/',
+      address: 'https://609004a9c4b5.ngrok.io/plan/get_savings_by_zip_code/',
       localAddress: './src/assets/JSONforTesting/',
       overallPlan:[],
       selectedPlan: '',
@@ -336,7 +336,7 @@ export default {
             this.errors.push(e)
           })
       this.address =
-          // 'https://910e02343ac1.ngrok.io/v1/get_utilities_and_rates_by_zip_code/' //un-command-out me to link to Zhen////////////////////////////////////////
+          // 'https://609004a9c4b5.ngrok.io/plan/get_savings_by_zip_code/' //un-command-out me to link to Zhen////////////////////////////////////////
           './src/assets/JSONforTesting/' /////////////////////////////////////////////////////////command-out me to run locally
     },
 
