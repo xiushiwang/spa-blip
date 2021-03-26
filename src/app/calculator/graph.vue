@@ -320,7 +320,7 @@ export default {
     },
     zeroSaving: function (){
       if (this.savePerYear === 0){
-        this.askWhy = false;
+        // this.askWhy = false;
         return true
       }
       return false

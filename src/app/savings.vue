@@ -32,9 +32,9 @@
           </b-col>
         </b-row>
         <b-row class = "w-100p m-l-0 p-l-0" >
-          <bcol xs="12" sm="12" md="8" lg="8" xl="8" class="t-left m-tb-a p-l-0">
+          <b-col xs="12" sm="12" md="8" lg="8" xl="8" class="t-left m-tb-a p-l-0">
           <p v-show="!showValidZipcodeError" class="validZipcodeError p4 c-FF0000 t-center">Please enter a valid zip code.</p>
-          </bcol>
+          </b-col>
         </b-row>
       </b-row>
 
@@ -82,7 +82,10 @@
           </b-col>
 
           <b-row class="t-left w-100p m-l-0 p-l-0">
-            <p v-show="!showValidZipcodeError" class="validZipcodeError p4 c-FF0000 t-center">Please enter a valid zip code.</p>
+            <p v-show="!showValidZipcodeError" class="validZipcodeError p4 c-FF0000 t-center">
+              <span v-if="showErrorMsgExpNYCA">Please enter a CA or NY zip code.</span>
+              <span v-else>Please enter a valid zip code.</span>
+            </p>
           </b-row>
         </b-row>
 
@@ -167,7 +170,7 @@
 
     <div v-else class="dontSupport p-l-0 t-left">
       <button @click="refresh()" class="goBack w-100p">
-        <p class="p4 c-254B77 t-left m-l-0">< Go back</p>
+        <p class="p4 c-254B77 t-left m-l-0">&lt; Go back</p>
       </button>
 
       <h2 class="h2 c-254B77 t-left m-l-0">We currently do not support that zip code.</h2>
@@ -205,13 +208,14 @@ export default {
           "",
 //Start: add
       showValidZipcodeError: true,
+      showErrorMsgExpNYCA: false,
       showNoData: false,
       notNYorCA: false,
       posts: [],
       errors: [],
       utilityPicked: [],
       planNum: 0,
-      address: 'https://609004a9c4b5.ngrok.io/plan/get_savings_by_zip_code/',
+      address: 'http://ec2-34-228-112-229.compute-1.amazonaws.com:8080/plan/get_savings_by_zip_code/',
       localAddress: './src/assets/JSONforTesting/',
       overallPlan:[],
       selectedPlan: '',
@@ -298,7 +302,22 @@ export default {
         // this.seen = !this.seen;
         this.showValidZipcodeError = true;
         this.selectedPlan = '';
-        this.loadJSON();
+        // this.loadJSON();
+        var address = this.address + this.zipcode
+        axios.get(address)
+            .then(resp => {
+                  // JSON responses are automatically parsed.
+                  // console.log('hhhhhhhhhhhh', response.data.data)
+                  if (resp.data.data){
+                  this.loadJSON();
+                  }else{
+                    this.showErrorMsgExpNYCA = true;
+                    this.showValidZipcodeError = false;
+                  }
+            })
+            .catch(e => {
+              this.errors.push(e)
+            })
       }else{
         // alert('!!!');
         this.showValidZipcodeError = false;
@@ -307,9 +326,9 @@ export default {
 
     loadJSON(){
       this.provider = false;
-      // this.address = this.address + this.zipcode //un-command-out me to link to Zhen1///////////////////////////////////////////////////////
-      const address = './src/assets/JSONforTesting/' /////////////////////////////////////////////////////////command-out me to run locally
-      this.address = address + this.zipcode + '.json' /////////////////////////////////////////////////////////command-out me to run locally
+      this.address = this.address + this.zipcode //un-command-out me to link to Zhen1///////////////////////////////////////////////////////
+      // const address = './src/assets/JSONforTesting/' /////////////////////////////////////////////////////////command-out me to run locally
+      // this.address = address + this.zipcode + '.json' /////////////////////////////////////////////////////////command-out me to run locally
       axios.get(this.address)
           .then(response => {
             // JSON responses are automatically parsed.
@@ -318,6 +337,7 @@ export default {
             if (response.data.data){
               this.sendNoData(false)
               this.seen = false;//////////////////////////////////
+              this.showErrorMsgExpNYCA = false;
               if (response.data.data.length === 1){
                 this.list(response.data.data[0]);
                 this.sendUtility(response.data.data[0]);
@@ -334,10 +354,11 @@ export default {
           })
           .catch(e => {
             this.errors.push(e)
+            // this.showValidZipcodeError = false;
           })
       this.address =
-          // 'https://609004a9c4b5.ngrok.io/plan/get_savings_by_zip_code/' //un-command-out me to link to Zhen////////////////////////////////////////
-          './src/assets/JSONforTesting/' /////////////////////////////////////////////////////////command-out me to run locally
+          'http://ec2-34-228-112-229.compute-1.amazonaws.com:8080/plan/get_savings_by_zip_code/' //un-command-out me to link to Zhen////////////////////////////////////////
+          // './src/assets/JSONforTesting/' /////////////////////////////////////////////////////////command-out me to run locally
     },
 
     list(utility) {
