@@ -13,22 +13,6 @@
           When paired with an energy dense appliance like a window AC, blip can save you money on your electricity bill.
           Fill in your zipcode to get started
         </p>
-
-        <b-row class="headsUp t-left w-100p m-l-0">
-          <b-col  xs="12" sm="12" md="5" lg="5" xl="5" class ="headsUp_left">
-            <img src="../assets/Savings Calculator Graphic/Heads Up Location Graphic/1.png">
-          </b-col>
-          <b-col  xs="12" sm="12" md="7" lg="7" xl="7" class ="headsUp_right">
-            <h3 class="h3 c-254B77 t-left">Heads up!</h3>
-            <p class="p3 c-254B77 t-left">
-              This savings calculator currently only includes selected providers in California and New York City.
-            </p>
-            <p class="p4 c-4F9BC1 t-left">
-              Check back soon, we are expanding fast!
-            </p>
-          </b-col>
-        </b-row>
-
         <b-row class="zipcode_input t-left w-100p m-l-0">
           <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="t-left m-tb-a p-l-0">
             <b-form-input
@@ -48,10 +32,28 @@
           </b-col>
         </b-row>
         <b-row class = "w-100p m-l-0 p-l-0" >
-          <bcol xs="12" sm="12" md="8" lg="8" xl="8" class="t-left m-tb-a p-l-0">
+          <b-col xs="12" sm="12" md="8" lg="8" xl="8" class="t-left m-tb-a p-l-0">
           <p v-show="!showValidZipcodeError" class="validZipcodeError p4 c-FF0000 t-center">Please enter a valid zip code.</p>
-          </bcol>
+          </b-col>
         </b-row>
+      </b-row>
+
+      <b-row v-show="notNYorCA" class="headsUp t-left w-100p m-l-0">
+        <b-col  xs="12" sm="12" md="5" lg="5" xl="5" class ="headsUp_left">
+          <img src="../assets/Savings Calculator Graphic/Heads Up Location Graphic/1.png">
+        </b-col>
+        <b-col  xs="12" sm="12" md="7" lg="7" xl="7" class ="headsUp_right">
+          <h3 class="h3 c-254B77 t-left">Heads up!</h3>
+          <p class="p3 c-254B77 t-left">
+            This savings calculator currently only includes selected providers in California and New York City.
+          </p>
+          <p class="p4 c-4F9BC1 t-left">
+            Check back soon, we are expanding fast!
+          </p>
+        </b-col>
+        <b-button class="submit NYCresult m-lr-a" v-on:click="oneOOOnine()">
+          <span>Click here to see our calculator at work in New York City</span>
+        </b-button>
       </b-row>
 
     </b-container>
@@ -73,13 +75,17 @@
           </b-col>
 
           <b-col xs="12" sm="12" md="3" lg="3" xl="3" class="t-center i-a-c">
-            <b-button variant="outline-primary" v-on:click="checkZipcodeAfter()" class="enter_button submit">Enter
+            <b-button variant="outline-primary" v-on:click="checkZipcodeAfter()" class="enter_button submit">
+              Enter
               <!--            <font-awesome-icon icon="search"/>-->
             </b-button>
           </b-col>
 
           <b-row class="t-left w-100p m-l-0 p-l-0">
-            <p v-show="!showValidZipcodeError" class="validZipcodeError p4 c-FF0000 t-center">Please enter a valid zip code.</p>
+            <p v-show="!showValidZipcodeError" class="validZipcodeError p4 c-FF0000 t-center">
+              <span v-if="showErrorMsgExpNYCA">Please enter a CA or NY zip code.</span>
+              <span v-else>Please enter a valid zip code.</span>
+            </p>
           </b-row>
         </b-row>
 
@@ -121,7 +127,7 @@
           <!--        <b-col xs="12" sm="12" md="12" lg="12" xl="12" >-->
           <h4 class="c-254B77">Choose your rate plan:</h4>
           <b-button
-              v-on:click="findMaxSaving()"
+              v-on:click="doTOU()"
               class="iDont"
           ><p class="p4 c-4F9BC1 t-left">(I don’t know my rate plan)</p></b-button> <!--!!!!!!!!!!!!!!!!!!!Empty!!!!!!!!!!!!!!!!!!-->
           <b-row class="plan_select t-left w-100p m-l-0 p-l-0">
@@ -164,7 +170,7 @@
 
     <div v-else class="dontSupport p-l-0 t-left">
       <button @click="refresh()" class="goBack w-100p">
-        <p class="p4 c-254B77 t-left m-l-0">< Go back</p>
+        <p class="p4 c-254B77 t-left m-l-0">&lt; Go back</p>
       </button>
 
       <h2 class="h2 c-254B77 t-left m-l-0">We currently do not support that zip code.</h2>
@@ -192,6 +198,7 @@ import axios from 'axios'; //add
 
 export default {
   name: "savings",
+  props:['switchTOU'],
   data: function() {
     return {
       dataHere:'display this!',
@@ -201,12 +208,14 @@ export default {
           "",
 //Start: add
       showValidZipcodeError: true,
+      showErrorMsgExpNYCA: false,
       showNoData: false,
+      notNYorCA: false,
       posts: [],
       errors: [],
       utilityPicked: [],
       planNum: 0,
-      address: 'https://910e02343ac1.ngrok.io/v1/get_utilities_and_rates_by_zip_code/',
+      address: 'http://ec2-34-228-112-229.compute-1.amazonaws.com:8080/plan/get_savings_by_zip_code/',
       localAddress: './src/assets/JSONforTesting/',
       overallPlan:[],
       selectedPlan: '',
@@ -215,6 +224,7 @@ export default {
       capacity: 2.2,
       numOfGraphLoaded: 0,
       provider: false,
+      // switchTOU: false,
 //End: add
     };
   },
@@ -227,17 +237,31 @@ export default {
     },
   },
 
-  mounted() {},
+  mounted() {
+    console.log('switchTOU', this.switchTOU)
+  },
+  watch:{
+    switchTOU: {
+      handler (newVal, oldVal){
+        if(newVal === true && oldVal === false) {
+          this.doTOU()
+          // this.switchTOU = false;
+        }
+        // this.switchTOU = false;
+      },
+      immediate: true
+    }
+  },
 
   methods: {
     entered_zipcode(zipcode) {
-      console.log(zipcode);
+      // console.log(zipcode);
     },
 
     displaySavings() {
       const data = this.dataHere;
        this.$emit('display-savings', data)
-       console.log('data', data);
+       // console.log('data', data);
        this.numOfGraphLoaded = 1
     },
 
@@ -255,7 +279,7 @@ export default {
       }
       // console.log('sppppppppppp', split)
       if (this.zipcode.length === 5 && allNum){
-        this.seen = !this.seen;
+        //where this.seen = !this.seen; use to be
         this.showValidZipcodeError = true;
         this.loadJSON();
       }else{
@@ -278,7 +302,22 @@ export default {
         // this.seen = !this.seen;
         this.showValidZipcodeError = true;
         this.selectedPlan = '';
-        this.loadJSON();
+        // this.loadJSON();
+        var address = this.address + this.zipcode
+        axios.get(address)
+            .then(resp => {
+                  // JSON responses are automatically parsed.
+                  // console.log('hhhhhhhhhhhh', response.data.data)
+                  if (resp.data.data){
+                  this.loadJSON();
+                  }else{
+                    this.showErrorMsgExpNYCA = true;
+                    this.showValidZipcodeError = false;
+                  }
+            })
+            .catch(e => {
+              this.errors.push(e)
+            })
       }else{
         // alert('!!!');
         this.showValidZipcodeError = false;
@@ -287,33 +326,39 @@ export default {
 
     loadJSON(){
       this.provider = false;
-      // this.address = this.address + this.zipcode //un-command-out me to link to Zhen1///////////////////////////////////////////////////////
-      const address = './src/assets/JSONforTesting/' /////////////////////////////////////////////////////////command-out me to run locally
-      this.address = address + this.zipcode + '.json' /////////////////////////////////////////////////////////command-out me to run locally
+      this.address = this.address + this.zipcode //un-command-out me to link to Zhen1///////////////////////////////////////////////////////
+      // const address = './src/assets/JSONforTesting/' /////////////////////////////////////////////////////////command-out me to run locally
+      // this.address = address + this.zipcode + '.json' /////////////////////////////////////////////////////////command-out me to run locally
       axios.get(this.address)
           .then(response => {
             // JSON responses are automatically parsed.
             this.posts = response.data.data
             // console.log('hhhhhhhhhhhh', response.data.data)
-            if (response.data.data.length === 0){
-              this.showNoData = true
-              this.sendNoData(true)
-            }else{
+            if (response.data.data){
               this.sendNoData(false)
+              this.seen = false;//////////////////////////////////
+              this.showErrorMsgExpNYCA = false;
               if (response.data.data.length === 1){
                 this.list(response.data.data[0]);
                 this.sendUtility(response.data.data[0]);
                 this.countOverallPlan(response.data.data[0]);
                 this.provider = true;
+              }else if (response.data.data.length === 0) {
+                this.showNoData = true
+                this.sendNoData(true)
               }
+            }else{
+              // alert('!!!')
+              this.notNYorCA = true
             }
           })
           .catch(e => {
             this.errors.push(e)
+            // this.showValidZipcodeError = false;
           })
       this.address =
-          // 'https://910e02343ac1.ngrok.io/v1/get_utilities_and_rates_by_zip_code/' //un-command-out me to link to Zhen////////////////////////////////////////
-          './src/assets/JSONforTesting/' /////////////////////////////////////////////////////////command-out me to run locally
+          'http://ec2-34-228-112-229.compute-1.amazonaws.com:8080/plan/get_savings_by_zip_code/' //un-command-out me to link to Zhen////////////////////////////////////////
+          // './src/assets/JSONforTesting/' /////////////////////////////////////////////////////////command-out me to run locally
     },
 
     list(utility) {
@@ -332,11 +377,11 @@ export default {
         this.overallPlan.push(provider.planList[i].saving)
             // ((provider.planList[i].highPrice - provider.planList[i].lowPrice)*this.capacity*365).toFixed(2))
       }
-      console.log(this.overallPlan)
+      // console.log(this.overallPlan)
       this.$emit('overAllSavings', this.overallPlan)
     },
 
-    findMaxSaving(){
+    doTOU(){
       // for (var i = 0; i < this.overallPlan.length; i++) {
       //   // if (this.overallPlan[i] === Math.max(...this.overallPlan)){
       //   //   break;
@@ -408,7 +453,33 @@ export default {
 
     contactUs(){
       this.$router.push({path: '/contact-us'})
-    }
+    },
+
+    oneOOOnine(){
+      this.zipcode = '10009';
+      this.checkZipcode();
+      // console.log(this.utilityPicked, this.utilityPicked.length)
+      //
+      // for (var i = 0; i < this.utilityPicked.length; i++){
+      //   if (this.utilityPicked[i].planType === 1){
+      //     break;
+      //   }
+      // }
+      // console.log(this.utilityPicked.planList[i])
+      // var plan = this.utilityPicked.planList[i]
+      //
+      // // var plan = this.utilityPicked.planList[0]
+      // this.selectedPlan = plan.planName;
+      // this.model = i;
+      // // this.pleaseSelect = plan.planName;
+      // this.countPlan(plan);
+      // this.sendPlan(plan)
+      // console.log("oneOOOnine", this.selectedPlan)
+
+    },
+    // doTOU(){
+    //
+    // },
 
 //End: add
   },

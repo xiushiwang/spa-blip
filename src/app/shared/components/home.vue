@@ -141,7 +141,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./src/scss/components/_home.scss";
+@import "src/scss/pages/home";
 </style>
 
 

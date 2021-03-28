@@ -10,7 +10,7 @@
 <!--            </b-col>-->
 <!--          </b-row>-->
 <!--          v-if="noData === false"-->
-           <b-col  xs="12" sm="12" md="5" lg="5" xl="5" class = "saving_enter">
+           <b-col  xs="12" sm="12" md="12" lg="5" xl="5" class = "saving_enter">
              <b-row class = "row" >
                <div class = "t-left m-l-0">
 <!--                 <h1 class="see h1 c-000000 t-left f-Avenir">See how blip can save you money</h1>-->
@@ -23,6 +23,7 @@
                      v-on:overAllSavings="getOverAllSavings"
                      v-on:planClickd="getPlanClicked"
                      v-on:savePerYear="getSaving"
+                     :switchTOU="switchTOU"
                      @refreshGraph = "refreshGraph"
                  ></savings>
                </div>
@@ -33,7 +34,7 @@
 <!--            hhhhhhh-->
 <!--          </b-col>-->
 
-          <b-col xs="12" sm="12" md="7" lg="7" xl="7" class = "graph_enter">
+          <b-col xs="12" sm="12" md="12" lg="7" xl="7" class = "graph_enter">
             <img class="blip-pig" src="../../assets/Savings Calculator Graphic/Main Graphic/blip-savings-calculator-graphic-F-taller.png" v-if='savings'>
 <!--            <h3 v-if='!savings'>Savings will be displayed here</h3>-->
             <div v-if='!savings'>
@@ -45,6 +46,7 @@
                   :save-per-year="savePerYear"
                   :ac="ac"
                   :overAllSavings="overAllSavings"
+                  v-on:switchTOU="getSwitch"
                   ref = "graphContainer"
               ></graph>
             </div>
@@ -75,6 +77,7 @@ export default {
       savePerYear: 0,
       numOfGraphLoaded: 0,
       ac: true,
+      switchTOU: false,
     };
   },
   computed: {
@@ -92,14 +95,14 @@ export default {
 
   methods: {
     displaySavings(value) {
-      console.log('waht', value);
+      // console.log('waht', value);
       this.savings = false;
       // console.log('plan',this.planPicked)
     },
 //add start
     getIDontKnow(e){
       this.iDontKnow = e
-      console.log('IDooooooooont',this.iDontKnow)
+      // console.log('IDooooooooont',this.iDontKnow)
     },
     getNoData(nData){
       this.noData = nData
@@ -110,6 +113,7 @@ export default {
       this.pickedUtility = utility
       // this.savings = true////////////////////////////////////////////////command it back if hope to load image again when choose utility again
       // console.log('hhhhhhhh',this.pickedUtility)
+      this.switchTOU = false
     },
     getOverAllSavings(allSavings){
       this.overAllSavings = allSavings
@@ -117,7 +121,8 @@ export default {
     },
     getPlan(plan){
       this.planPicked = plan
-      // console.log('hhhhhhhh',this.pickedUtility)
+      // console.log('hhhhhhhh',this.planPicked)
+      this.switchTOU = false
     },
     getPlanClicked(planClicked){
       this.planClickd = planClicked
@@ -128,9 +133,15 @@ export default {
       if (this.savePerYear < 39){
         this.ac = false
       }
-      console.log('AAAAACCCCCC in parent', this.ac)
+      // console.log('AAAAACCCCCC in parent', this.ac)
       // console.log(this.numOfGraphLoaded)
       // this.numOfGraphLoaded = this.numOfGraphLoaded + 1
+    },
+    getSwitch(swi){
+      // alert(this.switchTOU)
+      this.switchTOU = swi
+      // alert(this.switchTOU)
+      // this.switchTOU = false
     },
     refreshGraph(){
       // if (this.numOfGraphLoaded > 0){
