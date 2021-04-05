@@ -54,12 +54,12 @@
         <div class="row">
           <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
             <div class="content text-center">
-              <h2 class="h2 zero000000 t-center">Contact Us</h2>
+              <p class="p3 zero000000 t-center upperCase">Contact Us</p>
               <p class="p1 two54B77 t-center">hello@blipenergy.com</p>
               <div class="w-100p m-l-0 p-l-0">
-                <a href="https://www.linkedin.com/company/blip-energy"><font-awesome-icon :icon="['fab', 'twitter']" class="font-awesome-icon c-B0E7FF"/></a>
-                <a href="https://twitter.com/BlipEnergy"><font-awesome-icon :icon="['fab', 'facebook-f']" class="font-awesome-icon c-B0E7FF"/></a>
-                <a href="https://www.facebook.com/blipenergy/"><font-awesome-icon :icon="['fab', 'linkedin-in']" class="font-awesome-icon c-B0E7FF"/></a>
+                <a href="https://www.linkedin.com/company/blip-energy" target="_blank"><font-awesome-icon :icon="['fab', 'twitter']" class="font-awesome-icon c-B0E7FF"/></a>
+                <a href="https://twitter.com/BlipEnergy" target="_blank"><font-awesome-icon :icon="['fab', 'facebook-f']" class="font-awesome-icon c-B0E7FF"/></a>
+                <a href="https://www.facebook.com/blipenergy/" target="_blank"><font-awesome-icon :icon="['fab', 'linkedin-in']" class="font-awesome-icon c-B0E7FF"/></a>
               </div>
               <router-link :to="'/privacy-policy'" class="t-center" style="color: #254B77">
                 <p class="p3 c-254B77 t-center">blip respects your privacy</p>
@@ -122,6 +122,7 @@ section{
 .t-center{text-align: center;}
 .t-left{text-align: left;}
 .text-center{text-align: center};
+.upperCase{text-transform: uppercase;}
 
 h2{
   font-family: 'Montserrat', Avenir;
@@ -231,6 +232,8 @@ input{
   margin-right:0px;
   margin-bottom: 25px;
   padding-left: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   ::placeholder{
     font-family: 'Montserrat', Avenir;
     font-style: normal;
@@ -393,7 +396,8 @@ input{
   left: 40%;
   right: 40%;
   top: calc(50% - 22px/2 + 150px);
-  margin-top: 20px;
+  margin-top:-12px;
+      //20px;
   text-align: center;
 
   font-family: 'Montserrat', Avenir;;
