@@ -232,16 +232,16 @@ input{
   margin-right:0px;
   margin-bottom: 25px;
   padding-left: 20px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  ::placeholder{
-    font-family: 'Montserrat', Avenir;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 111%;
-    color: #8E8E8E;
-  }
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+input::placeholder{
+  font-family: 'Montserrat', Avenir;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 111%;
+  color: #8E8E8E;
 }
 
 //.full{width: 100%}
