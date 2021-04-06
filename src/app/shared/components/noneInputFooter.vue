@@ -9,9 +9,9 @@
 <!--              <h2 class="h2 zero000000 t-center">Contact</h2>-->
 <!--              <p class="p2 zero000000 t-center">hello@blipenergy.com</p>-->
               <div class="w-100p m-l-0 p-l-0">
-                <a href="https://twitter.com/BlipEnergy"><font-awesome-icon :icon="['fab', 'twitter']" class="font-awesome-icon one83B56"/></a>
-                <a href="https://www.facebook.com/blipenergy/"><font-awesome-icon :icon="['fab', 'facebook-f']" class="font-awesome-icon one83B56"/></a>
-                <a href="https://www.linkedin.com/company/blip-energy"><font-awesome-icon :icon="['fab', 'linkedin-in']" class="font-awesome-icon one83B56"/></a>
+                <a href="https://twitter.com/BlipEnergy" target="_blank"><font-awesome-icon :icon="['fab', 'twitter']" class="font-awesome-icon one83B56"/></a>
+                <a href="https://www.facebook.com/blipenergy/" target="_blank"><font-awesome-icon :icon="['fab', 'facebook-f']" class="font-awesome-icon one83B56"/></a>
+                <a href="https://www.linkedin.com/company/blip-energy" target="_blank"><font-awesome-icon :icon="['fab', 'linkedin-in']" class="font-awesome-icon one83B56"/></a>
 <!--                <p class="circle">-->
 <!--                  <a href="https://twitter.com/BlipEnergy"><font-awesome-icon :icon="['fab', 'twitter']" class="font-awesome-icon one83B56"/></a>-->
 <!--                </p>-->
