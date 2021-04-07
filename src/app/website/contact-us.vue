@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div style="background: #FFFFFF; overflow:auto; clear:both;">
     <banner></banner>
     <b-container class="t-center m-t-0">
 
       <b-row class="others w-100p t-center">
         <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="left t-left m-l-0 p-l-0">
-          <img src="../../assets/contact-illo-v02.png" style="width: 671px; margin-top: 89px; margin-left: -50px;">
+          <img src="../../assets/contact-illo-v02.png" style="width: 110%; margin-top: 18%; margin-left: -9%;">
         </b-col>
 
         <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="t-left m-l-0 p-l-0">
@@ -16,7 +16,7 @@
               <p class="p3 t-left c-000000">Name*</p>
             </b-row>
             <b-row class="w-100p m-l-0 m-b-32 p-l-0">
-              <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="first p-l-0">
+              <b-col xs="6" sm="6" md="6" lg="6" xl="6" class="first p-l-0">
                 <b-form-input
                     class="input"
                     type="string"
@@ -25,7 +25,7 @@
                 >
                 </b-form-input>
               </b-col>
-              <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="last p-r-0">
+              <b-col xs="6" sm="6" md="6" lg="6" xl="6" class="last p-r-0">
                 <b-form-input
                     class="input m-l-0"
                     type="string"
@@ -66,11 +66,16 @@
             </b-row>
 
             <b-row class="w-100p m-l-0 m-b-12 p-l-0">
-              <b-button
-                  class = "submitButton"
-                  variant="outline-primary"
-                  v-on:click="submitMessage()"
-              >Submit</b-button>
+              <a class="" data-email="johndoe@example.com" :href="emailContent" target="_blank">
+                <b-button
+                    class = "submitButton"
+                    variant="outline-primary"
+                    v-on:click="submitMessage()"
+                    :disabled="!submitButton"
+                >
+                  Submit
+                </b-button>
+              </a>
             </b-row>
 
 
@@ -98,33 +103,110 @@ export default {
         position: {lat: 42.056432, lng: -87.674835}
       }],
       firstName: "",
+      firstNameExists: false,
       lastName: "",
+      namesExist: false,
       email: "",
+      emailValid: false,
       messages: "",
+      submitButton: false,
+      emailBody: "",
+      emailContent: "",
     };
   },
+  computed: {
+    // submitButton: function (){
+    //   if (this.firstName !== "" && this.lastName !== "" && this.email !== "" && this.validEmail(this.email) && this.messages !== ""){
+    //     return true
+    //   }
+    //   return false
+    // }
+  },
   mounted() {
+  },
+  watch:{
+    // lastName:{
+    //   handler (newVal, oldVal){
+    //     if (this.firstName !== "") {
+    //       this.firstNameExists = true
+    //     }else{
+    //       // this.submitButton = false
+    //       alert("Oops, you forget your first name")
+    //     }
+    //   },
+    // },
+    // email:{
+    //   handler (newVal, oldVal){
+    //     if (this.firstNameExists && this.lastName !== "") {
+    //       this.namesExist = true
+    //     }else{
+    //       // this.submitButton = false
+    //       alert("Please let us have your name")
+    //     }
+    //   },
+    // },
+    messages:{
+      handler (newVal, oldVal){
+        // if (this.namesExist && this.email !== "" && this.validEmail(this.email)){
+        //   this.submitButton = true
+        //   document.getElementsByClassName("isDisabled").className = "sendEmail";
+        //   // this.emailBody = "First Name: " + this.firstName + "%0aLast Name: " + this.lastName + "%0aEmail: " + this.email + "%0aMessage: %0a" + this.messages
+        //   // this.emailContent = "mailto:xiushiwang09@gmail.com?subject=Comment&body=" + this.emailBody
+        // }else{
+        //   this.submitButton = false
+        //   alert("Please enter a valid email address")
+        // }
+
+        // if(oldVal === "" && newVal !== "") {
+          // alert("im here")
+          if (this.firstName !== ""){
+            if (this.lastName !== ""){
+              if (this.email !== "" && this.validEmail(this.email)){
+                  this.submitButton = true
+                  document.getElementsByClassName("isDisabled").className = "sendEmail";
+                  // this.emailBody = "First Name: " + this.firstName + "%0aLast Name: " + this.lastName + "%0aEmail: " + this.email + "%0aMessage: %0a" + this.messages
+                  // this.emailContent = "mailto:xiushiwang09@gmail.com?subject=Comment&body=" + this.emailBody
+              }else{
+                this.submitButton = false
+                alert("Please enter a valid email address")
+              }
+            }else{
+              this.submitButton = false
+              alert("Oops, you forget your last name")
+            }
+          }else{
+            this.submitButton = false
+            alert("Oops, you forget your first name")
+          }
+        // }
+      },
+      // immediate: true
+    },
   },
 
   methods: {
     submitMessage(){
-      if (this.firstName !== ''){
-        if (this.lastName !== ''){
-          if (this.email !== "" && this.validEmail(this.email)){
+      // alert("hhhhhh")
+      // if (this.firstName !== ''){
+      //   if (this.lastName !== ''){
+      //     if (this.email !== "" && this.validEmail(this.email)){
             if (this.messages !== ""){
-              console.log(this.messages);
+              // this.submitButton = true
+              // document.getElementsByTagName('a').className = "sendEmail";
+              this.emailBody = "First Name: " + this.firstName + "%0aLast Name: " + this.lastName + "%0aEmail: " + this.email + "%0a%0aMessage: %0a" + this.messages
+              this.emailContent = "mailto:xiushiwang09@gmail.com?subject=Comment&body=" + this.emailBody
             }else{
               alert("Please leave your message")
             }
-          }else{
-            alert("Please enter a valid email address")
-          }
-        }else{
-          alert("Oops, you forget your last name")
-        }
-      }else{
-        alert("Oops, you forget your first name")
-      }
+      //     }else{
+      //       alert("Please enter a valid email address")
+      //     }
+      //   }else{
+      //     alert("Oops, you forget your last name")
+      //   }
+      // }else{
+      //   alert("Oops, you forget your first name")
+      // }
     },
     validEmail(email) {
       var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

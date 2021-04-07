@@ -18,6 +18,10 @@ section{
   align-items: center;
   font-family: 'Montserrat', Avenir;
 }
+//div{background: #FFFFFF;}
+//div::after {
+//  clear: both
+//}
 
 //.h-536{height: 536px;}
 
@@ -125,7 +129,7 @@ button.submit:hover {
   margin-top: auto;
   margin-bottom: auto;
 }
-.m-b-12{margin-bottom: 12px;}
+.m-b-12{margin-bottom: -6px;}
 .m-b-32{margin-bottom: 32px;}
 .m-b-58{margin-bottom: 58px;}
 .p-0{padding: 0px;}
@@ -189,7 +193,7 @@ button.btn.btn-outline-4F9BC1{
 }
 
 .container{
-  //background: #F2607B;
+  //background: #FFFFFF;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -281,6 +285,15 @@ button.btn.btn-outline-4F9BC1{
   line-height: 29px;
 
   color: #254B77;
+
+  a{color: currentColor}
+  a:hover{text-decoration: none;}
+  .isDisabled {
+    color: currentColor;
+    cursor: not-allowed;
+    pointer-events: none;
+    //opacity: 0.5;
+  }
 }
 .submitButton:hover{
   //border: 2px solid #FFFFFF;
