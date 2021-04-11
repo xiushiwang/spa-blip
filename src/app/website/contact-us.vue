@@ -186,11 +186,11 @@ export default {
               }
             }else{
               this.submitButton = false
-              this.errorMsg = "Oops, you forget your last name"
+              this.errorMsg = "Oops, you forgot your last name"
             }
           }else{
             this.submitButton = false
-            this.errorMsg = "Oops, you forget your first name"
+            this.errorMsg = "Oops, you forgot your first name"
           }
         // }
       },
@@ -229,10 +229,10 @@ export default {
       //       alert("Please enter a valid email address")
       //     }
       //   }else{
-      //     alert("Oops, you forget your last name")
+      //     alert("Oops, you forgot your last name")
       //   }
       // }else{
-      //   alert("Oops, you forget your first name")
+      //   alert("Oops, you forgot your first name")
       // }
     },
     validEmail(email) {

@@ -153,7 +153,7 @@ export default {
         }else{
           if (this.firstName === "") {
             // this.submitButton = false
-            this.alertMsg = "Oops, you forget your first name"
+            this.alertMsg = "Oops, you forgot your first name"
           }
           if (this.firstName !== "" && this.validEmail(this.email) && this.checkZipcode()) {
             this.submitButton = true
@@ -171,7 +171,7 @@ export default {
           this.submitButton = false
         }else{
           if (this.lastName === "") {
-            this.alertMsg = "Oops, you forget your last name"
+            this.alertMsg = "Oops, you forgot your last name"
           }
           // if (this.validEmail(this.email)){
           //   this.alertMsg = ""
@@ -239,11 +239,11 @@ export default {
           }
         }else{
           // document.getElementById("last").className += " " + "c-FF0000";
-          this.alertMsg = "Oops, you forget your last name"
+          this.alertMsg = "Oops, you forgot your last name"
         }
       }else{
         // document.getElementById("first").className += " " + "c-FF0000";
-        this.alertMsg = "Oops, you forget your first name"
+        this.alertMsg = "Oops, you forgot your first name"
       }
     },
     validEmail(email) {
