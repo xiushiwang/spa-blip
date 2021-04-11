@@ -131,26 +131,33 @@ export default {
   mounted() {
   },
   watch:{
-    // lastName:{
-    //   handler (newVal, oldVal){
-    //     if (this.firstName !== "") {
-    //       this.firstNameExists = true
-    //     }else{
-    //       // this.submitButton = false
-    //       alert("Oops, you forget your first name")
-    //     }
-    //   },
-    // },
-    // email:{
-    //   handler (newVal, oldVal){
-    //     if (this.firstNameExists && this.lastName !== "") {
-    //       this.namesExist = true
-    //     }else{
-    //       // this.submitButton = false
-    //       alert("Please let us have your name")
-    //     }
-    //   },
-    // },
+    firstName:{
+      handler (newVal, oldVal){
+        if (this.lastName !== "" && this.validEmail(this.email) && this.messages !== "") {
+          this.errorMsg = ""
+          this.submitButton = true
+        }
+      },
+    },
+    lastName:{
+      handler (newVal, oldVal){
+        if (this.firstName !== "" && this.validEmail(this.email) && this.messages !== "") {
+          this.errorMsg = ""
+          this.submitButton = true
+        }
+      },
+    },
+    email:{
+      handler (newVal, oldVal) {
+        if (this.firstName !== "" && this.lastName !== "" && this.validEmail(newVal) && this.messages !== "") {
+          this.errorMsg = ""
+          this.submitButton = true
+        }else if(this.validEmail(newVal)){
+          this.errorMsg = ""
+          // this.adjustAlertMsg()
+        }
+      },
+    },
     messages:{
       handler (newVal, oldVal){
         // if (this.namesExist && this.email !== "" && this.validEmail(this.email)){
@@ -192,8 +199,21 @@ export default {
   },
 
   methods: {
+    adjustAlertMsg(){
+      if (this.messages === ""){
+        this.errorMsg = "Please tell us something"
+      }
+      if (this.email === "" && !this.validEmail(this.email)){
+        this.errorMsg = "Please enter a valid email address"
+      }
+      if (this.lastName === ""){
+        this.errorMsg = "Oops, you forget your last name"
+      }
+      if (this.firstName === ""){
+        this.errorMsg = "Oops, you forget your first name"
+      }
+    },
     submitMessage(){
-      // alert("hhhhhh")
       // if (this.firstName !== ''){
       //   if (this.lastName !== ''){
       //     if (this.email !== "" && this.validEmail(this.email)){
@@ -201,7 +221,7 @@ export default {
               // this.submitButton = true
               // document.getElementsByTagName('a').className = "sendEmail";
               this.emailBody = "First Name: " + this.firstName + "%0aLast Name: " + this.lastName + "%0aEmail: " + this.email + "%0a%0aMessage: %0a" + this.messages
-              this.emailContent = "mailto:xiushiwang09@gmail.com?subject=Comment&body=" + this.emailBody
+              this.emailContent = "mailto:xiushiwang09@gmail.com?subject=Hello! Blip Team&body=" + this.emailBody
             }else{
               this.errorMsg = "Please leave your message"
             }

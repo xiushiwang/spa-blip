@@ -220,7 +220,7 @@ export default {
               this.post();
               document.getElementById("submitMsg").className -= "c-FF0000"
               document.getElementById("submitMsg").className += " " + "two54B77"
-              this.alertMsg = "Thank you for subscription"
+              this.alertMsg = "Thank you for signing up"
               this.submitButtonMsg = "Success!"
               this.submitButton = false
               // console.log("!!!!")
