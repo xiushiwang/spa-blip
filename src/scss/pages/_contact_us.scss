@@ -269,10 +269,13 @@ button.btn.btn-outline-4F9BC1{
 }
 .submitButton{
   position: absolute;
-  width: 174px;
+  width: 90%;
+          //174px;
   height: 59px;
   //left: 2px;
   //top: 720px;
+  margin-left: -46%;
+  margin-top: 0%;
 
   border: 2px solid #254B77;
   box-sizing: border-box;
@@ -299,4 +302,21 @@ button.btn.btn-outline-4F9BC1{
   //border: 2px solid #FFFFFF;
   background: #254B77;
   color: #FFFFFF;
+}
+
+.errorMsg{
+  height: 59px;
+  //height: $height;
+  //position: absolute;
+  //top: 50%;
+
+  //padding-top: 4%;
+  //p{
+  //  position: absolute;
+  //  top: 50%;
+  //  transform: translate(0, -50%);
+  //}
+
+  //display:flex;
+  //align-items:center;
 }

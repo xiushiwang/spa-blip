@@ -66,16 +66,21 @@
             </b-row>
 
             <b-row class="w-100p m-l-0 m-b-12 p-l-0">
-              <a class="" data-email="johndoe@example.com" :href="emailContent" target="_blank">
-                <b-button
-                    class = "submitButton"
-                    variant="outline-primary"
-                    v-on:click="submitMessage()"
-                    :disabled="!submitButton"
-                >
-                  Submit
-                </b-button>
-              </a>
+              <b-col xs="5" sm="5" md="5" lg="5" xl="5" class="w-100p m-l-0 p-l-0">
+                <a class="m-l-0 p-l-0" :data-email="email" :href="emailContent" target="_blank">
+                  <b-button
+                      class = "submitButton m-l-0"
+                      variant="outline-primary"
+                      v-on:click="submitMessage()"
+                      :disabled="!submitButton"
+                  >
+                    Submit
+                  </b-button>
+                </a>
+              </b-col>
+              <b-col xs="7" sm="7" md="7" lg="7" xl="7" class="errorMsg p-l-0 p-r-0">
+                <p class="p3 c-FF0000 p-l-0 absolute-mid">{{errorMsg}}</p>
+              </b-col>
             </b-row>
 
 
@@ -112,6 +117,7 @@ export default {
       submitButton: false,
       emailBody: "",
       emailContent: "",
+      errorMsg: "",
     };
   },
   computed: {
@@ -125,26 +131,33 @@ export default {
   mounted() {
   },
   watch:{
-    // lastName:{
-    //   handler (newVal, oldVal){
-    //     if (this.firstName !== "") {
-    //       this.firstNameExists = true
-    //     }else{
-    //       // this.submitButton = false
-    //       alert("Oops, you forget your first name")
-    //     }
-    //   },
-    // },
-    // email:{
-    //   handler (newVal, oldVal){
-    //     if (this.firstNameExists && this.lastName !== "") {
-    //       this.namesExist = true
-    //     }else{
-    //       // this.submitButton = false
-    //       alert("Please let us have your name")
-    //     }
-    //   },
-    // },
+    firstName:{
+      handler (newVal, oldVal){
+        if (this.lastName !== "" && this.validEmail(this.email) && this.messages !== "") {
+          this.errorMsg = ""
+          this.submitButton = true
+        }
+      },
+    },
+    lastName:{
+      handler (newVal, oldVal){
+        if (this.firstName !== "" && this.validEmail(this.email) && this.messages !== "") {
+          this.errorMsg = ""
+          this.submitButton = true
+        }
+      },
+    },
+    email:{
+      handler (newVal, oldVal) {
+        if (this.firstName !== "" && this.lastName !== "" && this.validEmail(newVal) && this.messages !== "") {
+          this.errorMsg = ""
+          this.submitButton = true
+        }else if(this.validEmail(newVal)){
+          this.errorMsg = ""
+          // this.adjustAlertMsg()
+        }
+      },
+    },
     messages:{
       handler (newVal, oldVal){
         // if (this.namesExist && this.email !== "" && this.validEmail(this.email)){
@@ -162,21 +175,22 @@ export default {
           if (this.firstName !== ""){
             if (this.lastName !== ""){
               if (this.email !== "" && this.validEmail(this.email)){
-                  this.submitButton = true
-                  document.getElementsByClassName("isDisabled").className = "sendEmail";
+                this.errorMsg = ""
+                this.submitButton = true
+                document.getElementsByClassName("isDisabled").className = "sendEmail";
                   // this.emailBody = "First Name: " + this.firstName + "%0aLast Name: " + this.lastName + "%0aEmail: " + this.email + "%0aMessage: %0a" + this.messages
                   // this.emailContent = "mailto:xiushiwang09@gmail.com?subject=Comment&body=" + this.emailBody
               }else{
                 this.submitButton = false
-                alert("Please enter a valid email address")
+                this.errorMsg = "Please enter a valid email address"
               }
             }else{
               this.submitButton = false
-              alert("Oops, you forget your last name")
+              this.errorMsg = "Oops, you forgot your last name"
             }
           }else{
             this.submitButton = false
-            alert("Oops, you forget your first name")
+            this.errorMsg = "Oops, you forgot your first name"
           }
         // }
       },
@@ -185,8 +199,21 @@ export default {
   },
 
   methods: {
+    adjustAlertMsg(){
+      if (this.messages === ""){
+        this.errorMsg = "Please tell us something"
+      }
+      if (this.email === "" && !this.validEmail(this.email)){
+        this.errorMsg = "Please enter a valid email address"
+      }
+      if (this.lastName === ""){
+        this.errorMsg = "Oops, you forget your last name"
+      }
+      if (this.firstName === ""){
+        this.errorMsg = "Oops, you forget your first name"
+      }
+    },
     submitMessage(){
-      // alert("hhhhhh")
       // if (this.firstName !== ''){
       //   if (this.lastName !== ''){
       //     if (this.email !== "" && this.validEmail(this.email)){
@@ -194,18 +221,18 @@ export default {
               // this.submitButton = true
               // document.getElementsByTagName('a').className = "sendEmail";
               this.emailBody = "First Name: " + this.firstName + "%0aLast Name: " + this.lastName + "%0aEmail: " + this.email + "%0a%0aMessage: %0a" + this.messages
-              this.emailContent = "mailto:xiushiwang09@gmail.com?subject=Comment&body=" + this.emailBody
+              this.emailContent = "mailto:xiushiwang09@gmail.com?subject=Hello! Blip Team&body=" + this.emailBody
             }else{
-              alert("Please leave your message")
+              this.errorMsg = "Please leave your message"
             }
       //     }else{
       //       alert("Please enter a valid email address")
       //     }
       //   }else{
-      //     alert("Oops, you forget your last name")
+      //     alert("Oops, you forgot your last name")
       //   }
       // }else{
-      //   alert("Oops, you forget your first name")
+      //   alert("Oops, you forgot your first name")
       // }
     },
     validEmail(email) {

@@ -6,7 +6,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'vue-material-design-icons/styles.css'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faPlus, faArrowRight, faCoffee, faMapMarkerAlt, faMapMarker, faSearch, faLink, faBolt, faInfoCircle } from '@fortawesome/free-solid-svg-icons'
+import { faPlus, faArrowRight, faCoffee, faMapMarkerAlt, faMapMarker, faSearch, faLink, faBolt, faInfoCircle, faEllipsisH, faEllipsisV, } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faLinkedin, faLinkedinIn, faTwitter, faTwitterSquare, faFacebook, faFacebookF, faFacebookMessenger, faFacebookSquare, faInstagram, faMedium } from "@fortawesome/free-brands-svg-icons"
 
@@ -29,7 +29,7 @@ import vuescroll from 'vuescroll';
 import "vuescroll/dist/vuescroll.css";
 
 library.add(
-    faPlus, faArrowRight, faCoffee, faMapMarkerAlt, faMapMarker, faSearch, faLink, faBolt, faInfoCircle,
+    faPlus, faArrowRight, faCoffee, faMapMarkerAlt, faMapMarker, faSearch, faLink, faBolt, faInfoCircle, faEllipsisH, faEllipsisV,
     faLinkedin, faLinkedinIn ,faTwitter, faTwitterSquare, faFacebook, faFacebookF, faFacebookMessenger, faFacebookSquare, faInstagram, faMedium,
 )
 Vue.component('font-awesome-icon', FontAwesomeIcon)

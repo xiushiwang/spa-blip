@@ -14,13 +14,25 @@
                   <div class="form-row">
                     <!--                      <div class="form-group col-md-6">-->
 <!--                    <b-col xs="6" sm="6" md="6" lg="6" xl="6">-->
-                    <input type="text" class="form-control-name-left" aria-describedby="int2" placeholder="First">
+                    <b-form-input type="text"
+                                  id="first"
+                                  class="form-control-name-left"
+                                  aria-describedby="int2"
+                                  v-model="firstName"
+                                  placeholder="First"
+                    ></b-form-input>
                     <!--                        <p class="text-gray mt-8 mb-24">First Name</p>-->
 <!--                    </b-col>-->
                     <!--                      </div>-->
                     <!--                      <div class="form-group col-md-6">-->
 <!--                    <b-col xs="6" sm="6" md="6" lg="6" xl="6" class="FFFFFF">-->
-                    <input type="text" class="form-control-name-right" aria-describedby="int2" placeholder="Last">
+                    <b-form-input type="text"
+                                  id="last"
+                                  class="form-control-name-right"
+                                  aria-describedby="int2"
+                                  v-model="lastName"
+                                  placeholder="Last"
+                    ></b-form-input>
                     <!--                        <p class="text-gray mt-8 mb-24">Last Name</p>-->
 <!--                    </b-col>-->
                     <!--                      </div>-->
@@ -28,17 +40,37 @@
 
                   <div class="form-group">
                     <p class="p3 two54B77 t-left">Email*</p>
-                    <input type="email" class="form-control-email" aria-describedby="emailHelp" placeholder="">
+                    <b-form-input type="email"
+                                  id="email"
+                                  class="form-control-email"
+                                  aria-describedby="emailHelp"
+                                  placeholder=""
+                                  v-model="email"
+                    ></b-form-input>
                   </div>
 
                   <div class="form-group">
                     <p class="p3 two54B77 t-left">Zip Code*</p>
-                    <input type="text" class="form-control-zipcode" aria-describedby="areaCode" placeholder="">
+                    <b-form-input type="text"
+                                  id="zipcode"
+                                  class="form-control-zipcode"
+                                  aria-describedby="areaCode"
+                                  placeholder=""
+                                  v-model="zipCode"
+                                  @keyup.enter="submit()"
+                    ></b-form-input>
+<!--                    <p id="areaCode">please</p>-->
                   </div>
 
                   <div class="form-group mb-0">
-                    <button type="submit" class="btn btn-outline-254B77 takeTheSurvey">Submit</button>
+                    <b-button class="btn btn-outline-254B77 takeTheSurvey"
+                              v-on:click="submit()"
+                              :disabled="!submitButton"
+                    >{{submitButtonMsg}}</b-button>
+                    <p id="submitMsg" class="c-FF0000 m-t-0">{{alertMsg}}</p>
                   </div>
+
+
                 </form>
               </div>
             </div>
@@ -82,20 +114,179 @@
 <script>
 // import GoogleLogin from "vue-google-login";
 
+import axios from "axios";
+
 export default {
   name: "footer",
   data() {
     return {
-      firstName:"",
+      firstName: "",
       lastName: "",
-      email:"",
-      zipCode:"",
+      email: "",
+      zipCode: "",
+      submitButtonMsg: "Submit",
+      submitButton: false,
+      alertMsg: "",
     };
   },
   created() {},
+  watch: {
+    firstName:{
+      handler (newVal, oldVal){
+        if (this.submitButtonMsg === "Success!"){
+          this.submitButton = false
+        }else{
+          if (this.lastName !== "" && this.validEmail(this.email) && this.checkZipcode()) {
+            this.submitButton = true
+            this.alertMsg = ""
+          }else{
+            this.submitButton = false
+          }
+        }
+
+      },
+    },
+    lastName:{
+      handler (newVal, oldVal){
+        if (this.submitButtonMsg === "Success!"){
+          this.submitButton = false
+        }else{
+          if (this.firstName === "") {
+            // this.submitButton = false
+            this.alertMsg = "Oops, you forgot your first name"
+          }
+          if (this.firstName !== "" && this.validEmail(this.email) && this.checkZipcode()) {
+            this.submitButton = true
+            this.alertMsg = ""
+          }else{
+            this.submitButton = false
+          }
+        }
+
+      },
+    },
+    email:{
+      handler (newVal, oldVal){
+        if (this.submitButtonMsg === "Success!"){
+          this.submitButton = false
+        }else{
+          if (this.lastName === "") {
+            this.alertMsg = "Oops, you forgot your last name"
+          }
+          // if (this.validEmail(this.email)){
+          //   this.alertMsg = ""
+          // }
+          if (this.firstName !== "" && this.lastName !== "" && this.checkZipcode()) {
+            this.submitButton = true
+            this.alertMsg = ""
+          }else{
+            this.submitButton = false
+          }
+        }
+      },
+    },
+    zipCode:{
+      handler (newVal, oldVal){
+        if (this.submitButtonMsg === "Success!"){
+          this.submitButton = false
+        }else{
+          if (!this.validEmail(this.email)){
+            this.alertMsg = "Please enter a valid email address"
+          }
+          if (this.checkZipcode()){
+            this.alertMsg = ""
+          }
+          if (this.firstName !== "" && this.lastName !== "" && this.validEmail(this.email)) {
+            this.submitButton = true
+            this.alertMsg = ""
+          }else{
+            this.submitButton = false
+          }
+        }
+      },
+    }
+  },
 
   methods: {
-    
+    submit(){
+      if (this.firstName !== "") {
+        // console.log("!")
+        if (this.lastName !== "")  {
+          // console.log("!!")
+          if (this.validEmail(this.email)) {
+            // console.log("!!!")
+            if (this.checkZipcode()) {
+              this.alertMsg = ""
+              this.post();
+              document.getElementById("submitMsg").className -= "c-FF0000"
+              document.getElementById("submitMsg").className += " " + "two54B77"
+              this.alertMsg = "Thank you for signing up"
+              this.submitButtonMsg = "Success!"
+              this.submitButton = false
+              // console.log("!!!!")
+              // document.getElementById("zipcode").className -= "c-FF0000";
+              // document.getElementById("email").className -= "c-FF0000";
+              // document.getElementById("last").className -= "c-FF0000";
+              // document.getElementById("first").className -= "c-FF0000";
+            }else{
+              // alert("Please enter a valid zipcode")
+              this.alertMsg = "Please enter a valid zipcode"
+              // document.getElementById("zipcode").className += " " + "c-FF0000";
+            }
+          }else{
+            // document.getElementById("email").className += " " + "c-FF0000";
+            this.alertMsg = "Please enter a valid email address"
+          }
+        }else{
+          // document.getElementById("last").className += " " + "c-FF0000";
+          this.alertMsg = "Oops, you forgot your last name"
+        }
+      }else{
+        // document.getElementById("first").className += " " + "c-FF0000";
+        this.alertMsg = "Oops, you forgot your first name"
+      }
+    },
+    validEmail(email) {
+      var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    },
+    checkZipcode(){
+      var re = /^[1-9][0-9]{3,5}$/
+      return re.test(this.zipCode);
+    },
+    lcheckZipcode(){
+      if (this.zipCode.length !== 5){
+        // console.log("length" + this.zipCode.length)
+        // alert("Please enter a valid zipcode")
+        return false
+      }
+      var split = this.zipCode.split("")
+      const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+      // var allNum = true;
+      for(var i=0; i<5; i++){
+        if(!numbers.includes(split[i])){
+          // allNum = false;
+          // console.log("letter" + typeof(this.zipCode))
+          // alert("Please enter a valid zipcode")
+          return false
+        }
+      }
+      return true
+    },
+    post(){
+      console.log('posting...', this.lastName, this.firstName, this.email, this.zipCode)
+
+      let param = new URLSearchParams()
+      param.append('first_name', this.firstName)
+      param.append('last_name', this.lastName)
+      param.append('email', this.email)
+      param.append('zip_code', this.zipCode)
+      axios({
+        method: 'post',
+        url: 'http://ec2-34-228-112-229.compute-1.amazonaws.com:8080/user/subscribe',
+        data: param
+      })
+    },
   },
   components: {}
 };
@@ -118,6 +309,7 @@ section{
 .one83B56{color: #183B56;}
 .zero000000{color: #000000;}
 .c-B0E7FF{color: #B0E7FF;}
+.c-FF0000{color: #FF0000;}
 
 .t-center{text-align: center;}
 .t-left{text-align: left;}
@@ -363,6 +555,11 @@ input::placeholder{
     }
   }
 }
+
+#submitMsg{
+  margin-top: -40px;
+}
+
 .font-awesome-icon{
   font-size: 28px;
 
