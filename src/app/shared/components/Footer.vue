@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar-nav">
+  <div class="navbar-nav" style="background: #FFFFFF;">
     <!--start:blip is launching soon-->
     <section class="DEF5FF launching">
       <div class="hero">
@@ -10,32 +10,34 @@
                 <h2 class="h2 two54B77 t-center">blip is launching soon</h2>
                 <p class="p2 two54B77 t-center">get notified</p>
                 <form>
-                  <p class="p3 two54B77 t-left">Name*</p>
-                  <div class="form-row">
-                    <!--                      <div class="form-group col-md-6">-->
-<!--                    <b-col xs="6" sm="6" md="6" lg="6" xl="6">-->
-                    <b-form-input type="text"
-                                  id="first"
-                                  class="form-control-name-left"
-                                  aria-describedby="int2"
-                                  v-model="firstName"
-                                  placeholder="First"
-                    ></b-form-input>
-                    <!--                        <p class="text-gray mt-8 mb-24">First Name</p>-->
-<!--                    </b-col>-->
-                    <!--                      </div>-->
-                    <!--                      <div class="form-group col-md-6">-->
-<!--                    <b-col xs="6" sm="6" md="6" lg="6" xl="6" class="FFFFFF">-->
-                    <b-form-input type="text"
-                                  id="last"
-                                  class="form-control-name-right"
-                                  aria-describedby="int2"
-                                  v-model="lastName"
-                                  placeholder="Last"
-                    ></b-form-input>
-                    <!--                        <p class="text-gray mt-8 mb-24">Last Name</p>-->
-<!--                    </b-col>-->
-                    <!--                      </div>-->
+                  <div class="form-group">
+                    <p class="p3 two54B77 t-left">Name*</p>
+                    <div class="form-row">
+                      <!--                      <div class="form-group col-md-6">-->
+  <!--                    <b-col xs="6" sm="6" md="6" lg="6" xl="6">-->
+                      <b-form-input type="text"
+                                    id="first"
+                                    class="form-control-name-left"
+                                    aria-describedby="int2"
+                                    v-model="firstName"
+                                    placeholder="First"
+                      ></b-form-input>
+                      <!--                        <p class="text-gray mt-8 mb-24">First Name</p>-->
+  <!--                    </b-col>-->
+                      <!--                      </div>-->
+                      <!--                      <div class="form-group col-md-6">-->
+  <!--                    <b-col xs="6" sm="6" md="6" lg="6" xl="6" class="FFFFFF">-->
+                      <b-form-input type="text"
+                                    id="last"
+                                    class="form-control-name-right"
+                                    aria-describedby="int2"
+                                    v-model="lastName"
+                                    placeholder="Last"
+                      ></b-form-input>
+                      <!--                        <p class="text-gray mt-8 mb-24">Last Name</p>-->
+  <!--                    </b-col>-->
+                      <!--                      </div>-->
+                    </div>
                   </div>
 
                   <div class="form-group">
@@ -62,7 +64,7 @@
 <!--                    <p id="areaCode">please</p>-->
                   </div>
 
-                  <div class="form-group mb-0">
+                  <div class="form-group mb-0 t-center">
                     <b-button class="btn btn-outline-254B77 takeTheSurvey"
                               v-on:click="submit()"
                               :disabled="!submitButton"
@@ -93,7 +95,7 @@
                 <a href="https://twitter.com/BlipEnergy" target="_blank"><font-awesome-icon :icon="['fab', 'facebook-f']" class="font-awesome-icon c-B0E7FF"/></a>
                 <a href="https://www.facebook.com/blipenergy/" target="_blank"><font-awesome-icon :icon="['fab', 'linkedin-in']" class="font-awesome-icon c-B0E7FF"/></a>
               </div>
-              <router-link :to="'/privacy-policy'" class="t-center" style="color: #254B77">
+              <router-link :to="'/privacy-policy'" class="t-center" style="color: #254B77" target="_blank">
                 <p class="p3 c-254B77 t-center">blip respects your privacy</p>
               </router-link>
               <br>
@@ -247,7 +249,8 @@ export default {
       }
     },
     validEmail(email) {
-      var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      var re = /^([a-z0-9A-Z]+[-|\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\.)+[a-zA-Z]{2,}$/;
+          // /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
     },
     checkZipcode(){
@@ -519,41 +522,46 @@ input::placeholder{
   align-items: center;
   form{
     text-align: left;
-    .form-row{
-      display: flex;
-      flex-direction: row;
-      padding: 0;
-      //background: #6f42c1;
-      margin-bottom: 15px;
+    .form-group{
+      .form-row{
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        //background: #6f42c1;
+        margin-bottom: -18px;
+        .form-control-name-left{
+          //position: absolute;
+          width: 47%;
+          margin-left: 0.6%;
+          margin-right: 2.4%;
+        }
+        .form-control-name-right{
+          width: 47%;
+          margin-left: 2.5%;
+          margin-right: 0.5%;
+        }
+        .form-control-email{
+          //position: absolute;
+          width: 100%;
+          margin-left: 0px;
+          margin-right: 0px;
+        }
+      }
+
+      .form-control-zipcode{
+        width: 173px;
+      }
+      .mb-0{
+        width: 100%;
+        text-align: center;
+      }
     }
-    .form-control-name-left{
-      //position: absolute;
-      width: 47%;
-      margin-left: 0.6%;
-      margin-right: 2.4%;
-    }
-    .form-control-name-right{
-      width: 47%;
-      margin-left: 2.5%;
-      margin-right: 0.5%;
-    }
-    .form-control-email{
-      //position: absolute;
-      width: 100%;
-      margin-left: 0px;
-      margin-right: 0px;
-    }
-    .form-control-zipcode{
-      width: 173px;
-    }
-    .mb-0{
-      width: 100%;
-      text-align: center;
-    }
-    .takeTheSurvey{
-      margin-bottom: 50px;
-    }
+
   }
+
+}
+.takeTheSurvey{
+  margin-bottom: 50px;
 }
 
 #submitMsg{

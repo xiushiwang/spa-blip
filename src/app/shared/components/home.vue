@@ -1,24 +1,27 @@
 <template>
   <div>
-    <banner></banner>
+<!--    <banner></banner>-->
     <div class="main">
       <!--start: Saving Renters Money-->
       <section class="SavingRentersMoney">
         <div class="crop">
-          <img src="../../../assets/website_photo.jpg" class="card-img" alt="...">
-        </div>
-        <div class="fog">
+<!--          <img src="../../../assets/website_photo.jpg" class="card-img" alt="...">-->
+<!--        </div>-->
+<!--          <transparentBanner></transparentBanner>-->
+        <div class="innerFog">
+          <transparentBanner style="position: absolute; top: 0px; width: 100%;"></transparentBanner>
           <b-row class="insider m-tb-a t-left">
 <!--            <b-col  xs="12" sm="12" md="5" lg="5" xl="5" class ="insideInsider">-->
-              <h1 class="c-FFFFFF">Saving Renters Money</h1>
+            <h1 class="c-FFFFFF t-left">Saving Renters Money</h1>
             <p class="p2 c-FFFFFF t-left p-l-0 aSustainable">
               A sustainable energy storage solution focused on saving you money on your electricity bill
             </p>
-            <button type="button" class="btn btn-outline-FFFFFF" onclick="window.location.href='../product'">
+            <button type="button" class="btn btn-outline-FFFFFF" onclick="window.location.href='../about'">
               Learn more &nbsp;&nbsp;<font-awesome-icon icon="arrow-right" style="font-size: 18px"/>
             </button>
 <!--            </b-col>-->
           </b-row>
+        </div>
         </div>
       </section>
       <!--end: Saving Renters Money-->
@@ -27,7 +30,7 @@
       <section class="AboutBlip b-FFFFFF i-a-c">
         <b-row class="w-80p insider">
           <b-col  xs="12" sm="12" md="5" lg="5" xl="5" class ="leftImg">
-            <img src="../../../assets/blip-mockup-update.png" alt="" class="w-100p">
+            <img src="../../../assets/blip-mockup-updateForHome.png" alt="" class="w-100p">
           </b-col>
           <b-col  xs="12" sm="12" md="7" lg="7" xl="7" class ="rightText t-left">
             <h2 class="c-254B77 m-l-0 p-l-0">About blip</h2>
@@ -45,7 +48,7 @@
       <section class="cleanEnergy b-DEF5FF i-a-c t-center">
         <b-row class="w-80p insider t-center">
           <b-row class="w-100p t-center">
-            <h2 class="c-254B77 t-center m-lr-a">
+            <h2 class="c-254B77 t-center m-lr-a m-t-0">
               Clean energy is no longer just for homeowners</h2>
           </b-row>
 
@@ -70,7 +73,7 @@
           </b-row>
 
           <b-row class="w-100p t-center">
-            <button type="button" class="btn btn-outline-254B77 m-lr-a" onclick="window.location.href='../about'">
+            <button type="button" class="btn btn-outline-254B77 m-lr-a" onclick="window.location.href='../product'">
               Learn More
             </button>
           </b-row>
@@ -108,13 +111,14 @@
       </section>
       <!--end: blip helps the planet too-->
 
+      <Footer></Footer>
     </div>
-    <Footer></Footer>
   </div>
 </template>
 
 <script>
 import banner from "./banner.vue";
+import transparentBanner from "@/app/shared/components/transparentBanner";
 import Footer from "./Footer.vue";
 
 export default {
@@ -133,7 +137,7 @@ export default {
   computed: {
   },
   components: {
-    banner,
+    transparentBanner,
     // FontAwesomeIcon,
     Footer
   }

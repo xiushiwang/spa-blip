@@ -230,31 +230,68 @@ button.btn.btn-outline-254B77:hover {
   width: 100%;
   //background: #4F9BC1;
   text-align: center;
+  height: 100%;
 
   .SavingRentersMoney{
-    .crop{
+    width: 100%;
+    height: 100%;
+    background: url("../../../assets/website_photo.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    //background-attachment: fixed;
+    //width: 100%;
+    //height: auto;
+
+    //740px;
+    zoom: 1;
+    overflow: hidden;
+    //padding-top: 0px
+    padding: 0px;
+    .crop {
+      //background: url("../../../assets/website_photo.jpg");
+      //background-size: cover;
+      //-webkit-background-size: cover;
+      //-o-background-size: cover;
+      //background-position: center 0;
+      //background-repeat: no-repeat;
+      ////background-attachment: fixed;
       width: 100%;
-      height: 740px;
+      height: 100%;
+      //padding-bottom: 20px ;
+
+      //        //740px;
+      //zoom: 1;
       overflow: hidden;
-      .card-img{
+      //padding-top: 0px
+      padding: 0px;
+      //background: rgba(24, 59, 86, 0.65);
+
+      .card-img {
         margin: -75px 0 0 0;
       }
-    }
-    .fog{
+    //}
+
+    .innerFog{
       position: absolute;
-      top: 4em;
+      top: 0px;
+              //4em;
       float: top;
       width: 100%;
-      height: 740px;
+      height: 100%;
       background: rgba(24, 59, 86, 0.65);
-      padding-left: 10%;
+      padding-right: 0px;
+      //padding-left: 10%;
       //padding-top: 15%;
       display: flex;
       align-items: center;
 
       .insider{
+        //background: #D3D3D3;
         width: 70%;
-        margin-left: 0px;
+        margin-left: 10%;
         margin-top: auto;
         margin-bottom: auto;
         padding: 0px;
@@ -274,10 +311,13 @@ button.btn.btn-outline-254B77:hover {
         }
       }
     }
+    }
   }
 
   .AboutBlip{
-    height: 740px;
+    //height: 740px;
+    padding-top: 150px;
+    padding-bottom: 150px;
     //display: flex;
     //align-items: center;
     .insider{
@@ -287,6 +327,14 @@ button.btn.btn-outline-254B77:hover {
       .leftImg{
         display: flex;
         align-items: center;
+
+        //.crop{
+        //  height: 100%;
+        //  width: 60%;
+        //  overflow: hidden;
+        //  background: #254B77;
+        //  //img{clip: rect(0px, 140px, 140px, 0px);}
+        //}
       }
       .rightText{
         padding-left: 80px;
@@ -297,7 +345,9 @@ button.btn.btn-outline-254B77:hover {
   }
 
   .cleanEnergy{
-    height: 820px;
+    //height: 820px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     //display: flex;
     //align-items: center;
     .insider{
@@ -315,7 +365,9 @@ button.btn.btn-outline-254B77:hover {
   }
 
   .blipHelps{
-    height: 847px;
+    //height: 847px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     //display: flex;
     //align-items: center;
     .w-80p{
