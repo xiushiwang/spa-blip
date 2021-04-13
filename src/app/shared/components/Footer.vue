@@ -89,11 +89,11 @@
           <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
             <div class="content text-center">
               <p class="p3 zero000000 t-center upperCase">Contact Us</p>
-              <p class="p1 two54B77 t-center">hello@blipenergy.com</p>
+              <p class="p1 two54B77 t-center"><a class="emailTo" href="mailto:hello@blipenergy.com?subject=Hello! Blip Team" target="_blank">hello@blipenergy.com</a></p>
               <div class="w-100p m-l-0 p-l-0">
-                <a href="https://www.linkedin.com/company/blip-energy" target="_blank"><font-awesome-icon :icon="['fab', 'twitter']" class="font-awesome-icon c-B0E7FF"/></a>
-                <a href="https://twitter.com/BlipEnergy" target="_blank"><font-awesome-icon :icon="['fab', 'facebook-f']" class="font-awesome-icon c-B0E7FF"/></a>
-                <a href="https://www.facebook.com/blipenergy/" target="_blank"><font-awesome-icon :icon="['fab', 'linkedin-in']" class="font-awesome-icon c-B0E7FF"/></a>
+                <a href="https://twitter.com/BlipEnergy" target="_blank"><font-awesome-icon :icon="['fab', 'twitter']" class="font-awesome-icon c-B0E7FF"/></a>
+                <a href="https://www.facebook.com/blipenergy/" target="_blank"><font-awesome-icon :icon="['fab', 'facebook-f']" class="font-awesome-icon c-B0E7FF"/></a>
+                <a href="https://www.linkedin.com/company/blip-energy" target="_blank"><font-awesome-icon :icon="['fab', 'linkedin-in']" class="font-awesome-icon c-B0E7FF"/></a>
               </div>
               <router-link :to="'/privacy-policy'" class="t-center" style="color: #254B77" target="_blank">
                 <p class="p3 c-254B77 t-center">blip respects your privacy</p>
@@ -566,6 +566,11 @@ input::placeholder{
 
 #submitMsg{
   margin-top: -40px;
+}
+
+.emailTo{color: #254B77;}
+.emailTo:hover{
+  
 }
 
 .font-awesome-icon{

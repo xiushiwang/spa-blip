@@ -125,12 +125,13 @@ button.submit:hover {
 
 .m-l-0{margin-left: 0px;}
 .m-r-0{margin-right: 0px;}
+.m-r-10{margin-right: 10px;}
 .m-tb-a{
   margin-top: auto;
   margin-bottom: auto;
 }
 .m-b-12{margin-bottom: -6px;}
-.m-b-32{margin-bottom: 32px;}
+.m-b-32{margin-bottom: 22px;}
 .m-b-58{margin-bottom: 58px;}
 .p-0{padding: 0px;}
 .p-l-0{padding-left: 0px;}
@@ -151,11 +152,14 @@ button.submit:hover {
 
 .input{
   height: 49px;
+  margin-bottom: 10px;
   background: #FFFFFF;
   border: 2px solid #D3D3D3;
   box-sizing: border-box;
   border-radius: 30px;
   padding: 12px 20px;
+
+  font-family: 'Montserrat', Avenir;
 }
 .input::placeholder{
   //text-align: center;
@@ -266,6 +270,9 @@ button.btn.btn-outline-4F9BC1{
   //width: 636px;
   margin-top: 134px;
   margin-bottom: 44px;
+}
+.name{
+  margin-bottom: 10px;
 }
 .submitButton{
   position: absolute;
