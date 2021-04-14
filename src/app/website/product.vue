@@ -3,7 +3,7 @@
     <banner></banner>
     <div class="main">
       <!--start:Electricity rates vary throughout the day-->
-      <section class="FFFFFF h-1152px">
+      <section class="FFFFFF">
         <div class="container">
           <div class="heading wow fadeInUp">
             <div class="row">
@@ -34,7 +34,7 @@
       <!--end:Electricity rates vary throughout the day-->
 
       <!--start:Don’t pay for high cost electricity-->
-      <section class="DEF5FF h-1152px">
+      <section class="DEF5FF">
         <div class="container">
           <div class="heading wow fadeInUp">
             <div class="row">
@@ -62,7 +62,7 @@
       <!--end:Don’t pay for high cost electricity-->
 
       <!--start:So why choose blip?-->
-      <section class="features FFFFFF h-800px">
+      <section class="features FFFFFF">
         <div class="container">
 
           <div class="row">
@@ -128,8 +128,8 @@
             </div>
           </div>
 
-          <div class="card-pricing-footer m-t-0">
-            <button type="button" class="btn btn-outline-254B77" style="width: 415px" onclick="window.location.href='./calculator'">See How Much You Will Save</button>
+          <div class="card-pricing-footer m-t-0" style="margin-bottom: 30px;">
+            <button type="button" class="btn btn-outline-254B77" style="width: 415px" onclick="window.location.href='./calculator'">See how much you will save</button>
           </div>
 
         </div>
@@ -137,7 +137,7 @@
       <!--end:So why choose blip?-->
 
       <!--start:FAQs-->
-      <section class="FAQs oneD3755 h-1539px">
+      <section class="FAQs oneD3755">
         <div class="container">
           <div class="w-1109px">
             <div class="pr-16">

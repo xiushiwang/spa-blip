@@ -80,9 +80,12 @@ export default {
 .navbar {
   font-family: 'Montserrat', Avenir;
 
-  background-color: #ffffff;
+  background: transparent;
+      //rgba(48, 59, 86, 0.65);
+      //rgba(24, 59, 86, 0.65);
   height: 4em !important;
-  box-shadow: 0px 2px 50px -5px rgba(0, 0, 0, 0.09);
+  //float: top;
+  //box-shadow: 0px 2px 50px -5px rgba(0, 0, 0, 0.09);
   //box-shadow: 0px 1px 4px rgba(0,0,0,0.3);, 0px 0px 20px rgba(0,0,0,0.1) inset;
   .bene-logo {
     margin-left: 30px;
@@ -98,21 +101,26 @@ export default {
   }
   .navigation div {
     font-family: 'Montserrat', Avenir;
-    color: #254B77;
+    color: #FFFFFF;
     margin-left: 10px;
     margin-right: 10px;
   }
+  .navigation div:hover{
+    color: #FFFFFF;
+    text-decoration: underline;
+  }
   .router-link-active{
-    color: #254B77;
+    color: #FFFFFF;
     text-decoration: underline;
     //div{border-bottom: 1px solid #254B77;}
   }
+
   .button{
     width: 200px;
     margin-left: 10px;
     margin-right: 0px;
 
-    border: 1px solid #254B77;
+    border: 1px solid #FFFFFF;
     box-sizing: border-box;
     border-radius: 25px;
 

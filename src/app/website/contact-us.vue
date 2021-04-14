@@ -164,7 +164,7 @@ export default {
         //   this.submitButton = true
         //   document.getElementsByClassName("isDisabled").className = "sendEmail";
         //   // this.emailBody = "First Name: " + this.firstName + "%0aLast Name: " + this.lastName + "%0aEmail: " + this.email + "%0aMessage: %0a" + this.messages
-        //   // this.emailContent = "mailto:xiushiwang09@gmail.com?subject=Comment&body=" + this.emailBody
+        //   // this.emailContent = "mailto:hello@blipenergy.com?subject=Comment&body=" + this.emailBody
         // }else{
         //   this.submitButton = false
         //   alert("Please enter a valid email address")
@@ -179,7 +179,7 @@ export default {
                 this.submitButton = true
                 document.getElementsByClassName("isDisabled").className = "sendEmail";
                   // this.emailBody = "First Name: " + this.firstName + "%0aLast Name: " + this.lastName + "%0aEmail: " + this.email + "%0aMessage: %0a" + this.messages
-                  // this.emailContent = "mailto:xiushiwang09@gmail.com?subject=Comment&body=" + this.emailBody
+                  // this.emailContent = "mailto:hello@blipenergy.com?subject=Comment&body=" + this.emailBody
               }else{
                 this.submitButton = false
                 this.errorMsg = "Please enter a valid email address"
@@ -221,7 +221,7 @@ export default {
               // this.submitButton = true
               // document.getElementsByTagName('a').className = "sendEmail";
               this.emailBody = "First Name: " + this.firstName + "%0aLast Name: " + this.lastName + "%0aEmail: " + this.email + "%0a%0aMessage: %0a" + this.messages
-              this.emailContent = "mailto:xiushiwang09@gmail.com?subject=Hello! Blip Team&body=" + this.emailBody
+              this.emailContent = "mailto:hello@blipenergy.com?subject=Hello! Blip Team&body=" + this.emailBody
             }else{
               this.errorMsg = "Please leave your message"
             }
@@ -236,7 +236,8 @@ export default {
       // }
     },
     validEmail(email) {
-      var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      var re = /^([a-z0-9A-Z]+[-|\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\.)+[a-zA-Z]{2,}$/
+          // /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
     },
 

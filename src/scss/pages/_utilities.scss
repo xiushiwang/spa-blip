@@ -86,7 +86,7 @@ h3{
   font-family: 'Montserrat', Avenir;
   font-style: normal;
   font-weight: 200;
-  font-size: 41px;
+  font-size: 35px;
   line-height: 50px;
   /* identical to box height */
 }
@@ -239,30 +239,42 @@ input{
 }
 
 .howDoes{
-  height: 800px;
-  h1{width: 70%}
+  //height: 800px;
+  padding: 130px 0;
+  h1{
+    //background: #3cb582;
+    width: 70%;
+    margin-left: 20%;
+    margin-right: 10%;
+  }
   p{width: 80%}
 }
 
 .Homeowners{
-  height: 693px;
+  height: auto;
   img{
-    height: 693px;
+    height: 100%;
   }
   .homeownnerInnner{
     width: 85%;
     margin-left: 1%;
+    margin-top: 96px;
+    margin-bottom: 96px;
     h2{width: 80%}
   }
 }
 
 .trio{
-  height: 500px;
+  padding: 100px 0;
   .colOneThird{
     padding-left: 2.5%;
     padding-right: 2.5%;
   }
-  h3{margin-bottom: 30px}
+  h3{
+    //background: #3cb582;
+    //height: 150px;
+    //margin-bottom: 30px;
+  }
   .p2{
     margin-left: 0px;
   }

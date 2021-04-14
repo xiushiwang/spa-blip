@@ -5,7 +5,7 @@
       <!--start:Our Mission-->
       <section class="FFFFFF">
         <div class="hero">
-          <div class="container h-536">
+          <div class="container">
             <div class="row">
               <div class="content text-center">
                 <h2 class="h2 c-254B77 t-center">Our Mission</h2>
@@ -20,8 +20,8 @@
       <!--start:Our Goal-->
       <section class="DEF5FF">
         <div class="hero">
-          <div class="container h-536">
-            <div class="row">
+          <div class="container">
+            <div class="row" style="width: 100%;">
                 <div class="content text-center">
                   <h2 class="h2 c-254B77 t-center">Our Goal</h2>
                   <p class="p2 one83B56 t-center">
@@ -45,7 +45,7 @@
       <!--start:We care deeply about our environment-->
       <section class="b-1D3755">
         <div class="hero">
-          <div class="container h-536">
+          <div class="container">
             <div class="row" style="width: 100%">
               <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="picOnLeft flyFromLeft">
@@ -71,8 +71,8 @@
       <!--start:You save money-->
       <section class="DEF5FF">
         <div class="hero">
-          <div class="container h-536">
-            <div class="row">
+          <div class="container">
+            <div class="row" style="width: 100%; padding-left: 4.5%; padding-right: 4.5%;">
                 <div class="content text-center">
                   <p class="p1 one83B56 t-center">You save money. You help the planet.</p>
                   <p class="p1 one83B56 t-center">And we are excited to provide the tools to make it happen.</p>
@@ -88,8 +88,8 @@
       <!--start:What we’ve been up to-->
       <section class="FFFFFF">
         <div class="hero">
-          <div class="container h-1036">
-            <div class="row">
+          <div class="container">
+            <div class="row" style="width: 90%;">
               <div class="content text-center">
 <!--                <div class="pr-16">-->
                 <h2 class="h2 c-254B77 t-center">What we’ve been up to</h2>
@@ -123,7 +123,7 @@
                     <img src="../../assets/images/websiteTraction/RBPC.jpg" alt="" class="w-100p">
                   </div>
                   <div class="col-md-10 col-lg-10 col-xl-10">
-                    <h3 class="h3 c-254B77 t-left wow fadeInUp">Rice Business Plan Competitiono</h3>
+                    <h3 class="h3 c-254B77 t-left wow fadeInUp">Rice Business Plan Competition</h3>
                     <p class="p3 c-4F9BC1 t-left m-l-0 w-511px wow fadeInUp">
                       Finalist
                     </p>
@@ -219,7 +219,7 @@
                       <div class="card-f-heading">
                           <img src="../../assets/images/team/BWSophia.jpg" alt="" class="members">
                       </div>
-                      <div class="card-f-body">
+                      <div class="card-f-body t-center">
                         <h4 class="h4 c-FFFFFF t-center">Sophia Wennstedt</h4>
                         <p class="p3 c-FFFFFF t-center">Co-Founder</p>
                       </div>
