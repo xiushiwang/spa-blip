@@ -552,10 +552,10 @@ button.submit:hover {
           .utilityProviderPic:focus{
             //box-shadow: 6px 6px 12px rgba(176, 231, 255, 0.85);
             //border: 2px solid #B0E7FF;
-            //box-shadow: 6px 6px 12px rgba(79, 155, 193, 0.65);
-            //border: 2px solid #4F9BC1;
-            box-shadow: 6px 6px 12px rgba(37, 75, 119, 0.55);
-            border: 2px solid rgba(37, 75, 119, 0.55);
+            box-shadow: 6px 6px 12px rgba(79, 155, 193, 0.65);
+            border: 2px solid #4F9BC1;
+            //box-shadow: 6px 6px 12px rgba(37, 75, 119, 0.55);
+            //border: 2px solid rgba(37, 75, 119, 0.55);
             //background: #E5E5E5;
             //img{border: 2px solid #B0E7FF;}
           }
@@ -589,7 +589,9 @@ button.submit:hover {
             }
           }
           .utilityProviderLetter:focus{
-            border: 2px solid #B0E7FF;
+            //border: 2px solid #B0E7FF;
+            box-shadow: 6px 6px 12px rgba(79, 155, 193, 0.65);
+            border: 2px solid #4F9BC1;
           }
           .chosen{
             //box-shadow: 6px 6px 12px rgba(37, 75, 119, 0.55);

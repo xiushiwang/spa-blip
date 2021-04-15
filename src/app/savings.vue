@@ -96,7 +96,6 @@
                   <b-button
                       class="utilityProviderPic"
                       id="tooltip-target-1"
-                      name = "hahah"
                       variant="outline-primary"
                       v-if="post.logo !== ''"
                       v-on:click="list(post); sendUtility(post); countOverallPlan(post); provider = true;"

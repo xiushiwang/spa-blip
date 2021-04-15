@@ -303,9 +303,10 @@ export default {
       askWhy: false,
       chartOne: null,
       overallSavingsButtonAbled: true,
-      xAxisMark: ['','','Spring','','','Summer','','','Fall','','','Winter'],
+      xAxisMark: ['Jan','','','Apr','','','Jul','','','Oct','',''],
       xAxisMark4Overall: ['Year 1', '', '', '', 'Year 5', '', '', '', '', 'Year 10'],
-      xAxisMark4Seasonal: ['','','Spring','','','Summer','','','Fall','','','Winter'],
+      xAxisMark4Seasonal: ['Jan','','','Apr','','','Jul','','','Oct','',''],
+          // ['','','Spring','','','Summer','','','Fall','','','Winter'],
 //End: add
     };
   },
@@ -571,7 +572,13 @@ export default {
             type: 'category',
             data: this.xAxisMark,
             axisTick: {
-              alignWithLabel: true
+              alignWithLabel: true,
+            },
+            axisLine: {
+              lineStyle: {
+                color: "#ccc",
+                type: 'dashed',
+              }
             },
             // splitLine: {
             //   show: true,
@@ -598,6 +605,12 @@ export default {
             axisLabel: {
               formatter: '${value}',
               textStyle:{color: '#254B77'}
+            },
+            axisLine: {
+              lineStyle: {
+                color: "#ccc",
+                type: 'dashed',
+              }
             },
           }
         ],
