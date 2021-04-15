@@ -57,6 +57,14 @@ h1{
   line-height: 76px;
   /* or 119% */
 }
+.h1point5{
+  //font-family: Avenir;
+  font-family: 'Montserrat', Avenir;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 52px;
+  line-height: 119%;
+}
 
 h2{
   font-family: 'Montserrat', Avenir;
@@ -104,12 +112,30 @@ p.p1{
   line-height: 125%;
   /* or 40px */
 }
+p.p1point5{
+  //font-family: FF Mark Pro;
+  font-family: 'Montserrat', Avenir;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 125%;
+  /* or 40px */
+}
 p.p2{
   //font-family: FF Mark Pro;
   font-family: 'Montserrat', Avenir;
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
+  line-height: 30px;
+  margin: 20px;
+}
+p.p2point5{
+  //font-family: FF Mark Pro;
+  font-family: 'Montserrat', Avenir;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
   line-height: 30px;
   margin: 20px;
 }
@@ -154,6 +180,7 @@ button.submit:hover {
 
 .container{
   //background: #F2607B;
+  //width: 100%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -221,397 +248,462 @@ button.submit:hover {
   padding-top: 0px;
 }
 
-.seeHow{
-  position: relative;
-  //width: 517px;
-  //height: 174px;
-  //left: 130px;
-  top: 109px;
-  //margin-top: -40px;
-  margin-bottom: 0px;
-  //background: #6f42c1;
-}
-
-.blip-pig{
-  //max-width: 100%;
-  position: absolute;
-  left: 10%;
-  top: 207px;
-  width: 105%;
-}
-
-
-.saving_enter{
-  position: absolute;
-  //width: 517px;
-  //height: 174px;
-  left: 8%;
-  top: 40px;
-  padding-top: 0px;
-}
-.graph_enter{
-  position: absolute;
-  //width: 517px;
-  //height: 174px;
-  left: 35%;
-  top: 33px;
-}
-
-/////////////////////////////////////////////////////////savings.vue
-/////////////////////seen
-.zipcode_container{
-  //background: #FAAD13;
-  position: relative;
-  top: 143px;
-  max-width: 100%;
-  //padding-bottom: 50px;
-  .see{
-    //background: #C4C4C4;
-    //height: 174px;
-    margin-bottom: 5%;
-            //30px;
-  }
-  .how{
-    //background: #C4C4C4;
-    width: 464px;
-    margin-top: 0px;
-    margin-bottom: 45px;
-  }
-  .zip-input{
-    width: 97%;
-    height: 76px;
-    //left: 130px;
-    //top: 504px;
-    padding-top: 9.5%;
-    padding-bottom: 9%;
-    padding-left: 5%;
-
-    background: #FFFFFF;
-    border: 2px solid #E5E5E5;
-    box-sizing: border-box;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 50px;
-
-    text-align: center;
-
-    //text-indent: 10px;
-    vertical-align: center;
-    //line-height: 1.5em;
-
-    //padding-top: 23px;
-    //padding-bottom: 23px;
-
-
-    //display: flex;
-    //align-items: center;
-  }
-  .zip-input::placeholder{
-    width: 97%;
-    //height: 30px;
-    font-family: 'Montserrat', Avenir;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 24px;
-    //line-height: 1.5em;
-    text-align: center;
-
-    //line-height: normal;
-    color: #C4C4C4;
-    //background: #3cb582;
-    //text-align: center;
-    //margin: 0px;
-  }
-
-  button.search-button{
-    width: 70%;
-    height: 67px;
-    //left: 415.51px
-    margin-left: 15px;
-
-    font-size: 24px;
-    line-height: 30px;
-  }
-
-  .validZipcodeError{
-    width: 266px;
-    margin-top: 10px
-  }
-
-  .headsUp{
-    width: 540px;
-    margin-top: -5%;
-            //2%;
-    margin-bottom: 40px;
-    padding: 10px 23px;
-    border: 1px solid #B0E7FF;
-    box-sizing: border-box;
-    border-radius: 30px;
-    img{
-      position: absolute;
-      top: 7px;
-      left: -5px;
-      width: 220px;
-    }
-    .h3{
-      margin-top: 10px;
-      //margin-bottom: 0px;
-    }
-    .p4{margin-top: 6px}
-    .NYCresult{
-      width: 86%;
-      margin-bottom: 18px;
-      padding-left: 18%;
-      padding-right: 18%;;
-      span{
-        //width: 70%;
-        //margin-left: 10%;
-        //margin-right: 20%;
-      }
-    }
+.mainPic{
+  //position: absolute;
+  //top: 4em;
+  max-height: 632px;
+  //background: #F2607B;
+  .blip-pig{
+    //max-width: 100%;\
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    //top: 207px;
+    top: 50%;
+    transform: translate(0, -50%);
   }
 }
 
-/////////////////////!seen
-.utility_container{
-  position: absolute;
-  top: 120px;
-  //background: #FAAD13;
-  //padding-top: 0px;
-  width: 485px;
-  //height: 799px;
-  background: #FFFFFF;
-  box-shadow: 6px 12px 19px -4px #E5E5E5;
-  border-radius: 25px;
-  padding-left: 41px;
-  padding-bottom: 40px;
-  margin-bottom: 120px;
-  .seeAfterNotSeen{
-    width: 400px;
-    margin-top: 55px;
-    padding-bottom: 40px;
-    //background: #C4C4C4;
+
+
+/////////////////signUp
+.fog{
+  position: fixed;
+  top: 0;
+
+  float: top;
+  width: 100%;
+  height: 100%;
+  margin: 0 0 0 0;
+  padding-right: 0px;
+  //padding-left: 10%;
+  //padding-top: 15%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background: rgba(24, 59, 86, 0.65);
+
+  .clickToClose{
+    width: 100%;
+    height: 100%;
+
+    background: transparent;
+    border: none;
+    z-index: 1;
   }
-  .zipcode_input{
-    height: 88px;
-    padding-bottom: 38px;
+  .window{
+    ////border: 2px solid #E5E5E5;
+    //box-sizing: border-box;
+    //border-radius: 50px;
+    //width: 560px;
+    position:absolute;
+    //left: calc(50% - 560px/2);
+    width: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 100;
+  }
+
+
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////saving.vue
+
+.all{
+  //background: #faad13;
+  margin-left: -3%;
+  ////////////////////////////////////////////////////////////////////////////////////////////seen
+  .zipcode_container{
     //background: #F2607B;
-    .h-52px{
-      height: 52px;
-    }
-    .input_not_seen{
-      position: absolute;
-      width: 220px;
-      height: 50px;
-
+    //position: relative;
+    //top: 143px;
+    margin-top: 80px;
+    max-width: 100%;
+    height: 800px;
+    //padding-bottom: 50px;
+    .seeHow{
+      position: relative;
+      //width: 517px;
+      //height: 174px;
       //left: 130px;
-      //top: 322px;
+      top: 109px;
+      //margin-top: -40px;
+      margin-bottom: 0px;
+      //background: #6f42c1;
+    }
+    .see{
+      //background: #C4C4C4;
+      //height: 174px;
+      //margin-top: 20px;
+      margin-bottom: 5%;
+      //30px;
+    }
+    .how{
+      //background: #C4C4C4;
+      width: 464px;
+      margin-top: 0px;
+      margin-bottom: 45px;
+    }
+    .zip-input{
+      width: 97%;
+      max-width: 266px;
+      height: 76px;
+      max-height: 76px;
+      //left: 130px;
+      //top: 504px;
+      padding-top: 9.25%;
+      padding-bottom: 9%;
+      padding-left: 7%;
+      text-align: center;
+      vertical-align: center;
 
       background: #FFFFFF;
-      border: 2px solid #D3D3D3;
+      border: 2px solid #E5E5E5;
       box-sizing: border-box;
-      border-radius: 24px;
-      box-shadow: none;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 50px;
 
+      font-size: 20px;
+    }
+    .zip-input::placeholder{
+      width: 97%;
+      //height: 30px;
       font-family: 'Montserrat', Avenir;
       font-style: normal;
       font-weight: 300;
-      font-size: 18px;
-      line-height: 20px;
-      color: #254B77;
-      text-align: center;
-    }
-    .input_not_seen::placeholder{
-      font-family: 'Montserrat', Avenir;
-      text-align: center;
-    }
-
-    .enter_button{
-      width: 100px;
-      height: 50px;
+      font-size: 24px;
+      //line-height: 1.5em;
       text-align: center;
 
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 20px;
+      //line-height: normal;
+      color: #C4C4C4;
+      //background: #3cb582;
+      //text-align: center;
+      //margin: 0px;
     }
+
+    button.search-button{
+      width: 86%;
+      max-width: 214px;
+      height: 67px;
+      //left: 415.51px
+      margin-left: 15px;
+
+      font-size: 24px;
+      line-height: 30px;
+    }
+
     .validZipcodeError{
-      width: 220px;
-      //margin-top: 10px;
-      //background: #C4C4C4;
+      width: 266px;
+      margin-top: 11px;
+      margin-left: 3%;
+      margin-right: 10%;
+    }
+
+    .headsUp{
+      width: 540px;
+      margin-top: -5%;
+      //2%;
+      margin-bottom: 40px;
+      padding: 10px 23px;
+      border: 1px solid #B0E7FF;
+      box-sizing: border-box;
+      border-radius: 30px;
+      img{
+        position: absolute;
+        top: 7px;
+        left: -5px;
+        width: 220px;
+      }
+      .h3{
+        margin-top: 10px;
+        //margin-bottom: 0px;
+      }
+      .p4{margin-top: 6px}
+      .NYCresult{
+        width: 86%;
+        margin-bottom: 18px;
+        padding-left: 18%;
+        padding-right: 18%;;
+        span{
+          //width: 70%;
+          //margin-left: 10%;
+          //margin-right: 20%;
+        }
+      }
     }
   }
+  ///////////////////////////////////////////////////////////////////////////////////////////!seen
+  .utility_container{
+    margin-top: 80px;
+    width: 100%;
+    max-width: 485px;
+    min-width: 416px;
+    //height: 799px;
+    background: #FFFFFF;
+    box-shadow: 6px 12px 19px -4px #E5E5E5;
+    border-radius: 25px;
+    padding-left: 41px;
+    padding-bottom: 40px;
+    margin-bottom: 120px;
+    .seeAfterNotSeen{
+      width: 90%;
+      margin-top: 55px;
+      padding-bottom: 40px;
+      //background: #C4C4C4;
+    }
+    .zipcode_input{
+      width: 80%;
+      height: 88px;
+      padding-bottom: 38px;
+      //background: #F2607B;
+      .h-52px{
+        height: 52px;
+      }
+      .input_not_seen{
+        display:inline;
+        position: absolute;
+        width: 100%;
+        max-width: 220px;
+        height: 50px;
 
-  .utility_provider{
-    margin-top: 0px;
-    margin-bottom: 30px;
-    .h-40px{height: 40px;}
-    .utility_select{
-      padding-left: 0px;
-      margin-left: 0px;
-      .card{
-        border: none;
-        margin: 0px;
-        width: 119.92px;
-        position: relative;
-        left: 0px;
-        background: transparent;
-        .utilityProviderPic{
-          //position: relative;
+        //left: 130px;
+        //top: 322px;
+
+        background: #FFFFFF;
+        border: 2px solid #D3D3D3;
+        box-sizing: border-box;
+        border-radius: 24px;
+        box-shadow: none;
+
+        font-family: 'Montserrat', Avenir;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 20px;
+        color: #254B77;
+        text-align: center;
+      }
+      .input_not_seen::placeholder{
+        font-family: 'Montserrat', Avenir;
+        text-align: center;
+      }
+
+      .enter_button{
+        display:inline;
+        width: 100px;
+        height: 50px;
+        text-align: center;
+
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 20px;
+      }
+      .validZipcodeError{
+        width: 50%;
+        //margin-top: 10px;
+        margin-left: 0%;
+        margin-right: 0%;
+        padding: 0px;
+        //background: #C4C4C4;
+        span{
+          //margin: 0;
+          margin-left: -1%;
+          margin-right: 0%;
+        }
+      }
+    }
+
+    .utility_provider{
+      margin-top: 0px;
+      margin-bottom: 30px;
+      .h-40px{height: 40px;}
+      .utility_select{
+        padding-left: 0px;
+        margin-left: 0px;
+        .card{
+          border: none;
+          margin: 0px;
           width: 119.92px;
-          height: 119.92px;
-          //left: 0px;
-          //top: 460.33px;
+          position: relative;
+          left: 0px;
+          background: transparent;
+          .utilityProviderPic{
+            //position: relative;
+            width: 119.92px;
+            height: 119.92px;
+            //left: 0px;
+            //top: 460.33px;
 
-          background: #FFFFFF;
-          border: 2px solid #D3D3D3;
-          box-sizing: border-box;
-          border-radius: 24px;
-          box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25);
+            background: #FFFFFF;
+            border: 2px solid #D3D3D3;
+            box-sizing: border-box;
+            border-radius: 24px;
+            box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25);
 
-          padding: 0px;
-          text-align: center;
-          img{
-            width: 67.03px;
+            padding: 0px;
+            text-align: center;
+            img{
+              width: 67.03px;
+            }
+          }
+          .utilityProviderPic:focus{
+            //box-shadow: 6px 6px 12px rgba(176, 231, 255, 0.85);
+            //border: 2px solid #B0E7FF;
+            //box-shadow: 6px 6px 12px rgba(79, 155, 193, 0.65);
+            //border: 2px solid #4F9BC1;
+            box-shadow: 6px 6px 12px rgba(37, 75, 119, 0.55);
+            border: 2px solid rgba(37, 75, 119, 0.55);
+            //background: #E5E5E5;
+            //img{border: 2px solid #B0E7FF;}
+          }
+          .utilityProviderPic:disabled{
+            border: 2px solid #B0E7FF;
+          }
+          .utilityProviderLetter{
+            width: 119.92px;
+            height: 119.92px;
+            //left: 130px;
+            //top: 460.33px;
+
+            background: #FFFFFF;
+            border: 2px solid #D3D3D3;
+            box-sizing: border-box;
+            border-radius: 24px;
+            box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25);
+
+            font-family: 'Montserrat', Avenir;
+            font-size: 18px;
+            line-height: 21px;
+            //line-height: 24px;
+            color: #254B77;
+
+            padding: 0px;
+            text-align: center;
+            p{
+              //background: #F2607B;
+              width: 118px;
+              line-height: 19px;
+            }
+          }
+          .utilityProviderLetter:focus{
+            border: 2px solid #B0E7FF;
+          }
+          .chosen{
+            //box-shadow: 6px 6px 12px rgba(37, 75, 119, 0.55);
+            //border: 2px solid rgba(37, 75, 119, 0.55);
+            border: 2px solid #F2607B;
           }
         }
-        .utilityProviderPic:focus{
-          //box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25);
-          border: 2px solid #B0E7FF;
-          //background: #E5E5E5;
-          //img{border: 2px solid #B0E7FF;}
-        }
-        .utilityProviderLetter{
-          width: 119.92px;
-          height: 119.92px;
-          //left: 130px;
-          //top: 460.33px;
+      }
+    }
 
+    .rate_plan{
+      h4{
+        height: 33px;
+        margin-bottom: -5px;
+      }
+      .iDont{
+        background: transparent;
+        border: none;
+        padding-left: 0px;
+        font-style: normal;
+      }
+      .plan_select{
+        //height: 80px;
+        padding-left: 0px;
+        .dropdown{
+          overflow: hidden;
+          text-overflow : ellipsis ;
+          //white-space : nowrap ;
+          //white-space:pre-wrap;////////////////////////command out it back if need show all content rather than ...
+
+          width: 296px;
+          height:
+                  //119.55px;
+                  49.55px;
+          margin-top: 10px;
+          padding-left: 25px;
+          padding-right: 25px;
           background: #FFFFFF;
           border: 2px solid #D3D3D3;
           box-sizing: border-box;
           border-radius: 24px;
-          box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25);
 
           font-family: 'Montserrat', Avenir;
           font-size: 18px;
           line-height: 21px;
           //line-height: 24px;
           color: #254B77;
-
-          padding: 0px;
           text-align: center;
-          p{
-            //background: #F2607B;
-            width: 118px;
-            line-height: 19px;
-          }
+          text-align-last:center;
+
+          appearance:none;
+          -moz-appearance:none;
+          -webkit-appearance:none;
+          ///*在选择框的最右侧中间显示下拉箭头图片*/
+          //background: url(../../../src/assets/battery.png)  right center no-repeat;
+          ///*为下拉小箭头留出一点位置，避免被文字覆盖*/
         }
-        .utilityProviderLetter:focus{
-          border: 2px solid #B0E7FF;
+        //.dropdown::content{
+        //  font-family: 'Montserrat', Avenir;
+        //  text-align: center;
+        //}
+        .dropdown-item{
+          //width: 296px;
+          height: 50px;
+          padding: 0px 0px;
+
+          //background: #EAEAEA;
+          //border: 3px solid #D3D3D3;
+          //box-sizing: border-box;
+          //border-radius: 24px;
+
+          font-family: 'Montserrat', Avenir;
+          //color: #3cb582;
         }
-      }
-    }
-  }
+        .seeSavings{
+          width: 242px;
+          height: 59px;
+          margin-top: 37px;
+          margin-bottom: 37px;
 
-  .rate_plan{
-    h4{
-      height: 33px;
-      margin-bottom: -5px;
-    }
-    .iDont{
-      background: transparent;
-      border: none;
-      padding-left: 0px;
-      font-style: normal;
-    }
-    .plan_select{
-      //height: 80px;
-      padding-left: 0px;
-      .dropdown{
-        overflow: hidden;
-        text-overflow : ellipsis ;
-        //white-space : nowrap ;
-        //white-space:pre-wrap;////////////////////////command out it back if need show all content rather than ...
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          /* identical to box height, or 125% */
+          color: #254B77;
+        }
+        .seeSavings:hover{
+          color:#FFFFFF;
+        }
 
-        width: 296px;
-        height:
-                //119.55px;
-                49.55px;
-        margin-top: 10px;
-        padding-left: 25px;
-        padding-right: 25px;
-        background: #FFFFFF;
-        border: 2px solid #D3D3D3;
-        box-sizing: border-box;
-        border-radius: 24px;
-
-        font-family: 'Montserrat', Avenir;
-        font-size: 18px;
-        line-height: 21px;
-        //line-height: 24px;
-        color: #254B77;
-        text-align: center;
-        text-align-last:center;
-
-        appearance:none;
-        -moz-appearance:none;
-        -webkit-appearance:none;
-        ///*在选择框的最右侧中间显示下拉箭头图片*/
-        //background: url(../../../src/assets/battery.png)  right center no-repeat;
-        ///*为下拉小箭头留出一点位置，避免被文字覆盖*/
-      }
-      //.dropdown::content{
-      //  font-family: 'Montserrat', Avenir;
-      //  text-align: center;
-      //}
-      .dropdown-item{
-        //width: 296px;
-        height: 50px;
-        padding: 0px 0px;
-
-        //background: #EAEAEA;
-        //border: 3px solid #D3D3D3;
-        //box-sizing: border-box;
-        //border-radius: 24px;
-
-        font-family: 'Montserrat', Avenir;
-        //color: #3cb582;
-      }
-      .seeSavings{
-        width: 242px;
-        height: 59px;
-        margin-top: 37px;
-        margin-bottom: 37px;
-
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 20px;
-        /* identical to box height, or 125% */
-        color: #254B77;
-      }
-      .seeSavings:hover{
-        color:#FFFFFF;
       }
 
     }
 
   }
-
 }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////graph.vue
 
-/////////////////////////////////////////////////////////graph.vue
 .saving_container{
   //background: #FAAD13;
-  position: relative;
-  top: 159px;
-  margin-left: 70px;
-  margin-bottom: 300px;
+  //position: relative;
+  //top: 159px;
+  width: 100%;
+  margin-top: 100px;
+  margin-left: 1%;
+          //70px;
+  margin-bottom: 200px;
   //padding-bottom: 80px;
 
   .topButton{
     position: relative;
-    width: 634px;
+    width: calc(100%);
+            //634px;
     height: 60px;
     //left: 891px;
     top: -51px;
@@ -625,13 +717,14 @@ button.submit:hover {
     //background: #254B77;
     border-radius: 49px 49px 0px 0px;
     //box-shadow:
-            //0px 0px 0px rgba(0, 0, 0, 1);
-            //0px 4px 4px -8px rgba(0, 0, 0, 0.25),
-            //0px 4px 4px rgba(0, 0, 0, 0.25);
+    //0px 0px 0px rgba(0, 0, 0, 1);
+    //0px 4px 4px -8px rgba(0, 0, 0, 0.25),
+    //0px 4px 4px rgba(0, 0, 0, 0.25);
     .buttonIn{
       //position: relative;
       //position: absolute;
-      width: 317px;
+      width: 100%;
+              //317px;
       height: 62px;
       //left: 891px;
       //top: 143px;
@@ -650,6 +743,11 @@ button.submit:hover {
 
       //color: #000000;
       z-index:-1;
+
+      img{
+        height: 30px;
+        margin-top: -4px;
+      }
     }
     .buttonIn:disabled{
       //background: #B0E7FF;
@@ -682,7 +780,7 @@ button.submit:hover {
   }
 
   .shadow{
-    width: 634px;
+    width: 100%;
     //height: 1268px;
     //left: 690px;
     //top: 182px;
@@ -697,15 +795,16 @@ button.submit:hover {
             //0px 0px 0px rgba(0, 0, 0, 1);
             0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 49px;
-            //0px 0px 49px 49px;
+    //0px 0px 49px 49px;
 
     .withBlip_box{
-      width: 562px;
-      height: 272px;
+      width: 86%;
+      //height: 272px;
       //left: calc(50% - 562px/2 + 280px);
       //top: calc(50% - 272px/2 - 411.5px);
-      padding-top: 0px;
-      padding-bottom: 0px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      margin-top: -10px;
 
       background: #254B77;
       box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25);
@@ -726,13 +825,13 @@ button.submit:hover {
 
       .blip-area{
         //background: #3cb582;
-        margin-top: 30px;
+        margin-top: 0px;
         margin-bottom: 0px;
       }
 
       .savePerYear{
         padding-bottom: 0px;
-        margin-top: -20px;
+        margin-top: 0px;
         margin-bottom: 0px;
 
         font-family: 'Montserrat', Avenir;
@@ -749,13 +848,14 @@ button.submit:hover {
 
       .perYear{
         //background: #3cb582;
-        width: 245px;
-        height: 44.81px;
-        margin-top: -35px;
+        //width: 245px;
+        //height: 44.81px;
+        margin-top: -10px;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 0px;
 
+        font-family: 'Montserrat', Avenir;
         font-style: normal;
         font-weight: 500;
         font-size: 22px;
@@ -767,7 +867,7 @@ button.submit:hover {
         //background: #C4C4C4;
         width: 70%;
         //height: 20.84px;
-        margin-top: -25px;
+        margin-top: 25px;
         margin-bottom: 0px;
         margin-left: auto;
         margin-right: auto;
@@ -782,7 +882,7 @@ button.submit:hover {
       }
 
       .yourSaving{
-        margin-top: 35px;
+        margin-top: 0px;
         margin-bottom: 15px;
       }
     }
@@ -812,15 +912,17 @@ button.submit:hover {
     .graph{
       .graphButton{
         background: #FFFFFF;
-        width: 491px;
+        width: 80%;
         height: 49.55px;
         margin-top: 20px;
         margin-bottom: -30px;
+        margin-left: 10%;
+        margin-right: 10%;
         border: 2px solid #254B77;
         box-sizing: border-box;
-        border-radius: 24px;
+        border-radius: 50px;
         button{
-          width: 247px;
+          width: calc(100% + 2px);
           height: 49px;
           margin-top: -2px;
           margin-left: -2px;
@@ -833,7 +935,7 @@ button.submit:hover {
           //border-radius: 6px;
           border: none;
 
-          border-radius: 50px;
+          border-radius: 48px;
 
           font-family: 'Montserrat', Avenir;
           font-style: normal;
@@ -853,15 +955,24 @@ button.submit:hover {
           border: none;
         }
       }
+      .graphSaving{
+        width: 90%;
+        //background: #F2607B;
+
+        .chart{
+
+        }
+      }
     }
 
     .outage{
-      width: 562px;
+      width: 90%;
+              //562px;
       //626px;
       //height: 128px;
       //left: 44px;
       //top: 1393px;
-      padding: 60px 30px;
+      padding: 45px 30px;
       margin-top: 40px;
       margin-bottom: 30px;
 
@@ -895,8 +1006,8 @@ button.submit:hover {
 
       .outageTimes{
         //background: #C4C4C4;
-        padding-bottom: 50px;
-        margin-bottom: 50px;
+        padding-bottom: 30px;
+        margin-bottom: 40px;
         border-bottom: 2px solid #4F9BC1;
         //border-bottom-height: 390px;
         //font-family: FF Mark Pro;
@@ -910,7 +1021,7 @@ button.submit:hover {
           font-family: 'Montserrat', Avenir;
           font-style: normal;
           font-weight: 300;
-          font-size: 60px;
+          font-size: 56px;
           line-height: 76px;
           /* or 127% */
 
@@ -923,7 +1034,7 @@ button.submit:hover {
           font-family: 'Montserrat', Avenir;
           font-style: normal;
           font-weight: 300;
-          font-size: 45px;
+          font-size: 42px;
           line-height: 76px;
           /* or 169% */
 
@@ -932,7 +1043,7 @@ button.submit:hover {
         }
       }
       .outageTimesLast{
-        padding-bottom: 20px;
+        padding-bottom: 0px;
         margin-bottom: 0px;
         //border-bottom: 2px solid #4F9BC1;
         //border-bottom-height: 390px;
@@ -948,7 +1059,7 @@ button.submit:hover {
           font-family: 'Montserrat', Avenir;
           font-style: normal;
           font-weight: 300;
-          font-size: 45px;
+          font-size: 42px;
           line-height: 76px;
           /* or 169% */
 
@@ -1063,9 +1174,9 @@ button.submit:hover {
 
           color: #B0E7FF;
           //p{
-            //background: #5A7184;
-            margin-top: auto;
-            margin-bottom: auto;
+          //background: #5A7184;
+          margin-top: auto;
+          margin-bottom: auto;
           //}
         }
         //a:hover{
@@ -1184,7 +1295,10 @@ button.submit:hover {
       border-radius: 24px;
     }
     button:hover{
+      width: 302px;
+      height: 59px;
       background: #254B77;
+      border: 2px solid #FFFFFF;
       //color: #B0E7FF;
     }
   }
@@ -1209,3 +1323,7 @@ button.submit:hover {
   //border: solid 2px #D3D3D3;
   //border-radius: 50px;
 }
+
+
+
+

@@ -1,20 +1,15 @@
 <template>
   <div class="all">
     <b-container class="zipcode_container t-left m-l-0 p-0" v-if="seen" >
-<!--      <b-row class="seeHow row w-100p">-->
-<!--        <h1 class="h1 c-000000 t-left f-Avenir see">See how blip can save you money</h1>-->
-<!--      </b-row>-->
-
-<!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!Where original Heads up session goes!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
       <b-row class = "w-100p m-l-0 p-l-0 m-b-50" >
         <h1 class="h1 c-254B77 t-left see">See how blip can save you money</h1>
-        <p class="p2 c-254B77 t-left m-l-0 how" style="margin-left: 0px">
+        <p class="p2 c-254B77 t-left m-l-0 how" style="margin-left: 0">
           When paired with an energy dense appliance like a window AC, blip can save you money on your electricity bill.
           Fill in your zipcode to get started
         </p>
         <b-row class="zipcode_input t-left w-100p m-l-0">
-          <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="t-left m-tb-a p-l-0">
+          <b-col xs="6" sm="6" md="6" lg="6" xl="6" class="t-left m-tb-a p-l-0">
             <b-form-input
                 class="zip-input absolute-mid"
                 v-model="zipcode"
@@ -22,7 +17,7 @@
                 @keyup.enter="checkZipcode()">
             </b-form-input>
           </b-col>
-          <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="i-a-c p-0">
+          <b-col xs="6" sm="6" md="6" lg="6" xl="6" class="i-a-c p-0">
             <b-button
                 class = "submit search-button m-l-0"
                 variant="outline-primary"
@@ -32,17 +27,17 @@
           </b-col>
         </b-row>
         <b-row class = "w-100p m-l-0 p-l-0" >
-          <b-col xs="12" sm="12" md="8" lg="8" xl="8" class="t-left m-tb-a p-l-0">
-          <p v-show="!showValidZipcodeError" class="validZipcodeError p4 c-FF0000 t-center">Please enter a valid zip code.</p>
+          <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="t-center m-tb-a p-l-0">
+          <p v-show="!showValidZipcodeError" class="validZipcodeError p4 c-FF0000 t-center">Please enter a valid zip code</p>
           </b-col>
         </b-row>
       </b-row>
 
       <b-row v-show="notNYorCA" class="headsUp t-left w-100p m-l-0">
-        <b-col  xs="12" sm="12" md="5" lg="5" xl="5" class ="headsUp_left">
+        <b-col  xs="5" sm="5" md="5" lg="5" xl="5" class ="headsUp_left">
           <img src="../assets/Savings Calculator Graphic/Heads Up Location Graphic/1.png">
         </b-col>
-        <b-col  xs="12" sm="12" md="7" lg="7" xl="7" class ="headsUp_right">
+        <b-col  xs="7" sm="7" md="7" lg="7" xl="7" class ="headsUp_right">
           <h3 class="h3 c-254B77 t-left">Heads up!</h3>
           <p class="p3 c-254B77 t-left">
             This savings calculator currently only includes selected providers in California and New York City.
@@ -63,9 +58,8 @@
     <div  v-if ="showNoData === false">
       <b-row class="utility_container t-left m-l-0" v-if="!seen">
         <div class="h2point5 c-254B77 t-left m-l-0 seeAfterNotSeen">See how blip can save you money</div>
-        <b-row class="zipcode_input t-left w-100p m-l-0 p-l-0">
-
-          <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="h-52px t-left m-l-0 p-l-0">
+        <b-row class="zipcode_input t-left m-l-0 p-l-0">
+          <b-col xs="7" sm="7" md="7" lg="7" xl="7" class="h-52px t-left m-l-0 p-l-0">
             <b-form-input
                 v-model="zipcode"
                 class = "input_not_seen absolute-mid"
@@ -74,7 +68,7 @@
             ></b-form-input>
           </b-col>
 
-          <b-col xs="12" sm="12" md="3" lg="3" xl="3" class="t-center i-a-c">
+          <b-col xs="5" sm="5" md="5" lg="5" xl="5" class="t-center i-a-c">
             <b-button variant="outline-primary" v-on:click="checkZipcodeAfter()" class="enter_button submit">
               Enter
               <!--            <font-awesome-icon icon="search"/>-->
@@ -82,16 +76,18 @@
           </b-col>
 
           <b-row class="t-left w-100p m-l-0 p-l-0">
-            <p v-show="!showValidZipcodeError" class="validZipcodeError p4 c-FF0000 t-center">
-              <span v-if="showErrorMsgExpNYCA">Please enter a CA or NY zip code.</span>
-              <span v-else>Please enter a valid zip code.</span>
+<!--            <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="h-52px t-left m-l-0 p-l-0">-->
+            <p v-show="!showValidZipcodeError" class="validZipcodeError p4 c-FF0000 t-center" style="">
+              <span v-if="showErrorMsgExpNYCA">Please enter a CA or NY zip code</span>
+              <span v-else>Please enter a valid zip code</span>
             </p>
+<!--            </b-col>-->
           </b-row>
         </b-row>
 
         <b-row class="utility_provider t-left w-100p m-l-0 p-l-0">
           <b-col xs="12" sm="12" md="12" lg="12" xl="12" class="t-left m-l-0 p-l-0">
-            <h4 class = "h-40px c-254B77">Choose your utility provider:</h4>
+            <h4 class = "h-40px c-254B77">Choose your energy provider:</h4>
             <b-row class="utility_select w-100p m-l-0 p-l-0" v-if="posts && posts.length">
               <!--            Start: add-->
               <b-col xs="12" sm="12" md="4" lg="4" xl="4" class="t-left p-l-0" v-for="post of posts">
@@ -100,6 +96,7 @@
                   <b-button
                       class="utilityProviderPic"
                       id="tooltip-target-1"
+                      name = "hahah"
                       variant="outline-primary"
                       v-if="post.logo !== ''"
                       v-on:click="list(post); sendUtility(post); countOverallPlan(post); provider = true;"
@@ -209,6 +206,7 @@ export default {
 //Start: add
       showValidZipcodeError: true,
       showErrorMsgExpNYCA: false,
+      nonNYCA: false,
       showNoData: false,
       notNYorCA: false,
       posts: [],
@@ -283,8 +281,10 @@ export default {
         this.showValidZipcodeError = true;
         this.loadJSON();
       }else{
+        // alert(this.zipcode.length)
         // alert('!!!');
         this.showValidZipcodeError = false;
+        this.notNYorCA = false;
       }
     },
 
@@ -320,6 +320,7 @@ export default {
             })
       }else{
         // alert('!!!');
+        this.showErrorMsgExpNYCA = false
         this.showValidZipcodeError = false;
       }
     },
@@ -363,12 +364,17 @@ export default {
 
     list(utility) {
       // const utilityPlans = '{{post.utilities.' + utility + '.plans.plan_name}}'
+      document.getElementsByClassName('hahah').className += " " + "chosen";
+      // $(utility).addClass("chosen")
       this.utilityPicked = utility
       this.planNum = this.utilityPicked.planList.length
       this.model = ''
       this.selectedPlan = ''
       this.sendPlan(this.selectedPlan)
       this.countPlan(this.selectedPlan)
+      if (this.nonNYCA){
+        this.doTOU()
+      }
     },
 
     countOverallPlan(provider){
@@ -393,7 +399,7 @@ export default {
         }
       }
       var plan = this.utilityPicked.planList[i]
-
+      // alert('!!')
       // var plan = this.utilityPicked.planList[0]
       // console.log("I donnnnnnnnt", plan)
       this.selectedPlan = plan.planName;
@@ -403,7 +409,9 @@ export default {
 
       this.$emit('iDontKnow', true)
       this.countPlan(plan);
-      this.sendPlan(plan)
+      this.sendPlan(plan);
+      this.savings = !this.savings;
+      this.displaySavings();
     },
 
     sendNoData(nData){
@@ -413,6 +421,13 @@ export default {
     sendUtility(utility){
       // console.log('hah', utility.utilities.utility_name)
       this.$emit('pickedUtility', utility)
+    },
+
+    planSelected(event){
+      this.selectedPlan = this.utilityPicked.planList[event.target.value].planName
+      this.$emit('iDontKnow', false)
+      this.countPlan(this.utilityPicked.planList[event.target.value]);
+      this.sendPlan(this.utilityPicked.planList[event.target.value]);
     },
 
     countPlan(plan){
@@ -430,23 +445,6 @@ export default {
       // console.log('sendPlan', plan)
     },
 
-    planSelected(event){
-      // console.log('Valllllllllllllllue',event.target.value)
-      // const mark = 0;
-      // for (var i=0; i<this.utilityPicked.planList.length; i++){
-      //   if (this.utilityPicked.planList[i].planName === this.selectedPlan){
-      //     break;
-      //   }
-      // }
-      // console.log('TTTTTTTTTTTThis',this.utilityPicked.planList[event.target.value]);
-      // console.log("Mooooooooodel", this.model)
-      this.selectedPlan = this.utilityPicked.planList[event.target.value].planName
-      // console.log('Mooooooodel', this.selectedPlan)
-      this.$emit('iDontKnow', false)
-      this.countPlan(this.utilityPicked.planList[event.target.value]);
-      this.sendPlan(this.utilityPicked.planList[event.target.value]);
-    },
-
     refresh(){
       this.$router.go(0)
     },
@@ -456,9 +454,17 @@ export default {
     },
 
     oneOOOnine(){
+      this.nonNYCA = true;
       this.zipcode = '10009';
-      this.checkZipcode();
-      // console.log(this.utilityPicked, this.utilityPicked.length)
+      // this.checkZipcode();
+      this.showValidZipcodeError = true;
+      this.loadJSON();
+      console.log(this.utilityPicked, this.utilityPicked.length)
+
+      // this.doTOU();
+      // this.savings = !this.savings;
+      // this.displaySavings();
+
       //
       // for (var i = 0; i < this.utilityPicked.length; i++){
       //   if (this.utilityPicked[i].planType === 1){

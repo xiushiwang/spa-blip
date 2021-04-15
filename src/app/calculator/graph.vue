@@ -1,37 +1,33 @@
 <template>
   <div>
-    <b-container class="saving_container t-center w-100p m-r-0 p-l-0" v-if="seen">
+    <b-container class="saving_container t-center m-r-0 p-l-0" v-if="seen">
 
       <b-row id="topButtonBackground" class="topButton p-0" :style='dollarSignBackground'>
-        <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">
+        <b-col xs="6" sm="6" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">
           <b-button
               class="buttonIn b-F9F9F9 c-254B77 m-l-0"
               v-on:click="showResiliency(); b254B77()"
               :disabled="dollarSign"
-          >$ Bill Savings</b-button>
+          ><img src="../../assets/Savings Calculator Graphic/blip-icon-savingscalc-billsavings.png">
+            Bill Savings
+          </b-button>
         </b-col>
-        <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">
+        <b-col xs="6" sm="6" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">
           <b-button
               class="buttonIn b-254B77 c-FFFFFF m-r-0"
               v-on:click="showResiliency(); bF9F9F9()"
               :disabled="!dollarSign"
-          ><font-awesome-icon icon="bolt"/> Backup power</b-button>
+          ><img src="../../assets/Savings Calculator Graphic/blip-icon-savingscalc-backuppower.png">
+            Backup power
+          </b-button>
         </b-col>
       </b-row>
-<!--      <b-row class="topButtonExplanation t-center p-0">-->
-<!--        <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="t-center m-l-0 m-t-0 p-0">-->
-<!--          <div class="explanation dollarEx">Cash Savings</div>-->
-<!--        </b-col>-->
-<!--        <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="t-center m-l-0 m-t-0 p-0">-->
-<!--          <div class="explanation boltEx">Resiliency Planning</div>-->
-<!--        </b-col>-->
-<!--      </b-row>-->
 
       <b-container v-if="dollarSign" class = "shadow b-F9F9F9 t-center w-100p">
         <b-container v-if="!hasMaxSaving">
           <b-row class="notBiggest_box t-center">
             <p class="current p4 t-center c-FFFFFF">
-              You won't see any savings with this utility provider.
+              You won't see any savings with this energy provider.
             </p>
             <p class = "currentBottom t-center c-FFFFFF">
               All plans provided are 0 savings.
@@ -58,7 +54,7 @@
               <p class = "p4 C-4F9BC1 t-center about">
                 * estimated savings when pairing our device with an energy dense appliance
                 <span id="tooltip-target-2" class="infoMark" v-b-tooltip.hover.bottomright="{variant: 'light', customClass: 'myTooltipClass'}"
-                      title="Savings estimated based on utility specific rate plan information"
+                      title="Savings estimated based on utility specific rate plan information and average monthly consumption of 800kWh"
                 ><font-awesome-icon icon="info-circle"/></span>
               </p>
             </b-row>
@@ -172,26 +168,26 @@
 
           <b-row class="graph w-100p t-center">
             <b-row class="graphButton w-100p t-center p-0">
-              <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">
+              <b-col xs="6" sm="6" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">
                 <b-button
                     variant="outline-primary"
                     v-on:click="drawSeasonalSavings('chartOne')"
                     :disabled="!showOverallSavings"
-                >Seasonal Savings
+                >Monthly Savings
                 </b-button>
               </b-col>
-              <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">
+              <b-col xs="6" sm="6" md="6" lg="6" xl="6" class="m-l-0 m-t-0 p-0">
                 <b-button
                     variant="outline-primary"
                     v-on:click="drawOverallSavings('chartOne')"
                     :disabled="showOverallSavings"
-                >Overall Savings
+                >Total Savings
                 </b-button>
               </b-col>
             </b-row>
 
             <b-row class="graphSaving">
-              <div v-if="planClickd" id="chartOne" class="chart" style="width: 520px;height: 423px;"></div>
+              <div v-if="planClickd" id="chartOne" class="chart" style="width: 520px; height: 423px;"></div>
             </b-row>
           </b-row>
         </b-container>
@@ -232,28 +228,28 @@
 <!--          <div class="boltSign c-FFFFFF t-center w-100p m-tb-a"><font-awesome-icon icon="bolt"/></div>-->
           <div class="outageTimes c-FFFFFF t-center w-100p m-tb-a">
             <!--              <p class="outageTimes c-FFFFFF t-left w-100p m-tb-a">-->
-            <p class="p1">{{pickedUtility.utilityName}} Users in Your Area lost</p>
+            <p class="p1point5">{{pickedUtility.utilityName}} users in your area lost</p>
             <p class = "lostToBlackouts">{{computeHours(pickedUtility.outage.saidi)}}</p>
-            <p class="p1">of power to blackouts this year</p>
+            <p class="p1point5">of power to blackouts this year</p>
           </div>
 <!--          </b-col>-->
           <div class="outageTimes c-FFFFFF t-center w-100p m-tb-a">
-            <p class="p1">This utility has had an average of</p>
+            <p class="p1point5">This provider has had an average of</p>
             <p class = "emf c-B0E7FF">{{pickedUtility.outage.saifi}} blackouts</p>
-            <p class="p1">this year</p>
+            <p class="p1point5">this year</p>
           </div>
 
           <div class="outageTimesLast c-FFFFFF t-center w-100p m-tb-a">
-            <p class="p1">Each blackout lasted</p>
+            <p class="p1point5">Each blackout lasted</p>
             <p class = "emf c-B0E7FF">{{computeHours(pickedUtility.outage.caidi)}}</p>
-            <p class="p1">on average</p>
+            <p class="p1point5">on average</p>
           </div>
 
-          <div class="iSymbol p4 c-D3D3D3 w-100p"
-              id="tooltip-target-4" v-b-tooltip.hover.bottom="{variant: 'light', customClass: 'myTooltipClass'}"
-                title="Source: U.S. Energy Information Administration, Annual Electric Power Industry Report"
-          ><font-awesome-icon icon="info-circle"/>
-          </div>
+<!--          <div class="iSymbol p4 c-D3D3D3 w-100p"-->
+<!--              id="tooltip-target-4" v-b-tooltip.hover.bottom="{variant: 'light', customClass: 'myTooltipClass'}"-->
+<!--                title="Source: U.S. Energy Information Administration, Annual Electric Power Industry Report"-->
+<!--          ><font-awesome-icon icon="info-circle"/>-->
+<!--          </div>-->
 
         </b-row>
 
@@ -276,7 +272,9 @@
       </b-container>
 
       <b-row class="signUpForUpdates w-100p t-center">
-        <b-button class="submit" variant="outline-primary" ><a ref="">Get notified when we launch</a></b-button>
+        <b-button class="submit" variant="outline-primary" @click="sendSubscription()">
+          <a ref="">Get notified when we launch</a>
+        </b-button>
       </b-row>
 
     </b-container>
@@ -378,7 +376,7 @@ export default {
     overallSavings: function(){
       var savings = []
       for (var i = 0; i < 10; i++) {
-        savings[i] = (this.savePerYear * (i + 1)).toFixed(2);
+        savings[i] = (this.savePerYear * (i + 1)).toFixed(0);
       }
       return savings;
     },
@@ -387,7 +385,10 @@ export default {
       // for (var i = 0; i < seasonal.length; i++) {
       //   seasonal[i] = (this.savePerYear * 3 * seasonal[i]).toFixed(2);
       // }
-      var seasonal = this.planPicked.savingList
+      var seasonal = []
+      for (var i = 0; i < this.planPicked.savingList.length; i++) {
+        seasonal.push(this.planPicked.savingList[i].toFixed(0))
+      }
       return seasonal
     },
     maxSaving: function(){
@@ -572,6 +573,12 @@ export default {
             axisTick: {
               alignWithLabel: true
             },
+            // splitLine: {
+            //   show: true,
+            //   lineStyle:{
+            //     type:'dashed'
+            //   }
+            // },
             axisLabel: {
               interval: 0,
               rotate: 45, //If the label names are too long you can manage this by rotating the label.
@@ -582,6 +589,12 @@ export default {
         yAxis: [
           {
             type: 'value',
+            splitLine: {
+              show: true,
+              lineStyle:{
+                type:'dashed'
+              }
+            },
             axisLabel: {
               formatter: '${value}',
               textStyle:{color: '#254B77'}
@@ -593,10 +606,12 @@ export default {
             name: 'Saving',
             type: 'bar',
             barWidth: '60%',
-            data: dataHere
+            data: dataHere,
+            // textStyle:{fontFamily: 'Montserrat'}
             // this.savingsForChart
           }
-        ]
+        ],
+        textStyle:{fontFamily: 'Montserrat'}
       }, {notMerge: true})
     },
     drawSeasonalSavings(){
@@ -639,6 +654,10 @@ export default {
       // console.log('gotHere')
       this.drawSeasonalSavings()
       // this.drawChartOne(this.overallSavings)
+    },
+
+    sendSubscription(){
+      this.$emit('subscription', true)
     }
 //End: add
   },
