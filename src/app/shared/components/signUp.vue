@@ -416,7 +416,7 @@ input{
   margin-bottom: 25px;
   padding-left: 20px;
   padding-top: 3%;
-  padding-bottom: 2%;
+  padding-bottom: 3%;
 }
 input::placeholder{
   //position: absolute;
