@@ -1,13 +1,13 @@
 <template>
-  <div class="navbar-nav" style="background: #FFFFFF;">
+  <div class="navbar-nav" style="">
     <!--start:blip is launching soon-->
-    <section class="DEF5FF launching">
+    <section class="launching">
       <div class="hero">
         <div class="container">
           <div class="row">
-            <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
+            <div class="contentContent col-lg-12 offset-lg-12 col-md-12 col-sm-12">
               <div class="content text-center">
-                <h2 class="h2 two54B77 t-center">blip is launching soon</h2>
+                <h2 class="h2point5 two54B77 t-center">blip is launching soon</h2>
                 <p class="p2 two54B77 t-center">get notified</p>
                 <form>
                   <div class="form-group">
@@ -21,6 +21,7 @@
                                     aria-describedby="int2"
                                     v-model="firstName"
                                     placeholder="First"
+                                    @keyup.enter="submit()"
                       ></b-form-input>
                       <!--                        <p class="text-gray mt-8 mb-24">First Name</p>-->
   <!--                    </b-col>-->
@@ -33,6 +34,7 @@
                                     aria-describedby="int2"
                                     v-model="lastName"
                                     placeholder="Last"
+                                    @keyup.enter="submit()"
                       ></b-form-input>
                       <!--                        <p class="text-gray mt-8 mb-24">Last Name</p>-->
   <!--                    </b-col>-->
@@ -46,30 +48,32 @@
                                   id="email"
                                   class="form-control-email"
                                   aria-describedby="emailHelp"
-                                  placeholder=""
                                   v-model="email"
-                    ></b-form-input>
-                  </div>
-
-                  <div class="form-group">
-                    <p class="p3 two54B77 t-left">Zip Code*</p>
-                    <b-form-input type="text"
-                                  id="zipcode"
-                                  class="form-control-zipcode"
-                                  aria-describedby="areaCode"
-                                  placeholder=""
-                                  v-model="zipCode"
+                                  placeholder="hello@blip.com"
                                   @keyup.enter="submit()"
                     ></b-form-input>
-<!--                    <p id="areaCode">please</p>-->
                   </div>
 
-                  <div class="form-group mb-0 t-center">
+<!--                  <div class="form-group">-->
+<!--                    <p class="p3 two54B77 t-left">Zip Code*</p>-->
+<!--                    <b-form-input type="text"-->
+<!--                                  id="zipcode"-->
+<!--                                  class="form-control-zipcode"-->
+<!--                                  aria-describedby="areaCode"-->
+<!--                                  placeholder=""-->
+<!--                                  v-model="zipCode"-->
+<!--                                  @keyup.enter="submit()"-->
+<!--                    ></b-form-input>-->
+<!--&lt;!&ndash;                    <p id="areaCode">please</p>&ndash;&gt;-->
+<!--                  </div>-->
+
+                  <div class="form-group mb-0 t-center" style="height: 100px">
                     <b-button class="btn btn-outline-254B77 takeTheSurvey"
                               v-on:click="submit()"
                               :disabled="!submitButton"
                     >{{submitButtonMsg}}</b-button>
                     <p id="submitMsg" class="c-FF0000 m-t-0">{{alertMsg}}</p>
+<!--                    <p v-show="!subscriptionEnd" class="closeWindow two54B77 m-t-0" @click="closeWindow">Click me to bring you back</p>-->
                   </div>
 
 
@@ -81,34 +85,6 @@
       </div>
     </section>
     <!--end:blip is launching soon-->
-
-    <!--start:Contact-->
-    <div class="hero">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
-            <div class="content text-center">
-              <p class="p3 zero000000 t-center upperCase">Contact Us</p>
-              <p class="p1 two54B77 t-center"><a class="emailTo" href="mailto:hello@blipenergy.com?subject=Hello! Blip Team" target="_blank">hello@blipenergy.com</a></p>
-              <div class="w-100p m-l-0 p-l-0">
-                <a href="https://twitter.com/BlipEnergy" target="_blank"><font-awesome-icon :icon="['fab', 'twitter']" class="font-awesome-icon c-B0E7FF"/></a>
-                <a href="https://www.facebook.com/blipenergy/" target="_blank"><font-awesome-icon :icon="['fab', 'facebook-f']" class="font-awesome-icon c-B0E7FF"/></a>
-                <a href="https://www.linkedin.com/company/blip-energy" target="_blank"><font-awesome-icon :icon="['fab', 'linkedin-in']" class="font-awesome-icon c-B0E7FF"/></a>
-              </div>
-              <router-link :to="'/privacy-policy'" class="t-center" style="color: #254B77" target="_blank">
-                <p class="p3 c-254B77 t-center">blip respects your privacy</p>
-              </router-link>
-              <br>
-              <br>
-              <!--              <div class="logo w-88h-55"></div>-->
-              <img src="../../../assets/blip_logo.png" class="w-88h-55"/>
-              <p class="copyright">Copyright © 2020</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--end:Contact-->
   </div>
 </template>
 <!--&lt;!&ndash;Gallery , New, Account &ndash;&gt;-->
@@ -119,16 +95,17 @@
 import axios from "axios";
 
 export default {
-  name: "footer",
+  name: "signUp",
   data() {
     return {
       firstName: "",
       lastName: "",
       email: "",
-      zipCode: "",
+      zipCode: "99999",
       submitButtonMsg: "Submit",
       submitButton: false,
       alertMsg: "",
+      subscriptionEnd: false,
     };
   },
   created() {},
@@ -157,7 +134,7 @@ export default {
             // this.submitButton = false
             this.alertMsg = "Oops, you forgot your first name"
           }
-          if (this.firstName !== "" && this.validEmail(this.email) && this.checkZipcode()) {
+          if (this.firstName !== "" && this.validEmail(this.email)) {
             this.submitButton = true
             this.alertMsg = ""
           }else{
@@ -178,7 +155,7 @@ export default {
           // if (this.validEmail(this.email)){
           //   this.alertMsg = ""
           // }
-          if (this.firstName !== "" && this.lastName !== "" && this.checkZipcode()) {
+          if (this.firstName !== "" && this.lastName !== "") {
             this.submitButton = true
             this.alertMsg = ""
           }else{
@@ -187,26 +164,12 @@ export default {
         }
       },
     },
-    zipCode:{
-      handler (newVal, oldVal){
-        if (this.submitButtonMsg === "Success!"){
-          this.submitButton = false
-        }else{
-          if (!this.validEmail(this.email)){
-            this.alertMsg = "Please enter a valid email address"
-          }
-          if (this.checkZipcode()){
-            this.alertMsg = ""
-          }
-          if (this.firstName !== "" && this.lastName !== "" && this.validEmail(this.email)) {
-            this.submitButton = true
-            this.alertMsg = ""
-          }else{
-            this.submitButton = false
-          }
-        }
-      },
-    }
+    submitButtonMsg:{
+      handler (newVal, oldVal) {
+        if (this.submitButtonMsg === "Success!")
+        setTimeout(this.sendSubscriptionEnd, 3000) // == 3 sec 5000 for5 seconds
+      }
+    },
   },
 
   methods: {
@@ -217,7 +180,7 @@ export default {
           // console.log("!!")
           if (this.validEmail(this.email)) {
             // console.log("!!!")
-            if (this.checkZipcode()) {
+            // if (this.checkZipcode()) {
               this.alertMsg = ""
               this.post();
               document.getElementById("submitMsg").className -= "c-FF0000"
@@ -225,16 +188,17 @@ export default {
               this.alertMsg = "Thank you for signing up"
               this.submitButtonMsg = "Success!"
               this.submitButton = false
-              // console.log("!!!!")
+              this.subscriptionEnd = true
+
+              // this.sendSubscriptionEnd()
+              // setTimeout(this.sendSubscriptionEnd,3000) // == 3 sec 5000 for5 seconds
+
               // document.getElementById("zipcode").className -= "c-FF0000";
-              // document.getElementById("email").className -= " c-FF0000";
-              // document.getElementById("last").className -= " c-FF0000";
-              // document.getElementById("first").className -= " c-FF0000";
-            }else{
-              // alert("Please enter a valid zipcode")
-              this.alertMsg = "Please enter a valid zipcode"
-              // document.getElementById("zipcode").className += " " + "c-FF0000";
-            }
+            // }else{
+            //   // alert("Please enter a valid zipcode")
+            //   this.alertMsg = "Please enter a valid zipcode"
+            //   // document.getElementById("zipcode").className += " " + "c-FF0000";
+            // }
           }else{
             // document.getElementById("email").className += " " + "c-FF0000";
             this.alertMsg = "Please enter a valid email address"
@@ -290,6 +254,21 @@ export default {
         data: param
       })
     },
+    sendSubscriptionEnd(){
+      // alert("did it")
+      this.$emit('subscriptionEnd', this.subscriptionEnd)
+      // this.firstName = ""
+      // this.lastName = ""
+      // this.email = ""
+      // this.zipCode = "99999"
+      // this.submitButtonMsg = "Submit"
+      // this.submitButton = false
+      // this.alertMsg = ""
+      // this.subscriptionEnd = false
+    },
+    closeWindow(){
+      this.$emit('subscriptionEnd', true)
+    }
   },
   components: {}
 };
@@ -326,6 +305,15 @@ h2{
   font-size: 48px;
   line-height: 62px;
   margin: 20px;
+  /* identical to box height, or 129% */
+}
+.h2point5{
+  font-family: 'Montserrat', Avenir;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 42px;
+  line-height: 128%;
+  //margin: 20px;
   /* identical to box height, or 129% */
 }
 h4{
@@ -422,15 +410,19 @@ input{
   background: #FFFFFF;
   box-sizing: border-box;
   border-radius: 30px;
-  border: transparent;
+  border: 1px solid #254B77;
   outline: none;
   margin-right:0px;
   margin-bottom: 25px;
   padding-left: 20px;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
 input::placeholder{
+  //position: absolute;
+  //top: 50%;
+  //transform: translate(0, -50%);
+
   font-family: 'Montserrat', Avenir;
   font-style: normal;
   font-weight: 300;
@@ -441,155 +433,86 @@ input::placeholder{
 
 //.full{width: 100%}
 
-.hero{
-  width: 100%;
-  //background: #6f42c1;
-  .container{
-    width: 100%;
-    height: 536px;
-    padding-right: 0;
-    padding-left: 0;
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    //background: #869791;
-    .row {
-      width: 100%;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-      margin:0 auto;
-      align-items: center;
-      text-align: center;
-      //background: #F2607B;
-      .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
-        position: relative;
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        //background: #6f42c1;
-        //border: #3cb582 0.2cm;
-        .picOnLeft{
-          text-align: center;
-          //display: flex;
-          //align-items: center;
-          margin-left: auto;
-          margin-right: auto;
-          img{
-            width: 470px;
-            height: 373px;
-            //position: absolute;
-            //left: 15%;
-          }
-        }
-
-        .textOnRight{
-          width: 90%;
-          height: 444px;
-          //background: #F2607B;
-          text-align: center;
-          display: flex;
-          align-items: center;
-          //flex-direction: column;
-          .contentCenter{
-            position: absolute;
-            //width: 488px;
-            //height: 186px;
-            //left: 98px;
-            //top: 78px;
-            width: 70%;
-            left: 10%;
-            //background: #3cb582;
-          }
-        }
-      }
-      //.offset-lg-2{
-      //  height: 536px;
-      //}
-      .content{
-        //width: 940px;
-      }
-    }
-  }
-}
-
 .launching{
-  height: 694px;
+  height: 100%;
   display: flex;
   align-items: center;
-  form{
-    text-align: left;
-    .form-group{
-      .form-row{
-        display: flex;
-        flex-direction: row;
-        padding: 0;
-        //background: #6f42c1;
-        margin-bottom: -18px;
-        .form-control-name-left{
-          //position: absolute;
-          width: 47%;
-          margin-left: 0.6%;
-          margin-right: 2.4%;
-        }
-        .form-control-name-right{
-          width: 47%;
-          margin-left: 2.5%;
-          margin-right: 0.5%;
-        }
-        .form-control-email{
-          //position: absolute;
-          width: 100%;
-          margin-left: 0px;
-          margin-right: 0px;
-        }
-      }
-
-      .form-control-zipcode{
-        width: 173px;
-      }
-      .mb-0{
-        width: 100%;
-        text-align: center;
-      }
+  padding: 5% 0%;
+  .hero {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+    h2 {
+      margin-left: 30px;
+      margin-right: 30px;
     }
 
+    form {
+      padding: 0% 10%;
+      text-align: left;
+
+      .form-group {
+        .p3 {
+          margin-bottom: 8px;
+        }
+
+        .form-row {
+          display: flex;
+          flex-direction: row;
+          padding: 0;
+          //background: #6f42c1;
+          margin-bottom: -18px;
+
+          .form-control-name-left {
+            //position: absolute;
+            width: 47%;
+            margin-left: 0.6%;
+            margin-right: 2.4%;
+          }
+
+          .form-control-name-right {
+            width: 47%;
+            margin-left: 2.5%;
+            margin-right: 0.5%;
+          }
+
+          .form-control-email {
+            //position: absolute;
+            width: 100%;
+            margin-left: 0px;
+            margin-right: 0px;
+          }
+        }
+
+        .form-control-zipcode {width: 173px;}
+
+        .mb-0 {
+          width: 100%;
+          text-align: center;
+        }
+
+        .takeTheSurvey{
+          margin-top: 10px;
+          margin-bottom: 8px;
+        }
+
+        #submitMsg{
+          margin-top: -3px;
+          margin-bottom: 0px;
+        }
+
+        .closeWindow{margin-top: 0px;}
+
+        .closeWindow:hover{
+          text-decoration: underline;
+        }
+      }
+
+    }
   }
-
-}
-.takeTheSurvey{
-  margin-bottom: 50px;
 }
 
-#submitMsg{
-  margin-top: -40px;
-}
 
-.emailTo{color: #254B77;}
-.emailTo:hover{
-  
-}
-
-.font-awesome-icon{
-  font-size: 28px;
-
-  width: 64px;
-  height: 64px;
-  padding: 16px 16px;
-  margin-left: 14px;
-  margin-right: 5px;
-  margin-bottom: 10px;
-
-  border: 2px solid #B0E7FF;
-  border-radius: 50px;
-}
-.router-link{color: #254B77}
-.logo{
-  background: url(../../../assets/blip_logo.png);
-}
 .w-88h-55{
   //position: absolute;
   width: 88px;
@@ -598,32 +521,23 @@ input::placeholder{
   //top: 231px;
   margin-top: -60px;
 }
-.copyright{
-  position: absolute;
-  height: 22px;
-  //left: 45.35%;
-  //right: 45.35%;
-  left: 40%;
-  right: 40%;
-  top: calc(50% - 22px/2 + 150px);
-  margin-top:-12px;
-      //20px;
-  text-align: center;
 
-  font-family: 'Montserrat', Avenir;;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 22px;
-  /* identical to box height */
-  color: #5A7184;
+.contentContent{
+  padding: 0 18px;
 }
-
-
+.content{
+  margin-bottom: 18px;
+}
 
 .navbar-nav{
   justify-content: center;
   text-decoration: none;
   width: 100%;
+
+  background: #FFFFFF;
+
+  border: 2px solid #E5E5E5;
+  box-sizing: border-box;
+  border-radius: 50px;
 }
 </style>

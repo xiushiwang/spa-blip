@@ -1,58 +1,58 @@
 <template>
-  <div>
+  <div style="padding-left: 0px; padding-right: 0px; width: 100%;">
     <banner></banner>
-    <b-container>
-        <b-row class = "container portal" style="padding-top: 0px; margin-top: 0px">
+    <b-container style="">
+      <b-row>
+      <b-col  xs="12" sm="12" md="12" lg="5" xl="5" class = "">
+        <savings
+            @display-savings="displaySavings"
+            v-on:iDontKnow="getIDontKnow"
+            v-on:noData="getNoData"
+            v-on:pickedUtility="getUtility"
+            v-on:planPicked="getPlan"
+            v-on:overAllSavings="getOverAllSavings"
+            v-on:planClickd="getPlanClicked"
+            v-on:savePerYear="getSaving"
+            :switchTOU="switchTOU"
+            @refreshGraph = "refreshGraph"
+        ></savings>
+      </b-col>
 
-<!--          <b-row class="seeHow row w-100p">-->
-<!--            <b-col xs="12" sm="12" md="6" lg="6" xl="6">-->
-<!--              <h1 class="h1 c-000000 t-left f-Avenir see">See how blip can save you money</h1>-->
-<!--            </b-col>-->
-<!--          </b-row>-->
-<!--          v-if="noData === false"-->
-           <b-col  xs="12" sm="12" md="12" lg="5" xl="5" class = "saving_enter">
-             <b-row class = "row" >
-               <div class = "t-left m-l-0">
-<!--                 <h1 class="see h1 c-000000 t-left f-Avenir">See how blip can save you money</h1>-->
-                 <savings
-                     @display-savings="displaySavings"
-                     v-on:iDontKnow="getIDontKnow"
-                     v-on:noData="getNoData"
-                     v-on:pickedUtility="getUtility"
-                     v-on:planPicked="getPlan"
-                     v-on:overAllSavings="getOverAllSavings"
-                     v-on:planClickd="getPlanClicked"
-                     v-on:savePerYear="getSaving"
-                     :switchTOU="switchTOU"
-                     @refreshGraph = "refreshGraph"
-                 ></savings>
-               </div>
-             </b-row>
-           </b-col>
+      <b-col xs="12" sm="12" md="12" lg="7" xl="7" class = "">
+        <div  v-if='savings' class="mainPic">
+          <img class="blip-pig" src="../../assets/Savings Calculator Graphic/Main Graphic/blip-savings-calculator-graphic-F-taller.png" >
+        </div>
+        <div v-else>
+          <graph
+              :pickedUtility = "pickedUtility"
+              :iDontKnow = "iDontKnow"
+              :planPicked = "planPicked"
+              :planClickd = "planClickd"
+              :save-per-year="savePerYear"
+              :ac="ac"
+              :overAllSavings="overAllSavings"
+              v-on:switchTOU="getSwitch"
+              v-on:subscription="getSubscription"
+              ref = "graphContainer"
+          ></graph>
+        </div>
+      </b-col>
+      </b-row>
 
-<!--          <b-col v-if="noData === true" xs="12" sm="12" md="5" lg="5" xl="5" class = "saving_enter">-->
-<!--            hhhhhhh-->
-<!--          </b-col>-->
+    </b-container>
 
-          <b-col xs="12" sm="12" md="12" lg="7" xl="7" class = "graph_enter">
-            <img class="blip-pig" src="../../assets/Savings Calculator Graphic/Main Graphic/blip-savings-calculator-graphic-F-taller.png" v-if='savings'>
-<!--            <h3 v-if='!savings'>Savings will be displayed here</h3>-->
-            <div v-if='!savings'>
-              <graph
-                  :pickedUtility = "pickedUtility"
-                  :iDontKnow = "iDontKnow"
-                  :planPicked = "planPicked"
-                  :planClickd = "planClickd"
-                  :save-per-year="savePerYear"
-                  :ac="ac"
-                  :overAllSavings="overAllSavings"
-                  v-on:switchTOU="getSwitch"
-                  ref = "graphContainer"
-              ></graph>
-            </div>
-          </b-col>
-        </b-row>
-    </b-container>                   
+    <section v-show = "subscription" class="fog">
+      <b-button
+          class="clickToClose"
+          @click="closeWindow()"
+      ></b-button>
+      <b-row class = "window absolute-mid" style="">
+        <signUp
+            v-if="subscription"
+            v-on:subscriptionEnd="getSubscriptionEnd"
+        ></signUp>
+      </b-row>
+    </section>
 
   </div>
 </template>
@@ -61,7 +61,9 @@
 import banner from "../shared/components/banner.vue";
 import savings from "../savings.vue";
 import graph from "./graph.vue";
+import signUp from "@/app/shared/components/signUp";
 import utility from "./utility.vue"
+import noneInputFooter from "@/app/shared/components/noneInputFooter";
 
 export default {
   name: "calculator",
@@ -78,16 +80,21 @@ export default {
       numOfGraphLoaded: 0,
       ac: true,
       switchTOU: false,
+      subscription: false,
+      subscriptionEnd: false,
     };
   },
   computed: {
-    // AC: function(){
-    //   if(this.savePerYear < 39){
-    //     return true
-    //   }else{
-    //     return false
-    //   }
-    // },
+  },
+  watch: {
+    subscriptionEnd: {
+      handler(newVal, oldVal) {
+        if (newVal === true) {
+          this.subscription = false
+        }
+      },
+      // immediate: true
+    },
   },
 
   mounted() {
@@ -148,13 +155,25 @@ export default {
       //   console.log("ha")
       this.$refs.graphContainer.reDrawChart();
       // }
+    },
+    getSubscription(subs){
+      this.subscription = subs
+      this.subscriptionEnd = false
+    },
+    closeWindow(){
+      this.subscription = false
+    },
+    getSubscriptionEnd(end){
+      this.subscriptionEnd = end
     }
 //add end
   },
   components: {
     banner,
     savings,
-    graph
+    graph,
+    signUp,
+    noneInputFooter,
   }
 };
 </script>
