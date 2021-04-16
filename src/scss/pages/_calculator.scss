@@ -353,8 +353,8 @@ button.submit:hover {
       max-height: 76px;
       //left: 130px;
       //top: 504px;
-      padding-top: 9.25%;
-      padding-bottom: 9%;
+      //padding-top: 9%;
+      //padding-bottom: 9%;
       padding-left: 7%;
       text-align: center;
       vertical-align: center;
@@ -369,7 +369,7 @@ button.submit:hover {
     }
     .zip-input::placeholder{
       width: 97%;
-      //height: 30px;
+      //height: 60%;
       font-family: 'Montserrat', Avenir;
       font-style: normal;
       font-weight: 300;
@@ -380,8 +380,7 @@ button.submit:hover {
       //line-height: normal;
       color: #C4C4C4;
       //background: #3cb582;
-      //text-align: center;
-      //margin: 0px;
+      //margin: auto;
     }
 
     button.search-button{
@@ -523,52 +522,74 @@ button.submit:hover {
       .utility_select{
         padding-left: 0px;
         margin-left: 0px;
+        margin-bottom: 2px;
         .card{
           border: none;
-          margin: 0px;
+          margin: 0;
           width: 119.92px;
+          height: 119.92px;
           position: relative;
           left: 0px;
-          background: transparent;
+          //background: transparent;
+          img{
+            width: 67.03px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            top: 50%;
+            transform: translate(0, -50%);
+            //margin-top: 26.44px;
+          }
           .utilityProviderPic{
-            //position: relative;
+            position: absolute;
             width: 119.92px;
             height: 119.92px;
             //left: 0px;
-            //top: 460.33px;
-
-            background: #FFFFFF;
+            top: 0px;
+            //float: top;
+            background: transparent;
+            //background-size: 67.03px 67.03px;
+            //background-position: center;
+            //background-repeat: no-repeat;
             border: 2px solid #D3D3D3;
             box-sizing: border-box;
             border-radius: 24px;
-            box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25);
+            box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.25), inset 15px 0 #FFFFFF;
 
             padding: 0px;
             text-align: center;
-            img{
-              width: 67.03px;
-            }
+            //margin-top: -67.03px;
+            //img{
+            //  width: 67.03px;
+            //}
           }
-          .utilityProviderPic:focus{
-            //box-shadow: 6px 6px 12px rgba(176, 231, 255, 0.85);
-            //border: 2px solid #B0E7FF;
+          //.utilityProviderPic:focus{
+          //  //box-shadow: 6px 6px 12px rgba(176, 231, 255, 0.85);
+          //  //border: 2px solid #B0E7FF;
+          //  box-shadow: 6px 6px 12px rgba(79, 155, 193, 0.65);
+          //  border: 2px solid #4F9BC1;
+          //  //box-shadow: 6px 6px 12px rgba(37, 75, 119, 0.55);
+          //  //border: 2px solid rgba(37, 75, 119, 0.55);
+          //  //background: #E5E5E5;
+          //  //img{border: 2px solid #B0E7FF;}
+          //}
+          .utilityProviderPic:disabled{
+            //filter:none;
             box-shadow: 6px 6px 12px rgba(79, 155, 193, 0.65);
             border: 2px solid #4F9BC1;
-            //box-shadow: 6px 6px 12px rgba(37, 75, 119, 0.55);
-            //border: 2px solid rgba(37, 75, 119, 0.55);
-            //background: #E5E5E5;
-            //img{border: 2px solid #B0E7FF;}
-          }
-          .utilityProviderPic:disabled{
-            border: 2px solid #B0E7FF;
+            //opacity: 1;
           }
           .utilityProviderLetter{
+            position: absolute;
+            top: 0;
             width: 119.92px;
             height: 119.92px;
             //left: 130px;
             //top: 460.33px;
-
-            background: #FFFFFF;
+            padding: 0px;
+            //margin-bottom: 100px;
+            background: transparent;
+                    //#FFFFFF;
             border: 2px solid #D3D3D3;
             box-sizing: border-box;
             border-radius: 24px;
@@ -580,7 +601,7 @@ button.submit:hover {
             //line-height: 24px;
             color: #254B77;
 
-            padding: 0px;
+
             text-align: center;
             p{
               //background: #F2607B;
@@ -588,15 +609,20 @@ button.submit:hover {
               line-height: 19px;
             }
           }
-          .utilityProviderLetter:focus{
+          .utilityProviderLetter:disabled{
             //border: 2px solid #B0E7FF;
             box-shadow: 6px 6px 12px rgba(79, 155, 193, 0.65);
             border: 2px solid #4F9BC1;
           }
-          .chosen{
+          #chosen{
             //box-shadow: 6px 6px 12px rgba(37, 75, 119, 0.55);
             //border: 2px solid rgba(37, 75, 119, 0.55);
-            border: 2px solid #F2607B;
+            box-shadow: 6px 6px 12px rgba(79, 155, 193, 0.75), inset 15px 0 #FFFFFF;
+            border: 2px solid #4F9BC1;
+
+            //pointer-events: none;
+            cursor: default;
+            opacity: 1;
           }
         }
       }
@@ -608,14 +634,19 @@ button.submit:hover {
         margin-bottom: -5px;
       }
       .iDont{
+        height: 32px;
+        margin-bottom: 5px;
         background: transparent;
         border: none;
         padding-left: 0px;
         font-style: normal;
       }
+      .inIDont:hover{text-decoration: underline}
       .plan_select{
         //height: 80px;
+        //margin-top: 5px;
         padding-left: 0px;
+        //background: #F2607B;
         .dropdown{
           overflow: hidden;
           text-overflow : ellipsis ;
@@ -646,7 +677,7 @@ button.submit:hover {
           -moz-appearance:none;
           -webkit-appearance:none;
           ///*在选择框的最右侧中间显示下拉箭头图片*/
-          //background: url(../../../src/assets/battery.png)  right center no-repeat;
+          //background: url("../../../src/assets/battery.png")  right center no-repeat;
           ///*为下拉小箭头留出一点位置，避免被文字覆盖*/
         }
         //.dropdown::content{
@@ -669,7 +700,7 @@ button.submit:hover {
         .seeSavings{
           width: 242px;
           height: 59px;
-          margin-top: 37px;
+          margin-top: 40px;
           margin-bottom: 37px;
 
           font-style: normal;

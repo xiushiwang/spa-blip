@@ -90,27 +90,27 @@
             <h4 class = "h-40px c-254B77">Choose your energy provider:</h4>
             <b-row class="utility_select w-100p m-l-0 p-l-0" v-if="posts && posts.length">
               <!--            Start: add-->
-              <b-col xs="12" sm="12" md="4" lg="4" xl="4" class="t-left p-l-0" v-for="post of posts">
-                <div class="card" >
-                  <!--                <button v-if="post.userId == 1"><strong>{{post.title}}</strong></button>-->
+              <b-col xs="4" sm="4" md="4" lg="4" xl="4" class="t-left p-l-0" v-for="post of posts">
+                <div class="card" id="tooltip-target-1">
+                  <img v-if="post.logo !== ''" :src= "'http://'+post.logo" class = "utilityLogo">
                   <b-button
                       class="utilityProviderPic"
-                      id="tooltip-target-1"
+                      :id="onlyOneProvider"
                       variant="outline-primary"
                       v-if="post.logo !== ''"
-                      v-on:click="list(post); sendUtility(post); countOverallPlan(post); provider = true;"
+                      v-on:click="disableButton($event); list(post); sendUtility(post); countOverallPlan(post); provider = true;"
                       v-b-tooltip.hover.bottom="{variant: 'light',customClass: 'myTooltipClass', title: post.utilityName}"
                   >
-                    <img :src= "'http://'+post.logo" class = "utilityLogo">
+<!--                    <img :src= "'http://'+post.logo" class = "utilityLogo">-->
                   </b-button>
 
                   <b-button
                       class="utilityProviderLetter"
                       variant="outline-primary"
                       v-if="post.logo === ''"
-                      v-on:click="list(post); sendUtility(post); countOverallPlan(post); provider = true;"
+                      v-on:click="disableButton($event); list(post); sendUtility(post); countOverallPlan(post); provider = true;"
                   >
-                    <p class="p4 t-center">{{post.utilityName}}</p>
+                    {{post.utilityName}}
                   </b-button>
                 </div>
               </b-col>
@@ -125,7 +125,9 @@
           <b-button
               v-on:click="doTOU()"
               class="iDont"
-          ><p class="p4 c-4F9BC1 t-left">(I don’t know my rate plan)</p></b-button> <!--!!!!!!!!!!!!!!!!!!!Empty!!!!!!!!!!!!!!!!!!-->
+          >
+            <p class="inIDont p4 c-4F9BC1 t-left">(I don’t know my rate plan)</p>
+          </b-button> <!--!!!!!!!!!!!!!!!!!!!Empty!!!!!!!!!!!!!!!!!!-->
           <b-row class="plan_select t-left w-100p m-l-0 p-l-0">
             <!--            <b-col xs="12" sm="12" md="12" lg="12" xl="12">-->
 
@@ -209,6 +211,7 @@ export default {
       showNoData: false,
       notNYorCA: false,
       posts: [],
+      onlyOneProvider: "",
       errors: [],
       utilityPicked: [],
       planNum: 0,
@@ -333,12 +336,20 @@ export default {
           .then(response => {
             // JSON responses are automatically parsed.
             this.posts = response.data.data
-            // console.log('hhhhhhhhhhhh', response.data.data)
             if (response.data.data){
               this.sendNoData(false)
               this.seen = false;//////////////////////////////////
               this.showErrorMsgExpNYCA = false;
+              // for (var i = 0; i < response.data.data.length; i++){
+              //   // alert(response.data.data.logo)
+              //   if (response.data.data.logo !== undefined){
+              //     response.data.data[i].logo = "http://" + response.data.data[i].logo
+              //   }
+              // }
+              this.onlyOneProvider = "";
+              // console.log('hhhhhhhhhhhh', response.data.data)
               if (response.data.data.length === 1){
+                this.onlyOneProvider = "chosen";
                 this.list(response.data.data[0]);
                 this.sendUtility(response.data.data[0]);
                 this.countOverallPlan(response.data.data[0]);
@@ -363,7 +374,7 @@ export default {
 
     list(utility) {
       // const utilityPlans = '{{post.utilities.' + utility + '.plans.plan_name}}'
-      document.getElementsByClassName('hahah').className += " " + "chosen";
+      // document.getElementsByClassName('hahah').className += " " + "chosen";
       // $(utility).addClass("chosen")
       this.utilityPicked = utility
       this.planNum = this.utilityPicked.planList.length
@@ -427,6 +438,24 @@ export default {
       this.$emit('iDontKnow', false)
       this.countPlan(this.utilityPicked.planList[event.target.value]);
       this.sendPlan(this.utilityPicked.planList[event.target.value]);
+    },
+
+    disableButton(event){
+      // if (this.$refs.chosenButton){
+      //   alert('hhhhhh')
+      //   this.$refs.chosenButton.disabled = false
+      //   this.$refs.chosenButton.ref = undefined
+      // }
+      if (document.getElementById("chosen") !== null){
+        // console.log(document.getElementById("chosen").disabled)
+        // document.getElementById("chosen").disabled = false
+        // console.log(document.getElementById("chosen").disabled)
+        document.getElementById("chosen").id -= "chosen"
+      }
+      // event.target.disabled = true
+      // event.target.ref="chosenProvider"
+      event.target.id = "chosen"
+      // console.log(!document.getElementsByClassName("chosen"))
     },
 
     countPlan(plan){
