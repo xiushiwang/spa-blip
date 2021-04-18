@@ -144,6 +144,10 @@ export default {
           }else{
             this.submitButton = false
           }
+          if (oldVal !== "" && newVal === "") {
+            this.submitButton = false
+            this.alertMsg = "Please don't forget your first name"
+          }
         }
 
       },
@@ -162,6 +166,10 @@ export default {
             this.alertMsg = ""
           }else{
             this.submitButton = false
+          }
+          if (oldVal !== "" && newVal === "") {
+            this.submitButton = false
+            this.alertMsg = "Please don't forget your last name"
           }
         }
 
@@ -184,6 +192,10 @@ export default {
           }else{
             this.submitButton = false
           }
+          if (this.validEmail(oldVal) && !this.validEmail(newVal)) {
+            this.submitButton = false
+            this.alertMsg = "Please enter a valid email address"
+          }
         }
       },
     },
@@ -203,6 +215,10 @@ export default {
             this.alertMsg = ""
           }else{
             this.submitButton = false
+          }
+          if (oldVal !== "" && newVal === "") {
+            this.submitButton = false
+            this.alertMsg = "Please don't forget your zipcode"
           }
         }
       },

@@ -140,6 +140,7 @@ export default {
           this.submitButton = false
         }
         if (oldVal !== "" && newVal === ""){
+          this.submitButton = false
           this.errorMsg = "Please don't forget your first name"
         }
       },
@@ -157,6 +158,7 @@ export default {
           this.submitButton = false
         }
         if (oldVal !== "" && newVal === ""){
+          this.submitButton = false
           this.errorMsg = "Please don't forget your last name"
         }
       },
@@ -175,8 +177,9 @@ export default {
         }else{
           this.submitButton = false
         }
-        if (oldVal !== "" && newVal === ""){
-          this.errorMsg = "Please don't forget your email address"
+        if ((this.validEmail(oldVal) && !this.validEmail(newVal))){
+          this.submitButton = false
+          this.errorMsg = "Please enter a valid email address"
         }
       },
     },
