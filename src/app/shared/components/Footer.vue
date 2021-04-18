@@ -148,6 +148,10 @@ export default {
             this.submitButton = false
             this.alertMsg = "Please don't forget your first name"
           }
+          if (newVal.length > 30){
+            this.submitButton = false
+            this.alertMsg = "Please don't use more than 30 characters in first name"
+          }
         }
 
       },
@@ -170,6 +174,10 @@ export default {
           if (oldVal !== "" && newVal === "") {
             this.submitButton = false
             this.alertMsg = "Please don't forget your last name"
+          }
+          if (newVal.length > 30){
+            this.submitButton = false
+            this.alertMsg = "Please don't use more than 30 characters in first name"
           }
         }
 

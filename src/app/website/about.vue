@@ -29,9 +29,7 @@
                     Other energy storage systems require professional installation,
                     are designed only for homeowners,
                     and cost five times more than blip.
-                    <!--                  </p>-->
                     <br>
-                    <!--                  <p class="p2 one83B56 t-center">-->
                     With blip, those concerned about energy savings can finally access them,
                     no matter where you live.
                   </p>

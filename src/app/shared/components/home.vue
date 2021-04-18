@@ -91,15 +91,9 @@
             <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="oneHalf">
               <p class="p2 c-B0E7FF t-left" data-wow-duration="3s">
                 Imagine a world where dirty plants are shut down because consumers control their power consumption without sacrificing their quality of life.
-                <!--                  </p>-->
-                <br>
-                <br>
-                <!--                  <p class="text-black-mt-24-mb-16-wow-fadeInUp" data-wow-duration="3s">-->
+                <br><br>
                 By offering a way to store power, and using it during peak demand times, blip reduces our reliance on dirty energy from peaker plants.
-                <!--                  </p>-->
-                <br>
-                <br>
-                <!--                  <p class="text-black-mt-24-mb-16-wow-fadeInUp" data-wow-duration="3s">-->
+                <br><br>
                 We can work together to decommission dirty plants by shifting demand away from those peak hours, one home at a time. If we each help a little, we can all do a lot.
               </p>
             </b-col>

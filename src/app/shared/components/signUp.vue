@@ -101,7 +101,7 @@ export default {
       firstName: "",
       lastName: "",
       email: "",
-      zipCode: "99999",
+      zipCode: "0",
       submitButtonMsg: "Submit",
       submitButton: false,
       alertMsg: "",
@@ -121,6 +121,10 @@ export default {
           }else{
             this.submitButton = false
           }
+          if (newVal.length > 30){
+            this.submitButton = false
+            this.alertMsg = "Please don't use more than 30 characters in first name"
+          }
         }
 
       },
@@ -139,6 +143,10 @@ export default {
             this.alertMsg = ""
           }else{
             this.submitButton = false
+          }
+          if (newVal.length > 30){
+            this.submitButton = false
+            this.alertMsg = "Please don't use more than 30 characters in last name"
           }
         }
 
