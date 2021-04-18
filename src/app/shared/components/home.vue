@@ -73,7 +73,7 @@
           </b-row>
 
           <b-row class="w-100p t-center">
-            <button type="button" class="btn btn-outline-254B77 m-lr-a" onclick="window.location.href='../about'">
+            <button type="button" class="btn btn-outline-254B77 m-lr-a" onclick="window.location.href='../product'">
               Learn More
             </button>
           </b-row>
