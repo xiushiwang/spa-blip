@@ -51,8 +51,8 @@
                 </div>
               </div>
               <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="textOnRight flyFromRight">
-                  <div class="contentCenter">
+                <div class="textOnRight">
+                  <div class="contentCenter flyFromRight">
                     <h2 class="h2 c-B0E7FF t-left">We care deeply about our environment</h2>
                     <p class="p2 c-FFFFFF t-left">
                       blip is designed to keep dirty power plants offline by shifting your energy usage.
