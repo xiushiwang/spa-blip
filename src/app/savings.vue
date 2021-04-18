@@ -3,7 +3,7 @@
     <b-container class="zipcode_container t-left m-l-0 p-0" v-if="seen" >
 
       <b-row class = "w-100p m-l-0 p-l-0 m-b-50" >
-        <h1 class="h1 c-254B77 t-left see">See how blip can save you money</h1>
+        <h1 class="h1point5 c-254B77 t-left see">See how blip can save you money</h1>
         <p class="p2 c-254B77 t-left m-l-0 how" style="margin-left: 0">
           When paired with an energy dense appliance like a window AC, blip can save you money on your electricity bill.
           Fill in your zipcode to get started
@@ -106,6 +106,7 @@
 
                   <b-button
                       class="utilityProviderLetter"
+                      :id="onlyOneProvider"
                       variant="outline-primary"
                       v-if="post.logo === ''"
                       v-on:click="disableButton($event); list(post); sendUtility(post); countOverallPlan(post); provider = true;"

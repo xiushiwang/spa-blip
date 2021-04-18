@@ -16,7 +16,7 @@
             <p class="p2 c-FFFFFF t-left p-l-0 aSustainable">
               A sustainable energy storage solution focused on saving you money on your electricity bill
             </p>
-            <button type="button" class="btn btn-outline-FFFFFF" onclick="window.location.href='../about'">
+            <button type="button" class="btn btn-outline-FFFFFF" onclick="window.location.href='../product'">
               Learn more &nbsp;&nbsp;<font-awesome-icon icon="arrow-right" style="font-size: 18px"/>
             </button>
 <!--            </b-col>-->
@@ -73,7 +73,7 @@
           </b-row>
 
           <b-row class="w-100p t-center">
-            <button type="button" class="btn btn-outline-254B77 m-lr-a" onclick="window.location.href='../product'">
+            <button type="button" class="btn btn-outline-254B77 m-lr-a" onclick="window.location.href='../about'">
               Learn More
             </button>
           </b-row>

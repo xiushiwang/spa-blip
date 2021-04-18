@@ -49,7 +49,7 @@
                                   class="form-control-email"
                                   aria-describedby="emailHelp"
                                   v-model="email"
-                                  placeholder="hello@blip.com"
+                                  placeholder=""
                                   @keyup.enter="submit()"
                     ></b-form-input>
                   </div>
@@ -200,7 +200,7 @@ export default {
             //   // document.getElementById("zipcode").className += " " + "c-FF0000";
             // }
           }else{
-            // document.getElementById("email").className += " " + "c-FF0000";
+            // document.getElementById("email").className += " " + "redBoarder";
             this.alertMsg = "Please enter a valid email address"
           }
         }else{
@@ -539,5 +539,8 @@ input::placeholder{
   border: 2px solid #E5E5E5;
   box-sizing: border-box;
   border-radius: 50px;
+}
+.redBoarder{
+
 }
 </style>

@@ -141,6 +141,10 @@ export default {
     },
     lastName:{
       handler (newVal, oldVal){
+        if (this.firstName === "") {
+          // this.submitButton = false
+          this.errorMsg = "Oops, you forgot your first name"
+        }
         if (this.firstName !== "" && this.validEmail(this.email) && this.messages !== "") {
           this.errorMsg = ""
           this.submitButton = true
@@ -149,6 +153,9 @@ export default {
     },
     email:{
       handler (newVal, oldVal) {
+        if (this.lastName === "") {
+          this.errorMsg = "Oops, you forgot your last name"
+        }
         if (this.firstName !== "" && this.lastName !== "" && this.validEmail(newVal) && this.messages !== "") {
           this.errorMsg = ""
           this.submitButton = true
@@ -236,7 +243,7 @@ export default {
       // }
     },
     validEmail(email) {
-      var re = /^([a-z0-9A-Z]+[-|\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\.)+[a-zA-Z]{2,}$/
+      var re = /^([a-z0-9A-Z]+[-|\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\.)+[a-zA-Z]{2,}$/;
           // /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
     },

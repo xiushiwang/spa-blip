@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap');
 
-.main{
-  width: 100%;
-  font-family: 'Montserrat', Avenir;
-}
 //@font-face {
 //  font-family: "MarkPro-TestFont";
 //  src:local("./assets/fonts/MarkPro-TestFont.otf/MarkPro-TestFont.otf");
@@ -232,40 +228,75 @@ input{
 }
 
 //.full{width: 100%}
+
+.main{
+  width: 100%;
+  margin: 0;
+
+  font-family: 'Montserrat', Avenir;
+}
+
 .common{
-  width: 84%;
-  margin-left: 8%;
-  margin-right: 8%;
+  width: 86%;
+  margin-left: 7%;
+  margin-right: 7%;
 }
 
 .howDoes{
   //height: 800px;
+  width: 100%;
   padding: 130px 0;
   h1{
     //background: #3cb582;
-    width: 70%;
-    margin-left: 20%;
-    margin-right: 10%;
+    width: 85%;
+    margin-left: 13%;
+    margin-right: 2%;
   }
-  p{width: 80%}
+  p{
+    width: 80%;
+    margin-left: 5%;
+  }
 }
 
 .Homeowners{
+  width: 100%;
   height: auto;
-  img{
-    height: 100%;
+  padding: 0;
+  margin: 0;
+  .picOnLeft{
+    background: url("../../assets/Stock Images/night-glow-8BM107iOuys-unsplash.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    width: 100%;
+    //img{
+    //  position: relative;
+    //  height: 100%;
+    //  //width: auto;
+    //}
   }
-  .homeownnerInnner{
-    width: 85%;
-    margin-left: 1%;
-    margin-top: 96px;
-    margin-bottom: 96px;
-    h2{width: 80%}
+
+  .textOnRight{
+    //background: #F2607B;
+    margin: 0;
+    width: 100%;
+    .homeownnerInnner{
+      //background: #F2607B;
+      width: 85%;
+      margin: 96px 14% 96px 1%;
+      h2{width: 80%}
+    }
   }
+
 }
 
 .trio{
+  width: 100%;
   padding: 100px 0;
+  margin: 0;
   .colOneThird{
     padding-left: 2.5%;
     padding-right: 2.5%;
