@@ -29,9 +29,7 @@
                     Other energy storage systems require professional installation,
                     are designed only for homeowners,
                     and cost five times more than blip.
-                    <!--                  </p>-->
                     <br>
-                    <!--                  <p class="p2 one83B56 t-center">-->
                     With blip, those concerned about energy savings can finally access them,
                     no matter where you live.
                   </p>
@@ -53,8 +51,8 @@
                 </div>
               </div>
               <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="textOnRight flyFromRight">
-                  <div class="contentCenter">
+                <div class="textOnRight">
+                  <div class="contentCenter flyFromRight">
                     <h2 class="h2 c-B0E7FF t-left">We care deeply about our environment</h2>
                     <p class="p2 c-FFFFFF t-left">
                       blip is designed to keep dirty power plants offline by shifting your energy usage.
@@ -75,6 +73,7 @@
             <div class="row" style="width: 100%; padding-left: 4.5%; padding-right: 4.5%;">
                 <div class="content text-center">
                   <p class="p1 one83B56 t-center">You save money. You help the planet.</p>
+                  <br>
                   <p class="p1 one83B56 t-center">And we are excited to provide the tools to make it happen.</p>
                   <br>
                   <p class="p1 one83B56 t-center">If we each help a little, we can all do a lot.</p>
@@ -125,7 +124,7 @@
                   <div class="col-md-10 col-lg-10 col-xl-10">
                     <h3 class="h3 c-254B77 t-left wow fadeInUp">Rice Business Plan Competition</h3>
                     <p class="p3 c-4F9BC1 t-left m-l-0 w-511px wow fadeInUp">
-                      Finalist
+                      Semi-Finalist
                     </p>
                   </div>
                 </div>
@@ -149,7 +148,7 @@
                   <div class="col-md-10 col-lg-10 col-xl-10">
                     <h3 class="h3 c-254B77 t-left wow fadeInUp">Baylor New Venture Competition</h3>
                     <p class="p3 c-4F9BC1 t-left m-l-0 w-511px wow fadeInUp">
-                      Finalist
+                      Semi-Finalist
                     </p>
                   </div>
                 </div>

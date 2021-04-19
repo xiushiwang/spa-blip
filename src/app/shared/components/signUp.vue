@@ -49,7 +49,7 @@
                                   class="form-control-email"
                                   aria-describedby="emailHelp"
                                   v-model="email"
-                                  placeholder="hello@blip.com"
+                                  placeholder=""
                                   @keyup.enter="submit()"
                     ></b-form-input>
                   </div>
@@ -101,7 +101,7 @@ export default {
       firstName: "",
       lastName: "",
       email: "",
-      zipCode: "99999",
+      zipCode: "0",
       submitButtonMsg: "Submit",
       submitButton: false,
       alertMsg: "",
@@ -121,6 +121,10 @@ export default {
           }else{
             this.submitButton = false
           }
+          if (newVal.length > 30){
+            this.submitButton = false
+            this.alertMsg = "Please don't use more than 30 characters in first name"
+          }
         }
 
       },
@@ -139,6 +143,10 @@ export default {
             this.alertMsg = ""
           }else{
             this.submitButton = false
+          }
+          if (newVal.length > 30){
+            this.submitButton = false
+            this.alertMsg = "Please don't use more than 30 characters in last name"
           }
         }
 
@@ -200,7 +208,7 @@ export default {
             //   // document.getElementById("zipcode").className += " " + "c-FF0000";
             // }
           }else{
-            // document.getElementById("email").className += " " + "c-FF0000";
+            // document.getElementById("email").className += " " + "redBoarder";
             this.alertMsg = "Please enter a valid email address"
           }
         }else{
@@ -539,5 +547,8 @@ input::placeholder{
   border: 2px solid #E5E5E5;
   box-sizing: border-box;
   border-radius: 50px;
+}
+.redBoarder{
+
 }
 </style>

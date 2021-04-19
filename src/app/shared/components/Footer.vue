@@ -144,6 +144,14 @@ export default {
           }else{
             this.submitButton = false
           }
+          if (oldVal !== "" && newVal === "") {
+            this.submitButton = false
+            this.alertMsg = "Please don't forget your first name"
+          }
+          if (newVal.length > 30){
+            this.submitButton = false
+            this.alertMsg = "Please don't use more than 30 characters in first name"
+          }
         }
 
       },
@@ -162,6 +170,14 @@ export default {
             this.alertMsg = ""
           }else{
             this.submitButton = false
+          }
+          if (oldVal !== "" && newVal === "") {
+            this.submitButton = false
+            this.alertMsg = "Please don't forget your last name"
+          }
+          if (newVal.length > 30){
+            this.submitButton = false
+            this.alertMsg = "Please don't use more than 30 characters in first name"
           }
         }
 
@@ -184,6 +200,10 @@ export default {
           }else{
             this.submitButton = false
           }
+          if (this.validEmail(oldVal) && !this.validEmail(newVal)) {
+            this.submitButton = false
+            this.alertMsg = "Please enter a valid email address"
+          }
         }
       },
     },
@@ -203,6 +223,10 @@ export default {
             this.alertMsg = ""
           }else{
             this.submitButton = false
+          }
+          if (oldVal !== "" && newVal === "") {
+            this.submitButton = false
+            this.alertMsg = "Please don't forget your zipcode"
           }
         }
       },

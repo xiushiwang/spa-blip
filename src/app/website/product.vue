@@ -76,7 +76,7 @@
           <div class="content">
             <div class="row m-t-0 p-t-0">
 
-              <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="col-lg-4 col-md-12 col-sm-12">
                 <div class="card-f flex text-center wow fadeInUp">
                   <div class="card-f-heading t-center">
                     <div class="mb-36 w-100p h-100p t-center" >
@@ -92,7 +92,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="col-lg-4 col-md-12 col-sm-12">
                 <div class="card-f flex text-center wow fadeInUp">
                   <div class="card-f-heading t-center">
                     <div class="mb-36 w-100p h-100p t-center">
@@ -108,7 +108,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="col-lg-4 col-md-12 col-sm-12">
                 <div class="card-f flex text-center wow fadeInUp">
                   <div class="card-f-heading t-center">
                     <div class="mb-36 w-100p h-100p t-center">
@@ -139,7 +139,7 @@
       <!--start:FAQs-->
       <section class="FAQs oneD3755">
         <div class="container">
-          <div class="w-1109px">
+          <div class="w-100p">
             <div class="pr-16">
               <h2 class="h2 c-FFFFFF t-center">FAQs</h2>
 
@@ -171,8 +171,7 @@
               <div class="topline">
                 <h3 class="h3 c-B0E7FF t-left wow fadeInUp">I have an idea for blip. Who can I talk to?</h3>
                 <p class="p2 c-FFFFFF t-left w-511px wow fadeInUp">
-                  We would love it if you filled out our survey! You can help shape the future of blip.
-                  If you have have more ideas, please reach out by filling out the contact form.
+                  Please reach out to us by filling out the contact form.
                 </p>
               </div>
 

@@ -62,7 +62,7 @@ h1{
   font-family: 'Montserrat', Avenir;
   font-style: normal;
   font-weight: 200;
-  font-size: 52px;
+  font-size: 54px;
   line-height: 119%;
 }
 
@@ -249,18 +249,21 @@ button.submit:hover {
 }
 
 .mainPic{
-  //position: absolute;
-  //top: 4em;
+  width: 96%;
   max-height: 632px;
+  //position: relative;
+  position: absolute;
+  top: 16%;
+  left: 4%;
   //background: #F2607B;
+  //background: url("../../assets/Savings Calculator Graphic/Main Graphic/blip-savings-calculator-graphic-F-taller.png");
   .blip-pig{
     //max-width: 100%;\
     width: 100%;
-    position: absolute;
+    position: relative;
     left: 0%;
-    //top: 207px;
-    top: 50%;
-    transform: translate(0, -50%);
+    top: 0%;
+    //transform: translate(0, -50%);
   }
 }
 
@@ -403,7 +406,7 @@ button.submit:hover {
 
     .headsUp{
       width: 540px;
-      margin-top: -5%;
+      margin-top: -7%;
       //2%;
       margin-bottom: 40px;
       padding: 10px 23px;

@@ -4,11 +4,11 @@
     <b-container class="t-center m-t-0">
 
       <b-row class="others w-100p t-center">
-        <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="left t-left m-l-0 p-l-0">
+        <b-col xs="12" sm="12" md="12" lg="6" xl="6" class="left t-left m-l-0 p-l-0">
           <img src="../../assets/contact-illo-v02.png" style="width: 110%; margin-top: 18%; margin-left: -9%;">
         </b-col>
 
-        <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="t-left m-l-0 p-l-0">
+        <b-col xs="12" sm="12" md="12" lg="6" xl="6" class="t-left m-l-0 p-l-0">
           <b-row class="we t-center m-t-0">
             <!--        <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="right t-left m-l-0 p-l-0">-->
             <h2 class="h2 w-100p c-254B77 wed">We’d love to hear from you</h2>
@@ -133,28 +133,61 @@ export default {
   watch:{
     firstName:{
       handler (newVal, oldVal){
-        if (this.lastName !== "" && this.validEmail(this.email) && this.messages !== "") {
+        if (newVal !== "" && this.lastName !== "" && this.validEmail(this.email) && this.messages !== "") {
           this.errorMsg = ""
           this.submitButton = true
+        }else{
+          this.submitButton = false
+        }
+        if (oldVal !== "" && newVal === ""){
+          this.submitButton = false
+          this.errorMsg = "Please don't forget your first name"
+        }
+        if (newVal.length > 30){
+          this.submitButton = false
+          this.errorMsg = "Please don't use more than 30 characters in first name"
         }
       },
     },
     lastName:{
       handler (newVal, oldVal){
-        if (this.firstName !== "" && this.validEmail(this.email) && this.messages !== "") {
+        if (this.firstName === "") {
+          // this.submitButton = false
+          this.errorMsg = "Oops, you forgot your first name"
+        }
+        if (this.firstName !== "" && newVal !== "" && this.validEmail(this.email) && this.messages !== "") {
           this.errorMsg = ""
           this.submitButton = true
+        }else{
+          this.submitButton = false
+        }
+        if (oldVal !== "" && newVal === ""){
+          this.submitButton = false
+          this.errorMsg = "Please don't forget your last name"
+        }
+        if (newVal.length > 30){
+          this.submitButton = false
+          this.errorMsg = "Please don't use more than 30 characters in last name"
         }
       },
     },
     email:{
       handler (newVal, oldVal) {
+        if (this.lastName === "") {
+          this.errorMsg = "Oops, you forgot your last name"
+        }
         if (this.firstName !== "" && this.lastName !== "" && this.validEmail(newVal) && this.messages !== "") {
           this.errorMsg = ""
           this.submitButton = true
         }else if(this.validEmail(newVal)){
           this.errorMsg = ""
           // this.adjustAlertMsg()
+        }else{
+          this.submitButton = false
+        }
+        if ((this.validEmail(oldVal) && !this.validEmail(newVal))){
+          this.submitButton = false
+          this.errorMsg = "Please enter a valid email address"
         }
       },
     },
@@ -214,9 +247,9 @@ export default {
       }
     },
     submitMessage(){
-      // if (this.firstName !== ''){
-      //   if (this.lastName !== ''){
-      //     if (this.email !== "" && this.validEmail(this.email)){
+      if (this.firstName !== ""){
+        if (this.lastName !== ""){
+          if (this.validEmail(this.email)){
             if (this.messages !== ""){
               // this.submitButton = true
               // document.getElementsByTagName('a').className = "sendEmail";
@@ -225,18 +258,18 @@ export default {
             }else{
               this.errorMsg = "Please leave your message"
             }
-      //     }else{
-      //       alert("Please enter a valid email address")
-      //     }
-      //   }else{
-      //     alert("Oops, you forgot your last name")
-      //   }
-      // }else{
-      //   alert("Oops, you forgot your first name")
-      // }
+          }else{
+            this.errorMsg = "Please enter a valid email address"
+          }
+        }else{
+          this.errorMsg = "Oops, you forgot your last name"
+        }
+      }else{
+        this.errorMsg = "Oops, you forgot your first name"
+      }
     },
     validEmail(email) {
-      var re = /^([a-z0-9A-Z]+[-|\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\.)+[a-zA-Z]{2,}$/
+      var re = /^([a-z0-9A-Z]+[-|\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\.)+[a-zA-Z]{2,}$/;
           // /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
     },
