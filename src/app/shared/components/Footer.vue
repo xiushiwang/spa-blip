@@ -307,11 +307,11 @@ export default {
           // /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
     },
+    // checkZipcode(){
+    //   var re = /^[1-9][0-9]{3,5}$/
+    //   return re.test(this.zipCode);
+    // },
     checkZipcode(){
-      var re = /^[1-9][0-9]{3,5}$/
-      return re.test(this.zipCode);
-    },
-    lcheckZipcode(){
       if (this.zipCode.length !== 5){
         // console.log("length" + this.zipCode.length)
         // alert("Please enter a valid zipcode")
