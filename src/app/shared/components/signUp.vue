@@ -115,15 +115,24 @@ export default {
         if (this.submitButtonMsg === "Success!"){
           this.submitButton = false
         }else{
-          if (this.lastName !== "" && this.validEmail(this.email) && this.checkZipcode()) {
+          if (newVal.length > 30){
+            this.submitButton = false
+            this.alertMsg = "Please don't use more than 30 characters in first name"
+          }else if (oldVal.length > 30 && newVal.length <= 30){
+            this.alertMsg = ""
+          }
+          if (newVal === "") {
+            this.submitButton = false
+            this.alertMsg = "Please don't forget your first name"
+          }
+          if (newVal !== "" && this.alertMsg === ("Oops, you forgot your first name" || "Please don't forget your first name")){
+            this.alertMsg = ""
+          }
+          if (this.validFirst(newVal) && this.validLast(this.lastName) && this.validEmail(this.email)) {
             this.submitButton = true
             this.alertMsg = ""
           }else{
             this.submitButton = false
-          }
-          if (newVal.length > 30){
-            this.submitButton = false
-            this.alertMsg = "Please don't use more than 30 characters in first name"
           }
         }
 
@@ -137,19 +146,29 @@ export default {
           if (this.firstName === "") {
             // this.submitButton = false
             this.alertMsg = "Oops, you forgot your first name"
+          }else if (this.firstName !== "" && this.alertMsg === ("Oops, you forgot your first name" || "Please don't forget your first name")){
+            this.alertMsg = ""
           }
-          if (this.firstName !== "" && this.validEmail(this.email)) {
+          if (newVal.length > 30){
+            this.submitButton = false
+            this.alertMsg = "Please don't use more than 30 characters in last name"
+          }else if (oldVal.length > 30 && newVal.length <= 30){
+            this.alertMsg = ""
+          }
+          if (newVal === "") {
+            this.submitButton = false
+            this.alertMsg = "Please don't forget your last name"
+          }
+          if (newVal !== "" && this.alertMsg === ("Oops, you forgot your last name" || "Please don't forget your last name")){
+            this.alertMsg = ""
+          }
+          if ( this.validFirst(this.firstName) && this.validLast(newVal) && this.validEmail(this.email)) {
             this.submitButton = true
             this.alertMsg = ""
           }else{
             this.submitButton = false
           }
-          if (newVal.length > 30){
-            this.submitButton = false
-            this.alertMsg = "Please don't use more than 30 characters in last name"
-          }
         }
-
       },
     },
     email:{
@@ -159,11 +178,17 @@ export default {
         }else{
           if (this.lastName === "") {
             this.alertMsg = "Oops, you forgot your last name"
+          }else if(this.lastName !== "" && this.alertMsg === ("Oops, you forgot your last name" || "Please don't forget your last name")){
+            this.alertMsg = ""
           }
-          // if (this.validEmail(this.email)){
-          //   this.alertMsg = ""
-          // }
-          if (this.firstName !== "" && this.lastName !== "") {
+          if (this.validEmail(oldVal) && !this.validEmail(newVal)) {
+            this.submitButton = false
+            this.alertMsg = "Please enter a valid email address"
+          }
+          if (this.validEmail(newVal) && this.alertMsg === "Please enter a valid email address") {
+            this.alertMsg = ""
+          }
+          if (this.validFirst(this.firstName) && this.validLast(this.lastName) && this.validEmail(newVal)) {
             this.submitButton = true
             this.alertMsg = ""
           }else{
@@ -182,9 +207,9 @@ export default {
 
   methods: {
     submit(){
-      if (this.firstName !== "") {
+      if (this.validFirst(this.firstName)) {
         // console.log("!")
-        if (this.lastName !== "")  {
+        if (this.validLast(this.lastName)) {
           // console.log("!!")
           if (this.validEmail(this.email)) {
             // console.log("!!!")
@@ -219,6 +244,18 @@ export default {
         // document.getElementById("first").className += " " + "c-FF0000";
         this.alertMsg = "Oops, you forgot your first name"
       }
+    },
+    validFirst(name){
+      if (name.length > 0 && name.length <= 30){
+        return true
+      }
+      return false
+    },
+    validLast(name){
+      if (name.length > 0 && name.length <= 30){
+        return true
+      }
+      return false
     },
     validEmail(email) {
       var re = /^([a-z0-9A-Z]+[-|\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\.)+[a-zA-Z]{2,}$/;
