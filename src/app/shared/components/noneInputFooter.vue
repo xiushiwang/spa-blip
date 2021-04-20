@@ -9,10 +9,14 @@
 <!--              <h2 class="h2 zero000000 t-center">Contact</h2>-->
 <!--              <p class="p2 zero000000 t-center">hello@blipenergy.com</p>-->
               <div class="w-100p m-l-0 p-l-0">
-                <a href="https://twitter.com/BlipEnergy" target="_blank"><font-awesome-icon :icon="['fab', 'twitter']" class="font-awesome-icon one83B56"/></a>
-                <a href="https://www.facebook.com/blipenergy/" target="_blank"><font-awesome-icon :icon="['fab', 'facebook-f']" class="font-awesome-icon one83B56"/></a>
-                <a href="https://www.linkedin.com/company/blip-energy" target="_blank"><font-awesome-icon :icon="['fab', 'linkedin-in']" class="font-awesome-icon one83B56"/></a>
-<!--                <p class="circle">-->
+<!--                <a href="https://twitter.com/BlipEnergy" target="_blank"><font-awesome-icon :icon="['fab', 'twitter']" class="font-awesome-icon one83B56"/></a>-->
+<!--                <a href="https://www.facebook.com/blipenergy/" target="_blank"><font-awesome-icon :icon="['fab', 'facebook-f']" class="font-awesome-icon one83B56"/></a>-->
+<!--                <a href="https://www.linkedin.com/company/blip-energy" target="_blank"><font-awesome-icon :icon="['fab', 'linkedin-in']" class="font-awesome-icon one83B56"/></a>-->
+                <a href="https://twitter.com/BlipEnergy" target="_blank"><font-awesome-icon :icon="['fab', 'twitter-square']" class="font-awesome-iconI boxOver c-F1FAFF"/></a>
+                <a href="https://www.facebook.com/blipenergy/" target="_blank"><font-awesome-icon :icon="['fab', 'facebook-square']" class="font-awesome-iconI boxOver c-F1FAFF"/></a>
+                <a href="https://www.linkedin.com/company/blip-energy" target="_blank"><font-awesome-icon :icon="['fab', 'linkedin']" class="font-awesome-iconI boxOver c-F1FAFF"/></a>
+
+                <!--                <p class="circle">-->
 <!--                  <a href="https://twitter.com/BlipEnergy"><font-awesome-icon :icon="['fab', 'twitter']" class="font-awesome-icon one83B56"/></a>-->
 <!--                </p>-->
 <!--                <p class="circle">-->
@@ -70,6 +74,7 @@ section{
 .two54B77{color: #254B77;}
 .one83B56{color: #183B56;}
 .zero000000{color: #000000;}
+.c-F1FAFF{color: #F1FAFF;}
 
 .t-center{text-align: center;}
 .t-left{text-align: left;}
@@ -265,6 +270,26 @@ input{
 
   border: 2px solid #254B77;
   border-radius: 50px;
+}
+.font-awesome-iconI{
+  font-size: 28px;
+  //margin: 15px;
+  //margin-top: 13px;
+
+  width: 64px;
+  height: 64px;
+  padding: 12px 12px 12px 12px;
+  margin-left: 9px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+  border: 2px solid #183B56;
+  border-radius: 50px;
+
+  background: #183B56;
+}
+.boxOver{
+  box-shadow:  inset 15px 0 #F1FAFF, inset 0 15px #F1FAFF, inset -15px 0 #F1FAFF, inset 0 -15px #F1FAFF;
 }
 .circle{
   width: 64px;
