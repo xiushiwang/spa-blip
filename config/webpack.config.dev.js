@@ -25,7 +25,7 @@ const webpackConfig = merge(commonConfig, {
     plugins: [
         new webpack.EnvironmentPlugin(environment),
         new webpack.HotModuleReplacementPlugin(),
-        new FriendlyErrorsPlugin()
+        new FriendlyErrorsPlugin(),
     ],
     devServer: {
         compress: true,

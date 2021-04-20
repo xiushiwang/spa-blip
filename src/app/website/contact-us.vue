@@ -44,7 +44,6 @@
                 <b-form-input
                     novalidate="true"
                     class="input"
-                    type="email"
                     v-model="email"
                     @keyup.enter="submitMessage()"
                 ></b-form-input>
@@ -133,27 +132,43 @@ export default {
   watch:{
     firstName:{
       handler (newVal, oldVal){
+        if (newVal.length > 30){
+          this.submitButton = false
+          this.errorMsg = "Please don't use more than 30 characters in first name"
+        }else if (oldVal.length > 30 && newVal.length <= 30){this.errorMsg = ""}
+        if (newVal === ""){
+          this.submitButton = false
+          this.errorMsg = "Please don't forget your first name"
+        }
+        if (newVal !== "" && this.errorMsg === ("Oops, you forgot your first name" || "Please don't forget your first name")){
+          this.errorMsg = ""
+        }
         if (newVal !== "" && this.lastName !== "" && this.validEmail(this.email) && this.messages !== "") {
           this.errorMsg = ""
           this.submitButton = true
         }else{
           this.submitButton = false
         }
-        if (oldVal !== "" && newVal === ""){
-          this.submitButton = false
-          this.errorMsg = "Please don't forget your first name"
-        }
-        if (newVal.length > 30){
-          this.submitButton = false
-          this.errorMsg = "Please don't use more than 30 characters in first name"
-        }
       },
     },
     lastName:{
       handler (newVal, oldVal){
         if (this.firstName === "") {
-          // this.submitButton = false
+          this.submitButton = false
           this.errorMsg = "Oops, you forgot your first name"
+        }else if (this.firstName === "" && this.errorMsg === ("Oops, you forgot your first name" || "Please don't forget your first name")){
+          this.errorMsg = ""
+        }
+        if (newVal.length > 30){
+          this.submitButton = false
+          this.errorMsg = "Please don't use more than 30 characters in last name"
+        }else if (oldVal.length > 30 && newVal.length <= 30){this.errorMsg = ""}
+        if (newVal === ""){
+          this.submitButton = false
+          this.errorMsg = "Please don't forget your last name"
+        }
+        if (newVal !== "" && this.errorMsg === ("Oops, you forgot your last name" || "Please don't forget your last name")){
+          this.errorMsg = ""
         }
         if (this.firstName !== "" && newVal !== "" && this.validEmail(this.email) && this.messages !== "") {
           this.errorMsg = ""
@@ -161,33 +176,27 @@ export default {
         }else{
           this.submitButton = false
         }
-        if (oldVal !== "" && newVal === ""){
-          this.submitButton = false
-          this.errorMsg = "Please don't forget your last name"
-        }
-        if (newVal.length > 30){
-          this.submitButton = false
-          this.errorMsg = "Please don't use more than 30 characters in last name"
-        }
       },
     },
     email:{
       handler (newVal, oldVal) {
         if (this.lastName === "") {
           this.errorMsg = "Oops, you forgot your last name"
-        }
-        if (this.firstName !== "" && this.lastName !== "" && this.validEmail(newVal) && this.messages !== "") {
+        }else if(this.lastName !== "" && (this.errorMsg === ("Oops, you forgot your last name" || "Please don't forget your last name"))) {
           this.errorMsg = ""
-          this.submitButton = true
-        }else if(this.validEmail(newVal)){
-          this.errorMsg = ""
-          // this.adjustAlertMsg()
-        }else{
-          this.submitButton = false
         }
         if ((this.validEmail(oldVal) && !this.validEmail(newVal))){
           this.submitButton = false
           this.errorMsg = "Please enter a valid email address"
+        }
+        if (this.validEmail(newVal) && this.errorMsg === "Please enter a valid email address") {
+          this.errorMsg = ""
+        }
+        if (this.firstName !== "" && this.lastName !== "" && this.validEmail(newVal) && this.messages !== "") {
+          this.errorMsg = ""
+          this.submitButton = true
+        }else{
+          this.submitButton = false
         }
       },
     },
@@ -207,10 +216,10 @@ export default {
           // alert("im here")
           if (this.firstName !== ""){
             if (this.lastName !== ""){
-              if (this.email !== "" && this.validEmail(this.email)){
+              if (this.validEmail(this.email)){
                 this.errorMsg = ""
                 this.submitButton = true
-                document.getElementsByClassName("isDisabled").className = "sendEmail";
+                // document.getElementsByClassName("isDisabled").className = "sendEmail";
                   // this.emailBody = "First Name: " + this.firstName + "%0aLast Name: " + this.lastName + "%0aEmail: " + this.email + "%0aMessage: %0a" + this.messages
                   // this.emailContent = "mailto:hello@blipenergy.com?subject=Comment&body=" + this.emailBody
               }else{
@@ -236,7 +245,7 @@ export default {
       if (this.messages === ""){
         this.errorMsg = "Please tell us something"
       }
-      if (this.email === "" && !this.validEmail(this.email)){
+      if (!this.validEmail(this.email)){
         this.errorMsg = "Please enter a valid email address"
       }
       if (this.lastName === ""){
@@ -267,6 +276,18 @@ export default {
       }else{
         this.errorMsg = "Oops, you forgot your first name"
       }
+    },
+    validFirst(name){
+      if (name.length > 0 && name.length <= 30){
+        return true
+      }
+      return false
+    },
+    validLast(name){
+      if (name.length > 0 && name.length <= 30){
+        return true
+      }
+      return false
     },
     validEmail(email) {
       var re = /^([a-z0-9A-Z]+[-|\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\.)+[a-zA-Z]{2,}$/;
