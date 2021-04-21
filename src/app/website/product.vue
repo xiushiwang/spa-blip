@@ -286,7 +286,7 @@ export default {
           trigger: 'axis',
           show: false,
         },
-        color:['#4F9BC1','#183B56'],
+        color:['#183B56','#4F9BC1'],
         legend: {
           data: ['Costs you would pay without blip', 'Costs you would pay with blip'],
           selectedMode: false,
@@ -320,7 +320,7 @@ export default {
             itemStyle:{
               normal:{
                 lineStyle:{
-                  color:'#4F9BC1'
+                  color: '#183B56'
                 }
               }
             }
@@ -334,7 +334,7 @@ export default {
             itemStyle:{
               normal:{
                 lineStyle:{
-                  color:'#183B56'
+                  color: '#4F9BC1'
                 }
               }
             }
