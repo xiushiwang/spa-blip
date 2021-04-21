@@ -10,6 +10,9 @@ const helpers                  = require('./helpers');
 const commonConfig             = require('./webpack.config.common');
 const isProd                   = process.env.NODE_ENV === 'production';
 const environment              = isProd ? require('./env/prod.env') : require('./env/staging.env');
+const path                     = require('path');
+const HtmlWebpackPlugin        = require('html-webpack-plugin');
+
 
 const webpackConfig = merge(commonConfig, {
     mode: 'production',
@@ -67,7 +70,17 @@ const webpackConfig = merge(commonConfig, {
             threshold: 10240,
             minRatio: 0.8
         }),
-        new webpack.HashedModuleIdsPlugin()
+        new webpack.HashedModuleIdsPlugin(),
+        // new HtmlWebpackPlugin({
+        //     template: './index.html',
+        //     favicon: './public/favicon.ico'
+        // })
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: 'index.html',
+            inject: true,
+            favicon: path.resolve('public/favicon.ico')
+        })
     ]
 });
 

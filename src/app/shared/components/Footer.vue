@@ -91,9 +91,14 @@
               <p class="p3 zero000000 t-center upperCase">Contact Us</p>
               <p class="p1 two54B77 t-center"><a class="emailTo" href="mailto:hello@blipenergy.com?subject=Hello! Blip Team" target="_blank">hello@blipenergy.com</a></p>
               <div class="w-100p m-l-0 p-l-0">
-                <a href="https://twitter.com/BlipEnergy" target="_blank"><font-awesome-icon :icon="['fab', 'twitter']" class="font-awesome-icon c-B0E7FF"/></a>
-                <a href="https://www.facebook.com/blipenergy/" target="_blank"><font-awesome-icon :icon="['fab', 'facebook-f']" class="font-awesome-icon c-B0E7FF"/></a>
-                <a href="https://www.linkedin.com/company/blip-energy" target="_blank"><font-awesome-icon :icon="['fab', 'linkedin-in']" class="font-awesome-icon c-B0E7FF"/></a>
+<!--                <div class="circle">-->
+<!--                <a href="https://twitter.com/BlipEnergy" target="_blank"><font-awesome-icon :icon="['fab', 'twitter']" class="font-awesome-icon c-B0E7FF"/></a>-->
+<!--                <a href="https://www.facebook.com/blipenergy/" target="_blank"><font-awesome-icon :icon="['fab', 'facebook-f']" class="font-awesome-icon c-B0E7FF"/></a>-->
+<!--                <a href="https://www.linkedin.com/company/blip-energy" target="_blank"><font-awesome-icon :icon="['fab', 'linkedin-in']" class="font-awesome-icon c-B0E7FF"/></a>-->
+
+                <a href="https://twitter.com/BlipEnergy" target="_blank"><font-awesome-icon :icon="['fab', 'twitter-square']" class="font-awesome-iconI boxOver c-FFFFFF"/></a>
+                <a href="https://www.facebook.com/blipenergy/" target="_blank"><font-awesome-icon :icon="['fab', 'facebook-square']" class="font-awesome-iconI boxOver c-FFFFFF"/></a>
+                <a href="https://www.linkedin.com/company/blip-energy" target="_blank"><font-awesome-icon :icon="['fab', 'linkedin']" class="font-awesome-iconI boxOver c-FFFFFF"/></a>
               </div>
               <router-link :to="'/privacy-policy'" class="t-center" style="color: #254B77" target="_blank">
                 <p class="p3 c-254B77 t-center">blip respects your privacy</p>
@@ -367,6 +372,8 @@ section{
 .zero000000{color: #000000;}
 .c-B0E7FF{color: #B0E7FF;}
 .c-FF0000{color: #FF0000;}
+.c-E5E5E5{color: #E5E5E5;}
+.c-FFFFFF{color: #FFFFFF}
 
 .t-center{text-align: center;}
 .t-left{text-align: left;}
@@ -627,19 +634,56 @@ input::placeholder{
   
 }
 
+.circle{
+  width: 64px;
+  height: 64px;
+  border: 2px solid #B0E7FF;
+  border-radius: 50px;
+
+  //display: flex;
+  //align-items: center;
+
+}
 .font-awesome-icon{
   font-size: 28px;
+  //margin: 15px;
+  //margin-top: 13px;
+
 
   width: 64px;
   height: 64px;
-  padding: 16px 16px;
+  padding: 16px;
   margin-left: 14px;
   margin-right: 5px;
   margin-bottom: 10px;
 
   border: 2px solid #B0E7FF;
   border-radius: 50px;
+
+  background: transparent;
 }
+.font-awesome-iconI{
+  font-size: 28px;
+  //margin: 15px;
+  //margin-top: 13px;
+
+
+  width: 64px;
+  height: 64px;
+  padding: 12px 12px 13px 12px;
+  margin-left: 9px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+  border: 2px solid #B0E7FF;
+  border-radius: 50px;
+
+  background: #B0E7FF;
+}
+.boxOver{
+  box-shadow:  inset 15.5px 0 #FFFFFF, inset 0 15px #FFFFFF, inset -15px 0 #FFFFFF, inset 0 -15.2px #FFFFFF;
+}
+
 .router-link{color: #254B77}
 .logo{
   background: url(../../../assets/blip_logo.png);
