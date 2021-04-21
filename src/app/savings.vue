@@ -78,7 +78,7 @@
           <b-row class="t-left w-100p m-l-0 p-l-0">
 <!--            <b-col xs="12" sm="12" md="6" lg="6" xl="6" class="h-52px t-left m-l-0 p-l-0">-->
             <p v-show="!showValidZipcodeError" class="validZipcodeError p4 c-FF0000 t-center" style="">
-              <span v-if="showErrorMsgExpNYCA">Please enter a CA or NY zip code</span>
+              <span v-if="showErrorMsgExpNYCA">We'll be serving your area soon!</span>
               <span v-else>Please enter a valid zip code</span>
             </p>
 <!--            </b-col>-->

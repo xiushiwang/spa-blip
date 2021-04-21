@@ -238,11 +238,16 @@ export default {
           if (this.checkZipcode()){
             this.alertMsg = ""
           }
+          if (newVal.length > 3){
+            if (!this.checkZipcode()){
+              this.alertMsg = "Please enter a valid zipcode"
+            }
+          }
           if (oldVal !== "" && newVal === "") {
             this.submitButton = false
             this.alertMsg = "Please don't forget your zipcode"
           }
-          if (this.checkZipcode() && this.alertMsg === "Please don't forget your zipcode"){
+          if (this.checkZipcode() && this.alertMsg === ("Please don't forget your zipcode" || "Please enter a valid zipcode")){
             this.alertMsg = ""
           }
           if (this.validFirst(this.firstName) && this.validLast(this.lastName) && this.validEmail(this.email) && this.checkZipcode()) {
@@ -308,7 +313,7 @@ export default {
       return false
     },
     validEmail(email) {
-      var re = /^([a-z0-9A-Z]+[-|\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\.)+[a-zA-Z]{2,}$/;
+      var re = /^([a-z0-9A-Z]+[-_|.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\.)+[a-zA-Z]{2,}$/;
           // /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
     },
