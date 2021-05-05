@@ -105,7 +105,7 @@
       </section>
       <!--end: blip helps the planet too-->
 
-      <Footer id="sign-up"></Footer>
+      <Footer></Footer>
     </div>
   </div>
 </template>
