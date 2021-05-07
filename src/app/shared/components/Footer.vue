@@ -1,7 +1,7 @@
 <template>
   <div class="navbar-nav" style="background: #FFFFFF;">
     <!--start:blip is launching soon-->
-    <section class="DEF5FF launching">
+    <section class="DEF5FF launching"  id="sign-up">
       <div class="hero">
         <div class="container">
           <div class="row">
