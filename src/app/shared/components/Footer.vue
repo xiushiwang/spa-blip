@@ -350,7 +350,7 @@ export default {
       param.append('zip_code', this.zipCode)
       axios({
         method: 'post',
-        url: 'http://ec2-34-228-112-229.compute-1.amazonaws.com:8080/user/subscribe',
+        url: 'https://www.api.blipenergy.com/user/subscribe',
         data: param
       })
     },
