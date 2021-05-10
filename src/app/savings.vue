@@ -216,7 +216,7 @@ export default {
       errors: [],
       utilityPicked: [],
       planNum: 0,
-      address: 'http://ec2-34-228-112-229.compute-1.amazonaws.com:8080/plan/get_savings_by_zip_code/',
+      address: 'https://www.api.blipenergy.com/plan/get_savings_by_zip_code/',
       localAddress: './src/assets/JSONforTesting/',
       overallPlan:[],
       selectedPlan: '',
@@ -369,7 +369,7 @@ export default {
             // this.showValidZipcodeError = false;
           })
       this.address =
-          'http://ec2-34-228-112-229.compute-1.amazonaws.com:8080/plan/get_savings_by_zip_code/' //un-command-out me to link to Zhen////////////////////////////////////////
+          'https://www.api.blipenergy.com/plan/get_savings_by_zip_code/' //un-command-out me to link to Zhen////////////////////////////////////////
           // './src/assets/JSONforTesting/' /////////////////////////////////////////////////////////command-out me to run locally
     },
 
