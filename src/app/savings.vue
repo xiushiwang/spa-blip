@@ -157,6 +157,7 @@
                 class="submit seeSavings"
                 variant="outline-primary"
                 @click="savings = !savings; displaySavings(); "
+                :disabled = noRatePlan
             >
               See Your Savings
             </b-button>
@@ -219,6 +220,7 @@ export default {
       address: 'https://www.api.blipenergy.com/plan/get_savings_by_zip_code/',
       localAddress: './src/assets/JSONforTesting/',
       overallPlan:[],
+      noRatePlan: true,
       selectedPlan: '',
       model:'',
       planClickd: true,
@@ -236,6 +238,12 @@ export default {
     isDisabled: function() {
       return !this.zipcode;
     },
+    // noRatePlan: function (){
+    //   if (this.selectedPlan === ''){
+    //     return true
+    //   }
+    //   return false
+    // },
   },
 
   mounted() {
@@ -249,6 +257,15 @@ export default {
           // this.switchTOU = false;
         }
         // this.switchTOU = false;
+      },
+      immediate: true
+    },
+
+    selectedPlan: {
+      handler (newVal, oldVal){
+        if(newVal !== '' && oldVal === '') {
+          this.noRatePlan = false
+        }
       },
       immediate: true
     }
@@ -348,6 +365,7 @@ export default {
               //   }
               // }
               this.onlyOneProvider = "";
+              this.noRatePlan = true;
               // console.log('hhhhhhhhhhhh', response.data.data)
               if (response.data.data.length === 1){
                 this.onlyOneProvider = "chosen";
