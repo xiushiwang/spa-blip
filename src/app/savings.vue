@@ -399,6 +399,7 @@ export default {
       this.planNum = this.utilityPicked.planList.length
       this.model = ''
       this.selectedPlan = ''
+      this.noRatePlan = true
       this.sendPlan(this.selectedPlan)
       this.countPlan(this.selectedPlan)
       if (this.nonNYCA){
