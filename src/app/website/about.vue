@@ -227,7 +227,7 @@
                   <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card-f flex text-center wow fadeInUp">
                       <div class="card-f-heading">
-                          <img src="../../assets/images/team/BWChance.jpg" alt="" class="members">
+                          <img src="../../assets/images/team/ChanceNew.jpg" alt="" class="members">
                       </div>
                       <div class="card-f-body">
                         <h4 class="h4 c-FFFFFF t-center">Chance Cobb</h4>
