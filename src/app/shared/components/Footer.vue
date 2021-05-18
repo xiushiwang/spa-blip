@@ -14,7 +14,7 @@
                     <p class="p3 two54B77 t-left">Name*</p>
                     <div class="form-row">
                       <!--                      <div class="form-group col-md-6">-->
-  <!--                    <b-col xs="6" sm="6" md="6" lg="6" xl="6">-->
+                      <!--                    <b-col xs="6" sm="6" md="6" lg="6" xl="6">-->
                       <b-form-input type="text"
                                     id="first"
                                     class="form-control-name-left"
@@ -23,10 +23,10 @@
                                     placeholder="First"
                       ></b-form-input>
                       <!--                        <p class="text-gray mt-8 mb-24">First Name</p>-->
-  <!--                    </b-col>-->
+                      <!--                    </b-col>-->
                       <!--                      </div>-->
                       <!--                      <div class="form-group col-md-6">-->
-  <!--                    <b-col xs="6" sm="6" md="6" lg="6" xl="6" class="FFFFFF">-->
+                      <!--                    <b-col xs="6" sm="6" md="6" lg="6" xl="6" class="FFFFFF">-->
                       <b-form-input type="text"
                                     id="last"
                                     class="form-control-name-right"
@@ -35,7 +35,7 @@
                                     placeholder="Last"
                       ></b-form-input>
                       <!--                        <p class="text-gray mt-8 mb-24">Last Name</p>-->
-  <!--                    </b-col>-->
+                      <!--                    </b-col>-->
                       <!--                      </div>-->
                     </div>
                   </div>
@@ -61,7 +61,7 @@
                                   v-model="zipCode"
                                   @keyup.enter="submit()"
                     ></b-form-input>
-<!--                    <p id="areaCode">please</p>-->
+                    <!--                    <p id="areaCode">please</p>-->
                   </div>
 
                   <div class="form-group mb-0 t-center">
@@ -91,10 +91,10 @@
               <p class="p3 zero000000 t-center upperCase">Contact Us</p>
               <p class="p1 two54B77 t-center"><a class="emailTo" href="mailto:hello@blipenergy.com?subject=Hello! Blip Team" target="_blank">hello@blipenergy.com</a></p>
               <div class="w-100p m-l-0 p-l-0">
-<!--                <div class="circle">-->
-<!--                <a href="https://twitter.com/BlipEnergy" target="_blank"><font-awesome-icon :icon="['fab', 'twitter']" class="font-awesome-icon c-B0E7FF"/></a>-->
-<!--                <a href="https://www.facebook.com/blipenergy/" target="_blank"><font-awesome-icon :icon="['fab', 'facebook-f']" class="font-awesome-icon c-B0E7FF"/></a>-->
-<!--                <a href="https://www.linkedin.com/company/blip-energy" target="_blank"><font-awesome-icon :icon="['fab', 'linkedin-in']" class="font-awesome-icon c-B0E7FF"/></a>-->
+                <!--                <div class="circle">-->
+                <!--                <a href="https://twitter.com/BlipEnergy" target="_blank"><font-awesome-icon :icon="['fab', 'twitter']" class="font-awesome-icon c-B0E7FF"/></a>-->
+                <!--                <a href="https://www.facebook.com/blipenergy/" target="_blank"><font-awesome-icon :icon="['fab', 'facebook-f']" class="font-awesome-icon c-B0E7FF"/></a>-->
+                <!--                <a href="https://www.linkedin.com/company/blip-energy" target="_blank"><font-awesome-icon :icon="['fab', 'linkedin-in']" class="font-awesome-icon c-B0E7FF"/></a>-->
 
                 <a href="https://twitter.com/BlipEnergy" target="_blank"><font-awesome-icon :icon="['fab', 'twitter-square']" class="font-awesome-iconI boxOver c-FFFFFF"/></a>
                 <a href="https://www.facebook.com/blipenergy/" target="_blank"><font-awesome-icon :icon="['fab', 'facebook-square']" class="font-awesome-iconI boxOver c-FFFFFF"/></a>
@@ -120,9 +120,7 @@
 
 <script>
 // import GoogleLogin from "vue-google-login";
-
 import axios from "axios";
-
 export default {
   name: "footer",
   data() {
@@ -163,7 +161,6 @@ export default {
             this.submitButton = false
           }
         }
-
       },
     },
     lastName:{
@@ -260,7 +257,6 @@ export default {
       },
     }
   },
-
   methods: {
     submit(){
       if (this.validFirst(this.firstName)) {
@@ -314,7 +310,7 @@ export default {
     },
     validEmail(email) {
       var re = /^([a-z0-9A-Z]+[-_|.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\.)+[a-zA-Z]{2,}$/;
-          // /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      // /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return re.test(email);
     },
     // checkZipcode(){
@@ -342,7 +338,6 @@ export default {
     },
     post(){
       console.log('posting...', this.lastName, this.firstName, this.email, this.zipCode)
-
       let param = new URLSearchParams()
       param.append('first_name', this.firstName)
       param.append('last_name', this.lastName)
@@ -361,17 +356,14 @@ export default {
 
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap');
-
 section{
   width: 100%;
   font-family: 'Montserrat', Avenir;}
 //.h-536{height: 536px;}
-
 .E5E5E5{background: #E5E5E5;}
 .FFFFFF{background: #FFFFFF;}
 .DEF5FF{background: #DEF5FF;}
 .oneD3755{background: #1D3755;}
-
 .two54B77{color: #254B77;}
 .one83B56{color: #183B56;}
 .zero000000{color: #000000;}
@@ -379,12 +371,10 @@ section{
 .c-FF0000{color: #FF0000;}
 .c-E5E5E5{color: #E5E5E5;}
 .c-FFFFFF{color: #FFFFFF}
-
 .t-center{text-align: center;}
 .t-left{text-align: left;}
 .text-center{text-align: center};
 .upperCase{text-transform: uppercase;}
-
 h2{
   font-family: 'Montserrat', Avenir;
   font-style: normal;
@@ -402,7 +392,6 @@ h4{
   line-height: 33px;
   /* identical to box height */
 }
-
 p.p1{
   font-family: 'Montserrat', Avenir;
   font-style: normal;
@@ -427,27 +416,22 @@ p.p3{
   line-height: 20px;
   /* identical to box height, or 111% */
 }
-
 //img{background: #C4C4C4;}
-
 button.btn.btn-outline-4F9BC1{
   font-family: 'Montserrat', Avenir;
   width: 250px;
   height: 59px;
   //left: 608px;
   //top: 263px;
-
   border: 2px solid #4F9BC1;
   box-sizing: border-box;
   border-radius: 24px;
-
   text-align: center;
   background-color:transparent;
   button:hover {
     background-color: #4F9BC1;
     //color: white;
   }
-
   font-family: 'Montserrat', Avenir;;
   font-style: normal;
   font-weight: 300;
@@ -462,12 +446,10 @@ button.btn.btn-outline-254B77{
   //left: 608px;
   //top: 263px;
   text-align: center;
-
   background-color:transparent;
   border: 2px solid #254B77;
   box-sizing: border-box;
   border-radius: 50px;
-
   font-family: 'Montserrat', Avenir;;
   font-style: normal;
   font-weight: 300;
@@ -479,7 +461,6 @@ button.btn.btn-outline-254B77:hover {
   background-color: #254B77;
   color: #DEF5FF;
 }
-
 input{
   //width: ;
   height: 49px;
@@ -504,9 +485,7 @@ input::placeholder{
   line-height: 111%;
   color: #8E8E8E;
 }
-
 //.full{width: 100%}
-
 .hero{
   width: 100%;
   //background: #6f42c1;
@@ -551,7 +530,6 @@ input::placeholder{
             //left: 15%;
           }
         }
-
         .textOnRight{
           width: 90%;
           height: 444px;
@@ -581,7 +559,6 @@ input::placeholder{
     }
   }
 }
-
 .launching{
   height: 694px;
   display: flex;
@@ -613,7 +590,6 @@ input::placeholder{
           margin-right: 0px;
         }
       }
-
       .form-control-zipcode{
         width: 173px;
       }
@@ -622,73 +598,57 @@ input::placeholder{
         text-align: center;
       }
     }
-
   }
-
 }
 .takeTheSurvey{
   margin-bottom: 50px;
 }
-
 #submitMsg{
   margin-top: -40px;
 }
-
 .emailTo{color: #254B77;}
 .emailTo:hover{
-  
-}
 
+}
 .circle{
   width: 64px;
   height: 64px;
   border: 2px solid #B0E7FF;
   border-radius: 50px;
-
   //display: flex;
   //align-items: center;
-
 }
 .font-awesome-icon{
   font-size: 28px;
   //margin: 15px;
   //margin-top: 13px;
-
-
   width: 64px;
   height: 64px;
   padding: 16px;
   margin-left: 14px;
   margin-right: 5px;
   margin-bottom: 10px;
-
   border: 2px solid #B0E7FF;
   border-radius: 50px;
-
   background: transparent;
 }
 .font-awesome-iconI{
   font-size: 28px;
   //margin: 15px;
   //margin-top: 13px;
-
-
   width: 64px;
   height: 64px;
   padding: 12px 12px 13px 12px;
   margin-left: 9px;
   margin-right: 10px;
   margin-bottom: 10px;
-
   border: 2px solid #B0E7FF;
   border-radius: 50px;
-
   background: #B0E7FF;
 }
 .boxOver{
   box-shadow:  inset 15.5px 0 #FFFFFF, inset 0 15px #FFFFFF, inset -15px 0 #FFFFFF, inset 0 -15.2px #FFFFFF;
 }
-
 .router-link{color: #254B77}
 .logo{
   background: url(../../../assets/blip_logo.png);
@@ -710,9 +670,8 @@ input::placeholder{
   right: 40%;
   top: calc(50% - 22px/2 + 150px);
   margin-top:-12px;
-      //20px;
+  //20px;
   text-align: center;
-
   font-family: 'Montserrat', Avenir;;
   font-style: normal;
   font-weight: 300;
@@ -721,9 +680,6 @@ input::placeholder{
   /* identical to box height */
   color: #5A7184;
 }
-
-
-
 .navbar-nav{
   justify-content: center;
   text-decoration: none;
