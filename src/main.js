@@ -15,7 +15,6 @@ import VueWow from "vue-wow";
 import VueFormWizard from 'vue-form-wizard'
 import 'vue-form-wizard/dist/vue-form-wizard.min.css'
 
-
 import router from '../src/app/router';
 
 import VueDropdown from 'vue-dynamic-dropdown'
@@ -27,6 +26,7 @@ import VTooltip from 'v-tooltip'
 
 import vuescroll from 'vuescroll';
 import "vuescroll/dist/vuescroll.css";
+import VueAnalytics from 'vue-analytics';
 
 library.add(
     faPlus, faArrowRight, faCoffee, faMapMarkerAlt, faMapMarker, faSearch, faLink, faBolt, faInfoCircle, faEllipsisH, faEllipsisV,
@@ -60,6 +60,10 @@ Vue.use(vuescroll, {
     // The global config
   },
   name: 'myScroll' // customize component name, default -> vueScroll
+});
+Vue.use(VueAnalytics, {
+  id: 'G-XDRZ9PMXCC',
+  router
 });
 
 /**
