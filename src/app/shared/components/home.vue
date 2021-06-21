@@ -105,6 +105,10 @@
       </section>
       <!--end: blip helps the planet too-->
 
+<!--      <p>-->
+<!--        Click <a href="#" @click.prevent="disableTracking">here</a>,-->
+<!--        to disable the tracking through Google Analytics.-->
+<!--      </p>-->
       <Footer></Footer>
     </div>
   </div>
@@ -122,11 +126,17 @@ export default {
     };
   },
   mounted() {
-
+    this.$ga.page('/home');
   },
 
   methods: {
-
+    disableTracking: function() {
+      this.$ga.disable();
+      alert('Tracking disabled');
+    },
+    click: function() {
+      this.$ga.event('category', 'action', 'label', 123)
+    }
   },
   computed: {
   },
