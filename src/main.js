@@ -4,6 +4,7 @@ import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'vue-material-design-icons/styles.css'
+import VueLazyload from 'vue-lazyload'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPlus, faArrowRight, faCoffee, faMapMarkerAlt, faMapMarker, faSearch, faLink, faBolt, faInfoCircle, faEllipsisH, faEllipsisV, } from '@fortawesome/free-solid-svg-icons'
@@ -48,6 +49,7 @@ Vue.use(VueGoogleMaps, {
 });
 Vue.use(VTooltip)
 Vue.use(vuescroll)
+Vue.use(VueLazyload)
 
 new Vue({
   router,               // Add this line
