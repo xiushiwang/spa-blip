@@ -117,7 +117,7 @@
 <script>
 import banner from "./banner.vue";
 import transparentBanner from "@/app/shared/components/transparentBanner";
-import Footer from "./Footer.vue";
+import Footer from "./FooterII.vue";
 
 export default {
   name: "home",

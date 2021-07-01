@@ -1,6 +1,6 @@
 <template>
   <div class="navbar-nav" style="background: #FFFFFF;">
-    <section class="DEF5FF launching"  id="sign-upI">
+    <section class="DEF5FF launching"  id="sign-up">
       <div class="hero">
         <div class="container">
           <div class="row">
