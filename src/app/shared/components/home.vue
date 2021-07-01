@@ -115,7 +115,7 @@
 </template>
 
 <script>
-import banner from "./banner.vue";
+// import banner from "./banner.vue";
 import transparentBanner from "@/app/shared/components/transparentBanner";
 import Footer from "./FooterII.vue";
 // import Footer from "./Footer.vue";
